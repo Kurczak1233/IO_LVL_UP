@@ -33,15 +33,16 @@ export default {
 
 }
 .adv-text1{
-  font-size: 30px;
+  font-size: 50px;
   margin-top:150px;
   text-decoration: underline;
+  opacity: 1;
 }
 .color-white{
   color:white;
 }
 .color-green{
-  color:  blue;
+  color:blue;
 }
 .First-part:hover, .Second-part:hover{
   opacity:0.8;
