@@ -5,6 +5,7 @@
       <Advertisement></Advertisement>
       <Begginer></Begginer>
       <Achi></Achi>
+      <AdvBannerBottom></AdvBannerBottom>
   </body>
 </template>
 
@@ -14,6 +15,7 @@ import Navigation from './components/Navigation.vue'
 import Advertisement from './components/Advertisement.vue'
 import Begginer from './components/Begginer.vue'
 import Achi from './components/Achi.vue'
+import AdvBannerBottom from './components/AdvBannerBottom.vue'
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     Navigation,
     Advertisement,
     Begginer,
-    Achi
+    Achi,
+    AdvBannerBottom
   }
 }
 </script>
