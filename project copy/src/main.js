@@ -5,7 +5,13 @@ import './plugins/bootstrap-vue'
 import App from './App.vue'
 import { BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserFriends, faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+library.add(faUserSecret, faUserFriends)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(BootstrapVueIcons)
  
 Vue.config.productionTip = false
