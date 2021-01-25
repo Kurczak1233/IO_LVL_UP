@@ -33,7 +33,9 @@ export default {
     
 }
 body {
-  font-family: 'Cookie', cursive;
+font-family: 'Fraunces', serif;
+font-family: 'Nunito', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

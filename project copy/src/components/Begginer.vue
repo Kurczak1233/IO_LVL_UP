@@ -8,9 +8,9 @@
 <b-col class="text-center d-block d-md-none mt-2 mb-5" md=12>Przystępne materiały</b-col>
     <b-col class="Third-part my-auto" cols="12" md="3"><b-img class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Test.png?raw=true" alt="English book"></b-img></b-col>
 <b-col class="text-center d-block d-md-none mt-2 mb-5" md=12>Egzaminy cambridge!</b-col>
-    <b-col class="text-center d-none d-md-block" md=6>Określona ścieżka rozwoju</b-col>
-    <b-col class="text-center d-none d-md-block" md=3>Przystępne materiały</b-col>
-    <b-col class="text-center d-none d-md-block" md=3>Egzaminy cambridge!</b-col>
+    <b-col class="text-center d-none d-md-block mt-4 text-size-big" md=6>Określona ścieżka rozwoju</b-col>
+    <b-col class="text-center d-none d-md-block  mt-4 text-size-big"   md=3>Przystępne materiały</b-col>
+    <b-col class="text-center d-none d-md-block  mt-4 text-size-big" md=3>Egzaminy cambridge!</b-col>
   </b-row>
 </b-container>
 </template>
@@ -26,6 +26,10 @@ export default {
 /* .begginer-slider{
     height:250px;
 } */
+.text-size-big
+{
+    font-size: 1.2rem;
+}
 .begginer-banner{
     background: rgba(252, 233, 233, 0.74);
 }
