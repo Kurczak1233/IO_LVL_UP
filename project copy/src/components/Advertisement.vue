@@ -1,8 +1,8 @@
 <template>
 <b-container fluid class="advertisement">
   <b-row class="images m-0">
-    <b-col class="First-part" cols="6"><p class="adv-text1 color-white">Początkujący?</p></b-col>
-    <b-col class="Second-part" cols="6"><p class="adv-text1 color-green">Zaawanasowany?</p></b-col>
+    <b-col class="First-part" cols="6"><p class="adv-text1 color-white">Begginer</p></b-col>
+    <b-col class="Second-part" cols="6"><p class="adv-text1 color-green">Advanced</p></b-col>
   </b-row>
 </b-container>
 </template>
@@ -34,7 +34,7 @@ export default {
 
 }
 .adv-text1{
-  font-size: 50px;
+  font-size: 40px;
   margin-top:150px;
   text-decoration: underline;
   opacity: 1;
