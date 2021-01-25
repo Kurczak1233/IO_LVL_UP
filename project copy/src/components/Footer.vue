@@ -2,27 +2,28 @@
 <b-container fluid class="background-color">
     <b-row class="pt-4"> 
         <b-col class="col-3 offset-3">
-            <p class="mb-2 medium-font">Also of interest...</p>
+            <p class="mb-2 medium-font font-weight-bold">Also of interest...</p>
             <p><b-link class="h5">Terms of Use</b-link></p>
             <p><b-link class="h5">Privacy Policy</b-link></p>
             <p><b-link class="h5">Trademarks</b-link></p>
             <p><b-link class="h5">Sitemap</b-link></p>
         </b-col>
-        <b-col class="col-2 medium-font">
-           <p class="medium-font"> IO_LVL_UP</p>
-            <p><b-link class="h5">Terms of Use</b-link></p>
-            <p><b-link class="h5">Privacy Policy</b-link></p>
-            <p><b-link class="h5">Trademarks</b-link></p>
-            <p><b-link class="h5">Sitemap</b-link></p>
+        <b-col class="col-2">
+           <p class="mb-2 medium-font font-weight-bold"> IO_LVL_UP</p>
+            <p><b-link class="h5">About us</b-link></p>
+            <p><b-link class="h5">Leadership</b-link></p>
+            <p><b-link class="h5">Careers</b-link></p>
+            <p><b-link class="h5">Faq</b-link></p>
+            <p><b-link class="h5">Contact</b-link></p>
         </b-col>
-        <b-col class="col-2  medium-font">
-            <p class="medium-font"> Social</p>
-            <p><b-link class="h5">Terms of Use</b-link></p>
-            <p><b-link class="h5">Privacy Policy</b-link></p>
-            <p><b-link class="h5">Trademarks</b-link></p>
-            <p><b-link class="h5">Sitemap</b-link></p>
+        <b-col class="col-2">
+            <p class="mb-2 medium-font font-weight-bold"> Social</p>
+            <p><b-link class="h5">LinkedIn</b-link></p>
+            <p><b-link class="h5">Facebook</b-link></p>
+            <p><b-link class="h5">Twitter</b-link></p>
+            <p><b-link class="h5">YouTube</b-link></p>
         </b-col>
-        <b-col class="col-12 text-small text-grey">Copyright 2021 IO_LVL_UP<sup>&#169;</sup>. All rights reserved worldwide.</b-col>
+        <b-col class="col-12 text-small text-grey pt-3">Copyright 2021 IO_LVL_UP<sup>&#169;</sup>. All rights reserved worldwide.</b-col>
     </b-row>
 </b-container>
 </template>
@@ -54,5 +55,12 @@ export default {
 p{
     margin-bottom: 0px;
     text-align: left;
+}
+a:hover {
+  color: red;
+}
+a{
+    color:blue;
+    font-size:bold;
 }
 </style>
