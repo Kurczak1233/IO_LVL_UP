@@ -1,6 +1,6 @@
 <template>
 <b-container fluid class="advertisement">
-  <b-row class="images">
+  <b-row class="images m-0">
     <b-col class="First-part" cols="6"><p class="adv-text1 color-white">Początkujący?</p></b-col>
     <b-col class="Second-part" cols="6"><p class="adv-text1 color-green">Zaawanasowany?</p></b-col>
   </b-row>
@@ -30,6 +30,7 @@ export default {
    background-size: cover;
    background-repeat:no-repeat;
    background-position:center;
+   width:100%;
 
 }
 .adv-text1{
@@ -52,6 +53,7 @@ export default {
    background-size: cover;
    background-repeat:no-repeat;
    background-position:center;
+   width:100%;
 }
 
 </style>

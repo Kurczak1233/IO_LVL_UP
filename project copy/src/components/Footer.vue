@@ -57,7 +57,8 @@ p{
     text-align: left;
 }
 a:hover {
-  color: red;
+  text-decoration: none;
+  color:blue;
 }
 a{
     color:blue;
