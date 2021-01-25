@@ -1,7 +1,7 @@
 <template>
-<b-container>
-    <b-row>
-        <b-col cols="12"><a href="#">JOIN US TODAY</a></b-col>
+<b-container fluid class="background-color">
+    <b-row> 
+        <b-col cols="12" class="p-5"><b-link href="#foo" class="big-font text-danger">JOIN US TODAY</b-link></b-col>
     </b-row>
 </b-container>
 </template>
@@ -16,7 +16,7 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color: rgb(217,218,211);
+    background-color: rgba(252, 233, 233, 0.74);
 }
 .big-font
 {
