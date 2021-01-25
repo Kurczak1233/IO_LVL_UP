@@ -1,7 +1,7 @@
 <template>
 <b-container>
     <b-row class="fluid">
-        <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Kurczak1233/project%20copy/src/assets/59-592818_globus-png-globus-jpg-transparent-png.png?raw=true" alt="Logo projektu"> 
+        <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Kurczak1233/project%20copy/src/assets/pngfind.com-world-png-592818%20(1).png?raw=true" alt="Logo projektu"> 
         <b-col class="text-center d-none d-md-block" cols="4">Test</b-col>
         <b-col class="text-center d-none d-md-block" cols="4">Test</b-col>
         <b-col class="text-center d-none d-md-block" cols="4">Test</b-col>
