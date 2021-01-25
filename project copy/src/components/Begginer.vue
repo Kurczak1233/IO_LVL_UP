@@ -1,6 +1,6 @@
 <template>
 <b-container fluid class="begginer-banner">
-  <b-row class="begginer-slider">
+  <b-row class="begginer-slider pt-3">
     <b-col class="img fluid-md d-none d-md-block my-auto" cols="12" md="6"><b-img class="First-part img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/B2+.png?raw=true" alt="CERF Levels from B1+"></b-img></b-col>
     <b-col class="img fluid-md d-xsm-block d-md-none mt-3 my-auto" cols="12" md="6"><b-img class="First-part img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Small%20CERF%20lvls.png?raw=true" alt="CERF Levels from B1+"></b-img></b-col>
 <b-col class="text-center d-block d-md-none mt-2 mb-5" md=12>Określona ścieżka rozwoju</b-col>
@@ -27,7 +27,7 @@ export default {
     height:250px;
 }
 .begginer-banner{
-    background: rgb(217,218,211);
+    background: rgba(252, 233, 233, 0.74);
 }
 .First-part img{
     padding:5px;
