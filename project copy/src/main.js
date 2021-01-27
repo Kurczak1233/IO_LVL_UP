@@ -8,7 +8,9 @@ import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBook, faStar, faUserFriends, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueRouter from 'vue-router'
 
+Vue.use(VueRouter)
 library.add(faUserSecret, faUserFriends, faBook, faStar)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
