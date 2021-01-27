@@ -30,9 +30,14 @@
               <b-form-input required type="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
             </b-col>
       </b-row>
-      <b-row class="pb-5 mt-3">
+      <b-row class="mt-3">
         <b-col class="col-11 offset-1 pt-1">
         <b-form-checkbox type="checkbox" required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit dolore impedit minima maiores at?</b-form-checkbox>
+        </b-col>
+        </b-row>
+        <b-row class="pb-5 mt-3">
+        <b-col class="col-3 offset-5 pt-1">
+        <b-button type="submit" class="btn btn-control btn-success">Register</b-button>
         </b-col>
         </b-row>
     </b-container>
