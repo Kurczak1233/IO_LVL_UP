@@ -1,13 +1,13 @@
 <template>
   <body>
       <b-container fluid>
-        <b-row>
-          <b-col class="col-3 text-size-big text-success background-dark">Tutaj będzie nawbarek! ;)</b-col>
-          <b-col class="col-3 text-size-big text-success background-dark">Tutaj będzie nawbarek! ;)</b-col>
-          <b-col class="col-3 text-size-big text-success background-dark">Tutaj będzie nawbarek! ;)</b-col>
-          <b-col class="col-3 text-size-big text-success background-dark">Tutaj będzie nawbarek! ;)</b-col>
+        <b-row class="pb-4">
+          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">Register</router-link></b-col>
+          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">Login</router-link></b-col>
         </b-row>
       </b-container>
+      <router-view/>
       <HeaderBanner></HeaderBanner> 
       <nav><Navigation></Navigation></nav>
       <Advertisement></Advertisement>
@@ -63,7 +63,7 @@ header{
 }
 .text-size-big
 {
-    font-size: 4rem;
+    font-size: 2rem;
 }
 .background-dark{
   background-color: darkslategrey;
