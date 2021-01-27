@@ -1,6 +1,14 @@
 <template>
   <body>
-      <header><HeaderBanner></HeaderBanner></header> 
+      <b-container fluid>
+        <b-row>
+          <b-col class="col-3 text-size-big text-success background-dark">Tutaj będzie nawbarek! ;)</b-col>
+          <b-col class="col-3 text-size-big text-success background-dark">Tutaj będzie nawbarek! ;)</b-col>
+          <b-col class="col-3 text-size-big text-success background-dark">Tutaj będzie nawbarek! ;)</b-col>
+          <b-col class="col-3 text-size-big text-success background-dark">Tutaj będzie nawbarek! ;)</b-col>
+        </b-row>
+      </b-container>
+      <HeaderBanner></HeaderBanner> 
       <nav><Navigation></Navigation></nav>
       <Advertisement></Advertisement>
       <Begginer></Begginer>
@@ -53,5 +61,11 @@ font-family: 'Nunito', sans-serif;
 header{
   padding-top: 20px;
 }
-
+.text-size-big
+{
+    font-size: 4rem;
+}
+.background-dark{
+  background-color: darkslategrey;
+}
 </style>
