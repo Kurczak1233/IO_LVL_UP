@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 :root{
     box-sizing:border-box;
     
@@ -56,6 +56,7 @@ font-family: 'Nunito', sans-serif;
   background: rgb(217,218,211);
   background: linear-gradient(180deg, rgba(217,218,211,1) 0%, rgba(184,179,178,1) 100%);
   background:cover;
+  background-repeat: no-repeat;
 }
 header{
   padding-top: 20px;

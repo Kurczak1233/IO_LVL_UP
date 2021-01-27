@@ -1,6 +1,10 @@
 <template>
   <body>
-        <h1>Register!</h1>
+    <b-container fluid>
+      <b-row class="">
+         <h1>Register!</h1>
+      </b-row>
+    </b-container>
   </body>
 </template>
 
@@ -12,6 +16,12 @@ export default {
 }
 </script>
 
-<style>
+<style >
+body
+{
+  background-color: rgb(217,218,211);
+  width: 100%;
+  height:100%;
+}
 
 </style>
