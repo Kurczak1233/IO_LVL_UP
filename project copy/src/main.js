@@ -8,15 +8,29 @@ import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBook, faStar, faUserFriends, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueRouter from 'vue-router'
+import Register from './components/Register.vue'
+import MainPage from './components/MainPage.vue'
+ Vue.use(VueRouter)
+ 
+ const routes = [
+   {path: '/', name: 'home', component: MainPage},
+  { path: '/register', name: 'reg', component: Register},
+  { path: '/reg', redirect: '/register'}
+]
 
+const router = new VueRouter({
+  routes // short for `routes: routes`
+})
 library.add(faUserSecret, faUserFriends, faBook, faStar)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(BootstrapVueIcons)
- 
+
 Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
+ router: router
 }).$mount('#app')
 
