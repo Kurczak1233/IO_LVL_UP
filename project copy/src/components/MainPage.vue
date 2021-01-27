@@ -1,7 +1,6 @@
 <template>
   <body>
-    <router-view></router-view>
-      <!-- <b-container fluid>
+      <b-container fluid>
         <b-row class="pb-4">
           <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">Register</router-link></b-col>
@@ -14,30 +13,29 @@
       <Begginer></Begginer>
       <Achi></Achi>
       <AdvBannerBottom></AdvBannerBottom>
-      <Footer></Footer> -->
+      <Footer></Footer>
   </body>
 </template>
 
 <script>
-// import HeaderBanner from './components/HeaderBanner.vue'
-// import Navigation from './components/Navigation.vue'
-// import Advertisement from './components/Advertisement.vue'
-// import Begginer from './components/Begginer.vue'
-// import Achi from './components/Achi.vue'
-// import AdvBannerBottom from './components/AdvBannerBottom.vue'
-// import Footer from './components/Footer.vue'
-// import MainPage from './components/MainPage.vue'
+import HeaderBanner from './HeaderBanner.vue'
+import Navigation from './Navigation.vue'
+import Advertisement from './Advertisement.vue'
+import Begginer from './Begginer.vue'
+import Achi from './Achi.vue'
+import AdvBannerBottom from './AdvBannerBottom.vue'
+import Footer from './Footer.vue'
+
 export default {
-  name: 'App',
+  name: 'MainPage',
   components: {
-    // MainPage
-    // HeaderBanner,
-    // Navigation,
-    // Advertisement,
-    // Begginer,
-    // Achi,
-    // AdvBannerBottom,
-    // Footer
+    HeaderBanner,
+    Navigation,
+    Advertisement,
+    Begginer,
+    Achi,
+    AdvBannerBottom,
+    Footer
   }
 }
 </script>

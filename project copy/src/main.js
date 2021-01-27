@@ -10,9 +10,11 @@ import { faBook, faStar, faUserFriends, faUserSecret } from '@fortawesome/free-s
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueRouter from 'vue-router'
 import Register from './components/Register.vue'
+import MainPage from './components/MainPage.vue'
  Vue.use(VueRouter)
  
  const routes = [
+   {path: '/', name: 'home', component: MainPage},
   { path: '/register', name: 'reg', component: Register},
   { path: '/reg', redirect: '/register'}
 ]
@@ -29,6 +31,6 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
- router
+ router: router
 }).$mount('#app')
 
