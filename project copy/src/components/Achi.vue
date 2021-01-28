@@ -21,7 +21,8 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color: rgb(3,3,3);
+background: rgb(239,233,233);
+background: linear-gradient(180deg, rgb(66, 65, 65) 0%, rgb(36, 34, 34) 100%);
 }
 .big-font
 {
