@@ -1,6 +1,6 @@
 <template>
   <body>
-    <nav>
+     <b-nav>  <!--fixed="top" class="headerr" fluid -->
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
           <b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
@@ -22,7 +22,7 @@
           <b-col class="col-xl-2 col-4 text-success mt-auto mb-auto mr-4"><router-link to="/register"><b-button class="form-control btn btn-success">Login <b-icon icon="person-check-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
         </b-row>
       </b-container>
-      </nav>
+      </b-nav>
       <HeaderBanner></HeaderBanner> 
       <Advertisement></Advertisement>
       <Begginer></Begginer>
