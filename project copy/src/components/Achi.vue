@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color: rgb(217,218,211);
+    background-color: rgb(0,0,0);
 }
 .big-font
 {
