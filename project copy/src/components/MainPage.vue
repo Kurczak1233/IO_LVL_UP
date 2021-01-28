@@ -1,14 +1,29 @@
 <template>
   <body>
-      <b-container fluid>
-        <b-row class="pb-4">
-          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">IO_LVL_UP</router-link></b-col>
-          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">Register</router-link></b-col>
-          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">Login</router-link></b-col>
+    <nav>
+      <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
+        <b-row class="pt-3 pb-3">
+          <b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
+            <b-list-group horizontal>
+  <b-list-group-item class="rounded-edges-left" variant="primary" href="#some-link">Home</b-list-group-item>
+  <b-list-group-item variant="primary" href="#">Contact</b-list-group-item>
+  <b-list-group-item class="rounded-edges-right" variant="primary" href="#">About us</b-list-group-item>
+            </b-list-group>
+</b-col>
+          <b-col class="col-3 d-xl-none">  <b-dropdown size="lg"  variant="link" toggle-class="text-decoration-none" no-caret>   
+    <template #button-content>
+       <b-icon icon="list" font-scale="3"></b-icon>
+    </template>
+    <b-dropdown-item href="#">An item</b-dropdown-item>
+    <b-dropdown-item href="#">Another item</b-dropdown-item>
+  </b-dropdown></b-col>
+          <b-col class="col-xl-2 col-4 mt-auto mb-auto text-success"><router-link to="/register"><b-button class="form-control btn btn-warning">Register <b-icon icon="person-plus-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
+          <b-col class="col-xl-2 col-4 text-success mt-auto mb-auto mr-4"><router-link to="/register"><b-button class="form-control btn btn-success">Login <b-icon icon="person-check-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
         </b-row>
       </b-container>
+      </nav>
       <HeaderBanner></HeaderBanner> 
-      <nav><Navigation></Navigation></nav>
       <Advertisement></Advertisement>
       <Begginer></Begginer>
       <Achi></Achi>
@@ -19,7 +34,6 @@
 
 <script>
 import HeaderBanner from './HeaderBanner.vue'
-import Navigation from './Navigation.vue'
 import Advertisement from './Advertisement.vue'
 import Begginer from './Begginer.vue'
 import Achi from './Achi.vue'
@@ -30,7 +44,6 @@ export default {
   name: 'MainPage',
   components: {
     HeaderBanner,
-    Navigation,
     Advertisement,
     Begginer,
     Achi,
@@ -67,5 +80,19 @@ header{
 }
 .background-dark{
   background-color: darkslategrey;
+}
+.color-bluish
+{
+  background-color: rgb(105, 208, 245)
+}
+.rounded-edges-left
+{
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.rounded-edges-right
+{
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
 </style>
