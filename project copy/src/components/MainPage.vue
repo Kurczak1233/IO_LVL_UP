@@ -1,10 +1,10 @@
 <template>
   <body>
-      <b-container fluid>
-        <b-row class="pb-4">
-          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">IO_LVL_UP</router-link></b-col>
-          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">Register</router-link></b-col>
-          <b-col class="col-4 text-size-big text-success background-dark"><router-link to="/register">Login</router-link></b-col>
+      <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
+        <b-row class="pt-3 pb-3">
+          <b-col class="col-4 text-size-big text-success"><router-link to="/register">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-4 text-size-big text-success"><router-link to="/register">Register</router-link></b-col>
+          <b-col class="col-4 text-size-big text-success"><router-link to="/register">Login</router-link></b-col>
         </b-row>
       </b-container>
       <HeaderBanner></HeaderBanner> 
@@ -67,5 +67,9 @@ header{
 }
 .background-dark{
   background-color: darkslategrey;
+}
+.color-bluish
+{
+  background-color: rgb(105, 208, 245)
 }
 </style>

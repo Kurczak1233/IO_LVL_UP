@@ -46,18 +46,7 @@
 
 <script>
 export default {
-  name: 'Register',
-    data() {
-      return {
-        types: [
-          'text',
-          'number',
-          'email',
-          'password',
-        ]
-        }
-    }
-    
+  name: 'Register' 
 }
 </script>
 
