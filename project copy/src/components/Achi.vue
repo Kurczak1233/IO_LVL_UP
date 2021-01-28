@@ -2,7 +2,7 @@
 <b-container class="background-color pb-5" fluid>
     <b-row class="fluid">
     <b-col cols="12" class="pb-1">
-        <img id="banner" class="img-fluid text-center pt-5 pb-5" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/world_transparent.png?raw=true" alt="Logo projektu"> 
+        <img id="banner" class="img-fluid text-center pt-5 pb-5" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/world_transparent%20(3).png?raw=true" alt="Logo projektu"> 
     </b-col>
         <b-col class="text-center d-block col-12 col-md-4"><b-col cols="12" class="big-font"><font-awesome-icon :icon="['fas', 'user-friends']" /></b-col><b-col cols="12" class="medium-font">Over 30000 registered users!</b-col></b-col>
         <b-col class="text-center d-block col-12 col-md-4"><b-col cols="12" class="big-font"><font-awesome-icon :icon="['fas', 'book']" /></b-col><b-col cols="12"  class="medium-font">The greatest amount of educational resources</b-col></b-col>
