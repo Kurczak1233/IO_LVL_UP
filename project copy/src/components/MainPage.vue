@@ -3,7 +3,7 @@
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
           <b-col class="col-4 text-size-big text-success"><router-link to="/register">IO_LVL_UP</router-link></b-col>
-          <b-col class="col-4 text-size-big text-success"><router-link to="/register">Register</router-link></b-col>
+          <b-col class="col-4 text-size-big text-success"><router-link to="/register">Registerr</router-link></b-col>
           <b-col class="col-4 text-size-big text-success"><router-link to="/register">Login</router-link></b-col>
         </b-row>
       </b-container>
