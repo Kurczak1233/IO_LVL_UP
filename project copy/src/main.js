@@ -11,19 +11,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueRouter from 'vue-router'
 import Register from './components/Register.vue'
 import MainPage from './components/MainPage.vue'
-import tlogin from './components/tlogin.vue'
-import tregister from './components/tregister.vue'
-import tsecret from './components/tsecret.vue'
 import UserPage from '../views/MainUserPage.vue'
 
 
 import Login from './components/Login.vue'
 import axios from 'axios'
 import firebase from 'firebase/app'
-// import { firebase } from '@firebase/app'
-// import '@firebase/auth'
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
   const firebaseConfig = {
     apiKey: "AIzaSyASQaSEYaG-8Vgv82gss3Jwgr4H9lCbwA8",
     authDomain: "project-d22a2.firebaseapp.com",
@@ -35,7 +29,6 @@ import firebase from 'firebase/app'
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
 
 Vue.prototype.$axios = axios; /*  */
 
@@ -44,11 +37,8 @@ Vue.prototype.$axios = axios; /*  */
 const routes = [
     {path: '/', name: 'home', component: MainPage},
    { path: '/register', name: 'reg', component: Register},
-   { path: '/testlog', name: 'test1', component: tlogin},
-   { path: '/testreg', name: 'test2', component: tregister},
-   { path: '/testsec', name: 'test3', component: tsecret, meta: {requiresAuth: true}},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
-   { path: '/reg', redirect: '/register'}, /*Dla testu*/
+  //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
  

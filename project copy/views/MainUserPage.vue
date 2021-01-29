@@ -1,10 +1,17 @@
 <template>
-    <div>USERPAGE!</div>
+    <div>USERPAGE!
+
+        <LoggedIn></LoggedIn>
+    </div>
 </template>
 
 <script>
+import LoggedIn from '../src/components/LoggedIn.vue'
+
 export default {
-    
+     components: {
+    LoggedIn
+  }
 }
 </script>
 
