@@ -1,3 +1,15 @@
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="//ciasteczka.eu/cookiesEU-latest.min.js"></script>
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+	jQuery.fn.cookiesEU({
+		position:	'top'
+	});
+});
+
+</script>
+
 <template>
   <body>
      <b-nav>  <!--fixed="top" class="headerr" fluid -->
