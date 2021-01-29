@@ -37,8 +37,13 @@
         </b-row>
         <b-row class="pb-5 mt-3">
         <b-col class="col-3 offset-5 pt-1">
+        <a href="/terms.pdf" download="terms.pdf">Terms</a>
+        <br>
+        <input type="checkbox" id="zazn">
+        <br> <label for="zazn">I agree</label>
         <b-button type="submit" class="btn btn-control btn-success">Register</b-button>
-        </b-col>
+        <br>
+         </b-col>
         </b-row>
     </b-container>
   </body>
