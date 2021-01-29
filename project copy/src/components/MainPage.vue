@@ -19,7 +19,7 @@
     <b-dropdown-item href="#">Another item</b-dropdown-item>
   </b-dropdown></b-col>
           <b-col class="col-xl-2 col-4 mt-auto mb-auto text-success"><router-link to="/register"><b-button class="form-control btn btn-warning">Register <b-icon icon="person-plus-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
-          <b-col class="col-xl-2 col-4 text-success mt-auto mb-auto mr-4"><router-link to="/register"><b-button class="form-control btn btn-success">Login <b-icon icon="person-check-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
+          <b-col class="col-xl-2 col-4 text-success mt-auto mb-auto mr-4"><router-link to="/login"><b-button class="form-control btn btn-success">Login <b-icon icon="person-check-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
         </b-row>
       </b-container>
       </b-nav>
