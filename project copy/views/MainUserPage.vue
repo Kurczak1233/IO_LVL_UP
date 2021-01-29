@@ -1,16 +1,16 @@
 <template>
     <div>USERPAGE!
 
-        <LoggedIn></LoggedIn>
+        <LoggedInButton></LoggedInButton>
     </div>
 </template>
 
 <script>
-import LoggedIn from '../src/components/LoggedIn.vue'
+import LoggedInButton from '../src/components/LoggedInButton.vue'
 
 export default {
      components: {
-    LoggedIn
+    LoggedInButton
   }
 }
 </script>
