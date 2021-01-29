@@ -14,6 +14,9 @@ import MainPage from './components/MainPage.vue'
 import tlogin from './components/tlogin.vue'
 import tregister from './components/tregister.vue'
 import tsecret from './components/tsecret.vue'
+import UserPage from '../views/MainUserPage.vue'
+
+
 import Login from './components/Login.vue'
 import axios from 'axios'
 import firebase from 'firebase/app'
@@ -44,6 +47,7 @@ const routes = [
    { path: '/testlog', name: 'test1', component: tlogin},
    { path: '/testreg', name: 'test2', component: tregister},
    { path: '/testsec', name: 'test3', component: tsecret, meta: {requiresAuth: true}},
+   { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
@@ -74,8 +78,15 @@ Vue.use(BootstrapVueIcons)
 
 Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App),
- router: router
-}).$mount('#app')
+let app;
 
+firebase.auth().onAuthStateChanged(user=> {
+  console.log(user);
+  if(!app) {
+    app = new Vue({
+      render: h => h(App),
+     router: router
+    }).$mount('#app')
+    
+  }
+})

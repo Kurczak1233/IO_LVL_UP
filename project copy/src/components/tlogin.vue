@@ -35,7 +35,7 @@ export default {
             
             const val = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
             console.log(val);
-            this.$router.replace({name: "home"})
+            this.$router.replace({name: "userpage"})
             }catch(err)
             {
                 console.log(err)
