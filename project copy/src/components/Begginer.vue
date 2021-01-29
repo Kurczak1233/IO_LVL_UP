@@ -8,6 +8,10 @@
 <b-col class="text-center d-block d-md-none mt-2 mb-5" md=12>Unique materials!</b-col>
     <b-col class="Third-part my-auto" cols="12" md="3"><b-img class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Test.png?raw=true" alt="English book"></b-img></b-col>
 <b-col class="text-center d-block d-md-none mt-2 mb-5" md=12>Cambridge English Exams!</b-col>
+
+
+
+  
     <b-col class="text-center d-none d-md-block mt-4 text-size-big" md=6>Clear education career!</b-col>
     <b-col class="text-center d-none d-md-block" md=3><a href="\pliki.pdf" download="pliki.pdf">Przystępne materiały</a></b-col>
     <b-col class="text-center d-none d-md-block  mt-4 text-size-big"   md=3>Unique materials!</b-col>
