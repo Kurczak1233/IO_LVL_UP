@@ -9,12 +9,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBook, faStar, faUserFriends, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueRouter from 'vue-router'
-import Register from './components/Register.vue'
+import Register from '../views/Register.vue'
 import MainPage from '../views/MainPage.vue'
 import UserPage from '../views/MainUserPage.vue'
-
-
-import Login from './components/Login.vue'
+import Login from '../views/Login.vue'
 import axios from 'axios'
 import firebase from 'firebase/app'
 
