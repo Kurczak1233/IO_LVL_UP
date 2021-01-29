@@ -23,7 +23,6 @@
             <p class="text-md-left text-center "><b-link class="h5">Twitter</b-link></p>
             <p class="text-md-left text-center "><b-link class="h5">YouTube</b-link></p>
         </b-col>
-  
         <b-col class="col-12 text-small text-grey pt-3">Copyright 2021 IO_LVL_UP<sup>&#169;</sup>. All rights reserved worldwide.</b-col>
     </b-row>
 </b-container>
@@ -33,6 +32,7 @@
 
 
 <script>
+
 export default {
   name: 'AdvBannerBottom',
 }

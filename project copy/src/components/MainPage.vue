@@ -7,7 +7,6 @@ jQuery(document).ready(function(){
 		position:	'top'
 	});
 });
-
 </script>
 
 <template>
