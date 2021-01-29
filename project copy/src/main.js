@@ -9,14 +9,34 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBook, faStar, faUserFriends, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueRouter from 'vue-router'
-import Register from './components/Register.vue'
-import MainPage from './components/MainPage.vue'
-import Login from './components/Login.vue'
+import Register from '../views/Register.vue'
+import MainPage from '../views/MainPage.vue'
+import UserPage from '../views/MainUserPage.vue'
+import Login from '../views/Login.vue'
+import axios from 'axios'
+import firebase from 'firebase/app'
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyASQaSEYaG-8Vgv82gss3Jwgr4H9lCbwA8",
+    authDomain: "project-d22a2.firebaseapp.com",
+    projectId: "project-d22a2",
+    storageBucket: "project-d22a2.appspot.com",
+    messagingSenderId: "203113554810",
+    appId: "1:203113554810:web:9e5e54f97670a7ec2decc3",
+    measurementId: "G-98LMQPQ6CF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+Vue.prototype.$axios = axios; /*  */
+
+
 
 const routes = [
     {path: '/', name: 'home', component: MainPage},
    { path: '/register', name: 'reg', component: Register},
-   { path: '/reg', redirect: '/register'}, /*Dla testu*/
+   { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
+  //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
  
@@ -26,6 +46,19 @@ const routes = [
 const router = new VueRouter({
   routes // short for `routes: routes`
 })
+router.beforeEach((to, from, next)=>{
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  const isAuthenticated = firebase.auth().currentUser;
+  if(requiresAuth && !isAuthenticated)
+  {
+    next("/login");
+  }
+  else {
+    next();
+  }
+})
+
+
 library.add(faUserSecret, faUserFriends, faBook, faStar)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -33,8 +66,15 @@ Vue.use(BootstrapVueIcons)
 
 Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App),
- router: router
-}).$mount('#app')
+let app;
 
+firebase.auth().onAuthStateChanged(user=> {
+  console.log(user);
+  if(!app) {
+    app = new Vue({
+      render: h => h(App),
+     router: router
+    }).$mount('#app')
+    
+  }
+})

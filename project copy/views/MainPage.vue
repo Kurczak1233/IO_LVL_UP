@@ -24,30 +24,31 @@
       </b-container>
       </b-nav>
       <HeaderBanner></HeaderBanner> 
-      <Advertisement></Advertisement>
-      <Begginer></Begginer>
-      <Achi></Achi>
-      <AdvBannerBottom></AdvBannerBottom>
+      <BegginerOrAdvancedSection></BegginerOrAdvancedSection>
+      <WebsiteOfferSection></WebsiteOfferSection>
+      <GlobalAchievementsSection></GlobalAchievementsSection>
+      <BottomAdvertisementBanner></BottomAdvertisementBanner>
       <Footer></Footer>
+      
   </body>
 </template>
 
 <script>
-import HeaderBanner from './HeaderBanner.vue'
-import Advertisement from './Advertisement.vue'
-import Begginer from './Begginer.vue'
-import Achi from './Achi.vue'
-import AdvBannerBottom from './AdvBannerBottom.vue'
-import Footer from './Footer.vue'
+import HeaderBanner from '../src/components/HeaderBanner.vue'
+import BegginerOrAdvancedSection from '../src/components/BegginerOrAdvancedSection.vue'
+import WebsiteOfferSection from '../src/components/WebsiteOfferSection.vue'
+import GlobalAchievementsSection from '../src/components/GlobalAchievementsSection.vue'
+import BottomAdvertisementBanner from '../src/components/BottomAdvertisementBanner.vue'
+import Footer from '../src/components/Footer.vue'
 
 export default {
   name: 'MainPage',
   components: {
     HeaderBanner,
-    Advertisement,
-    Begginer,
-    Achi,
-    AdvBannerBottom,
+    BegginerOrAdvancedSection,
+    WebsiteOfferSection,
+    GlobalAchievementsSection,
+    BottomAdvertisementBanner,
     Footer
   }
 }

@@ -6,12 +6,13 @@
          <b-col class="col-12 text-size-big text-center pt-2">LOGGING PANEL</b-col>
          <b-col class="col-12"><hr></b-col>
       </b-row>
+      <b-form @submit.prevent="pressed">
       <b-row class="mt-3">
            <b-col class="col-2 offset-1 pt-1" >
               <label for="Login">Login:</label>
            </b-col>
-           <b-col class="col-8">
-              <b-form-input required type="text" class="form-control" aria-describedby="Login" placeholder="Insert your login" id="login"></b-form-input>
+           <b-col class="col-8" >
+              <b-form-input required type="email" v-model="email" :state="validation" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
             </b-col>
       </b-row>
       <b-row class="mt-3">
@@ -19,7 +20,7 @@
               <label for="Login">Password:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="password" class="form-control" aria-describedby="Login" placeholder="Insert your password" id="login"></b-form-input>
+              <b-form-input required type="password" v-model="password" :state="validation" class="form-control" aria-describedby="Login" placeholder="Insert your password" id="login"></b-form-input>
             </b-col>
       </b-row>
       <b-row class="mt-3">
@@ -27,15 +28,44 @@
         <b-row class="pb-5 mt-3">
         <b-col class="col-4 offset-4 pt-1">
         <b-button type="submit" class="form-control btn btn-control btn-success">Log in</b-button>
+        <!-- <b-row class="error" v-if="error">{{error.message}}</b-row> -->
         </b-col>
         </b-row>
+      </b-form>
     </b-container>
   </body>
 </template>
 
+
+
+
 <script>
+import { firebase } from '@firebase/app'
+import '@firebase/auth'
 export default {
-  name: 'Login' 
+    name: 'Login',
+    data()
+    {
+      
+        return{
+            email: '',
+            password: '',
+            error: 'Login or password are incorrect. Please try again.',
+        }
+    },
+    methods:
+    {
+        async pressed(){
+            try{ 
+            const val = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+            console.log(val);
+            this.$router.replace({name: "userpage"})
+            }catch(err)
+            {
+                console.log(err)
+            }
+        }
+    }
 }
 </script>
 
