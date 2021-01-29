@@ -10,7 +10,7 @@ import { faBook, faStar, faUserFriends, faUserSecret } from '@fortawesome/free-s
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueRouter from 'vue-router'
 import Register from './components/Register.vue'
-import MainPage from './components/MainPage.vue'
+import MainPage from '../views/MainPage.vue'
 import UserPage from '../views/MainUserPage.vue'
 
 

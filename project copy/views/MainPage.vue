@@ -34,12 +34,12 @@
 </template>
 
 <script>
-import HeaderBanner from './HeaderBanner.vue'
-import Advertisement from './Advertisement.vue'
-import Begginer from './Begginer.vue'
-import Achi from './Achi.vue'
-import AdvBannerBottom from './AdvBannerBottom.vue'
-import Footer from './Footer.vue'
+import HeaderBanner from '../src/components/HeaderBanner.vue'
+import Advertisement from '../src/components/Advertisement.vue'
+import Begginer from '../src/components/Begginer.vue'
+import Achi from '../src/components/Achi.vue'
+import AdvBannerBottom from '../src/components/AdvBannerBottom.vue'
+import Footer from '../src/components/Footer.vue'
 
 export default {
   name: 'MainPage',
