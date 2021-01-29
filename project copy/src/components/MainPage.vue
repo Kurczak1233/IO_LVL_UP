@@ -29,6 +29,10 @@
       <Achi></Achi>
       <AdvBannerBottom></AdvBannerBottom>
       <Footer></Footer>
+      <LoggedIn></LoggedIn>
+      <router-link to="/testlog">Login</router-link>
+      <router-link to="/testreg">Register</router-link>
+      <router-link to="/testsec">Secret</router-link>
   </body>
 </template>
 
@@ -39,6 +43,7 @@ import Begginer from './Begginer.vue'
 import Achi from './Achi.vue'
 import AdvBannerBottom from './AdvBannerBottom.vue'
 import Footer from './Footer.vue'
+import LoggedIn from './LoggedIn.vue'
 
 export default {
   name: 'MainPage',
@@ -48,7 +53,8 @@ export default {
     Begginer,
     Achi,
     AdvBannerBottom,
-    Footer
+    Footer,
+    LoggedIn
   }
 }
 </script>
