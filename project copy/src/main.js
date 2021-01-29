@@ -11,13 +11,17 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import VueRouter from 'vue-router'
 import Register from './components/Register.vue'
 import MainPage from './components/MainPage.vue'
+import Login from './components/Login.vue'
+
+const routes = [
+    {path: '/', name: 'home', component: MainPage},
+   { path: '/register', name: 'reg', component: Register},
+   { path: '/reg', redirect: '/register'}, /*Dla testu*/
+   { path: '/login', name:"log", component: Login} 
+ ]
+ 
  Vue.use(VueRouter)
  
- const routes = [
-   {path: '/', name: 'home', component: MainPage},
-  { path: '/register', name: 'reg', component: Register},
-  { path: '/reg', redirect: '/register'}
-]
 
 const router = new VueRouter({
   routes // short for `routes: routes`
