@@ -1,7 +1,7 @@
 <template>
   <body>
     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto margin10 background-bluish" fluid>
-            AHHHHHHHHHHHHHHHH zapomniałme xD
+            Tutaj wstawić quiz. Dynamiką sprawdzania "ONCLICK trzeba się też zająć..."
     </b-container>
   </body>
 </template>
