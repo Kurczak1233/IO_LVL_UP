@@ -50,7 +50,7 @@
 
                                 <b-row>
                   <b-col class="col-12"> Your actual progress:
-                                    <div class="progress mt-3">
+                                    <div class="progress mt-3"> <!--Można to rozbić na 5 pojedynczych zamiast jednego długiego paska-->
   <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20">Speaking</div>
   <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 20%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20">Writing</div>
   <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 20%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20">Grammar</div>
