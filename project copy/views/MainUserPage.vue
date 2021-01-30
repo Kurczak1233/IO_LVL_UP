@@ -34,11 +34,11 @@
               <b-row>
                 <b-col class="col-5 mt-auto mb-auto text-center font-large"><p class="d-none d-md-block">Available classes:</p></b-col>
                 <b-list-group class="col-11 pr-1 ml-auto mr-auto ml-md-0 mr-md-0 col-md-6">
-  <b-list-group-item class="" variant="info" href="#">Speaking</b-list-group-item>
-  <b-list-group-item class="" variant="info" href="#">Writing</b-list-group-item>
-  <b-list-group-item class="" variant="info" href="#">Grammar</b-list-group-item>
-  <b-list-group-item class="" variant="info" href="#">Vocabulary</b-list-group-item>
-  <b-list-group-item class="" variant="info" href="#">Listening</b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Speaking">Speaking</router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Writing">Writing</router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Grammar">Grammar</router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Reading">Reading</router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Listening">Listening</router-link></b-list-group-item>
             </b-list-group>
               </b-row>
               <b-row>
@@ -54,7 +54,7 @@
   <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20">Speaking</div>
   <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 20%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20">Writing</div>
   <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 20%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20">Grammar</div>
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20">Vocabulary</div>
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20">Reading</div>
   <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 15%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20">Listening</div>
   </div>
                       
