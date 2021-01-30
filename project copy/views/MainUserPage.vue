@@ -27,19 +27,22 @@
       <!---->
         <b-container fluid>
           <b-row>
-          <b-col class="col-4 pt-3 text-center color-bluish" fluid id="aside">
+          <b-col class="col-4 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
               <b-row>
                 <b-col class="col-12 mb-3 text-center font-large">Your level: (player-level)</b-col>
               </b-row>
               <b-row>
-                <b-col class="col-6 text-center font-medium">Available classes:</b-col>
+                <b-col class="col-6 mt-auto mb-auto text-center font-large">Available classes:</b-col>
                 <b-list-group>
-  <b-list-group-item class="" variant="" href="#">Speaking</b-list-group-item>
-  <b-list-group-item class="" variant="" href="#">Writing</b-list-group-item>
-  <b-list-group-item class="" variant="" href="#">Grammar</b-list-group-item>
-  <b-list-group-item class="" variant="" href="#">Vocabulary</b-list-group-item>
-  <b-list-group-item class="" variant="" href="#">Listening</b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#">Speaking</b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#">Writing</b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#">Grammar</b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#">Vocabulary</b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#">Listening</b-list-group-item>
             </b-list-group>
+              </b-row>
+              <b-row>
+                <b-col class="col-12 mt-4 mb-3">Available lessons left: (35 hours)</b-col>
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish" fluid id="main">
