@@ -32,8 +32,8 @@
                 <b-col class="col-12 mb-3 text-center font-large">Your level: (player-level)</b-col>
               </b-row>
               <b-row>
-                <b-col class="col-6 mt-auto mb-auto text-center font-large">Available classes:</b-col>
-                <b-list-group>
+                <b-col class="col-5 mt-auto mb-auto text-center font-large"><p class="d-none d-md-block">Available classes:</p></b-col>
+                <b-list-group class="col-11 pr-1 ml-auto mr-auto ml-md-0 mr-md-0 col-md-6">
   <b-list-group-item class="" variant="info" href="#">Speaking</b-list-group-item>
   <b-list-group-item class="" variant="info" href="#">Writing</b-list-group-item>
   <b-list-group-item class="" variant="info" href="#">Grammar</b-list-group-item>
