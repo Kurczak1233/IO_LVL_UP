@@ -51,12 +51,13 @@
                                 <b-row>
                   <b-col>
                                     <div class="progress">
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20"></div>
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 22%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20"></div>
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 20%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20"></div>
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20"></div>
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 5%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20"></div>
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20">Speaking</div>
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 20%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20">Writing</div>
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 20%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20">Grammar</div>
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20">Vocabulary</div>
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 15%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20">Listening</div>
   </div>
+  
                   </b-col>
                 </b-row>
                 </b-col>
