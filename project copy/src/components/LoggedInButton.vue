@@ -1,12 +1,11 @@
 <template>
-    <div>
-        Logged in
-        <span v-if="loggedIn">Yes</span>
+    <b-container>
+        <span v-if="loggedIn" class="text-primary">Logged as: <p class="text-danger">{{email}}</p></span>
         <span v-else>No</span>
         <div>
-            <button @click="signOut"> Sign out </button>
+            <b-button class="form-control btn btn-success" @click="signOut"> Log out </b-button>
         </div>
-    </div>
+     </b-container>
 
 </template>
 
@@ -17,6 +16,7 @@ import '@firebase/auth'
 export default {
     created()
     {
+        
         firebase.auth().onAuthStateChanged(user=>{
             this.loggedIn = !!user;
             // if(user){
@@ -25,11 +25,13 @@ export default {
             //     this.loggedIn = false;
             // }
         })
+        this.email = firebase.auth().currentUser.email 
     },
     data()
     {
         return {
-            loggedIn: false
+            loggedIn: false,
+            email: this.$root.email
         }
     },
     methods: {
