@@ -18,7 +18,7 @@
     <b-dropdown-item href="#">An item</b-dropdown-item>
     <b-dropdown-item href="#">Another item</b-dropdown-item>
   </b-dropdown></b-col>
-          <b-col class="col-xl-2 col-4 text-success mt-auto mb-auto mr-4"><LoggedInButton></LoggedInButton></b-col>
+          <b-col class="col-xl-2 col-8 text-success text-center mt-auto mb-auto mr-4"><LoggedInButton></LoggedInButton></b-col>
         </b-row>
       </b-container>
       </b-nav>

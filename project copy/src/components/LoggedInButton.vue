@@ -1,6 +1,6 @@
 <template>
     <b-container>
-        <span v-if="loggedIn" class="text-primary">Logged as: {{email}}</span>
+        <span v-if="loggedIn" class="text-primary">Logged as: <p class="text-danger">{{email}}</p></span>
         <span v-else>No</span>
         <div>
             <b-button class="form-control btn btn-success" @click="signOut"> Log out </b-button>
