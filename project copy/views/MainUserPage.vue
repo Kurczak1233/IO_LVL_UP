@@ -45,9 +45,21 @@
                 <b-col class="col-12 mt-4 mb-3">Available lessons left: (35 hours)</b-col>
               </b-row>
           </b-col>
-          <b-col class="col-8 text-center color-bluish" fluid id="main">
-            
-            tekst</b-col>
+          <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
+                Hello: <p class="text-danger">{{email}}</p><!-- Lepiej by było imię!-->
+
+                                <b-row>
+                  <b-col>
+                                    <div class="progress">
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20"></div>
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 22%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20"></div>
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 20%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20"></div>
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20"></div>
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 5%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20"></div>
+  </div>
+                  </b-col>
+                </b-row>
+                </b-col>
           </b-row>
 
               <!-- <b-button v-b-toggle.sidebar-variant>Toggle Sidebar</b-button>  ZAJEBISTY SIDEBAR!
@@ -66,11 +78,19 @@
 
 <script>
 import LoggedInButton from '../src/components/LoggedInButton.vue'
-
+import { firebase } from '@firebase/app'
+import '@firebase/auth'
 export default {
      components: {
     LoggedInButton
-  }
+  },
+      data()
+    {
+        return {
+            loggedIn: false,
+            email: firebase.auth().currentUser.email 
+        }
+    },
 }
 </script>
 
