@@ -34,11 +34,11 @@
               <b-row>
                 <b-col class="col-5 mt-auto mb-auto text-center font-large"><p class="d-none d-md-block">Available classes:</p></b-col>
                 <b-list-group class="col-11 pr-1 ml-auto mr-auto ml-md-0 mr-md-0 col-md-6">
-  <b-list-group-item class="" variant="info" href="#"><router-link to="/Speaking">Speaking</router-link></b-list-group-item>
-  <b-list-group-item class="" variant="info" href="#"><router-link to="/Writing">Writing</router-link></b-list-group-item>
-  <b-list-group-item class="" variant="info" href="#"><router-link to="/Grammar">Grammar</router-link></b-list-group-item>
-  <b-list-group-item class="" variant="info" href="#"><router-link to="/Reading">Reading</router-link></b-list-group-item>
-  <b-list-group-item class="" variant="info" href="#"><router-link to="/Listening">Listening</router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Speaking"><b-button class="btn form-control " variant="primary">Speaking</b-button></router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Writing"><b-button class="btn form-control " variant="success">Writing</b-button></router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Grammar"><b-button class="form-control btn" variant="info">Grammar</b-button></router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Reading"><b-button class="form-control btn" variant="danger">Reading</b-button></router-link></b-list-group-item>
+  <b-list-group-item class="" variant="info" href="#"><router-link to="/Listening"><b-button class="form-control btn" variant="warning">Listening</b-button></router-link></b-list-group-item>
             </b-list-group>
               </b-row>
               <b-row>
