@@ -23,26 +23,26 @@
   <thead>
     <tr>
       <th scope="row">1</th>
-      <td>based upon</td>
-      <td>based at</td>
-      <td>based by</td>
-      <td>based in</td>
+      <td><c>based upon</c></td>
+      <td><f>based at</f></td>
+      <td><f>based by</f></td>
+      <td><f>based in</f></td>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">2</th>
-      <td>retraced</td>
-      <td>retracted</td>
-      <td>refracted</td>
-      <td>retorted</td>
+      <td><f>retraced</f></td>
+      <td><f>retracted</f></td>
+      <td><c>refracted</c></td>
+      <td><f>retorted</f></td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>on</td>
-      <td>in</td>
-      <td>by</td>
-      <td>with</td>
+      <td><f>on</f></td>
+      <td><c>in</c></td>
+      <td><f>by</f></td>
+      <td><f>with</f></td>
     </tr>
     <tr>
       <th scope="row">4</th>
@@ -54,7 +54,7 @@
     <tr>
       <th scope="row">5</th>
       <td>that</td>
-      <td>than</td>
+      <td><p onclick="myFunction(this, 'red')">than</p></td>
       <td>when</td>
       <td>then</td>
     </tr>
@@ -69,8 +69,8 @@
       <th scope="row">7</th>
       <td>current</td>
       <td>actual</td>
-      <td>substantial</td>
-      <td>presentr</td>
+      <td><f>substantial</f></td>
+      <td><v>presentr</v></td>
     </tr>
     <tr>
       <th scope="row">8</th>
@@ -82,7 +82,6 @@
       </tbody>
 </table>
  
-
     </b-container>  
 </b-container>
 </template>
@@ -91,13 +90,17 @@
 export default {
 
 
-
 name: 'HeaderBanner',
   
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+c {color: black}
+c:active {background-color: green}
+f {color: black}
+f:active {background-color: red}
 #banner{
   border-radius: 50px;
 }
