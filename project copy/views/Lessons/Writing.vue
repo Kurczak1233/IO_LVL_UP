@@ -40,7 +40,7 @@
 //         }
 //     }
 // }
-
+//Dyrektor
 // let task = (new TaskBuilder()).setName("Zadanie 1")
 //         .setDescription("opis").setDone(true).build();
 // console.log(task);
