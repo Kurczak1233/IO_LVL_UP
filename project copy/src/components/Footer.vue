@@ -58,7 +58,7 @@ p{
 }
 a:hover {
   text-decoration: none;
-  color:rgb(105, 208, 245);
+  color:rgb(105, 142, 245);
 }
 a{
     color:rgb(46, 46, 46);

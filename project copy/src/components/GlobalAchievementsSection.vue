@@ -19,9 +19,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.background-color
+.color-bluish
 {
-    background-color: rgb(219, 219, 219);
+  background: linear-gradient(rgb(105, 208, 245),  rgb(105, 142, 245));
 }
 .big-font
 {
