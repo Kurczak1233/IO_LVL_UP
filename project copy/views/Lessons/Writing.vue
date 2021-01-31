@@ -2,7 +2,7 @@
   <body>
     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto margin10 background-bluish" fluid>
         <b-row>
-          <b-col class="col-12">Tekst: {{name}},{{description}},{{level}}</b-col>
+          <b-col class="col-12">{{name}},{{description}},stopień trudności: {{level}}</b-col>
         </b-row>
     </b-container>
   </body>
@@ -41,7 +41,7 @@ function TaskBuilder() {
 }
 // Dyrektor rozkazujący utworzenie zadania
 let task = (new TaskBuilder()).setName("Zadanie 1")
-        .setDescription("Opis zadania").setLevel("C1").build();
+        .setDescription("Przykładowe zadanie z writingu").setLevel("C1").build();
 
 export default {
     name: 'Grammar',
