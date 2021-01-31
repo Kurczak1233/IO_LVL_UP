@@ -15,6 +15,13 @@ import UserPage from '../views/MainUserPage.vue'
 import Login from '../views/Login.vue'
 import axios from 'axios'
 import firebase from 'firebase/app'
+//Lessons part//
+import Listening from '../views/Lessons/Listening.vue'
+import Speaking from '../views/Lessons/Speaking.vue'
+import Reading from '../views/Lessons/Reading.vue'
+import Writing from '../views/Lessons/Writing.vue'
+import Grammar from '../views/Lessons/Grammar.vue'
+
 
   const firebaseConfig = {
     apiKey: "AIzaSyASQaSEYaG-8Vgv82gss3Jwgr4H9lCbwA8",
@@ -36,6 +43,11 @@ const routes = [
     {path: '/', name: 'home', component: MainPage},
    { path: '/register', name: 'reg', component: Register},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
+   { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
+   { path: '/Writing', name: 'write', component: Writing, meta: {requiresAuth: true}},
+   { path: '/Reading', name: 'read', component: Reading, meta: {requiresAuth: true}},
+   { path: '/Grammar', name: 'gram', component: Grammar, meta: {requiresAuth: true}},
+   { path: '/Listening', name: 'listen', component: Listening, meta: {requiresAuth: true}},
   //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
