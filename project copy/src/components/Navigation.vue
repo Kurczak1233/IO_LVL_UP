@@ -69,7 +69,7 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  background-color:#d4d3d2;
+  background-color:#eeebe8;
   border-radius: 20px;
 }
 </style>

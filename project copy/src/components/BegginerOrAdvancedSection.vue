@@ -1,8 +1,8 @@
 <template>
 <b-container fluid class="advertisement">
   <b-row class="images m-0">
-    <b-col class="First-part" cols="6"><p class="adv-text1 color-white">Begginer</p></b-col>
-    <b-col class="Second-part" cols="6"><p class="adv-text1 color-green">Advanced</p></b-col>
+    <b-col class="First-part" cols="6"><p class="adv-text1 color-white">B E G G I N E R</p></b-col>
+    <b-col class="Second-part" cols="6"><p class="adv-text1 color-green">A D V A N C E D</p></b-col>
   </b-row>
 </b-container>
 </template>
@@ -34,16 +34,16 @@ export default {
 
 }
 .adv-text1{
-  font-size: 40px;
+  font-size: 50px;
   margin-top:150px;
-  text-decoration: underline;
-  opacity: 1;
+  text-decoration: none;
+  opacity: 5;
 }
 .color-white{
-  color:white;
+  color:rgb(247, 35, 35);
 }
 .color-green{
-  color:blue;
+  color:rgb(29, 51, 248);
 }
 .First-part:hover, .Second-part:hover{
   opacity:0.8;
