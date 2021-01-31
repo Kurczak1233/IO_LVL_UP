@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Achi',
+  name: 'GlobalAchievementsSection',
 }
 </script>
 
