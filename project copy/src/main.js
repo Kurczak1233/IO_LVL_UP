@@ -43,11 +43,11 @@ const routes = [
     {path: '/', name: 'home', component: MainPage},
    { path: '/register', name: 'reg', component: Register},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
-   { path: '/Speaking', name: 'userpage', component: Speaking, meta: {requiresAuth: true}},
-   { path: '/Writing', name: 'userpage', component: Writing, meta: {requiresAuth: true}},
-   { path: '/Reading', name: 'userpage', component: Reading, meta: {requiresAuth: true}},
-   { path: '/Grammar', name: 'userpage', component: Grammar, meta: {requiresAuth: true}},
-   { path: '/Listening', name: 'userpage', component: Listening, meta: {requiresAuth: true}},
+   { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
+   { path: '/Writing', name: 'write', component: Writing, meta: {requiresAuth: true}},
+   { path: '/Reading', name: 'read', component: Reading, meta: {requiresAuth: true}},
+   { path: '/Grammar', name: 'gram', component: Grammar, meta: {requiresAuth: true}},
+   { path: '/Listening', name: 'listen', component: Listening, meta: {requiresAuth: true}},
   //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
