@@ -34,7 +34,20 @@
       <td><f>Green fruits and vegetables</f></td>
     </tr>
   </thead>
-
+  <tbody>
+    <tr>
+      <td>More vegetables are stocked in grocery stores than fruits because:</td>
+      <td><f>Grocery store managers prefer fruits</f></td>
+       <td><f>A and C</f></td>
+      <td><c>Fruits stay fresh for less time than vegetables</c></td>
+    </tr>
+    <tr>
+      <td>"Fresh" groceries are:</td>
+      <td><f>Charged by the pound</f></td>
+      <td><f>Measured manually</f></td>
+      <td><c>All of the Above</c></td>
+      </tr>
+      </tbody>
 </table>
     </b-container>  
 </b-container>
