@@ -39,13 +39,14 @@
         <b-row>
           <b-col class="col-12 text-center">
         <b-link href="/terms.pdf">Terms of use</b-link>
-
           </b-col>
         </b-row>
         <b-row class="pb-5 mt-3">
-        <b-col class="col-3 offset-5 pt-1">
-        <b-button type="submit" class="btn btn-control btn-success">Register</b-button>
+        <b-col class="col-4"></b-col>
+        <b-col class="col-4">
+        <b-button type="submit" class="btn btn-control btn-success form-control">Register</b-button>
         </b-col>
+        <b-col class="col-4"></b-col>
         </b-row>
         </b-form>
     </b-container>
