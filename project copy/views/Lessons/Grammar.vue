@@ -4,21 +4,19 @@
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_grammar.png?raw=true" alt="Logo grammar"></b-col>
   </b-row>
 <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-            <b>THE MICROSCOPE</b>
-
+<b>THE MICROSCOPE</b>
 <b-row class="">
-  <b-col class="">An important invention in the development of science and medicine was the microscope. It was (1) ... the principle that light could be (2) ... or bent, by a glass lens. It was soon discovered that tiny objects could be magnified (3) ... size when viewed through a glass lens that had been ground and polished in a specific (4)... . Although the principle was known to the Chinese as early as 1000 A.D, it was not until the 13th and 14th centuries in Europe (5) ... it was put to practical use in the form of eyeglasses.
+  <b-col class=""><l>An important invention in the development of science and medicine was the microscope. It was (1) ... the principle that light could be (2) ... or bent, by a glass lens. It was soon discovered that tiny objects could be magnified (3) ... size when viewed through a glass lens that had been ground and polished in a specific (4)... . Although the principle was known to the Chinese as early as 1000 A.D, it was not until the 13th and 14th centuries in Europe (5) ... it was put to practical use in the form of eyeglasses.</l>
+  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""><l>In Europe the first microscope was invented by brothers Zacharias and Hans Janssen, two Dutch eyeglass-makers, around 1590. They built a “compound” microscope, so called because of its two lenses. The most significant development and use of the microscope during this period, however, belongs to another Dutch optician, Antonie van Leeuwenhoek (1632-1723). Born in Delft, Holland, he became skilled at (6) ... very sharp and accurate magnifying lenses. Some of his single-lens microscopes were able to</l>
   </b-col>
 </b-row>   
 <b-row class="">
-  <b-col class="">In Europe the first microscope was invented by brothers Zacharias and Hans Janssen, two Dutch eyeglass-makers, around 1590. They built a “compound” microscope, so called because of its two lenses. The most significant development and use of the microscope during this period, however, belongs to another Dutch optician, Antonie van Leeuwenhoek (1632-1723). Born in Delft, Holland, he became skilled at (6) ... very sharp and accurate magnifying lenses. Some of his single-lens microscopes were able to
+  <b-col class=""><l>magnify up the three hundred times (7) ... size, and around 1660 he began serious study using these instruments. He was the first to discover bacteria and other microscopic organisms, calling these tiny creatures “animalcules”. (8) ... to this discovery, very small creatures such as fleas and maggots were thought to “spontaneously generate” from a single source, such as rotting meat in the case of maggots.</l>
   </b-col>
 </b-row>   
-<b-row class="">
-  <b-col class="">magnify up the three hundred times (7) ... size, and around 1660 he began serious study using these instruments. He was the first to discover bacteria and other microscopic organisms, calling these tiny creatures “animalcules”. (8) ... to this discovery, very small creatures such as fleas and maggots were thought to “spontaneously generate” from a single source, such as rotting meat in the case of maggots.
-  </b-col>
-</b-row>   
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -46,57 +44,53 @@
     </tr>
     <tr>
       <th scope="row">4</th>
-      <td>manner</td>
-      <td>fashion</td>
-      <td>character</td>
-      <td>procedure</td>
+      <td><c>manner</c></td>
+      <td><f>fashion</f></td>
+      <td><f>character</f></td>
+      <td><f>procedure</f></td>
     </tr>
     <tr>
       <th scope="row">5</th>
-      <td>that</td>
-      <td><p onclick="myFunction(this, 'red')">than</p></td>
-      <td>when</td>
-      <td>then</td>
+      <td><c>that</c></td>
+      <td><f>than</f></td>
+      <td><f>when</f></td>
+      <td><f>then</f></td>
     </tr>
     <tr>
       <th scope="row">6</th>
-      <td>rubbing</td>
-      <td>granting</td>
-      <td>grinding</td>
-      <td>scraping</td>
+      <td><f>rubbing</f></td>
+      <td><f>granting</f></td>
+      <td><c>grinding</c></td>
+      <td><f>scraping</f></td>
     </tr>
     <tr>
       <th scope="row">7</th>
-      <td>current</td>
-      <td>actual</td>
+      <td><f>current</f></td>
+      <td><c>actual</c></td>
       <td><f>substantial</f></td>
-      <td><v>presentr</v></td>
+      <td><f>present</f></td>
     </tr>
     <tr>
       <th scope="row">8</th>
-      <td>Due</td>
-      <td>According</td>
-      <td>Owing</td>
-      <td>Prior</td>
+      <td><f>Due</f></td>
+      <td><f>According</f></td>
+      <td><f>Owing</f></td>
+      <td><c>Prior</c></td>
     </tr>
       </tbody>
 </table>
- 
     </b-container>  
 </b-container>
 </template>
 
 <script>
 export default {
-
-
 name: 'HeaderBanner',
-  
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+l {text-align: left}
 c {color: black}
 c:active {background-color: green}
 f {color: black}
