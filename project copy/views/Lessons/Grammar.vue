@@ -46,24 +46,24 @@
     </tr>
     <tr>
       <th scope="row">4</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>manner</td>
+      <td>fashion</td>
+      <td>character</td>
+      <td>procedure</td>
     </tr>
     <tr>
       <th scope="row">5</th>
-       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>that</td>
+      <td>than</td>
+      <td>when</td>
+      <td>then</td>
     </tr>
     <tr>
       <th scope="row">6</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>rubbing</td>
+      <td>granting</td>
+      <td>grinding</td>
+      <td>scraping</td>
     </tr>
     <tr>
       <th scope="row">7</th>
