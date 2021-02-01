@@ -6,8 +6,9 @@
 <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
 <b>Kendall Jenner</b>
 
-<b-row class=""><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/listening.mp3?raw=true" controls ></audio>
-  <b-col class="">
+<b-row class="mt-2 mb-2">
+  <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/listening.mp3?raw=true" controls ></audio>
+
   </b-col>
 </b-row>   
 <table class="table table-striped">

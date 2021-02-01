@@ -21,7 +21,7 @@ import Speaking from '../views/Lessons/Speaking.vue'
 import Reading from '../views/Lessons/Reading.vue'
 import Writing from '../views/Lessons/Writing.vue'
 import Grammar from '../views/Lessons/Grammar.vue'
-
+import File from '../views/Lessons/File.vue'
 
   const firebaseConfig = {
     apiKey: "AIzaSyASQaSEYaG-8Vgv82gss3Jwgr4H9lCbwA8",
@@ -48,6 +48,7 @@ const routes = [
    { path: '/Reading', name: 'read', component: Reading, meta: {requiresAuth: true}},
    { path: '/Grammar', name: 'gram', component: Grammar, meta: {requiresAuth: true}},
    { path: '/Listening', name: 'listen', component: Listening, meta: {requiresAuth: true}},
+   { path: '/File', name: 'file', component: File, meta: {requiresAuth: true}},
   //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]

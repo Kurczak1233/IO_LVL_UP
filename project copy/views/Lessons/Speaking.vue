@@ -10,8 +10,14 @@
         </center></b-col>
         </b-row>
     </b-container>
-     <b-container class="col-5 col-md-4 col-xl-2 mr-auto ml-auto margin10 background-bluish" fluid>
-        
+          <b-container class="col-10 mt-3 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
+        <b-row>
+          <b-col class="col-12 text-center">Proszę załączyć swoje rozwiązanie</b-col>
+          <b-col class="col-12 text-center"><form action="..." enctype="multipart/form-data">
+            <input type="file" name="nazwa">
+            </form>
+          </b-col>
+        </b-row>
     </b-container>
   </body>
 </template>
