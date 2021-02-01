@@ -20,7 +20,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row"><b>1</b></th>
       <td><c>based upon</c></td>
       <td><f>based at</f></td>
       <td><f>based by</f></td>
@@ -29,7 +29,7 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">2</th>
+      <th scope="row"><b>2</b></th>
       <td><f>retraced</f></td>
       <td><f>retracted</f></td>
       <td><c>refracted</c></td>
@@ -190,6 +190,42 @@
     </tr>
       </tbody>
 </table>
+
+</b-container>
+
+<b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
+<b>  <b-col class=""> Czas Past Continuous - Past Continuous Tense </b-col>
+</b>
+<b-row class="">
+  <b-col class=""> 1. He came while we ____________ </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 2. The professor ____________ when the telephone rang </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 3. When Mrs Jones came in her son ____________ </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">4. Frank ____________ fast, but I couldn't reach him. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 5. We were at home ____________ TV when the accident happened. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 6. Although the baby ____________ loudly, my neighbour came to see what was happening. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 7. What was Isabelle's husband ____________ there? </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 8. Paul broke his leg when he ____________ a horse. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 9. Where ____________ when you found this coin? </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 10. She ____________ in a bank when I last saw her. </b-col>
+</b-row>
 
 </b-container>
 
