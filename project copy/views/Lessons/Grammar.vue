@@ -113,6 +113,84 @@
 <b-row class="">
   <b-col class="">10. You _______ go out more. </b-col>
 </b-row>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="row">1</th>
+          <td><c>could</c></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">2</th>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+         <td><c>dare</c></td>
+      <td><f>zla</f></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><f>zla</f></td>
+           <td><c>are</c></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+           <td><c>has to</c></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+           <td><c>must not</c></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><f>zla</f></td>
+             <td><c>need not</c></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><f>zla</f></td>
+           <td><c>was able</c></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+         <td><c>are you going to</c></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+              <td><c>have to</c></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><f>zla</f></td>
+              <td><c>should</c></td>
+      <td><f>zla</f></td>
+      <td><f>zla</f></td>
+    </tr>
+      </tbody>
+</table>
+
 </b-container>
 
 
