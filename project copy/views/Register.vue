@@ -37,10 +37,11 @@
           </b-col>
         </b-row>
         <b-row class="pb-5 mt-3">
-        <b-col class="col-3 offset-5 pt-1">
-        <b-button type="submit" class="btn btn-control btn-success">Register</b-button>
-        <br>
-         </b-col>
+        <b-col class="col-4"></b-col>
+        <b-col class="col-4">
+        <b-button type="submit" class="btn btn-control btn-success form-control">Register</b-button>
+        </b-col>
+        <b-col class="col-4"></b-col>
         </b-row>
         </b-form>
     </b-container>

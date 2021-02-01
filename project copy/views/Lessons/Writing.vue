@@ -1,7 +1,9 @@
 <template>
   <body>
     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto margin10 background-bluish" fluid>
-            <!-- <router-link to="/Builder">Nie będziemy testować writingu.</router-link> -->
+        <b-row>
+          <b-col class="col-12">{{name}},{{description}},stopień trudności: {{level}}</b-col>
+        </b-row>
     </b-container>
   </body>
 </template>
@@ -10,44 +12,48 @@
 
 
 <script>
+//Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
+function Task(name, description, Islevel){
+    this.name = name;
+    this.description = description;
+    this.level = Islevel;
+}
+//Builder taska (pojedyncze funkcje nadają wartości typom prostym)
+function TaskBuilder() {
 
-// // przykład konstruktor Task oraz TaskBuilder
-
-// function Task(name, description, isDone){
-//     this.name = name;
-//     this.description = description;
-//     this.isDone = isDone;
-// }
-
-// function TaskBuilder() {
-//     let name, description, isDone;
-
-//     return {
-//         setName: function(name) {
-//             this.name = name;
-//             return this;
-//         },
-//         setDescription: function(description) {
-//             this.description = description;
-//             return this;
-//         },
-//         setDone: function(done) {
-//             this.isDone = done;
-//             return this;
-//         },
-//         build: function () {
-//             return new Task(this.name, this.description, this.isDone);
-//         }
-//     }
-// }
-//Dyrektor
-// let task = (new TaskBuilder()).setName("Zadanie 1")
-//         .setDescription("opis").setDone(true).build();
-// console.log(task);
-// // {name: "Zadanie 1", description: "opis", isDone: true}
+    return {
+        setName: function(name) {
+            this.name = name;
+            return this;
+        },
+        setDescription: function(description) {
+            this.description = description;
+            return this;
+        },
+        setLevel: function(level) {
+            this.level = level;
+            return this;
+        },
+        build: function () {
+            return new Task(this.name, this.description, this.level);
+        }
+    }
+}
+// Dyrektor rozkazujący utworzenie zadania
+let task = (new TaskBuilder()).setName("Zadanie 1")
+        .setDescription("Przykładowe zadanie z writingu").setLevel("C1").build();
 
 export default {
-    name: 'Grammar'}
+    name: 'Grammar',
+        data: function()
+    {
+      return { //Zwracamy pola z naszego taska
+        name: task.name,
+        description: task.description,
+        level: task.level
+      }
+    }
+}
 </script>
 
 <style >
