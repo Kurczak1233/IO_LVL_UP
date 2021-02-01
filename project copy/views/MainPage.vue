@@ -78,7 +78,7 @@ font-family: 'Nunito', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: rgba(240, 223, 223, 0.74);
+  background: rgba(240, 223, 223, 1);
   background:cover;
   background-repeat: no-repeat;
 }

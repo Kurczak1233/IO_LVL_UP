@@ -2,7 +2,7 @@
 <template>
 <b-container fluid class="color-blu">
     <b-row> 
-        <b-col cols="12" class="pt-5 medium-font text-primary">Give yourself a unasdasdsaique chance to...</b-col>
+        <b-col cols="12" class="pt-5 medium-font text-primary">Give yourself a unique chance to...</b-col>
         <b-col cols="12" class="pb-3"><b-link href="#foo" class="big-font text-danger"><router-link to="/register">JOIN US TODAY!</router-link></b-link></b-col>
     </b-row>
 </b-container>

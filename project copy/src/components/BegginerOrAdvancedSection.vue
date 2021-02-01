@@ -43,7 +43,7 @@ export default {
   color:white;
 }
 .color-black{
-  color:black;
+  color:blue;
 }
 .First-part:hover, .Second-part:hover{
   opacity:0.8;
