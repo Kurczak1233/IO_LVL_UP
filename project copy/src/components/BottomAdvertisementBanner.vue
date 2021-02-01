@@ -1,9 +1,8 @@
 
 <template>
-
-<b-container fluid class="color-bluish">
+<b-container fluid class="color-blu">
     <b-row> 
-        <b-col cols="12" class="pt-5 medium-font text-primary">Give yourself a unique chance to...</b-col>
+        <b-col cols="12" class="pt-5 medium-font text-primary">Give yourself a unasdasdsaique chance to...</b-col>
         <b-col cols="12" class="pb-3"><b-link href="#foo" class="big-font text-danger"><router-link to="/register">JOIN US TODAY!</router-link></b-link></b-col>
     </b-row>
 </b-container>
@@ -17,10 +16,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.background-color
-{
-background: rgb(239,233,233);
-background: linear-gradient(180deg, rgb(66, 65, 65) 0%, rgb(36, 34, 34) 100%);}
 .big-font
 {
     font-size: 7rem;
@@ -29,8 +24,8 @@ background: linear-gradient(180deg, rgb(66, 65, 65) 0%, rgb(36, 34, 34) 100%);}
 {
     font-size: 1.2rem;
 }
-.color-bluish
+.color-blu
 {
-background: rgb(239,233,233);
-background: linear-gradient(180deg, rgb(66, 65, 65) 0%, rgb(36, 34, 34) 100%);}
+    background-color: rgb(105, 208, 245);
+}
 </style>
