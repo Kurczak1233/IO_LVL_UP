@@ -8,10 +8,10 @@
           <b-col class="col-12"><b>Temat:</b> {{name}} <br> <b> Liczba punktów do uzyskania: </b> {{pkt}} <br> <b> Treść: </b> {{description}} <br> <b> Stopień trudności: </b> {{level}}</b-col>
         </b-row>
     </b-container>
-     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto margin10 background-bluish" fluid>
+     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto mt-3 background-bluish" fluid>
         <b-row>
-          <b-col class="col-12">Proszę załączyć swoje rozwiązanie</b-col>
-          <b-col class="col-12"><form action="..." enctype="multipart/form-data">
+          <b-col class="col-12 text-center">Proszę załączyć swoje rozwiązanie</b-col>
+          <b-col class="col-12 text-center"><form action="..." enctype="multipart/form-data">
             <input type="file" name="nazwa">
             </form>
           </b-col>
