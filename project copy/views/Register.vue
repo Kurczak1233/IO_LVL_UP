@@ -94,7 +94,8 @@ body
 }
 .background-bluish
 {
-  background-color: rgb(105, 208, 245);
+  background: rgb(239,233,233);
+background: linear-gradient(180deg, rgb(177, 174, 174) 0%, rgb(133, 123, 123) 100%);
   border-radius: 20px;
 }
 .margin10
