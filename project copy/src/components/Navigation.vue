@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="row">
-        <div id="logo-container" class="col-3"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/loogv2.png?raw=true" alt="Logo strony"></div>
+        <div id="logo-container" class="col-3"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony"></div>
         <div id="login" class="col-6 my-auto d-block">
   <!-- <b-form inline>
     <b-input-group prepend="Login:" class="mb-2 mr-sm-2 mb-sm-0">
@@ -48,8 +48,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
-background: rgba(230, 227, 227, 0.74);
-background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+background: rgb(239,233,233);
+background: linear-gradient(180deg, rgba(239,233,233,1) 0%, rgba(231,228,226,1) 100%);
   height:100px;
   border-radius: 40px;
   margin-top:20px;
@@ -69,7 +69,7 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  background-color:#eeebe8;
+  background-color:#d4d3d2;
   border-radius: 20px;
 }
 </style>

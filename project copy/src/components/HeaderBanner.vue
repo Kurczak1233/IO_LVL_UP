@@ -8,14 +8,16 @@
 
 <script>
 export default {
-  name: 'HeaderBanner',
+
+
+
+name: 'HeaderBanner',
+  
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #banner{
   border-radius: 50px;
 }
-
 </style>
