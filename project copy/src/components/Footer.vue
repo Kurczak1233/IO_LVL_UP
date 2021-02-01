@@ -28,7 +28,11 @@
 </b-container>
 </template>
 
+
+
+
 <script>
+
 export default {
   name: 'AdvBannerBottom',
 }
