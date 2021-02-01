@@ -32,7 +32,7 @@ export default {
     font-size: 1.2rem;
 }
 .begginer-banner{
-    background: rgba(252, 233, 233, 0.74);
+     background: rgba(240, 223, 223, 0.74);
 }
 .First-part img{
     padding:5px;

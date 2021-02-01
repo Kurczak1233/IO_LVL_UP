@@ -2,7 +2,7 @@
 <b-container fluid class="advertisement">
   <b-row class="images m-0">
     <b-col class="First-part" cols="6"><p class="adv-text1 color-white">Begginer</p></b-col>
-    <b-col class="Second-part" cols="6"><p class="adv-text1 color-green">Advanced</p></b-col>
+    <b-col class="Second-part" cols="6"><p class="adv-text1 color-black">Advanced</p></b-col>
   </b-row>
 </b-container>
 </template>
@@ -42,7 +42,7 @@ export default {
 .color-white{
   color:white;
 }
-.color-green{
+.color-black{
   color:blue;
 }
 .First-part:hover, .Second-part:hover{

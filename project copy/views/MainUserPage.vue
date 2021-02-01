@@ -99,7 +99,7 @@ export default {
 <style scoped>
 .color-bluish
 {
-  background-color: rgb(105, 208, 245)
+  background-color: rgb(105, 208, 245);
 }
 .rounded-edges-left
 {
