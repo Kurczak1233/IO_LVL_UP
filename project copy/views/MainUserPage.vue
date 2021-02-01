@@ -39,7 +39,7 @@
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Grammar"><b-button class="form-control btn" variant="info">Grammar</b-button></router-link></b-list-group-item>
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Reading"><b-button class="form-control btn" variant="danger">Reading</b-button></router-link></b-list-group-item>
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Listening"><b-button class="form-control btn" variant="warning">Listening</b-button></router-link></b-list-group-item>
-  <b-list-group-item class="mt-5" variant="info" href="#"><router-link to="/File"><b-button class="form-control btn" variant="warning">Download</b-button></router-link></b-list-group-item>
+  <b-list-group-item class="mt-5" variant="info" href="#"><router-link to="/File"><b-button class="form-control btn" variant="danger">Download</b-button></router-link></b-list-group-item>
             </b-list-group>
               </b-row>
               <b-row>
