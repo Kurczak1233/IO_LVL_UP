@@ -51,14 +51,35 @@
 
                                 <b-row>
                   <b-col class="col-12"> Your actual progress:
-                                    <div class="progress mt-3"> <!--Można to rozbić na 5 pojedynczych zamiast jednego długiego paska-->
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 17%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20">Speaking</div>
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20">Writing</div>
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 27%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20">Grammar</div>
-   <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 18%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20">Reading</div>
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20">Listeing</div>
-  </div>
-                      
+                  <p>
+                  </p>
+
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 31%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Speaking</div>
+</div>
+<p>
+</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 21%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Writing</div>
+</div>
+<p>
+</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" style="width: 58%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Grammar</div>
+</div>
+<p>
+</p>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Reading</div>
+</div>
+<p>
+</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: 43%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Listening</div>
+</div>
+
+                    
                   </b-col>
                 </b-row>
                 </b-col>
@@ -99,9 +120,9 @@ export default {
 <style scoped>
 .color-bluish
 {
-  background-image: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
-  margin-top: 120px;
+  background: linear-gradient(180deg, rgb(153, 199, 226) 0%, rgb(91, 146, 218) 100%);
 }
+
 .rounded-edges-left
 {
   border-bottom-left-radius: 20px;
