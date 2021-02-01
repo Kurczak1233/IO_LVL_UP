@@ -94,7 +94,7 @@ body
 }
 .background-bluish
 {
-  background-color: rgb(105, 208, 245);
+  background-color:  rgb(180, 184, 183);
   border-radius: 20px;
 }
 .margin10

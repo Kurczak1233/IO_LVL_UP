@@ -31,6 +31,6 @@ export default {
 }
 .color-bluish
 {
-  background-image: linear-gradient(rgb(105, 142, 245), rgb(105, 208, 245));
+  background-color: rgb(199, 198, 193);
 }
 </style>

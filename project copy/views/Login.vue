@@ -76,13 +76,13 @@ export default {
 <style >
 body
 {
-  background-color: rgb(242, 243, 237);
+  background-color: rgb(217,218,211);
   width: 100%;
   height:100%;
 }
 .background-bluish
 {
-  background-color: rgb(105, 208, 245);
+  background-color: rgb(180, 184, 183);
   border-radius: 20px;
 }
 .margin10

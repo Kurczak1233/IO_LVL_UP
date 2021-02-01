@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .color-bluish
 {
-  background: linear-gradient(rgb(105, 208, 245),  rgb(105, 142, 245));
+  background: linear-gradient(rgb(188, 192, 194),  rgb(105, 142, 245));
 }
 .big-font
 {
