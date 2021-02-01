@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="row">
-        <div id="logo-container" class="col-3"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony"></div>
+        <div id="logo-container" class="col-3"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony"></div>
         <div id="login" class="col-6 my-auto d-block">
   <!-- <b-form inline>
     <b-input-group prepend="Login:" class="mb-2 mr-sm-2 mb-sm-0">

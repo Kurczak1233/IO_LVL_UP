@@ -17,10 +17,10 @@
       </b-row>
       <b-row class="mt-3">
             <b-col class="col-2 offset-1 pt-1" >
-              <label for="Login">Password:</label>
+              <label for="password">Password:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="password" v-model="password" class="form-control" aria-describedby="Login" placeholder="Insert your password" id="login"></b-form-input>
+              <b-form-input required type="password" v-model="password" class="form-control" aria-describedby="password" placeholder="Insert your password" id="login"></b-form-input>
             </b-col>
       </b-row>
       <!-- <b-row class="mt-3">      
@@ -87,7 +87,7 @@ export default {
     }
 }
 </script>
-<style >
+<style scoped>
 body
 {
   background-color: rgb(217,218,211);
