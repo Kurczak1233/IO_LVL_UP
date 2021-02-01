@@ -227,6 +227,85 @@
   <b-col class=""> 10. She ____________ in a bank when I last saw her. </b-col>
 </b-row>
 
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="row">1</th>
+          <td><c> were sleeping </c></td>
+      <td><f>slept </f></td>
+      <td><f> was sleeping </f></td>
+      <td><f>are sleeping </f></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">2 </th>
+      <td><f>read</f></td>
+      <td><f>reads</f></td>
+      <td><f>were reading</f></td>
+      <td><c> was reading </c></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><f>were not sleeping </f></td>
+      <td><f> didn't sleep </f></td>
+      <td><c>  was not sleeping </c></td>
+      <td><f> doesn't sleep </f></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><c> wasn't running </c></td>
+      <td><f> weren't running </f></td>
+      <td><f> didn't run </f></td>
+      <td><f> doesn't run </f></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+           <td><c> watching </c></td>
+      <td><f> watches </f></td>
+      <td><f> watch </f></td>
+      <td><f> watched </f></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><f> weren't crying </f></td>
+             <td><c>wasn't crying </c></td>
+      <td><f> not cry  </f></td>
+      <td><f>don't cry </f></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><f> does </f></td>
+           <td><f> did </f></td>
+      <td><f> do </f></td>
+      <td><c> doing </c></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><f> were riding </f></td>
+      <td><c> was riding </c></td>
+      <td><f> rode  </f></td>
+         <td><f> ridden </f></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><f> did you dig   </f></td>
+      <td><c> were you digging  </c></td>
+      <td><f> do you dig  </f></td>
+      <td><f> you are digging </f></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><f> were working  </f></td>
+      <td><f> works </f></td>
+      <td><f> work </f></td>
+      <td><c> was working </c></td>
+    </tr>
+      </tbody>
+</table>
+
+
 </b-container>
 
 
