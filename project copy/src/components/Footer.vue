@@ -38,7 +38,7 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color:rgb(189, 193, 194);
+    background-color:rgb(255, 255, 255);
 }
 .text-small
 {
@@ -46,7 +46,7 @@ export default {
 }
 .text-grey
 {
-    color:rgb(104, 100, 100);
+    color:rgb(61, 60, 60);
 }
 .medium-font
 {
@@ -58,7 +58,7 @@ p{
 }
 a:hover {
   text-decoration: none;
-  color:rgb(105, 142, 245);
+  color:rgb(83, 126, 243);
 }
 a{
     color:rgb(46, 46, 46);

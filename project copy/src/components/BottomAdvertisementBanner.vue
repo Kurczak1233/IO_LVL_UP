@@ -19,18 +19,18 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color: rgb(198, 201, 202);
+    background-color: rgb(255, 255, 255);
 }
 .big-font
 {
-    font-size: 5rem;
+    font-size: 5.5rem;
 }
 .medium-font
 {
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 .color-bluish
 {
-  background-color: rgb(198, 201, 202);
+  background-color: rgb(255, 255, 255);
 }
 </style>
