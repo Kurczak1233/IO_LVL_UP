@@ -28,7 +28,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row"><b>1</b></th>
       <td>What are staples?</td>
       <td><f>Rare foods</f></td>
       <td><c>Foods that play a prominent role in the average diet</c></td>
@@ -37,14 +37,14 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">2</th>
+      <th scope="row"><b>2</b></th>
       <td>More vegetables are stocked in grocery stores than fruits because:</td>
       <td><f>Grocery store managers prefer fruits</f></td>
        <td><f>A and C</f></td>
       <td><c>Fruits stay fresh for less time than vegetables</c></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
+      <th scope="row"><b>3</b></th>
       <td>"Fresh" groceries are:</td>
       <td><f>Charged by the pound</f></td>
       <td><f>Measured manually</f></td>
