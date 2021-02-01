@@ -57,13 +57,13 @@ import Navigation from '../src/components/Navigation.vue';
 export default {
   name: 'MainPage',
   components: {
+    Navigation,
     HeaderBanner,
     BegginerOrAdvancedSection,
     WebsiteOfferSection,
     GlobalAchievementsSection,
     BottomAdvertisementBanner,
     Footer,
-    Navigation
   }
 }
 </script>
@@ -80,9 +80,9 @@ font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #212c38;
-  background:   rgb(128, 188, 223);
-  background-image: rgba(243, 237, 237, 0.74);
+  color: #171d24;
+  background-image: linear-gradient(180deg, rgb(91, 146, 218) 0%, rgb(173, 207, 226) 100%);
+  height:120px;
   background:cover;
   background-repeat: no-repeat;
 }
@@ -98,7 +98,7 @@ header{
 }
 .color-bluish
 {
-  background-color: (rgb(198, 221, 231));
+  background-color: (rgb(173, 207, 226));
 }
 .rounded-edges-left
 {
