@@ -1,3 +1,14 @@
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="//ciasteczka.eu/cookiesEU-latest.min.js"></script>
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+	jQuery.fn.cookiesEU({
+		position:	'top'
+	});
+});
+</script>
+
 <template>
   <body>
      <b-nav>  <!--fixed="top" class="headerr" fluid -->
@@ -67,9 +78,9 @@ font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  background: rgb(246, 247, 244);
-  background: linear-gradient(180deg, rgba(217,218,211,1) 0%, rgba(184,179,178,1) 100%);
+  color: #212c38;
+  background:  rgba(240, 223, 223, 0.74);
+  background: linear-gradient(180deg, rgb(212, 212, 212) 0%, rgb(199, 199, 199) 100%);
   background:cover;
   background-repeat: no-repeat;
 }
@@ -81,11 +92,11 @@ header{
     font-size: 2rem;
 }
 .background-dark{
-  background-color: darkslategrey;
+  background-color: rgb(34, 56, 56);
 }
 .color-bluish
 {
-  background: linear-gradient(180deg, rgb(105, 142, 245), rgb(105, 208, 245));
+  background-color: (rgb(218, 218, 218));
 }
 .rounded-edges-left
 {

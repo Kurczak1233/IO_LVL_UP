@@ -9,6 +9,10 @@
 <b-col class="text-center d-block d-md-none mt-2 mb-5" md=12>Clear education career!</b-col>
     <b-col class="Third-part my-auto" cols="12" md="3"><b-img class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/kissclipart-add-to-calendar-icon-png-clipart-computer-icons-ca-2a4fbdab8daf6d7d.png?raw=true" alt="calendar"></b-img></b-col>
 <b-col class="text-center d-block d-md-none mt-2 mb-5" md=12>Cambridge English Exams!</b-col>
+
+
+
+  
     <b-col class="text-center d-none d-md-block mt-4 text-size-big" md=6>Clear education career!</b-col>
     <b-col class="text-center d-none d-md-block  mt-4 text-size-big"   md=3>Unique materials!</b-col>
     <b-col class="text-center d-none d-md-block  mt-4 text-size-big" md=3>Cambridge English Exams!</b-col>
@@ -32,7 +36,7 @@ export default {
     font-size: 1.2rem;
 }
 .begginer-banner{
-    background: rgba(255, 255, 255, 0.74);
+    background: rgba(252, 233, 233, 0.74);
 }
 .First-part img{
     padding:5px;
