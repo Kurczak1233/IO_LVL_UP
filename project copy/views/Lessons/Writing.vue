@@ -77,6 +77,6 @@ body
   font-size: 2rem;
 }
 #project-logo{
-  height: 20px;
+  height: 80px;
 }
 </style>

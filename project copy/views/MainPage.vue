@@ -11,7 +11,7 @@ jQuery(document).ready(function(){
 
 <template>
   <body>
-     <b-nav>  <!--fixed="top" class="headerr" fluid -->
+     <b-nav>  <!--fixed="top" class="header" fluid -->
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
           <b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/loogv2.png?raw=true" alt="Logo strony">IO LVL UP</router-link></b-col>

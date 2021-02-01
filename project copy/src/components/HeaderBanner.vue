@@ -8,9 +8,6 @@
 
 <script>
 export default {
-
-
-
 name: 'HeaderBanner',
   
 }
@@ -19,9 +16,5 @@ name: 'HeaderBanner',
 <style scoped>
 #banner{
   border-radius: 50px;
-}
-.background-color
-{
-    background-color: rgba(237, 228, 228);
 }
 </style>

@@ -47,7 +47,7 @@
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
-                Hello: <p class="text-danger">{{imie}}</p><!-- juz zrobilam na imie ;) stworz nowe konto i sprawdz ;)-->
+                Hello: <p class="text-danger">{{imie}}</p> <!-- juz zrobilam na imie ;) stworz nowe konto i sprawdz ;)-->
 
                                 <b-row>
                   <b-col class="col-12"> Your actual progress:
@@ -100,6 +100,7 @@ export default {
 .color-bluish
 {
   background-image: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
+  margin-top: 120px;
 }
 .rounded-edges-left
 {

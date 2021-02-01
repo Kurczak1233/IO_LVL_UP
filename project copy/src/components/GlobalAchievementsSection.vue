@@ -25,7 +25,7 @@ export default {
 }
 .color-bluish
 {
-  background-color: rgba(243, 237, 237, 0.74);
+  background-color: rgba(237, 228, 228);
 }
 .big-font
 {
