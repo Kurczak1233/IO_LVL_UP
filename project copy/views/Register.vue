@@ -31,11 +31,6 @@
               <b-form-input required type="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
             </b-col>
       </b-row> -->
-      <b-row class="mt-3">
-        <b-col class="col-11 offset-1 pt-1">
-        <b-form-checkbox type="checkbox" required>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque suscipit dolore impedit minima maiores at? Lorem ipsum dolor sit amet.</b-form-checkbox>
-        </b-col>
-        </b-row>
         <b-row>
           <b-col class="col-12 text-center">
         <b-link href="/terms.pdf">Terms of use</b-link>
