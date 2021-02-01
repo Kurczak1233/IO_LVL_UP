@@ -94,8 +94,7 @@ header{
 }
 .color-bluish
 {
-  background: rgb(239,233,233);
-background: linear-gradient(180deg, rgb(177, 174, 174) 0%, rgb(133, 123, 123) 100%);
+  background-color: rgb(105, 208, 245);
 }
 .rounded-edges-left
 {

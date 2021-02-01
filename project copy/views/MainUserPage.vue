@@ -1,7 +1,7 @@
 <template>
     <body>
              <b-nav>  <!--fixed="top" class="headerr" fluid -->
-      <b-container fluid class="mb-4 pt-auto pb-auto color-blu">
+      <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
           <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
@@ -97,7 +97,7 @@ export default {
 </script>
 
 <style scoped>
-.color-blu
+.color-bluish
 {
   background-color: rgb(105, 208, 245);
 }
