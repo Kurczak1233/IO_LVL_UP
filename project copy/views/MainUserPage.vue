@@ -99,7 +99,7 @@ export default {
 <style scoped>
 .color-bluish
 {
-  background-color: rgb(105, 208, 245)
+  background-image: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
 }
 .rounded-edges-left
 {

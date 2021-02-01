@@ -81,7 +81,7 @@ font-family: 'Nunito', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #212c38;
-  background:  rgba(243, 237, 237, 0.74);
+  background:   rgb(128, 188, 223);
   background-image: rgba(243, 237, 237, 0.74);
   background:cover;
   background-repeat: no-repeat;
@@ -98,7 +98,7 @@ header{
 }
 .color-bluish
 {
-  background-color: (rgb(218, 218, 218));
+  background-color: (rgb(198, 221, 231));
 }
 .rounded-edges-left
 {

@@ -9,7 +9,7 @@
       <b-form @submit.prevent="pressed">
       <b-row class="mt-3">
            <b-col class="col-2 offset-1 pt-1" >
-              <label for="Login">Login:</label>
+              <label for="Login">Login (email):</label>
            </b-col>
            <b-col class="col-8" >
               <b-form-input required type="email" v-model="email" :state="validation" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
@@ -81,8 +81,9 @@ body
   height:100%;
 }
 .background-bluish
+.background-bluish
 {
-  background-color: rgb(180, 184, 183);
+  background-image: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
   border-radius: 20px;
 }
 .margin10
