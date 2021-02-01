@@ -13,7 +13,6 @@
 
   
     <b-col class="text-center d-none d-md-block mt-4 text-size-big" md=6>Clear education career!</b-col>
-    <b-col class="text-center d-none d-md-block" md=3><a href="\pliki.pdf" download="pliki.pdf">Przystępne materiały</a></b-col>
     <b-col class="text-center d-none d-md-block  mt-4 text-size-big"   md=3>Unique materials!</b-col>
     <b-col class="text-center d-none d-md-block  mt-4 text-size-big" md=3>Cambridge English Exams!</b-col>
   </b-row>
