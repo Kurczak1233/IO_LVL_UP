@@ -119,9 +119,9 @@
     <tr>
       <th scope="row">1</th>
           <td><c>could</c></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>was</f></td>
+      <td><f>have to</f></td>
+      <td><f>must</f></td>
     </tr>
   </thead>
   <tbody>
