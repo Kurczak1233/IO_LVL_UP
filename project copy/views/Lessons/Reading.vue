@@ -104,7 +104,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row"><b>1</b></th>
       <td>What is the name of the hotel where Mr. Abrams plans on staying?</td>
       <td><f>Lincoln Hotels</f></td>
       <td><f> Washington D.C.</f></td>
@@ -113,35 +113,35 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">2</th>
+      <th scope="row"><b>2</b></th>
       <td>For how long does Mr. Abrams plan on staying at the hotel?</td>
       <td><f>A week</f></td>
        <td><f>Overnight</f></td>
       <td><c>Two nights</c></td>
     </tr>
     <tr>
-      <th scope="row">3</th>
+      <th scope="row"><b>3</b></th>
       <td>What kind of room does Mr. Abrams request to stay in?</td>
       <td><c>A single room without a balcony.</c></td>
       <td><f>A double room with a balcony.</f></td>
       <td><f>A double room without a balcony.</f></td>
       </tr>
       <tr>
-        <th scope="row">4</th>
+        <th scope="row"><b>4</b></th>
       <td>All of the following are amenities the hotel offers its guests except:</td>
       <td><f>A swimming pool</f></td>
        <td><f>An exercise room</f></td>
       <td><c>A massage room</c></td>
     </tr>
     <tr>
-      <th scope="row">5</th>
+      <th scope="row"><b>5</b></th>
       <td>At what time can Mr. Abrams check into the hotel on Friday?</td>
       <td><f>Before 11:00 a.m.</f></td>
        <td><f>Before noon</f></td>
       <td><c>After 3:00 p.m.m</c></td>
     </tr>
     <tr>
-      <th scope="row">6</th>
+      <th scope="row"><b>6</b></th>
       <td>When does Mr. Abrams plan on giving the hotel his credit card information?</td>
       <td><f>During the phone call</f></td>
        <td><c>Upon his arrival to the reception desk</c></td>
