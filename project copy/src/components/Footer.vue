@@ -38,7 +38,7 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color: rgb(217,218,211);
+    background: rgba(252, 233, 233, 0.74);
 }
 .text-small
 {
