@@ -127,66 +127,66 @@
   <tbody>
     <tr>
       <th scope="row">2</th>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>have</f></td>
+      <td><f>must</f></td>
          <td><c>dare</c></td>
-      <td><f>zla</f></td>
+      <td><f>used</f></td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td><f>zla</f></td>
+      <td><f>was</f></td>
            <td><c>are</c></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>was able</f></td>
+      <td><f>has to</f></td>
     </tr>
     <tr>
       <th scope="row">4</th>
            <td><c>has to</c></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>have to</f></td>
+      <td><f>are going to</f></td>
+      <td><f>used</f></td>
     </tr>
     <tr>
       <th scope="row">5</th>
            <td><c>must not</c></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>has to </f></td>
+      <td><f>must not </f></td>
+      <td><f>was not</f></td>
     </tr>
     <tr>
       <th scope="row">6</th>
-      <td><f>zla</f></td>
+      <td><f>had better</f></td>
              <td><c>need not</c></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>are </f></td>
+      <td><f>was</f></td>
     </tr>
     <tr>
       <th scope="row">7</th>
-      <td><f>zla</f></td>
+      <td><f>could</f></td>
            <td><c>was able</c></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>have</f></td>
+      <td><f>can</f></td>
     </tr>
     <tr>
       <th scope="row">8</th>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>has to</f></td>
+      <td><f>were you </f></td>
+      <td><f>are</f></td>
          <td><c>are you going to</c></td>
     </tr>
     <tr>
       <th scope="row">9</th>
               <td><c>have to</c></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>must not</f></td>
+      <td><f>has to</f></td>
+      <td><f>are</f></td>
     </tr>
     <tr>
       <th scope="row">10</th>
-      <td><f>zla</f></td>
+      <td><f>are</f></td>
               <td><c>should</c></td>
-      <td><f>zla</f></td>
-      <td><f>zla</f></td>
+      <td><f>has</f></td>
+      <td><f>has to</f></td>
     </tr>
       </tbody>
 </table>
