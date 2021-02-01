@@ -156,6 +156,7 @@ name: 'HeaderBanner',
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 l {text-align: left}
 c {color: black}
 c:active {background-color: green}
@@ -164,5 +165,23 @@ f:active {background-color: red}
 #banner{
   border-radius: 50px;
 }
+
+.background-bulish
+{
+  background-color: rgb(105,08,245);
+  border-radius:20px;
+}
+.margin10
+{
+  margin-top:10%;
+}
+.text-size-big
+{
+  font-size:2rem;
+}
+#project-logo{
+  height:80px;
+}
+
 </style>
 

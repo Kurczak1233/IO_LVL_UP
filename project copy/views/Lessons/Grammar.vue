@@ -80,6 +80,44 @@
       </tbody>
 </table>
     </b-container>  
+
+    <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
+<b>Czasowniki modalne - Modal Verbs</b>
+<b-row class="">
+  <b-col class="">1. I _______ swim when I was a boy. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">2. How _______ you!  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">3. The killers _______ to be executed tomorrow.  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">4. She _______ go home!  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">5. You _______ go there alone!  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">6. You _______ worry about this anymore.  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">7. She _______ to accomplish her task before she lost consciousness.  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">8. What _______ do about it? </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">9. You will _______ earn a lot to afford such car. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">10. You _______ go out more. </b-col>
+</b-row>
+</b-container>
+
+
+
+
 </b-container>
 </template>
 
