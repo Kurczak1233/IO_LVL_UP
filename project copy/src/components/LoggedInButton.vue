@@ -1,11 +1,11 @@
 <template>
-    <b-container>
+    <div name="loggin button">
         <span v-if="loggedIn" class="text-primary">Logged as: <p class="text-danger">{{email}}</p></span>
         <span v-else>No</span>
         <div>
-            <b-button class="form-control btn btn-success" @click="signOut"> Log out </b-button>
+            <button name="button" class="form-control btn btn-success" @click="signOut">Log out</button>
         </div>
-     </b-container>
+     </div>
 
 </template>
 
