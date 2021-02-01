@@ -1,5 +1,8 @@
 <template>
     <body>
+      <head>
+        <link href="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/loogv2.png?raw=true" rel="icon" type="image/x-icon" />
+            
              <b-nav>  <!--fixed="top" class="headerr" fluid -->
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
@@ -35,6 +38,7 @@
               <b-row>
                 <b-col class="col-5 mt-auto mb-auto text-center font-large"><p class="d-none d-md-block">Available classes:</p></b-col>
                 <b-list-group class="col-11 pr-1 ml-auto mr-auto ml-md-0 mr-md-0 col-md-6">
+
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Speaking"><b-button class="btn form-control " variant="primary">Speaking</b-button></router-link></b-list-group-item>
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Writing"><b-button class="btn form-control " variant="success">Writing</b-button></router-link></b-list-group-item>
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Grammar"><b-button class="form-control btn" variant="info">Grammar</b-button></router-link></b-list-group-item>
@@ -96,6 +100,7 @@
       </div>
     </b-sidebar> -->
         </b-container>
+   </head>
     </body>
 </template>
 

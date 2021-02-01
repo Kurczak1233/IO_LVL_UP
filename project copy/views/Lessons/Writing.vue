@@ -59,7 +59,7 @@ export default {
 <style >
 body
 {
-  background-color:  rgba(237, 228, 228);
+  background-color: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
   width: 100%;
   height:100%;
 }
