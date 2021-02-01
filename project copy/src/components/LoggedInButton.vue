@@ -16,16 +16,7 @@ import '@firebase/auth'
 export default {
     created()
     {
-        
-        firebase.auth().onAuthStateChanged(user=>{
-            this.loggedIn = !!user;
-            // if(user){
-            //     this.loggedIn = true;
-            // } else {
-            //     this.loggedIn = false;
-            // }
-        })
-        this.email = firebase.auth().currentUser.email 
+        this.setupFirebase();
     },
     data()
     {
@@ -35,6 +26,18 @@ export default {
         }
     },
     methods: {
+        setupFirebase()
+        {
+        firebase.auth().onAuthStateChanged(user=>{
+            this.loggedIn = !!user;
+            // if(user){
+            //     this.loggedIn = true;
+            // } else {
+            //     this.loggedIn = false;
+            // }
+        })
+        this.email = firebase.auth().currentUser.email 
+        },
         async signOut(){
             try{
                  const data = await firebase.auth().signOut();
