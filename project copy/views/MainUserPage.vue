@@ -1,7 +1,7 @@
 <template>
     <body>
       <head>
-        <link href="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/loogv2.png?raw=true" rel="icon" type="image/x-icon" />
+        <link rel="icon" href="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/favicon%20(2).png?raw=true"> <!-- favicon-->
             
              <b-nav>  <!--fixed="top" class="headerr" fluid -->
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
