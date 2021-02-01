@@ -1,8 +1,6 @@
 <template>
     <body>
-      <head>
-        <link rel="icon" href="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/favicon%20(2).png?raw=true"> <!-- favicon-->
-            
+     
              <b-nav>  <!--fixed="top" class="headerr" fluid -->
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
@@ -100,7 +98,6 @@
       </div>
     </b-sidebar> -->
         </b-container>
-   </head>
     </body>
 </template>
 
