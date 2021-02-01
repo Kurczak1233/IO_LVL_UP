@@ -3,12 +3,12 @@
              <b-nav>  <!--fixed="top" class="headerr" fluid -->
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
-          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/loogv2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
-  <b-list-group-item class="rounded-edges-left btn btn-success" variant="success" href="#">Lessons</b-list-group-item>
-  <b-list-group-item variant="warning btn btn-warning" href="#">Quizes</b-list-group-item>
-  <b-list-group-item class="rounded-edges-right btn btn-danger" variant="danger" href="#">Progress</b-list-group-item>
+  <b-list-group-item class="rounded-edges-left btn btn-success" variant="success" href="#">L E S S O N S</b-list-group-item>
+  <b-list-group-item variant="warning btn btn-warning" href="#">Q U I Z E S</b-list-group-item>
+  <b-list-group-item class="rounded-edges-right btn btn-danger" variant="danger" href="#">P R O G R E S S</b-list-group-item>
             </b-list-group>
 </b-col>
           <b-col class="col-3 d-xl-none">  
@@ -16,8 +16,9 @@
     <template #button-content>
        <b-icon icon="list" font-scale="3"></b-icon>
     </template>
-    <b-dropdown-item href="#">An item</b-dropdown-item>
-    <b-dropdown-item href="#">Another item</b-dropdown-item>
+    <b-dropdown-item href="#">LESSONS</b-dropdown-item>
+    <b-dropdown-item href="#">QUIZES</b-dropdown-item>
+    <b-dropdown-item href="#">PROGRESS</b-dropdown-item>
             </b-dropdown>
         </b-col>
           <b-col class="col-xl-2 col-8 text-success text-center mt-auto mb-auto mr-4"><LoggedInButton></LoggedInButton></b-col>
@@ -29,7 +30,7 @@
           <b-row>
           <b-col class="col-4 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
               <b-row>
-                <b-col class="col-12 mb-3 text-center font-large">Your level: (player-level)</b-col>
+                <b-col class="col-12 mb-3 text-center font-large">Your level: </b-col>
               </b-row>
               <b-row>
                 <b-col class="col-5 mt-auto mb-auto text-center font-large"><p class="d-none d-md-block">Available classes:</p></b-col>
@@ -51,11 +52,11 @@
                                 <b-row>
                   <b-col class="col-12"> Your actual progress:
                                     <div class="progress mt-3"> <!--Można to rozbić na 5 pojedynczych zamiast jednego długiego paska-->
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20">Speaking</div>
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 20%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20">Writing</div>
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 20%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20">Grammar</div>
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20">Reading</div>
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 15%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20">Listening</div>
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 17%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20">Speaking</div>
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20">Writing</div>
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 27%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20">Grammar</div>
+   <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 18%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20">Reading</div>
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20">Listeing</div>
   </div>
                       
                   </b-col>

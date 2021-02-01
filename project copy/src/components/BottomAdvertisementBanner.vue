@@ -19,7 +19,7 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(109, 188, 235);
 }
 .big-font
 {
@@ -31,6 +31,6 @@ export default {
 }
 .color-bluish
 {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(128, 188, 223)
 }
 </style>

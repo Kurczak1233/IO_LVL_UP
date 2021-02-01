@@ -42,7 +42,7 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color:rgb(199, 199, 199);
+    background-image: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
 }
 .text-small
 {
@@ -62,10 +62,10 @@ p{
 }
 a:hover {
   text-decoration: none;
-  color:rgb(83, 126, 243);
+  color:rgb(62, 109, 240);
 }
 a{
-    color:rgb(46, 46, 46);
+    color:rgb(37, 37, 37);
     font-size:bold;
 }
 </style>

@@ -52,6 +52,7 @@ import WebsiteOfferSection from '../src/components/WebsiteOfferSection.vue'
 import GlobalAchievementsSection from '../src/components/GlobalAchievementsSection.vue'
 import BottomAdvertisementBanner from '../src/components/BottomAdvertisementBanner.vue'
 import Footer from '../src/components/Footer.vue'
+import Navigation from '../src/components/Navigation.vue';
 
 export default {
   name: 'MainPage',
@@ -61,7 +62,8 @@ export default {
     WebsiteOfferSection,
     GlobalAchievementsSection,
     BottomAdvertisementBanner,
-    Footer
+    Footer,
+    Navigation
   }
 }
 </script>
@@ -79,8 +81,8 @@ font-family: 'Nunito', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #212c38;
-  background:  rgba(240, 223, 223, 0.74);
-  background: linear-gradient(180deg, rgb(212, 212, 212) 0%, rgb(199, 199, 199) 100%);
+  background:  rgba(243, 237, 237, 0.74);
+  background-image: rgba(243, 237, 237, 0.74);
   background:cover;
   background-repeat: no-repeat;
 }

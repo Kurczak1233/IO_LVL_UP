@@ -21,11 +21,11 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color:rgb(216, 213, 213);
+    background-color:rgba(243, 237, 237, 0.74);
 }
 .color-bluish
 {
-  background-color: rgb(223, 222, 222);
+  background-color: rgba(243, 237, 237, 0.74);
 }
 .big-font
 {
