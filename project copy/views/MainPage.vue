@@ -96,10 +96,6 @@ header{
 .background-dark{
   background-color: rgb(34, 56, 56);
 }
-.color-bluish
-{
-  background-color: (rgb(173, 207, 226));
-}
 .rounded-edges-left
 {
   border-bottom-left-radius: 20px;

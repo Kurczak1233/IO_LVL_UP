@@ -50,7 +50,6 @@
 .container
 {
 background: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
-background: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
   height:100px;
   border-radius: 40px;
   margin-top:20px;

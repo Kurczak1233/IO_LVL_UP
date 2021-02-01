@@ -1,8 +1,8 @@
 <template>
   <body>
-    <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto margin10 background-bluish" fluid>
+    <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto margin-top background-bluish" fluid>
         <b-row>
-          <b-col class="col-12">{{name}},{{description}},stopień trudności: {{level}}</b-col>
+          <b-col class="col-12">{{name}}{{description}} stopień trudności:{{level}}</b-col>
         </b-row>
     </b-container>
   </body>
@@ -40,8 +40,8 @@ function TaskBuilder() {
     }
 }
 // Dyrektor rozkazujący utworzenie zadania
-let task = (new TaskBuilder()).setName("Zadanie 1")
-        .setDescription("Przykładowe zadanie z writingu").setLevel("C1").build();
+let task = (new TaskBuilder()).setName("Zadanie 1 ")
+        .setDescription(" Przykładowe zadanie z writingu").setLevel(" C1").build();
 
 export default {
     name: 'Grammar',
@@ -59,24 +59,24 @@ export default {
 <style >
 body
 {
-  background-color: rgb(217,218,211);
+  background-color:  rgba(237, 228, 228);
   width: 100%;
   height:100%;
 }
 .background-bluish
 {
-  background-color: rgb(105, 208, 245);
+  background-image: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
   border-radius: 20px;
 }
-.margin10
+.margin-top
 {
-  margin-top: 10%;
+  margin-top: 2.5%;
 }
 .text-size-big
 {
   font-size: 2rem;
 }
 #project-logo{
-  height: 80px;
+  height: 20px;
 }
 </style>

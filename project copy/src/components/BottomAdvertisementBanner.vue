@@ -31,6 +31,6 @@ export default {
 }
 .color-bluish
 {
-  background-color: rgb(128, 188, 223)
+  background-color: rgb(128, 188, 223);
 }
 </style>

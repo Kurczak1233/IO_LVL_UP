@@ -7,6 +7,14 @@
          <b-col class="col-12"><hr></b-col>
       </b-row>
       <b-form @submit.prevent="pressed">
+         <b-row class="mt-3">
+           <b-col class="col-2 offset-1 pt-1" >
+              <label for="Login">Imię:</label>
+           </b-col>
+           <b-col class="col-8">
+              <b-form-input required type="imie" v-model="imie"  class="form-control" aria-describedby="Imię" placeholder="Wpisz swoje imię do łatwiejszej komunikacji" id="imie"></b-form-input>
+            </b-col>
+      </b-row>
       <b-row class="mt-3">
            <b-col class="col-2 offset-1 pt-1" >
               <label for="Login">Login (Email):</label>

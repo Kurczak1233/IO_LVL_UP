@@ -3,7 +3,7 @@
              <b-nav>  <!--fixed="top" class="headerr" fluid -->
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
-          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/loogv2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/loogv2.png?raw=true" alt="Logo strony">IO LVLUP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left btn btn-success" variant="success" href="#">L E S S O N S</b-list-group-item>
@@ -47,7 +47,7 @@
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
-                Hello: <p class="text-danger">{{email}}</p><!-- Lepiej by było imię!-->
+                Hello: <p class="text-danger">{{imie}}</p><!-- juz zrobilam na imie ;) stworz nowe konto i sprawdz ;)-->
 
                                 <b-row>
                   <b-col class="col-12"> Your actual progress:
