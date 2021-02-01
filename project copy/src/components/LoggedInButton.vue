@@ -1,11 +1,11 @@
 <template>
-    <b-container>
+    <div name="loggin button">
         <span v-if="loggedIn" class="text-primary">Logged as: <p class="text-danger">{{email}}</p></span>
         <span v-else>No</span>
         <div>
-            <b-button class="form-control btn btn-success" @click="signOut"> Log out </b-button>
+            <button name="button" class="form-control btn btn-success" @click="signOut">Log out</button>
         </div>
-     </b-container>
+     </div>
 
 </template>
 
@@ -16,16 +16,7 @@ import '@firebase/auth'
 export default {
     created()
     {
-        
-        firebase.auth().onAuthStateChanged(user=>{
-            this.loggedIn = !!user;
-            // if(user){
-            //     this.loggedIn = true;
-            // } else {
-            //     this.loggedIn = false;
-            // }
-        })
-        this.email = firebase.auth().currentUser.email 
+        this.setupFirebase();
     },
     data()
     {
@@ -35,6 +26,18 @@ export default {
         }
     },
     methods: {
+        setupFirebase()
+        {
+        firebase.auth().onAuthStateChanged(user=>{
+            this.loggedIn = !!user;
+            // if(user){
+            //     this.loggedIn = true;
+            // } else {
+            //     this.loggedIn = false;
+            // }
+        })
+        this.email = firebase.auth().currentUser.email 
+        },
         async signOut(){
             try{
                  const data = await firebase.auth().signOut();
