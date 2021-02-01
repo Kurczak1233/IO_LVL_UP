@@ -19,8 +19,8 @@ export default {
 <style scoped>
 .background-color
 {
-    background-color: rgba(252, 233, 233, 0.74);
-}
+background: rgb(239,233,233);
+background: linear-gradient(180deg, rgb(66, 65, 65) 0%, rgb(36, 34, 34) 100%);}
 .big-font
 {
     font-size: 7rem;
@@ -31,6 +31,6 @@ export default {
 }
 .color-bluish
 {
-  background-color: rgb(105, 208, 245)
-}
+background: rgb(239,233,233);
+background: linear-gradient(180deg, rgb(66, 65, 65) 0%, rgb(36, 34, 34) 100%);}
 </style>
