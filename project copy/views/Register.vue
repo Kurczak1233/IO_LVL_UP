@@ -12,7 +12,7 @@
               <label for="Login">Imię:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="imie" v-model="imie"  class="form-control" aria-describedby="Imię" placeholder="Wpisz swoje imię do łatwiejszej komunikacji" id="imie"></b-form-input>
+              <b-form-input required type="imie" v-model="imie"  class="form-control" aria-describedby="Imię" placeholder="Enter your name for easier communication" id="imie"></b-form-input>
             </b-col>
       </b-row>
       <b-row class="mt-3">
@@ -41,7 +41,7 @@
       </b-row> -->
          <b-row class="mt-3">
         <b-col class="col-11 offset-1 pt-1">
-        <b-form-checkbox type="checkbox" required>Accept all regulamins</b-form-checkbox>
+        <b-form-checkbox type="checkbox" required>Accept all terms and conditions</b-form-checkbox>
         <b-link href="/terms.pdf">Terms of use</b-link>
         </b-col>
         </b-row>

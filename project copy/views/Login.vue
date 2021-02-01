@@ -20,13 +20,14 @@
               <label for="Login">Password:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="password" v-model="password" :state="validation" class="form-control" aria-describedby="Login" placeholder="Insert your password" id="login"></b-form-input>
+              <b-form-input required type="password" v-model="password" :state="validation" class="form-control" aria-describedby="password" placeholder="Insert your password" id="password"></b-form-input>
             </b-col>
       </b-row>
 
         <b-row class="mt-3">
         <b-col class="col-11 offset-1 pt-1">
-        <b-form-checkbox type="checkbox" required>Zapamiętaj adres email</b-form-checkbox>
+        <b-form-checkbox type="checkbox" required>Remember me</b-form-checkbox>
+      
         </b-col>
         </b-row>
         <b-row class="pb-5 mt-3">
