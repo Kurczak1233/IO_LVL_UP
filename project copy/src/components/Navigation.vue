@@ -48,8 +48,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container{
-background: rgba(255, 255, 255, 0.74);
-background: linear-gradient(180deg, rgba(239,233,233,1) 0%, rgba(231,228,226,1) 100%);
+background: rgba(230, 227, 227, 0.74);
+background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
   height:100px;
   border-radius: 40px;
   margin-top:20px;

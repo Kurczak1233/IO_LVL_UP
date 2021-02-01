@@ -15,8 +15,9 @@
     <template #button-content>
        <b-icon icon="list" font-scale="3"></b-icon>
     </template>
-    <b-dropdown-item href="#">An item</b-dropdown-item>
-    <b-dropdown-item href="#">Another item</b-dropdown-item>
+    <b-dropdown-item href="#">HOME</b-dropdown-item>
+    <b-dropdown-item href="#">CONTACT</b-dropdown-item>
+    <b-dropdown-item href="#">ABOUT US</b-dropdown-item>
   </b-dropdown></b-col>
           <b-col class="col-xl-2 col-4 mt-auto mb-auto text-success"><router-link to="/register"><b-button class="form-control btn btn-warning">Register <b-icon icon="person-plus-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
           <b-col class="col-xl-2 col-4 text-success mt-auto mb-auto mr-4"><router-link to="/login"><b-button class="form-control btn btn-success">Login <b-icon icon="person-check-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
@@ -66,9 +67,9 @@ font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  background: rgb(246, 247, 244);
-  background: linear-gradient(180deg, rgba(217,218,211,1) 0%, rgba(184,179,178,1) 100%);
+  color: #212c38;
+  background:  rgba(240, 223, 223, 0.74);
+  background: linear-gradient(180deg, rgb(212, 212, 212) 0%, rgb(199, 199, 199) 100%);
   background:cover;
   background-repeat: no-repeat;
 }
@@ -80,11 +81,11 @@ header{
     font-size: 2rem;
 }
 .background-dark{
-  background-color: darkslategrey;
+  background-color: rgb(34, 56, 56);
 }
 .color-bluish
 {
-  background: linear-gradient(180deg, rgb(221, 228, 205), rgb(209, 211, 204));
+  background-color: (rgb(218, 218, 218));
 }
 .rounded-edges-left
 {

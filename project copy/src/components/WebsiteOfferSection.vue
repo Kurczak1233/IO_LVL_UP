@@ -31,7 +31,7 @@ export default {
     font-size: 1.2rem;
 }
 .begginer-banner{
-    background: rgb(198, 201, 202);
+    background: rgb(255, 255, 255);
 }
 .First-part img{
     padding:5px;
