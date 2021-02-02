@@ -23,14 +23,6 @@
               <b-form-input required type="password" v-model="password" class="form-control" aria-describedby="password" placeholder="Insert your password" id="login"></b-form-input>
             </b-col>
       </b-row>
-      <!-- <b-row class="mt-3">      
-           <b-col class="col-2 offset-1 pt-1" >
-              <label for="Login">Email:</label>
-           </b-col>
-           <b-col class="col-8">
-              <b-form-input required type="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
-            </b-col>
-      </b-row> -->
         <b-row>
           <b-col class="col-12 text-center">
         <b-link href="/terms.pdf">Terms of use</b-link>
@@ -46,19 +38,6 @@
         </b-form>
     </b-container>
   </body>
-      <!-- <div>
-        <div class="error" v-if='error'>{{error.message}}</div>
-        <form @submit.prevent="pressed" >
-        Register
-        <div class="email">
-            <input type="email" v-model="email" placeholder="email">
-        </div>
-        <div class="password">
-            <input type="password" v-model="password" placeholder="password">
-        </div>
-        <button type="submit">Register</button>
-        </form>
-    </div> -->
 </template>
 
 <script>

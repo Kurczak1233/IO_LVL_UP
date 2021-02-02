@@ -28,7 +28,6 @@
         <b-row class="pb-5 mt-3">
         <b-col class="col-4 offset-4 pt-1">
         <b-button type="submit" class="form-control btn btn-control btn-success">Log in</b-button>
-        <!-- <b-row class="error" v-if="error">{{error.message}}</b-row> -->
         </b-col>
         </b-row>
       </b-form>
