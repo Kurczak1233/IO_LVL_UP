@@ -16,7 +16,7 @@ describe("LoggedInButton.vue", ()=> {
     it("does text log out exists", ()=> { //Test szukania tekstu
         expect(wrapper.find("button").text()).toBe("Log out");
     })
-    it("does any div exists in button", ()=> {
+    it("does any div exists in button", ()=> { //Test przeszukiwania divów w komponencie
         expect(wrapper.find('div').exists()).toBe(true)
     })
     
