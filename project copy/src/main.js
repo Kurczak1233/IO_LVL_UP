@@ -22,6 +22,7 @@ import Reading from '../views/Lessons/Reading.vue'
 import Writing from '../views/Lessons/Writing.vue'
 import Grammar from '../views/Lessons/Grammar.vue'
 import File from '../views/Lessons/File.vue'
+import Contacts from '../views/Contacts.vue'
 
   const firebaseConfig = {
     apiKey: "AIzaSyASQaSEYaG-8Vgv82gss3Jwgr4H9lCbwA8",
@@ -42,6 +43,7 @@ Vue.prototype.$axios = axios; /*  */
 const routes = [
     {path: '/', name: 'home', component: MainPage},
    { path: '/register', name: 'reg', component: Register},
+   { path: '/Contacts', name: 'con', component: Contacts},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
    { path: '/Writing', name: 'write', component: Writing, meta: {requiresAuth: true}},
