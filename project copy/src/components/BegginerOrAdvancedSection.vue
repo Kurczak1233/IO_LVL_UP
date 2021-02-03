@@ -1,8 +1,8 @@
 <template>
 <b-container fluid class="advertisement">
   <b-row class="images m-0">
-    <b-col class="First-part" cols="6"><p class="adv-text1 color-white">Begginer</p></b-col>
-    <b-col class="Second-part" cols="6"><p class="adv-text1 color-black">Advanced</p></b-col>
+    <b-col class="First-part" cols="6"><p class="adv-text1 color-white">B E G G I N E R</p></b-col>
+    <b-col class="Second-part" cols="6"><p class="adv-text1 color-green">A D V A N C E D</p></b-col>
   </b-row>
 </b-container>
 </template>
@@ -26,7 +26,7 @@ export default {
 }
 .First-part
 {
-   background-image: url(https://cdn.pixabay.com/photo/2017/09/21/13/32/girl-2771936_960_720.jpg);
+   background-image: url(https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/girl-2771936_960_720.jpg?raw=true);
    background-size: cover;
    background-repeat:no-repeat;
    background-position:center;
@@ -34,22 +34,22 @@ export default {
 
 }
 .adv-text1{
-  font-size: 40px;
+  font-size: 50px;
   margin-top:150px;
-  text-decoration: underline;
-  opacity: 1;
+  text-decoration: none;
+  opacity: 5;
 }
 .color-white{
-  color:white;
+  color:rgb(247, 35, 35);
 }
-.color-black{
-  color:blue;
+.color-green{
+  color:rgb(29, 51, 248);
 }
 .First-part:hover, .Second-part:hover{
   opacity:0.8;
 }
 .Second-part{
-   background-image: url(https://cdn.pixabay.com/photo/2015/05/15/14/38/telephone-booth-768610_960_720.jpg);
+   background-image: url(https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/telephone-booth-768610_960_720.jpg?raw=true);
    background-size: cover;
    background-repeat:no-repeat;
    background-position:center;

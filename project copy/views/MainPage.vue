@@ -11,10 +11,10 @@ jQuery(document).ready(function(){
 
 <template>
   <body>
-     <b-nav>  <!--fixed="top" class="headerr" fluid -->
+     <b-nav>  <!--fixed="top" class="header" fluid -->
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
-          <b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/loogv2.png?raw=true" alt="Logo strony">IO LVL UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left" variant="primary" href="#">Home</b-list-group-item>
@@ -26,8 +26,9 @@ jQuery(document).ready(function(){
     <template #button-content>
        <b-icon icon="list" font-scale="3"></b-icon>
     </template>
-    <b-dropdown-item href="#">An item</b-dropdown-item>
-    <b-dropdown-item href="#">Another item</b-dropdown-item>
+    <b-dropdown-item href="#">HOME</b-dropdown-item>
+    <b-dropdown-item href="#">CONTACT</b-dropdown-item>
+    <b-dropdown-item href="#">ABOUT US</b-dropdown-item>
   </b-dropdown></b-col>
           <b-col class="col-xl-2 col-4 mt-auto mb-auto text-success"><router-link to="/register"><b-button class="form-control btn btn-warning">Register <b-icon icon="person-plus-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
           <b-col class="col-xl-2 col-4 text-success mt-auto mb-auto mr-4"><router-link to="/login"><b-button class="form-control btn btn-success">Login <b-icon icon="person-check-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
@@ -51,16 +52,18 @@ import WebsiteOfferSection from '../src/components/WebsiteOfferSection.vue'
 import GlobalAchievementsSection from '../src/components/GlobalAchievementsSection.vue'
 import BottomAdvertisementBanner from '../src/components/BottomAdvertisementBanner.vue'
 import Footer from '../src/components/Footer.vue'
+import Navigation from '../src/components/Navigation.vue';
 
 export default {
   name: 'MainPage',
   components: {
+    Navigation,
     HeaderBanner,
     BegginerOrAdvancedSection,
     WebsiteOfferSection,
     GlobalAchievementsSection,
     BottomAdvertisementBanner,
-    Footer
+    Footer,
   }
 }
 </script>
@@ -77,9 +80,9 @@ font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-    background: rgb(217,218,211);
-  background: linear-gradient(180deg, rgba(217,218,211,1) 0%, rgba(184,179,178,1) 100%);
+  color: #171d24;
+  background-image: linear-gradient(180deg, rgb(91, 146, 218) 0%, rgb(173, 207, 226) 100%);
+  height:120px;
   background:cover;
   background-repeat: no-repeat;
 }
@@ -91,11 +94,7 @@ header{
     font-size: 2rem;
 }
 .background-dark{
-  background-color: darkslategrey;
-}
-.color-bluish
-{
-  background-color: rgb(105, 208, 245);
+  background-color: rgb(34, 56, 56);
 }
 .rounded-edges-left
 {

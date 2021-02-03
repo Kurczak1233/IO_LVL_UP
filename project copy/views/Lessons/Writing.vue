@@ -1,5 +1,6 @@
 <template>
   <body>
+
     <b-container class="container text-center">
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_writing.png?raw=true" alt="Logo writing"></b-col>
     </b-container>
@@ -73,18 +74,18 @@ export default {
 <style >
 body
 {
-  background-color: rgb(217,218,211);
+  background-color: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
   width: 100%;
   height:100%;
 }
 .background-bluish
 {
-  background-color: rgb(105, 208, 245);
+  background-image: linear-gradient(180deg, rgb(128, 188, 223) 0%, rgb(91, 146, 218) 100%);
   border-radius: 20px;
 }
-.margin10
+.margin-top
 {
-  margin-top: 10%;
+  margin-top: 2.5%;
 }
 .text-size-big
 {
