@@ -18,8 +18,8 @@ jQuery(document).ready(function(){
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left" variant="primary" href="#">Home</b-list-group-item>
-  <b-list-group-item variant="primary" href="#"><router-link to="/Contacts">Contats us</router-link></b-list-group-item>
-  <b-list-group-item class="rounded-edges-right" variant="primary" href="#">About us</b-list-group-item>
+  <b-list-group-item variant="primary" href="#">Contact</b-list-group-item>
+  <b-list-group-item class="rounded-edges-right" variant="primary" router-link to="/aboutus">About us</b-list-group-item>
             </b-list-group>
 </b-col>
           <b-col class="col-3 d-xl-none">  <b-dropdown size="lg"  variant="link" toggle-class="text-decoration-none" no-caret>   

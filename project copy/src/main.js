@@ -22,6 +22,7 @@ import Reading from '../views/Lessons/Reading.vue'
 import Writing from '../views/Lessons/Writing.vue'
 import Grammar from '../views/Lessons/Grammar.vue'
 import File from '../views/Lessons/File.vue'
+import AboutUs from '../views/AboutUs.vue'
 import Contacts from '../views/Contacts.vue'
 
   const firebaseConfig = {
@@ -51,6 +52,7 @@ const routes = [
    { path: '/Grammar', name: 'gram', component: Grammar, meta: {requiresAuth: true}},
    { path: '/Listening', name: 'listen', component: Listening, meta: {requiresAuth: true}},
    { path: '/File', name: 'file', component: File, meta: {requiresAuth: true}},
+   { path: '/AboutUs', name: 'aboutus', component: AboutUs},
   //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
