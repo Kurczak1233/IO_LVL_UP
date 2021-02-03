@@ -48,7 +48,7 @@
 
 <script>
 export default {
-name: 'HeaderBanner',
+name: 'File',
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

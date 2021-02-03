@@ -59,7 +59,7 @@ function TaskBuilder() {
 let task = (new TaskBuilder()).setName("Mówienie: ") .setPkt("10")
         .setDescription("Jakie są wady/zalety bycia singlem?").setLevel("B1").build();
 export default {
-    name: 'Writing',
+    name: 'Speaking',
         data: function()
     {
       return { //Zwracamy pola z naszego taska
