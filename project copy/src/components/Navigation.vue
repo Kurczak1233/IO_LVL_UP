@@ -3,13 +3,6 @@
       <div class="row">
         <div id="logo-container" class="col-3"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony"></div>
         <div id="login" class="col-6 my-auto d-block">
-  <!-- <b-form inline>
-    <b-input-group prepend="Login:" class="mb-2 mr-sm-2 mb-sm-0">
-    <b-form-input id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" required></b-form-input>
-    </b-input-group>
-    <b-input-group prepend="Password:" class="mb-2 mr-sm-2 mb-sm-0">
-    <b-form-input id="inline-form-input-username"></b-form-input>
-    </b-input-group> -->
     <b-form id="loginbar" class="mx-auto d-block" @submit.stop.prevent>
       <b-form-input type="text" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Login" v-model="userId" :state="loginValidation" required></b-form-input>
       <b-form-input type="password" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Password" v-model="userPassword" :state="passwordValidation" required></b-form-input>
