@@ -1,8 +1,11 @@
 <template>
 <b-container fluid class="advertisement">
   <b-row class="images m-0">
-    <b-col class="First-part" cols="6"><p class="adv-text1 color-white">Begginer</p></b-col>
-    <b-col class="Second-part" cols="6"><p class="adv-text1 color-black">Advanced</p></b-col>
+    <b-col class="First-part" router-link to="/Beginner" cols="6"><p class="adv-text1 color-white" >
+      <b-button class="btn bigger-button" router-link to="/Begginer"  variant="danger">Begginer</b-button>
+      </p></b-col>
+    <b-col class="Second-part" cols="6"><p class="adv-text1 color-black">
+      <b-button class="btn bluish-color bigger-button" router-link to="/Advanced" >Advanced</b-button></p></b-col>
   </b-row>
 </b-container>
 </template>
@@ -54,6 +57,15 @@ export default {
    background-repeat:no-repeat;
    background-position:center;
    width:100%;
+}
+.bluish-color
+{
+  background-color: rgb(105, 208, 245);
+}
+.bigger-button
+{
+  height: 75px;
+  font-size: 35px;
 }
 
 </style>
