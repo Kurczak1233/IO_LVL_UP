@@ -1,18 +1,36 @@
 <template>
-  <body>
-    <h2>Tekst</h2>
-  </body>
+<b-container class="container text-center">
+  <b-row class="">
+    <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_JS.png?raw=true" alt="Logo listening"></b-col>
+  </b-row>
+<b-container class="col-12 mr-auto ml-auto margin5 background-bluish" fluid>
+  <b-row>
+      <b-col class="text-center margin5"> Contact  </b-col>
+    </b-row>
+</b-container>
+<b-container class="col-12 mr-auto ml-auto margin5 background-bluish" fluid>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <td><a href="facebook.com">IO LVL UP on facebook</a></td>
+      <td><a href="https://pl.linkedin.com">IO LVL UP on linkedin</a></td>
+      <td><a href="https://twitter.com/?lang=pl">IO LVL UP on twitter</a></td>
+    </tr>
+  </thead>
+  </table>
+    </b-container>
+</b-container>
 </template>
+
 <script>
-
-
 export default {
-  name: 'Contacts',
-  components: {
-  }
+name: 'contatcs',
 }
 </script>
-
-<style>
-
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+a
+{
+  color: black;
+}
 </style>
