@@ -59,7 +59,7 @@
 
 <script>
 export default {
-name: 'HeaderBanner',
+name: 'Listening',
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
