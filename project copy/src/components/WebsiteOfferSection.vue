@@ -24,9 +24,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* .begginer-slider{
-    height:250px;
-} */
 .text-size-big
 {
     font-size: 1.2rem;
