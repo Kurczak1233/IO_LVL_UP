@@ -17,7 +17,6 @@
         <div class="col-3 my-auto text-center"><div>Zarejestruj się!</div><div><b-icon icon="person-plus-fill" font-scale="2.5"></b-icon></div></div>
       </div>
     </div>
-    
 </template>
 
 <script>
