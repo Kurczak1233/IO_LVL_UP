@@ -54,12 +54,5 @@ name: 'HeaderBanner',
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-l {text-align: left}
-c {color: black}
-c:active {background-color: green}
-f {color: black}
-f:active {background-color: red}
-#banner{
-  border-radius: 50px;
-}
+
 </style>
