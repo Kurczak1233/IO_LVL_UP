@@ -1,6 +1,6 @@
 <template>
     <body>
-             <b-nav>  <!--fixed="top" class="headerr" fluid -->
+             <b-nav> 
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
           <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
@@ -39,6 +39,7 @@
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Grammar"><b-button class="form-control btn" variant="info">Grammar</b-button></router-link></b-list-group-item>
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Reading"><b-button class="form-control btn" variant="danger">Reading</b-button></router-link></b-list-group-item>
   <b-list-group-item class="" variant="info" href="#"><router-link to="/Listening"><b-button class="form-control btn" variant="warning">Listening</b-button></router-link></b-list-group-item>
+  <b-list-group-item class="mt-5" variant="info" href="#"><router-link to="/File"><b-button class="form-control btn" variant="warning">Download</b-button></router-link></b-list-group-item>
             </b-list-group>
               </b-row>
               <b-row>
@@ -98,7 +99,7 @@ export default {
 <style scoped>
 .color-bluish
 {
-  background-color: rgb(105, 208, 245)
+  background-color: rgb(105, 208, 245);
 }
 .rounded-edges-left
 {

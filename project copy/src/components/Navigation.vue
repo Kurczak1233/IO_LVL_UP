@@ -3,13 +3,6 @@
       <div class="row">
         <div id="logo-container" class="col-3"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony"></div>
         <div id="login" class="col-6 my-auto d-block">
-  <!-- <b-form inline>
-    <b-input-group prepend="Login:" class="mb-2 mr-sm-2 mb-sm-0">
-    <b-form-input id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" required></b-form-input>
-    </b-input-group>
-    <b-input-group prepend="Password:" class="mb-2 mr-sm-2 mb-sm-0">
-    <b-form-input id="inline-form-input-username"></b-form-input>
-    </b-input-group> -->
     <b-form id="loginbar" class="mx-auto d-block" @submit.stop.prevent>
       <b-form-input type="text" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Login" v-model="userId" :state="loginValidation" required></b-form-input>
       <b-form-input type="password" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Password" v-model="userPassword" :state="passwordValidation" required></b-form-input>
@@ -49,7 +42,7 @@
 <style scoped>
 .container{
 background: rgb(239,233,233);
-background: linear-gradient(180deg, rgba(239,233,233,1) 0%, rgba(231,228,226,1) 100%);
+background: linear-gradient(180deg, rgb(66, 65, 65) 0%, rgb(36, 34, 34) 100%);
   height:100px;
   border-radius: 40px;
   margin-top:20px;

@@ -11,10 +11,10 @@ jQuery(document).ready(function(){
 
 <template>
   <body>
-     <b-nav>  <!--fixed="top" class="headerr" fluid -->
+     <b-nav> 
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
-          <b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left" variant="primary" href="#">Home</b-list-group-item>
@@ -78,7 +78,7 @@ font-family: 'Nunito', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: rgb(217,218,211);
+    background: rgb(217,218,211);
   background: linear-gradient(180deg, rgba(217,218,211,1) 0%, rgba(184,179,178,1) 100%);
   background:cover;
   background-repeat: no-repeat;
@@ -95,7 +95,7 @@ header{
 }
 .color-bluish
 {
-  background-color: rgb(105, 208, 245)
+  background-color: rgb(105, 208, 245);
 }
 .rounded-edges-left
 {
