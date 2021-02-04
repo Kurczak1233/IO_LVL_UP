@@ -2,6 +2,7 @@
 <b-container class="container text-center">
   <b-row class="">
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_JS.png?raw=true" alt="Logo listening"></b-col>
+
   </b-row>
 <b-container class="col-12 mr-auto ml-auto margin5 background-bluish" fluid>
   <b-row>
@@ -36,6 +37,17 @@
         </b-col>
     </b-row>
 </b-container>
+<br>
+
+
+<b-container class="col-12 mr-auto ml-auto margin5 background-bluish" fluid>
+  <b-row>
+      <b-col class="text-center margin5"> 
+        <a href="mailto:mailogolny@luye.com"> Znalazłeś błąd na stornie? Powiadom nas o tym!  </a> </b-col>
+    </b-row>
+</b-container>
+<br>
+<b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony"></router-link></b-col>
 </b-container>
 </template>
 
