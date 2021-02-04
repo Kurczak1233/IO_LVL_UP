@@ -8,7 +8,7 @@
         <b-row class="mt-4 pb-4 ml-4">
             <b-col class="col-5 d-none d-xl-block"><img src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/Skala%20poprawiona%20beg.png?raw=true" class="img-fluid img-fluid-class" alt=""></b-col>
             <b-col class="col-5 d-none d-sm-block d-xl-none"><img src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/B2.png?raw=true" class="img-fluid img-fluid-class" alt=""></b-col>
-            <b-col class="col-12 col-sm-7 text-indent font-size-md pr-5">As a begginer user you are ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestiae beatae dicta placeat voluptatum perferendis ipsum laboriosam eveniet saepe officia ullam ut culpa eius obcaecati, cupiditate assumenda quia labore explicabo. Facilis quibusdam consequuntur fugiat illum fuga ea saepe vel nostrum corporis laboriosam, suscipit voluptas ipsum, excepturi eveniet? Nisi illo accusantium quam laborum culpa suscipit incidunt omnis sint aperiam commodi? Rerum!</b-col>
+            <b-col class="col-12 col-sm-7 text-indent font-size-md pr-5 mt-auto mb-auto pl-5">As a begginer user you are ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestiae beatae dicta placeat voluptatum perferendis ipsum laboriosam eveniet saepe officia ullam ut culpa eius obcaecati, cupiditate assumenda quia labore explicabo. Facilis quibusdam consequuntur fugiat illum fuga ea saepe vel nostrum corporis laboriosam, suscipit voluptas ipsum, excepturi eveniet? Nisi illo accusantium quam laborum culpa suscipit incidunt omnis sint aperiam commodi? Rerum!</b-col>
         </b-row>
     </b-container>
   </body>
