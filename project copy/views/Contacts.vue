@@ -12,10 +12,17 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <td><a href="facebook.com">IO LVL UP on facebook</a></td>
-      <td><a href="https://pl.linkedin.com">IO LVL UP on linkedin</a></td>
+       <td><a href="https://pl.linkedin.com">IO LVL UP on linkedin</a></td>
+      <td><a href="facebook.com">IO LVL UP on facebook </a></td>
       <td><a href="https://twitter.com/?lang=pl">IO LVL UP on twitter</a></td>
+      <td><a href="https://www.youtube.com">IO LVL UP on YouTube</a></td>
     </tr>
+    <tr>
+        <td><a href="mailto:mail1@luye.com">Karolina Baron</a></td>
+        <td><a href="mailto:mail2@luye.com">Daniel Biegun</a></td>
+        <td><a href="mailto:mail3@luye.com">Michał Kupczak</a></td>
+        <td><a href="mailto:mail4@luye.com">Joanna Setla</a></td>
+      </tr>
   </thead>
   </table>
     </b-container>
