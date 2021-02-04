@@ -50,19 +50,7 @@
                 Hello: <p class="text-danger">{{email}}</p><!-- Lepiej by było imię!-->
 
                                 <b-row>
-                  <b-col class="col-12"> Your actual progress:
-                             <!--       <div class="progress mt-3"> Można to rozbić na 5 pojedynczych zamiast jednego długiego paska
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20">Speaking</div>
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 20%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20">Writing</div>
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 20%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20">Grammar</div>
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20">Reading</div>
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 15%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20">Listening</div>
-  </div>
--->
-           <p>
-</p>
-<p>
-</p>
+<b-col class="col-12"> Your actual progress:
 <b-row>
   <b-col class="col-10 ml-auto mr-auto">
   <div class="progress">
@@ -90,22 +78,15 @@
 </div>
 </b-col>
 </b-row>
-
+<b-row class="mt-5">
+  <b-col class="text center text-danger font-small">
+    You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
+  </b-col>
+</b-row>
                   </b-col>
                 </b-row>
                 </b-col>
           </b-row>
-
-              <!-- <b-button v-b-toggle.sidebar-variant>Toggle Sidebar</b-button>  ZAJEBISTY SIDEBAR!
-    <b-sidebar id="sidebar-variant" title="Sidebar" bg-variant="dark" text-variant="light" shadow>
-      <div class="px-3 py-2">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-      </div>
-    </b-sidebar> -->
         </b-container>
     </body>
 </template>
@@ -150,5 +131,9 @@ export default {
 .font-medium
 {
   font-size: 1.2rem;
+}
+.font-small
+{
+  font-size:1rem;
 }
 </style>
