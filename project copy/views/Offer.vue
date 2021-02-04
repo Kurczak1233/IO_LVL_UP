@@ -6,6 +6,11 @@
             <b-col class="text-center col-12"><img src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" class="height-50 img-fluid img-fluid-class" alt="logo"></b-col>
         </b-row>
         <hr>
+        <b-row>
+            <b-col class="col-12 font-size-lg text-center mt-4">
+                What will you achieve if you are work with us?
+            </b-col>
+        </b-row>
         <b-row class="pb-4 ml-4 height-400">
             <b-col class="col-12 d-xl-none text-center font-size-bg mt-5">Completely free materials!</b-col>
             <b-col class="col-sm-8 col-md-5 col-xl-5 d-block mt-auto mb-auto mr-auto ml-auto"><img src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/Upgraded%20free%20logo.png?raw=true" class="img-fluid img-fluid-class" alt="Cerf levels"></b-col>
@@ -51,6 +56,11 @@ export default {
 .font-size-md
 {
     font-size: 20px;
+}
+.font-size-lg
+{
+    font-size: 25px;
+    font-weight: bold;
 }
 .height-50
 {
