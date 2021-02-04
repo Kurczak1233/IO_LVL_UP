@@ -17,15 +17,25 @@
       <td><a href="https://twitter.com/?lang=pl">IO LVL UP on twitter</a></td>
       <td><a href="https://www.youtube.com">IO LVL UP on YouTube</a></td>
     </tr>
-    <tr>
-        <td><a href="mailto:mail1@luye.com">Karolina Baron</a></td>
-        <td><a href="mailto:mail2@luye.com">Daniel Biegun</a></td>
-        <td><a href="mailto:mail3@luye.com">Michał Kupczak</a></td>
-        <td><a href="mailto:mail4@luye.com">Joanna Setla</a></td>
-      </tr>
+  
   </thead>
   </table>
     </b-container>
+    <b-container class="col-12 mr-auto ml-auto margin5 background-bluish" fluid>
+  <b-row>
+      <b-col class="text-center margin5"> Kontakt do twórców strony:
+        <br><hr>
+        <a href="mailto:mail1@luye.com">Karolina Baron</a>
+        <hr>
+        <a href="mailto:mail2@luye.com">Daniel Biegun</a>
+        <hr>
+        <a href="mailto:mail3@luye.com">Michał Kupczak</a>
+        <hr>
+        <a href="mailto:mail4@luye.com">Joanna Setla</a>
+        <br><br>
+        </b-col>
+    </b-row>
+</b-container>
 </b-container>
 </template>
 
