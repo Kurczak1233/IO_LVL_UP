@@ -26,7 +26,7 @@ import AboutUs from '../views/AboutUs.vue'
 import Contacts from '../views/Contacts.vue'
 import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
-
+import Offer from '../views/Offer.vue'
 
 
   const firebaseConfig = {
