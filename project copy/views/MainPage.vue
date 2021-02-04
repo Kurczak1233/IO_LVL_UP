@@ -18,19 +18,20 @@ jQuery(document).ready(function(){
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left" variant="primary" href="#">Home</b-list-group-item>
-  <b-list-group-item variant="primary" href="#">Contact</b-list-group-item>
-  <b-list-group-item class="rounded-edges-right" variant="primary" href="#">About us</b-list-group-item>
+  <b-list-group-item class="" variant="primary" router-link to="/contacts">Contacts</b-list-group-item>
+  <b-list-group-item class="rounded-edges-right" variant="primary" router-link to="/aboutus">About us</b-list-group-item>
             </b-list-group>
 </b-col>
           <b-col class="col-3 d-xl-none">  <b-dropdown size="lg"  variant="link" toggle-class="text-decoration-none" no-caret>   
     <template #button-content>
        <b-icon icon="list" font-scale="3"></b-icon>
     </template>
-    <b-dropdown-item href="#">An item</b-dropdown-item>
-    <b-dropdown-item href="#">Another item</b-dropdown-item>
+    <b-dropdown-item router-link to="/NIE MA!">Home</b-dropdown-item>
+    <b-dropdown-item router-link to="/NIE MA!">Contact</b-dropdown-item>
+    <b-dropdown-item router-link to="/aboutus">About us</b-dropdown-item>
   </b-dropdown></b-col>
-          <b-col class="col-xl-2 col-4 mt-auto mb-auto text-success"><router-link to="/register"><b-button class="form-control btn btn-warning">Register <b-icon icon="person-plus-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
-          <b-col class="col-xl-2 col-4 text-success mt-auto mb-auto mr-4"><router-link to="/login"><b-button class="form-control btn btn-success">Login <b-icon icon="person-check-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
+          <b-col class="col-4 col-xl-2  mt-auto mb-auto text-success"><router-link to="/register"><b-button class="form-control btn btn-warning">Register <b-icon class="d-none d-sm-inline" icon="person-plus-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
+          <b-col class="col-4 col-xl-2 text-success mt-auto mb-auto mr-4"><router-link to="/login"><b-button class="form-control btn btn-success">Login <b-icon class="d-none d-sm-inline" icon="person-check-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
         </b-row>
       </b-container>
       </b-nav>
