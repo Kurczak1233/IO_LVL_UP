@@ -3,7 +3,7 @@
     <b-row class="pt-4"> 
         <b-col class="col-6 col-md-3 offset-md-2">
             <p class="mb-2 medium-font font-weight-bold text-md-left text-center">Also of interest...</p>
-            <p class="text-md-left text-center"><b-link class="h5">Terms of Use</b-link></p>
+            <p class="text-md-left text-center"><router-link to="/TermsOFUse">Terms of Use</router-link></p>
             <p class="text-md-left text-center"><b-link class="h5">Privacy Policy</b-link></p>
             <p class="text-md-left text-center"><b-link class="h5">Trademarks</b-link></p>
             <p class="text-md-left text-center"><b-link class="h5">Sitemap</b-link></p>
