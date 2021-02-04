@@ -27,6 +27,7 @@ import Contacts from '../views/Contacts.vue'
 import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
 import TermsOFUse from '../views/TermsOFUse.vue'
+import PrivacyPolicy from '../views/PrivacyPolicy'
 
 
   const firebaseConfig = {
@@ -60,6 +61,7 @@ const routes = [
    { path: '/File', name: 'file', component: File, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
+   { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
   //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
