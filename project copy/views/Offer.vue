@@ -44,6 +44,6 @@ export default {
 }
 .height-50
 {
-    height:200px;
+    height: 200px;
 }
 </style>
