@@ -48,7 +48,7 @@ Vue.prototype.$axios = axios; /*  */
 const routes = [
     {path: '/', name: 'home', component: MainPage},
    { path: '/register', name: 'reg', component: Register},
-   { path: '/Beginner', name: 'reg', component: Begginer},
+   { path: '/Begginer', name: 'reg', component: Begginer},
    { path: '/Advanced', name: 'reg', component: Advanced},
    { path: '/Contacts', name: 'con', component: Contacts},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
