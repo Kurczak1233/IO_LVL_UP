@@ -11,7 +11,7 @@
         <b-col class="col-6 col-md-2 offset-md-1 pb-4 pb-md-0">
            <p class="mb-2 medium-font font-weight-bold text-md-left text-center"> IO LVL UP</p>
             <p class="text-md-left text-center"><router-link to="/AboutUsF">About us</router-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Leadership</b-link></p>
+            <p class="text-md-left text-center"><router-link to="/Leadership">Leadership</router-link></p>
             <p class="text-md-left text-center"><b-link class="h5">Careers</b-link></p>
             <p class="text-md-left text-center"><b-link class="h5">Faq</b-link></p>
             <p class="text-md-left text-center"><b-link class="h5">Contact</b-link></p>
