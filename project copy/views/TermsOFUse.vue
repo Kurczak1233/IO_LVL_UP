@@ -5,7 +5,7 @@
   </b-row>
 <b-container class="col-12 mr-auto ml-auto margin5 background-bluish" fluid>
   <b-row>
-      <b-col class="text-center margin5"> Terms of Use </b-col>
+      <b-col class="text-center margin5"> TERMS OF USE </b-col>
     </b-row>
 </b-container>
    <b-col> <p> </p> </b-col>

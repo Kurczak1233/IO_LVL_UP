@@ -27,7 +27,7 @@ import Contacts from '../views/Contacts.vue'
 import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
 
-//Footer
+//Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy'
 import Trademarks from '../views/Trademarks'
