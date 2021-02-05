@@ -37,6 +37,8 @@ import SIteMap from '../views/SIteMap'
 import AboutUsF from '../views/AboutUsF'
 import Leadership from '../views/Leadership'
 import Careers from '../views/Careers'
+import Faq from '../views/Faq'
+import Contact from '../views/Contact'
 
 
   const firebaseConfig = {
@@ -66,6 +68,9 @@ const routes = [
    { path: '/SIteMap', name: 'map', component: SIteMap},
    { path: '/AboutUsF', name: 'aboutus', component: AboutUsF},
    { path: '/Leadership', name: 'leadership', component: Leadership},
+   { path: '/Faq', name: 'faq', component: Faq},
+   { path: '/Careers', name: 'careers', component: Careers},
+   { path: '/Contact', name: 'contact', component: Contact},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
    { path: '/Writing', name: 'write', component: Writing, meta: {requiresAuth: true}},

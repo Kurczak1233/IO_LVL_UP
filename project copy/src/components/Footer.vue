@@ -13,9 +13,9 @@
             <p class="text-md-left text-center"><router-link to="/AboutUsF">About us</router-link></p>
             <p class="text-md-left text-center"><router-link to="/Leadership">Leadership</router-link></p>
             <p class="text-md-left text-center"><router-link to="/Careers">Careers</router-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Careers</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Faq</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Contact</b-link></p>
+            <p class="text-md-left text-center"><router-link to="/Faq">Faq</router-link></p>
+            <p class="text-md-left text-center"><router-link to="/Contact">Contact</router-link></p>
+ 
         </b-col>
         <b-col class="col-12 col-md-2 offset-md-1">
             <p class="text-md-left text-center mb-2  medium-font font-weight-bold"> Social</p>
