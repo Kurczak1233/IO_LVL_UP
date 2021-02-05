@@ -36,6 +36,7 @@ import SIteMap from '../views/SIteMap'
 //Footer 2
 import AboutUsF from '../views/AboutUsF'
 import Leadership from '../views/Leadership'
+import Careers from '../views/Careers'
 
 
   const firebaseConfig = {
@@ -60,6 +61,7 @@ const routes = [
    { path: '/Beginner', name: 'reg', component: Begginer},
    { path: '/Advanced', name: 'reg', component: Advanced},
    { path: '/Contacts', name: 'con', component: Contacts},
+   { path: '/Careers', name: 'careers', component: Careers},
    { path: '/Trademarks', name: 'marks', component: Trademarks},
    { path: '/SIteMap', name: 'map', component: SIteMap},
    { path: '/AboutUsF', name: 'aboutus', component: AboutUsF},
