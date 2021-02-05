@@ -33,6 +33,9 @@ import PrivacyPolicy from '../views/PrivacyPolicy'
 import Trademarks from '../views/Trademarks'
 import SIteMap from '../views/SIteMap'
 
+//Footer 2
+import AboutUsF from '../views/AboutUsF'
+
 
   const firebaseConfig = {
     apiKey: "AIzaSyASQaSEYaG-8Vgv82gss3Jwgr4H9lCbwA8",
@@ -58,6 +61,7 @@ const routes = [
    { path: '/Contacts', name: 'con', component: Contacts},
    { path: '/Trademarks', name: 'marks', component: Trademarks},
    { path: '/SIteMap', name: 'map', component: SIteMap},
+   { path: '/AboutUsF', name: 'aboutus', component: AboutUsF},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
    { path: '/Writing', name: 'write', component: Writing, meta: {requiresAuth: true}},
