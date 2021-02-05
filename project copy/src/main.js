@@ -69,7 +69,6 @@ const routes = [
    { path: '/AboutUsF', name: 'aboutus', component: AboutUsF},
    { path: '/Leadership', name: 'leadership', component: Leadership},
    { path: '/Faq', name: 'faq', component: Faq},
-   { path: '/Careers', name: 'careers', component: Careers},
    { path: '/Contact', name: 'contact', component: Contact},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
