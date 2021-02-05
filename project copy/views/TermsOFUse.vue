@@ -1,7 +1,7 @@
 <template>
 <b-container class="container text-center">
   <b-row class="">
-    <b-col class="mb-2" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_JS.png?raw=true" alt="Logo listening"></b-col>
+    <b-col class="mb-2" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Karolina/project%20copy/src/assets/favicon%20(2).png?raw=true%22" alt="Logo listening"></b-col>
   </b-row>
 <b-container class="col-12 mr-auto ml-auto margin5 background-bluish" fluid>
   <b-row>

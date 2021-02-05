@@ -28,6 +28,7 @@ import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
 import TermsOFUse from '../views/TermsOFUse.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy'
+import Trademarks from '../views/Trademarks'
 
 
   const firebaseConfig = {
@@ -52,6 +53,7 @@ const routes = [
    { path: '/Beginner', name: 'reg', component: Begginer},
    { path: '/Advanced', name: 'reg', component: Advanced},
    { path: '/Contacts', name: 'con', component: Contacts},
+   { path: '/Trademarks', name: 'marks', component: Trademarks},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
    { path: '/Writing', name: 'write', component: Writing, meta: {requiresAuth: true}},
