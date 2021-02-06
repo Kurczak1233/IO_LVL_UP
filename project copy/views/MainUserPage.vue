@@ -3,7 +3,7 @@
              <b-nav> 
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
-          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left btn btn-success" variant="success" href="#">Lessons</b-list-group-item>
@@ -43,26 +43,14 @@
             </b-list-group>
               </b-row>
               <b-row>
-                <b-col class="col-12 mt-4 mb-3">Available lessons left: (35 hours)</b-col>
+                <b-col class="col-12 mt-4 mb-3"><i>Available lessons left: (35 hours)</i></b-col>
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
                 Hello: <p class="text-danger">{{email}}</p><!-- Lepiej by było imię!-->
 
                                 <b-row>
-                  <b-col class="col-12"> Your actual progress:
-                             <!--       <div class="progress mt-3"> Można to rozbić na 5 pojedynczych zamiast jednego długiego paska
-  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 15%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="20">Speaking</div>
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 20%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="20">Writing</div>
-  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 20%" aria-valuenow="4" aria-valuemin="0" aria-valuemax="20">Grammar</div>
-  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 15%" aria-valuenow="3" aria-valuemin="0" aria-valuemax="20">Reading</div>
-  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 15%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="20">Listening</div>
-  </div>
--->
-           <p>
-</p>
-<p>
-</p>
+<b-col class="col-12"> Your actual progress:
 <b-row>
   <b-col class="col-10 ml-auto mr-auto">
   <div class="progress">
@@ -90,22 +78,15 @@
 </div>
 </b-col>
 </b-row>
-
+<b-row class="mt-5">
+  <b-col class="text center text-danger font-small">
+    You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
+  </b-col>
+</b-row>
                   </b-col>
                 </b-row>
                 </b-col>
           </b-row>
-
-              <!-- <b-button v-b-toggle.sidebar-variant>Toggle Sidebar</b-button>  ZAJEBISTY SIDEBAR!
-    <b-sidebar id="sidebar-variant" title="Sidebar" bg-variant="dark" text-variant="light" shadow>
-      <div class="px-3 py-2">
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        </p>
-        <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-      </div>
-    </b-sidebar> -->
         </b-container>
     </body>
 </template>
@@ -150,5 +131,9 @@ export default {
 .font-medium
 {
   font-size: 1.2rem;
+}
+.font-small
+{
+  font-size:1rem;
 }
 </style>

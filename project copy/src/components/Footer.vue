@@ -10,11 +10,10 @@
         </b-col>
         <b-col class="col-6 col-md-2 offset-md-1 pb-4 pb-md-0">
            <p class="mb-2 medium-font font-weight-bold text-md-left text-center"> IO_LVL_UP</p>
-            <p class="text-md-left text-center"><b-link class="h5 ">About us</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Leadership</b-link></p>
+            <p class="text-md-left text-center"><b-link class="h5 " router-link to="/aboutus">About us</b-link></p>
             <p class="text-md-left text-center"><b-link class="h5">Careers</b-link></p>
             <p class="text-md-left text-center"><b-link class="h5">Faq</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Contact</b-link></p>
+            <p class="text-md-left text-center"><b-link class="h5" router-link to="/contacts">Contact</b-link></p>
         </b-col>
         <b-col class="col-12 col-md-2 offset-md-1">
             <p class="text-md-left text-center mb-2  medium-font font-weight-bold"> Social</p>
