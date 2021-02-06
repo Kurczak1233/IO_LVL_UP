@@ -39,6 +39,7 @@ import Leadership from '../views/Leadership'
 import Careers from '../views/Careers'
 import Faq from '../views/Faq'
 import Contact from '../views/Contact'
+import Offer from '../views/Offer.vue'
 
 
   const firebaseConfig = {
@@ -60,7 +61,7 @@ Vue.prototype.$axios = axios; /*  */
 const routes = [
     {path: '/', name: 'home', component: MainPage},
    { path: '/register', name: 'reg', component: Register},
-   { path: '/Beginner', name: 'reg', component: Begginer},
+   { path: '/Begginer', name: 'reg', component: Begginer},
    { path: '/Advanced', name: 'reg', component: Advanced},
    { path: '/Contacts', name: 'con', component: Contacts},
    { path: '/Careers', name: 'careers', component: Careers},
@@ -70,6 +71,7 @@ const routes = [
    { path: '/Leadership', name: 'leadership', component: Leadership},
    { path: '/Faq', name: 'faq', component: Faq},
    { path: '/Contact', name: 'contact', component: Contact},
+   { path: '/Offer', name: 'con', component: Offer},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
    { path: '/Writing', name: 'write', component: Writing, meta: {requiresAuth: true}},

@@ -4,7 +4,7 @@
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_grammar.png?raw=true" alt="Logo grammar"></b-col>
   </b-row>
 <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-<b>THE MICROSCOPE</b>
+<b><h3><i>THE MICROSCOPE</i></h3></b>
 <b-row class="">
   <b-col class=""><l>An important invention in the development of science and medicine was the microscope. It was (1) ... the principle that light could be (2) ... or bent, by a glass lens. It was soon discovered that tiny objects could be magnified (3) ... size when viewed through a glass lens that had been ground and polished in a specific (4)... . Although the principle was known to the Chinese as early as 1000 A.D, it was not until the 13th and 14th centuries in Europe (5) ... it was put to practical use in the form of eyeglasses.</l>
   </b-col>
@@ -82,7 +82,7 @@
     </b-container>  
 
     <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-<b>Czasowniki modalne - Modal Verbs</b>
+<b><h3><i>Czasowniki modalne - Modal Verbs</i></h3></b>
 <b-row class="">
   <b-col class="">1. I _______ swim when I was a boy. </b-col>
 </b-row>
@@ -194,7 +194,7 @@
 </b-container>
 
 <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-<b>  <b-col class=""> Czas Past Continuous - Past Continuous Tense </b-col>
+<b>  <b-col class=""><h3><i> Czas Past Continuous - Past Continuous Tense </i></h3> </b-col>
 </b>
 <b-row class="">
   <b-col class=""> 1. He came while we ____________ </b-col>
