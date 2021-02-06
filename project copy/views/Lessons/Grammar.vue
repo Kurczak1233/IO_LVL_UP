@@ -190,9 +190,7 @@
     </tr>
       </tbody>
 </table>
-
 </b-container>
-
 <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
 <b>  <b-col class=""><h3><i> Czas Past Continuous - Past Continuous Tense </i></h3> </b-col>
 </b>
@@ -304,13 +302,7 @@
     </tr>
       </tbody>
 </table>
-
-
 </b-container>
-
-
-
-
 </b-container>
 </template>
 

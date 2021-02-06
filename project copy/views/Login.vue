@@ -31,6 +31,11 @@
         </b-col>
         </b-row>
       </b-form>
+        <b-row>
+          <b-col class="col-12 offset-1 pt-1">
+         <p class="text-md-left text-center"><router-link to="/"> « Back to Main Page</router-link></p>
+          </b-col>
+        </b-row>
     </b-container>
   </body>
 </template>
