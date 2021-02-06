@@ -43,7 +43,7 @@
             </b-list-group>
               </b-row>
               <b-row>
-                <b-col class="col-12 mt-4 mb-3">Available lessons left: (35 hours)</b-col>
+                <b-col class="col-12 mt-4 mb-3"><i>Available lessons left: (35 hours)</i></b-col>
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
