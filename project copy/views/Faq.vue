@@ -20,12 +20,25 @@
   </thead>
   </table>
     </b-container>
+<b-container>
+  <!-- Plac zabaw Michoła -->
+<div id="example-1">
+  <button v-on:click="counter += 1">Add 1</button>
+  <p>The button above has been clicked {{ counter }} times.</p>
+</div>
+</b-container>
 </b-container>
 </template>
 
 <script>
 export default {
 name: 'contatcs',
+  el: '#example-1',
+  data() {
+           return {
+             counter: 0
+        }
+  }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
