@@ -23,7 +23,6 @@ import Writing from '../views/Lessons/Writing.vue'
 import Grammar from '../views/Lessons/Grammar.vue'
 import File from '../views/Lessons/File.vue'
 import AboutUs from '../views/AboutUs.vue'
-import Contacts from '../views/Contacts.vue'
 import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
 
@@ -38,7 +37,7 @@ import AboutUsF from '../views/AboutUsF'
 import Leadership from '../views/Leadership'
 import Careers from '../views/Careers'
 import Faq from '../views/Faq'
-import Contact from '../views/Contact'
+import Contact from '../views/Contacts'
 import Offer from '../views/Offer.vue'
 
 
@@ -63,14 +62,13 @@ const routes = [
    { path: '/register', name: 'reg', component: Register},
    { path: '/Begginer', name: 'reg', component: Begginer},
    { path: '/Advanced', name: 'reg', component: Advanced},
-   { path: '/Contacts', name: 'con', component: Contacts},
+   { path: '/Contact', name: 'con', component: Contact},
    { path: '/Careers', name: 'careers', component: Careers},
    { path: '/Trademarks', name: 'marks', component: Trademarks},
    { path: '/SIteMap', name: 'map', component: SIteMap},
    { path: '/AboutUsF', name: 'aboutus', component: AboutUsF},
    { path: '/Leadership', name: 'leadership', component: Leadership},
    { path: '/Faq', name: 'faq', component: Faq},
-   { path: '/Contact', name: 'contact', component: Contact},
    { path: '/Offer', name: 'con', component: Offer},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},

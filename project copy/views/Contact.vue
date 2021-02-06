@@ -1,1 +1,0 @@
-<!-- jebne odwolanie do contact z gory /karolina-->
