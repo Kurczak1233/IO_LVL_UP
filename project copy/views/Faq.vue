@@ -25,6 +25,7 @@
 <div id="example-1">
   <button v-on:click="counter += 1">Add 1</button>
   <p>The button above has been clicked {{ counter }} times.</p>
+  <b-button id="button" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title" v-on:click='checkAnswear()'>{{post.title}}</b-button>
 </div>
 </b-container>
 </b-container>
@@ -35,9 +36,19 @@ export default {
 name: 'contatcs',
   el: '#example-1',
   data() {
-           return {
-             counter: 0
-        }
+    return {counter: 0,
+    posts: [
+      { id: 1, title: 'My journey with Vue' },
+      { id: 2, title: 'Blogging with Vue' },
+      { id: 3, title: 'Why Vue is so fun' }
+    ]}
+  },
+  methods: {
+    checkAnswear: function(id)
+    {
+      this.id = id;
+      document.getElementById("button").style.color = "red";
+    }
   }
 }
 </script>
