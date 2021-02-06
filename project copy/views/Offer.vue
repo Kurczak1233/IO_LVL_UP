@@ -8,7 +8,7 @@
         <hr>
         <b-row>
             <b-col class="col-12 font-size-lg text-center mt-4">
-               <i> What will you achieve if you are work with us? </i>
+               <i> What will you achieve if you work with us? </i>
             </b-col>
         </b-row>
         <b-row class="pb-4 ml-4 height-400">
