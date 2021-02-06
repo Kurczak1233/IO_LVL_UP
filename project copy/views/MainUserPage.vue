@@ -3,7 +3,7 @@
              <b-nav> 
       <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
         <b-row class="pt-3 pb-3">
-          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
+          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left btn btn-success" variant="success" href="#">Lessons</b-list-group-item>
@@ -43,7 +43,7 @@
             </b-list-group>
               </b-row>
               <b-row>
-                <b-col class="col-12 mt-4 mb-3">Available lessons left: (35 hours)</b-col>
+                <b-col class="col-12 mt-4 mb-3"><i>Available lessons left: (35 hours)</i></b-col>
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
