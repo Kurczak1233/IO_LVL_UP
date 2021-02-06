@@ -14,7 +14,7 @@
   <thead>
     <tr>
        <td><a href="https://pl.linkedin.com">IO LVL UP on linkedin</a></td>
-      <td><a href="facebook.com">IO LVL UP on facebook </a></td>
+      <td><a href="https://www.facebook.com">IO LVL UP on facebook </a></td>
       <td><a href="https://twitter.com/?lang=pl">IO LVL UP on twitter</a></td>
       <td><a href="https://www.youtube.com">IO LVL UP on YouTube</a></td>
     </tr>

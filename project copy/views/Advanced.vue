@@ -2,7 +2,7 @@
   <body>
     <b-container class="col-11 col-md-11 col-xl-10 mr-auto ml-auto margin5 background-bluish" fluid>
         <b-row>
-            <b-col class="mt-4 col-12 text-center big-font">Advanced users</b-col>
+            <b-col class="mt-4 col-12 text-center big-font"><i>Advanced users</i></b-col>
         </b-row>
         <hr>
         <b-row class="mt-4 pb-4 ml-4">
