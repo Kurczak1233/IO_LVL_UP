@@ -4,7 +4,7 @@
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_reading.png?raw=true" alt="Logo reading"></b-col>
   </b-row>
 <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-<b>Food</b>
+<b><h3><i>Food</i></h3></b>
 <b-row class="">
   <b-col class=""><l>While eating at a restaurant is an enjoyable and convenient occasional treat, most individuals and families prepare their meals at home. To make breakfast, lunch, and dinner daily, these persons must have the required foods and ingredients on hand and ready to go; foods and ingredients are typically purchased from a grocery store, or an establishment that distributes foods, drinks, household products, and other items that're used by the typical consumer.</l>
   </b-col>
@@ -57,7 +57,7 @@
 
 
 <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-<b>Hotel Reservation</b>
+<b><h3><i>Hotel Reservation</i></h3></b>
 <b-row class="">
   <b-col class=""> <b>Receptionist: </b> Good afternoon! This is Capitol Hotels in Washington, D.C. How may I help you? </b-col>
 </b-row>
