@@ -1,53 +1,73 @@
 <template>
   <body>
-    <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto margin10 background-bluish" fluid>
-            <!-- <router-link to="/Builder">Nie będziemy testować writingu.</router-link> -->
+    <b-container class="container text-center">
+    <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_writing.png?raw=true" alt="Logo writing"></b-col>
+    </b-container>
+    <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
+        <b-row>
+          <b-col class="col-12"><b>Temat:</b> {{name}} <br> <b> Liczba punktów do uzyskania: </b> {{pkt}} <br> <b> Treść: </b> {{description}} <br> <b> Stopień trudności: </b> {{level}}</b-col>
+        </b-row>
+    </b-container>
+     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto mt-3 background-bluish" fluid>
+        <b-row>
+          <b-col class="col-12 text-center">Proszę załączyć swoje rozwiązanie</b-col>
+          <b-col class="col-12 text-center"><form action="..." enctype="multipart/form-data">
+            <input type="file" name="nazwa">
+            </form>
+          </b-col>
+        </b-row>
     </b-container>
   </body>
 </template>
 
-
-
-
 <script>
+//Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
+function Task(name, pkt, description, Islevel){
+    this.name = name;
+    this.pkt = pkt;
+    this.description = description;
+    this.level = Islevel;
+}
+//Builder taska (pojedyncze funkcje nadają wartości typom prostym)
+function TaskBuilder() {
 
-// // przykład konstruktor Task oraz TaskBuilder
-
-// function Task(name, description, isDone){
-//     this.name = name;
-//     this.description = description;
-//     this.isDone = isDone;
-// }
-
-// function TaskBuilder() {
-//     let name, description, isDone;
-
-//     return {
-//         setName: function(name) {
-//             this.name = name;
-//             return this;
-//         },
-//         setDescription: function(description) {
-//             this.description = description;
-//             return this;
-//         },
-//         setDone: function(done) {
-//             this.isDone = done;
-//             return this;
-//         },
-//         build: function () {
-//             return new Task(this.name, this.description, this.isDone);
-//         }
-//     }
-// }
-//Dyrektor
-// let task = (new TaskBuilder()).setName("Zadanie 1")
-//         .setDescription("opis").setDone(true).build();
-// console.log(task);
-// // {name: "Zadanie 1", description: "opis", isDone: true}
-
+    return {
+        setName: function(name) {
+            this.name = name;
+            return this;
+        },
+        setPkt: function(pkt) {
+            this.pkt = pkt;
+            return this;
+        },
+        setDescription: function(description) {
+            this.description = description;
+            return this;
+        },
+        setLevel: function(level) {
+            this.level = level;
+            return this;
+        },
+        build: function () {
+            return new Task(this.name, this.pkt, this.description, this.level);
+        }
+    }
+}
+// Dyrektor rozkazujący utworzenie zadania
+let task = (new TaskBuilder()).setName("Rozprawka: ") .setPkt("8")
+        .setDescription("Obejrzałeś ostatnio finał talent show. Osoba która wygrała, według Ciebie nie była najlepsza. Napisz rozprawkę w której uzasadnisz swój wybór.").setLevel("B1").build();
 export default {
-    name: 'Grammar'}
+    name: 'Writing',
+        data: function()
+    {
+      return { //Zwracamy pola z naszego taska
+        name: task.name,
+        pkt: task.pkt,
+        description: task.description,
+        level: task.level
+      }
+    }
+}
 </script>
 
 <style >
@@ -72,5 +92,8 @@ body
 }
 #project-logo{
   height: 80px;
+}
+#banner{
+  border-radius: 50px;
 }
 </style>

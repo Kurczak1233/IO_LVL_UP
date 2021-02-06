@@ -2,7 +2,7 @@
   <body>
     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto margin10 background-bluish" fluid>
       <b-row class="">
-         <b-col class="col-12 text-center pt-4"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/Projekt_IO/blob/main/project/src/assets/Logo.png?raw=true" alt="Logo strony"></b-col>
+         <b-col class="col-12 text-center pt-4"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony"></b-col>
          <b-col class="col-12 text-size-big text-center pt-2">LOGGING PANEL</b-col>
          <b-col class="col-12"><hr></b-col>
       </b-row>
@@ -28,7 +28,6 @@
         <b-row class="pb-5 mt-3">
         <b-col class="col-4 offset-4 pt-1">
         <b-button type="submit" class="form-control btn btn-control btn-success">Log in</b-button>
-        <!-- <b-row class="error" v-if="error">{{error.message}}</b-row> -->
         </b-col>
         </b-row>
       </b-form>
@@ -69,7 +68,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 body
 {
   background-color: rgb(217,218,211);

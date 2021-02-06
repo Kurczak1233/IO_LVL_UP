@@ -21,6 +21,12 @@ import Speaking from '../views/Lessons/Speaking.vue'
 import Reading from '../views/Lessons/Reading.vue'
 import Writing from '../views/Lessons/Writing.vue'
 import Grammar from '../views/Lessons/Grammar.vue'
+import File from '../views/Lessons/File.vue'
+import AboutUs from '../views/AboutUs.vue'
+import Contacts from '../views/Contacts.vue'
+import Begginer from '../views/Begginer.vue'
+import Advanced from '../views/Advanced.vue'
+
 
 
   const firebaseConfig = {
@@ -42,12 +48,17 @@ Vue.prototype.$axios = axios; /*  */
 const routes = [
     {path: '/', name: 'home', component: MainPage},
    { path: '/register', name: 'reg', component: Register},
+   { path: '/Beginner', name: 'reg', component: Begginer},
+   { path: '/Advanced', name: 'reg', component: Advanced},
+   { path: '/Contacts', name: 'con', component: Contacts},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
    { path: '/Writing', name: 'write', component: Writing, meta: {requiresAuth: true}},
    { path: '/Reading', name: 'read', component: Reading, meta: {requiresAuth: true}},
    { path: '/Grammar', name: 'gram', component: Grammar, meta: {requiresAuth: true}},
    { path: '/Listening', name: 'listen', component: Listening, meta: {requiresAuth: true}},
+   { path: '/File', name: 'file', component: File, meta: {requiresAuth: true}},
+   { path: '/AboutUs', name: 'aboutus', component: AboutUs},
   //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]

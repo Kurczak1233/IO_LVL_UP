@@ -20,7 +20,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row"><b>1</b></th>
       <td><c>based upon</c></td>
       <td><f>based at</f></td>
       <td><f>based by</f></td>
@@ -29,7 +29,7 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">2</th>
+      <th scope="row"><b>2</b></th>
       <td><f>retraced</f></td>
       <td><f>retracted</f></td>
       <td><c>refracted</c></td>
@@ -80,12 +80,243 @@
       </tbody>
 </table>
     </b-container>  
+
+    <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
+<b>Czasowniki modalne - Modal Verbs</b>
+<b-row class="">
+  <b-col class="">1. I _______ swim when I was a boy. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">2. How _______ you!  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">3. The killers _______ to be executed tomorrow.  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">4. She _______ go home!  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">5. You _______ go there alone!  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">6. You _______ worry about this anymore.  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">7. She _______ to accomplish her task before she lost consciousness.  </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">8. What _______ do about it? </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">9. You will _______ earn a lot to afford such car. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">10. You _______ go out more. </b-col>
+</b-row>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="row">1</th>
+          <td><c>could</c></td>
+      <td><f>was</f></td>
+      <td><f>have to</f></td>
+      <td><f>must</f></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">2</th>
+      <td><f>have</f></td>
+      <td><f>must</f></td>
+         <td><c>dare</c></td>
+      <td><f>used</f></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><f>was</f></td>
+           <td><c>are</c></td>
+      <td><f>was able</f></td>
+      <td><f>has to</f></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+           <td><c>has to</c></td>
+      <td><f>have to</f></td>
+      <td><f>are going to</f></td>
+      <td><f>used</f></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+           <td><c>must not</c></td>
+      <td><f>has to </f></td>
+      <td><f>must not </f></td>
+      <td><f>was not</f></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><f>had better</f></td>
+             <td><c>need not</c></td>
+      <td><f>are </f></td>
+      <td><f>was</f></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><f>could</f></td>
+           <td><c>was able</c></td>
+      <td><f>have</f></td>
+      <td><f>can</f></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><f>has to</f></td>
+      <td><f>were you </f></td>
+      <td><f>are</f></td>
+         <td><c>are you going to</c></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+              <td><c>have to</c></td>
+      <td><f>must not</f></td>
+      <td><f>has to</f></td>
+      <td><f>are</f></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><f>are</f></td>
+              <td><c>should</c></td>
+      <td><f>has</f></td>
+      <td><f>has to</f></td>
+    </tr>
+      </tbody>
+</table>
+
+</b-container>
+
+<b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
+<b>  <b-col class=""> Czas Past Continuous - Past Continuous Tense </b-col>
+</b>
+<b-row class="">
+  <b-col class=""> 1. He came while we ____________ </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 2. The professor ____________ when the telephone rang </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 3. When Mrs Jones came in her son ____________ </b-col>
+</b-row>
+<b-row class="">
+  <b-col class="">4. Frank ____________ fast, but I couldn't reach him. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 5. We were at home ____________ TV when the accident happened. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 6. Although the baby ____________ loudly, my neighbour came to see what was happening. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 7. What was Isabelle's husband ____________ there? </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 8. Paul broke his leg when he ____________ a horse. </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 9. Where ____________ when you found this coin? </b-col>
+</b-row>
+<b-row class="">
+  <b-col class=""> 10. She ____________ in a bank when I last saw her. </b-col>
+</b-row>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="row">1</th>
+          <td><c> were sleeping </c></td>
+      <td><f>slept </f></td>
+      <td><f> was sleeping </f></td>
+      <td><f>are sleeping </f></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">2 </th>
+      <td><f>read</f></td>
+      <td><f>reads</f></td>
+      <td><f>were reading</f></td>
+      <td><c> was reading </c></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><f>were not sleeping </f></td>
+      <td><f> didn't sleep </f></td>
+      <td><c>  was not sleeping </c></td>
+      <td><f> doesn't sleep </f></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><c> wasn't running </c></td>
+      <td><f> weren't running </f></td>
+      <td><f> didn't run </f></td>
+      <td><f> doesn't run </f></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+           <td><c> watching </c></td>
+      <td><f> watches </f></td>
+      <td><f> watch </f></td>
+      <td><f> watched </f></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><f> weren't crying </f></td>
+             <td><c>wasn't crying </c></td>
+      <td><f> not cry  </f></td>
+      <td><f>don't cry </f></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><f> does </f></td>
+           <td><f> did </f></td>
+      <td><f> do </f></td>
+      <td><c> doing </c></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><f> were riding </f></td>
+      <td><c> was riding </c></td>
+      <td><f> rode  </f></td>
+         <td><f> ridden </f></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><f> did you dig   </f></td>
+      <td><c> were you digging  </c></td>
+      <td><f> do you dig  </f></td>
+      <td><f> you are digging </f></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><f> were working  </f></td>
+      <td><f> works </f></td>
+      <td><f> work </f></td>
+      <td><c> was working </c></td>
+    </tr>
+      </tbody>
+</table>
+
+
+</b-container>
+
+
+
+
 </b-container>
 </template>
 
 <script>
 export default {
-name: 'HeaderBanner',
+name: 'Grammar',
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -97,5 +328,21 @@ f {color: black}
 f:active {background-color: red}
 #banner{
   border-radius: 50px;
+}
+.background-bluish
+{
+  background-color: rgb(105, 208, 245);
+  border-radius: 20px;
+}
+.margin10
+{
+  margin-top: 10%;
+}
+.text-size-big
+{
+  font-size: 2rem;
+}
+#project-logo{
+  height: 80px;
 }
 </style>
