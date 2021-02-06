@@ -3,17 +3,19 @@
     <b-row class="pt-4"> 
         <b-col class="col-6 col-md-3 offset-md-2">
             <p class="mb-2 medium-font font-weight-bold text-md-left text-center">Also of interest...</p>
-            <p class="text-md-left text-center"><b-link class="h5">Terms of Use</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Privacy Policy</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Trademarks</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Sitemap</b-link></p>
+            <p class="text-md-left text-center"><router-link to="/TermsOFUse">Terms of Use</router-link></p>
+            <p class="text-md-left text-center"><router-link to="/PrivacyPolicy">Privacy Policy</router-link></p>
+            <p class="text-md-left text-center"><router-link to="/Trademarks">Trademarks</router-link></p>
+            <p class="text-md-left text-center"><router-link to="/SIteMap">Sitemap</router-link></p>
         </b-col>
         <b-col class="col-6 col-md-2 offset-md-1 pb-4 pb-md-0">
-           <p class="mb-2 medium-font font-weight-bold text-md-left text-center"> IO_LVL_UP</p>
-            <p class="text-md-left text-center"><b-link class="h5 " router-link to="/aboutus">About us</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Careers</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5">Faq</b-link></p>
-            <p class="text-md-left text-center"><b-link class="h5" router-link to="/contacts">Contact</b-link></p>
+           <p class="mb-2 medium-font font-weight-bold text-md-left text-center"> IO LVL UP</p>
+            <p class="text-md-left text-center"><router-link to="/AboutUsF">About us</router-link></p>
+            <p class="text-md-left text-center"><router-link to="/Leadership">Leadership</router-link></p>
+            <p class="text-md-left text-center"><router-link to="/Careers">Careers</router-link></p>
+            <p class="text-md-left text-center"><router-link to="/Faq">Faq</router-link></p>
+            <p class="text-md-left text-center"><router-link to="/Contact">Contact</router-link></p>
+ 
         </b-col>
         <b-col class="col-12 col-md-2 offset-md-1">
             <p class="text-md-left text-center mb-2  medium-font font-weight-bold"> Social</p>
