@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left" variant="primary" router-link to="/Offer">Offer</b-list-group-item>
-  <b-list-group-item class="" variant="primary" router-link to="/Contacts">Contact</b-list-group-item>
+  <b-list-group-item class="" variant="primary" router-link to="/Contact">Contact</b-list-group-item>
   <b-list-group-item class="rounded-edges-right" variant="primary" router-link to="/aboutus">About us</b-list-group-item>
             </b-list-group>
 </b-col>
