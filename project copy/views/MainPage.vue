@@ -69,7 +69,6 @@ export default {
 <style scoped>
 :root{
     box-sizing:border-box;
-    
 }
 body {
 font-family: 'Fraunces', serif;
