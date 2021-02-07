@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: 'Advanced',
+    name: 'Begginer',
 }
 </script>
 <style scoped>

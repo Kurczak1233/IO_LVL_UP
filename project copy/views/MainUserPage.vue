@@ -69,12 +69,12 @@
 <p>
 </p>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 87%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Reading</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 87%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Reading</div>
 </div>
 <p>
 </p>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 17%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Listening</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 17%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Listening</div>
 </div>
 </b-col>
 </b-row>

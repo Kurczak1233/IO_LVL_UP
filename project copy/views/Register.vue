@@ -24,8 +24,8 @@
             </b-col>
       </b-row>
         <b-row>
-          <b-col class="col-12 text-center">
-        <b-link href="/terms.pdf">Terms of use</b-link>
+          <b-col class="col-12 offset-1 pt-1">
+         <p class="text-md-left text-center"><router-link to="/TermsOFUse"> « Terms of Use</router-link></p>
           </b-col>
         </b-row>
         <b-row class="pb-5 mt-3">

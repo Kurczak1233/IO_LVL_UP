@@ -23,9 +23,21 @@ import Writing from '../views/Lessons/Writing.vue'
 import Grammar from '../views/Lessons/Grammar.vue'
 import File from '../views/Lessons/File.vue'
 import AboutUs from '../views/AboutUs.vue'
-import Contacts from '../views/Contacts.vue'
 import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
+
+//Footer 1
+import TermsOFUse from '../views/TermsOFUse.vue'
+import PrivacyPolicy from '../views/PrivacyPolicy'
+import Trademarks from '../views/Trademarks'
+import SIteMap from '../views/SIteMap'
+
+//Footer 2
+import AboutUsF from '../views/AboutUsF'
+import Leadership from '../views/Leadership'
+import Careers from '../views/Careers'
+import Faq from '../views/Faq'
+import Contact from '../views/Contacts'
 import Offer from '../views/Offer.vue'
 
 
@@ -50,7 +62,13 @@ const routes = [
    { path: '/register', name: 'reg', component: Register},
    { path: '/Begginer', name: 'reg', component: Begginer},
    { path: '/Advanced', name: 'reg', component: Advanced},
-   { path: '/Contacts', name: 'con', component: Contacts},
+   { path: '/Contact', name: 'con', component: Contact},
+   { path: '/Careers', name: 'careers', component: Careers},
+   { path: '/Trademarks', name: 'marks', component: Trademarks},
+   { path: '/SIteMap', name: 'map', component: SIteMap},
+   { path: '/AboutUsF', name: 'aboutus', component: AboutUsF},
+   { path: '/Leadership', name: 'leadership', component: Leadership},
+   { path: '/Faq', name: 'faq', component: Faq},
    { path: '/Offer', name: 'con', component: Offer},
    { path: '/UserPage', name: 'userpage', component: UserPage, meta: {requiresAuth: true}},
    { path: '/Speaking', name: 'speak', component: Speaking, meta: {requiresAuth: true}},
@@ -60,6 +78,8 @@ const routes = [
    { path: '/Listening', name: 'listen', component: Listening, meta: {requiresAuth: true}},
    { path: '/File', name: 'file', component: File, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
+   { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
+   { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
   //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
