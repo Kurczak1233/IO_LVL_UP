@@ -27,6 +27,39 @@
   <p>The button above has been clicked {{ counter }} times.</p>
   <b-button id="button" v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title" v-on:click='checkAnswear()'>{{post.title}}</b-button>
 </div>
+<!-- https://stackoverflow.com/questions/47322875/vue-js-dynamic-style-with-variables -->
+<!-- 
+KOD ZE STACK OVERFLOWA!
+var vm = new Vue({
+  el: '#vue-instance',
+  data: {
+    rows: [
+      {value: 'green'},
+      {value: 'red'},
+      {value: 'blue'},
+    ],
+    item:""
+  },
+  methods:{
+  	  onTimeSlotClick: function(item){
+         console.log(item);
+      	document.querySelector(".dynamic").style.background = item;
+      }
+
+  }
+});
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
+<div id="vue-instance">
+   <select class="form-control" v-model="item" v-on:change="onTimeSlotClick(item)">
+         <option value="">Select</option>
+        <option v-for="row in rows">
+          {{row.value}}
+        </option>
+      </select>
+      <div class='dynamic'>VALUE</div>
+      <br/><br/>
+      <div :style="{ background: item}">Another</div>
+</div> -->
 </b-container>
 </b-container>
 </template>
@@ -47,7 +80,7 @@ name: 'contatcs',
     checkAnswear: function(id)
     {
       this.id = id;
-      document.getElementById("button").style.color = "red";
+        document.getElementById("button").style.color = "red";
     }
   }
 }
