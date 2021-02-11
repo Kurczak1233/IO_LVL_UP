@@ -19,7 +19,7 @@
 </b-row>   
 <table class="table table-striped">
   <thead>
-    <tr>
+    <tr v-on:click.once="solved">
       <th scope="row"><b>1.</b></th>
       <td v-on:click.once="inputClickedRight">based upon</td>
       <td v-on:click="inputClickedFalse">based at</td>
@@ -28,49 +28,49 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr v-on:click.once="solved">
       <th scope="row"><b>2.</b></th>
       <td v-on:click="inputClickedFalse">retraced</td>
       <td v-on:click.once="inputClickedRight">retracted</td>
       <td v-on:click="inputClickedFalse">refracted</td>
       <td v-on:click="inputClickedFalse">retorted</td>
     </tr>
-    <tr>
+    <tr v-on:click.once="solved">
       <th scope="row">3.</th>
       <td  v-on:click="inputClickedFalse">on</td>
       <td v-on:click="inputClickedRight">in</td>
       <td  v-on:click="inputClickedFalse">by</td>
       <td  v-on:click="inputClickedFalse">with</td>
     </tr>
-    <tr>
+    <tr v-on:click.once="solved">
       <th scope="row">4.</th>
       <td v-on:click="inputClickedRight">manner</td>
       <td v-on:click="inputClickedFalse">fashion</td>
       <td v-on:click="inputClickedFalse">character</td>
       <td v-on:click="inputClickedFalse">procedure</td>
     </tr>
-    <tr>
+    <tr v-on:click.once="solved"> 
       <th scope="row">5.</th>
       <td v-on:click="inputClickedRight">that</td>
       <td v-on:click="inputClickedFalse">than</td>
       <td v-on:click="inputClickedFalse">when</td>
       <td v-on:click="inputClickedFalse">then</td>
     </tr>
-    <tr>
+    <tr v-on:click.once="solved">
       <th scope="row">6.</th>
       <td v-on:click="inputClickedFalse">rubbing</td>
       <td v-on:click="inputClickedFalse">granting</td>
       <td v-on:click="inputClickedRight">grinding</td>
       <td v-on:click="inputClickedFalse">scraping</td>
     </tr>
-    <tr>
+    <tr v-on:click.once="solved">
       <th scope="row">7</th>
       <td v-on:click="inputClickedFalse">current</td>
       <td v-on:click="inputClickedRight">actual</td>
       <td v-on:click="inputClickedFalse">substantial</td>
       <td v-on:click="inputClickedFalse">present</td>
     </tr>
-    <tr>
+    <tr v-on:click.once="solved">
       <th scope="row">8.</th>
       <td v-on:click="inputClickedFalse">Due</td>
       <td v-on:click="inputClickedFalse">According</td>
@@ -79,6 +79,7 @@
     </tr>
       </tbody>
 </table>
+  <div class="text-center" v-if="QuestionSolved === 8">You scored: {{Pointscounter}} and <p v-if="Pointscounter >= 5" class="text-success">PASSED</p><p v-else class="text-size-big text-danger">FAILED</p> the quiz!</div>
     </b-container>  
 
     <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
@@ -319,27 +320,35 @@ export default {
 name: 'Grammar',
 data: function(){
 return{
-  counter:0
+  Pointscounter:0,
+  QuestionSolved:0,
+  AbleToGrantPoints: true
 }
 },
 methods: {
   score: function() 
   {
-      return this.counter++;
+      return this.Pointscounter++;
   },
   inputClickedRight: function(event)
   {
       //this.$el.setAttribute("style", "background: green;");
+      if(this.AbleToGrantPoints === true)
+      {
       event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
       this.score();
-      console.log(this.counter); //Działa poprawnie
       event.target.setAttribute("disabled", true);
-
+      }
   },
   inputClickedFalse: function(event)
   {
     console.log();
     event.target.setAttribute("style", "background: rgb(255, 64, 0)");
+    this.AbleToGrantPoints = false;
+  },
+  solved: function()
+  {     
+      this.QuestionSolved++;
   }
 }
 }
