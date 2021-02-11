@@ -79,7 +79,7 @@
     </tr>
       </tbody>
 </table>
-  <div class="text-center" v-if="QuestionSolved === 8">You scored: {{Pointscounter}} and <p v-if="Pointscounter >= 5" class="text-success">PASSED</p><p v-else class="text-size-big text-danger">FAILED</p> the quiz!</div>
+  <!-- <div class="text-center" v-if="QuestionSolved === 8">You scored: {{Pointscounter}} and <p v-if="Pointscounter >= 5" class="text-success">PASSED</p><p v-else class="text-size-big text-danger">FAILED</p> the quiz!</div> -->
     </b-container>  
 
     <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
@@ -322,7 +322,7 @@ data: function(){
 return{
   Pointscounter:0,
   QuestionSolved:0,
-  AbleToGrantPoints: true
+  AbleToGrantPoints: true,
 }
 },
 methods: {
@@ -333,22 +333,23 @@ methods: {
   inputClickedRight: function(event)
   {
       //this.$el.setAttribute("style", "background: green;");
-
+      console.log("PRZED PRZYUZNANIEM PUNKTA " + this.AbleToGrantPoints) //FALSE!
       event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
       if(this.AbleToGrantPoints === true)
       {
       this.score();
       event.target.setAttribute("disabled", true);
       }
+      console.log("PO PRZYZNANIEU PUNKTA " + this.AbleToGrantPoints+ "Punkty" + this.Pointscounter)
   },
   inputClickedFalse: function(event)
   {
-    console.log();
     event.target.setAttribute("style", "background: rgb(255, 64, 0)");
+    console.log("FALSE!" + "Ilośc pkt" + this.Pointscounter)
     this.AbleToGrantPoints = false;
   },
   solved: function()
-  {     
+  {   console.log("SOLVED")
       this.QuestionSolved++;
   }
 }
