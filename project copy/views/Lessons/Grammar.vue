@@ -3,7 +3,7 @@
   <b-row class="">
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_grammar.png?raw=true" alt="Logo grammar"></b-col>
   </b-row>
-<b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
+<b-container class="p-3 mb-3 mr-auto ml-auto margin5 background-bluish" fluid>
 <b><h3><i>THE MICROSCOPE</i></h3></b>
 <b-row class="">
   <b-col class=""><l>An important invention in the development of science and medicine was the microscope. It was (1) ... the principle that light could be (2) ... or bent, by a glass lens. It was soon discovered that tiny objects could be magnified (3) ... size when viewed through a glass lens that had been ground and polished in a specific (4)... . Although the principle was known to the Chinese as early as 1000 A.D, it was not until the 13th and 14th centuries in Europe (5) ... it was put to practical use in the form of eyeglasses.</l>
@@ -37,45 +37,45 @@
     </tr>
     <tr>
       <th scope="row">3.</th>
-      <td  v-on:click="inputClickedFalse"><f>on</f></td>
+      <td  v-on:click="inputClickedFalse">on</td>
       <td v-on:click="inputClickedRight">in</td>
-      <td  v-on:click="inputClickedFalse"><f>by</f></td>
-      <td  v-on:click="inputClickedFalse"><f>with</f></td>
+      <td  v-on:click="inputClickedFalse">by</td>
+      <td  v-on:click="inputClickedFalse">with</td>
     </tr>
     <tr>
       <th scope="row">4.</th>
-      <td v-on:click="inputClickedRight"><c>manner</c></td>
-      <td v-on:click="inputClickedFalse"><f>fashion</f></td>
-      <td v-on:click="inputClickedFalse"><f>character</f></td>
-      <td v-on:click="inputClickedFalse"><f>procedure</f></td>
+      <td v-on:click="inputClickedRight">manner</td>
+      <td v-on:click="inputClickedFalse">fashion</td>
+      <td v-on:click="inputClickedFalse">character</td>
+      <td v-on:click="inputClickedFalse">procedure</td>
     </tr>
     <tr>
       <th scope="row">5.</th>
-      <td v-on:click="inputClickedRight"><c>that</c></td>
-      <td v-on:click="inputClickedFalse"><f>than</f></td>
-      <td v-on:click="inputClickedFalse"><f>when</f></td>
-      <td v-on:click="inputClickedFalse"><f>then</f></td>
+      <td v-on:click="inputClickedRight">that</td>
+      <td v-on:click="inputClickedFalse">than</td>
+      <td v-on:click="inputClickedFalse">when</td>
+      <td v-on:click="inputClickedFalse">then</td>
     </tr>
     <tr>
       <th scope="row">6.</th>
-      <td v-on:click="inputClickedFalse"><f>rubbing</f></td>
-      <td v-on:click="inputClickedFalse"><f>granting</f></td>
-      <td v-on:click="inputClickedRight"><c>grinding</c></td>
-      <td v-on:click="inputClickedFalse"><f>scraping</f></td>
+      <td v-on:click="inputClickedFalse">rubbing</td>
+      <td v-on:click="inputClickedFalse">granting</td>
+      <td v-on:click="inputClickedRight">grinding</td>
+      <td v-on:click="inputClickedFalse">scraping</td>
     </tr>
     <tr>
       <th scope="row">7</th>
-      <td v-on:click="inputClickedFalse"><f>current</f></td>
-      <td v-on:click="inputClickedRight"><c>actual</c></td>
-      <td v-on:click="inputClickedFalse"><f>substantial</f></td>
-      <td v-on:click="inputClickedFalse"><f>present</f></td>
+      <td v-on:click="inputClickedFalse">current</td>
+      <td v-on:click="inputClickedRight">actual</td>
+      <td v-on:click="inputClickedFalse">substantial</td>
+      <td v-on:click="inputClickedFalse">present</td>
     </tr>
     <tr>
       <th scope="row">8.</th>
-      <td><f>Due</f></td>
-      <td><f>According</f></td>
-      <td><f>Owing</f></td>
-      <td v-on:click="inputClickedRight"><c>Prior</c></td>
+      <td v-on:click="inputClickedFalse">Due</td>
+      <td v-on:click="inputClickedFalse">According</td>
+      <td v-on:click="inputClickedFalse">Owing</td>
+      <td v-on:click="inputClickedRight">Prior</td>
     </tr>
       </tbody>
 </table>
