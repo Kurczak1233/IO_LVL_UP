@@ -333,23 +333,20 @@ methods: {
   inputClickedRight: function(event)
   {
       //this.$el.setAttribute("style", "background: green;");
-      console.log("PRZED PRZYUZNANIEM PUNKTA " + this.AbleToGrantPoints) //FALSE!
       event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
       if(this.AbleToGrantPoints === true)
       {
       this.score();
       event.target.setAttribute("disabled", true);
       }
-      console.log("PO PRZYZNANIEU PUNKTA " + this.AbleToGrantPoints+ "Punkty" + this.Pointscounter)
   },
   inputClickedFalse: function(event)
   {
     event.target.setAttribute("style", "background: rgb(255, 64, 0)");
-    console.log("FALSE!" + "Ilośc pkt" + this.Pointscounter)
     this.AbleToGrantPoints = false;
   },
   solved: function()
-  {   console.log("SOLVED")
+  {  
       this.QuestionSolved++;
   }
 }
