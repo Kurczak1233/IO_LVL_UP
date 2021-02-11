@@ -20,44 +20,44 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="row d-flex align-items-center vertical-align-center-obj"><b>1.</b></th>
-      <td><button class="btn btn-info form-control" type="button">based upon</button></td>
-      <td><button class="btn btn-info form-control" type="button">based at</button></td>
-      <td><button class="btn btn-info form-control" type="button">based by</button></td>
-      <td><button class="btn btn-info form-control" type="button">based in</button></td>
+      <th scope="row"><b>1.</b></th>
+      <td v-on:click="inputClickedRight">based upon</td>
+      <td v-on:click="inputClickedFalse">based at</td>
+      <td v-on:click="inputClickedFalse">based by</td>
+      <td v-on:click="inputClickedFalse">based in</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><b>2</b></th>
-      <td><f>retraced</f></td>
-      <td><f>retracted</f></td>
-      <td><c>refracted</c></td>
-      <td><f>retorted</f></td>
+      <th scope="row"><b>2.</b></th>
+      <td v-on:click="inputClickedFalse">retraced</td>
+      <td v-on:click="inputClickedRight">retracted</td>
+      <td v-on:click="inputClickedFalse">refracted</td>
+      <td v-on:click="inputClickedFalse">retorted</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
+      <th scope="row">3.</th>
       <td><f>on</f></td>
       <td><c>in</c></td>
       <td><f>by</f></td>
       <td><f>with</f></td>
     </tr>
     <tr>
-      <th scope="row">4</th>
+      <th scope="row">4.</th>
       <td><c>manner</c></td>
       <td><f>fashion</f></td>
       <td><f>character</f></td>
       <td><f>procedure</f></td>
     </tr>
     <tr>
-      <th scope="row">5</th>
+      <th scope="row">5.</th>
       <td><c>that</c></td>
       <td><f>than</f></td>
       <td><f>when</f></td>
       <td><f>then</f></td>
     </tr>
     <tr>
-      <th scope="row">6</th>
+      <th scope="row">6.</th>
       <td><f>rubbing</f></td>
       <td><f>granting</f></td>
       <td><c>grinding</c></td>
@@ -71,7 +71,7 @@
       <td><f>present</f></td>
     </tr>
     <tr>
-      <th scope="row">8</th>
+      <th scope="row">8.</th>
       <td><f>Due</f></td>
       <td><f>According</f></td>
       <td><f>Owing</f></td>
@@ -317,6 +317,18 @@
 <script>
 export default {
 name: 'Grammar',
+methods: {
+  inputClickedRight: function(event)
+  {
+      //this.$el.setAttribute("style", "background: green;");
+      event.target.setAttribute("style", "background: green;");
+    
+  },
+  inputClickedFalse: function(event)
+  {
+    event.target.setAttribute("style", "background: red");
+  }
+}
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -345,16 +357,7 @@ f:active {background-color: red}
 #project-logo{
   height: 80px;
 }
-.vertical-align-center-obj
-{
-  vertical-align: middle;
-}
-.table th
-{
-  padding:0;
-}
-td
-{
-  padding-bottom:0;
+table td:hover{
+  background-color: #ffc107;
 }
 </style>
