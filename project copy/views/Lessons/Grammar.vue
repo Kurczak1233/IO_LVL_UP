@@ -333,9 +333,10 @@ methods: {
   inputClickedRight: function(event)
   {
       //this.$el.setAttribute("style", "background: green;");
+
+      event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
       if(this.AbleToGrantPoints === true)
       {
-      event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
       this.score();
       event.target.setAttribute("disabled", true);
       }
