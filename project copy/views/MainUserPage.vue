@@ -99,7 +99,7 @@ export default {
      components: {
     LoggedInButton
   },
-      data()
+    data()
     {
         return {
             loggedIn: false,

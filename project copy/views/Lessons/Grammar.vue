@@ -20,11 +20,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="row"><b>1</b></th>
-      <td><c>based upon</c></td>
-      <td><f>based at</f></td>
-      <td><f>based by</f></td>
-      <td><f>based in</f></td>
+      <th scope="row d-flex align-items-center vertical-align-center-obj"><b>1.</b></th>
+      <td><button class="btn btn-info form-control" type="button">based upon</button></td>
+      <td><button class="btn btn-info form-control" type="button">based at</button></td>
+      <td><button class="btn btn-info form-control" type="button">based by</button></td>
+      <td><button class="btn btn-info form-control" type="button">based in</button></td>
     </tr>
   </thead>
   <tbody>
@@ -344,5 +344,17 @@ f:active {background-color: red}
 }
 #project-logo{
   height: 80px;
+}
+.vertical-align-center-obj
+{
+  vertical-align: middle;
+}
+.table th
+{
+  padding:0;
+}
+td
+{
+  padding-bottom:0;
 }
 </style>
