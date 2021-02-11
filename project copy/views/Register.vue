@@ -28,17 +28,9 @@
               <label for="Login">Name:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="email" v-model="email"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+              <b-form-input required type="text" v-model="name"  class="form-control" aria-describedby="Login" placeholder="Insert your name" id="name"></b-form-input>
             </b-col>
         </b-row>
-        <b-row class="mt-3">
-           <b-col class="col-2 offset-1 pt-1" >
-              <label for="Login">Photo:</label>
-           </b-col>
-           <b-col class="col-8">
-              <b-form-input required type="" v-model="photoUrl"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
-            </b-col>
-       </b-row>
         <b-row>
           <b-col class="col-12 offset-1 pt-1">              
           <div>
@@ -48,6 +40,7 @@
               name="checkbox-1"
               value="accepted"
               unchecked-value="not_accepted"
+              required
             >
               I accept the terms and use
             </b-form-checkbox>
@@ -101,9 +94,9 @@ export default {
             name: "",
             termsOfUse: false,
             emailVerified: false,
-            photoUrl: "",
             level: "",
-            status: 'not_accepted'
+            status: 'not_accepted',
+            file1: null
         }
     }
 }

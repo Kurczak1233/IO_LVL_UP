@@ -47,7 +47,7 @@
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
-                Hello: <p class="text-danger">{{email}}</p><!-- Lepiej by było imię!-->
+                Hello: <p class="text-danger">{{email}} as {{name}}</p><!-- Lepiej by było imię!-->
 
                                 <b-row>
 <b-col class="col-12"> Your actual progress:
@@ -103,8 +103,8 @@ export default {
     {
         return {
             loggedIn: false,
-            email: firebase.auth().currentUser.email 
-            
+            email: firebase.auth().currentUser.email,
+            name: firebase.auth().currentUser.displayName
         }
     },
 }
