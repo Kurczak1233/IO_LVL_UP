@@ -48,7 +48,17 @@ export default {
     methods: {
       async pressed(){
            try{
-                const user = firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+                const user = firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(userCredential => {
+                     if (userCredential) {
+                    userCredential.user.updateProfile({
+                        displaySurName: userCredential.surname,
+                        displayName: userCredential.username,
+                        displayEmailVerified: userCredential.emailVerified,
+                        displayPhotoURL: userCredential.photoURL,
+                        displayLevel: userCredential.level
+                    })
+                   }})
+                
                 console.log(user)
                 this.$router.replace({name: "userpage"});
            }catch(err)
@@ -62,6 +72,7 @@ export default {
             email: "",
             password: '',
             error: ''
+
         }
     }
 }
