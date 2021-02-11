@@ -53,7 +53,9 @@ import Offer from '../views/Offer.vue'
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   // var db = firebase.firestore();
-   
+  firebase = require("firebase");
+  // Required for side-effects
+  require("firebase/firestore");
 Vue.prototype.$axios = axios; /*  */
 
 
