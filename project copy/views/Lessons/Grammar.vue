@@ -21,7 +21,7 @@
   <thead>
     <tr>
       <th scope="row"><b>1.</b></th>
-      <td v-on:click="inputClickedRight">based upon</td>
+      <td v-on:click.once="inputClickedRight">based upon</td>
       <td v-on:click="inputClickedFalse">based at</td>
       <td v-on:click="inputClickedFalse">based by</td>
       <td v-on:click="inputClickedFalse">based in</td>
@@ -31,7 +31,7 @@
     <tr>
       <th scope="row"><b>2.</b></th>
       <td v-on:click="inputClickedFalse">retraced</td>
-      <td v-on:click="inputClickedRight">retracted</td>
+      <td v-on:click.once="inputClickedRight">retracted</td>
       <td v-on:click="inputClickedFalse">refracted</td>
       <td v-on:click="inputClickedFalse">retorted</td>
     </tr>
@@ -317,16 +317,29 @@
 <script>
 export default {
 name: 'Grammar',
+data: function(){
+return{
+  counter:0
+}
+},
 methods: {
+  score: function() 
+  {
+      return this.counter++;
+  },
   inputClickedRight: function(event)
   {
       //this.$el.setAttribute("style", "background: green;");
       event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
-    
+      this.score();
+      console.log(this.counter); //Działa poprawnie
+      event.target.setAttribute("disabled", true);
+
   },
   inputClickedFalse: function(event)
   {
-    event.target.setAttribute("style", "background: 	rgb(255, 64, 0)");
+    console.log();
+    event.target.setAttribute("style", "background: rgb(255, 64, 0)");
   }
 }
 }
