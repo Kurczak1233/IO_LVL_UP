@@ -73,8 +73,12 @@ export default {
                      if (userCredential) {
                     userCredential.user.updateProfile({
                         displayName: this.name,
-                        displayPhotoURL: this.photoUrl,
-                        displayTOU: this.termsOfUse
+                        displayTOU: this.termsOfUse,
+                        displayGrammar: this.grammar,
+                        displaySpeaking: this.speaking,
+                        displayWriting: this.writing,
+                        displayReading: this.reading,
+                        displayListening: this.listening,
                     })
                    }})
                 
@@ -95,8 +99,13 @@ export default {
             termsOfUse: false,
             emailVerified: false,
             level: "",
+            grammar: 0,
+            speaking: 0,
+            writing: 0,
+            reading: 0,
+            listening: 0,
             status: 'not_accepted',
-            file1: null
+            file1: null,
         }
     }
 }

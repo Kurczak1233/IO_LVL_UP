@@ -54,7 +54,7 @@
 <b-row>
   <b-col class="col-10 ml-auto mr-auto">
   <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 22%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Speaking</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 22%" aria-valuenow="{{}}" aria-valuemin="0" aria-valuemax="100">Speaking</div>
 </div>
 <p>
 </p>
@@ -105,6 +105,7 @@ export default {
             loggedIn: false,
             email: firebase.auth().currentUser.email,
             name: firebase.auth().currentUser.displayName
+            
         }
     },
 }
