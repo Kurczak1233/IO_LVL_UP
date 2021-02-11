@@ -37,45 +37,45 @@
     </tr>
     <tr>
       <th scope="row">3.</th>
-      <td><f>on</f></td>
-      <td><c>in</c></td>
-      <td><f>by</f></td>
-      <td><f>with</f></td>
+      <td  v-on:click="inputClickedFalse"><f>on</f></td>
+      <td v-on:click="inputClickedRight">in</td>
+      <td  v-on:click="inputClickedFalse"><f>by</f></td>
+      <td  v-on:click="inputClickedFalse"><f>with</f></td>
     </tr>
     <tr>
       <th scope="row">4.</th>
-      <td><c>manner</c></td>
-      <td><f>fashion</f></td>
-      <td><f>character</f></td>
-      <td><f>procedure</f></td>
+      <td v-on:click="inputClickedRight"><c>manner</c></td>
+      <td v-on:click="inputClickedFalse"><f>fashion</f></td>
+      <td v-on:click="inputClickedFalse"><f>character</f></td>
+      <td v-on:click="inputClickedFalse"><f>procedure</f></td>
     </tr>
     <tr>
       <th scope="row">5.</th>
-      <td><c>that</c></td>
-      <td><f>than</f></td>
-      <td><f>when</f></td>
-      <td><f>then</f></td>
+      <td v-on:click="inputClickedRight"><c>that</c></td>
+      <td v-on:click="inputClickedFalse"><f>than</f></td>
+      <td v-on:click="inputClickedFalse"><f>when</f></td>
+      <td v-on:click="inputClickedFalse"><f>then</f></td>
     </tr>
     <tr>
       <th scope="row">6.</th>
-      <td><f>rubbing</f></td>
-      <td><f>granting</f></td>
-      <td><c>grinding</c></td>
-      <td><f>scraping</f></td>
+      <td v-on:click="inputClickedFalse"><f>rubbing</f></td>
+      <td v-on:click="inputClickedFalse"><f>granting</f></td>
+      <td v-on:click="inputClickedRight"><c>grinding</c></td>
+      <td v-on:click="inputClickedFalse"><f>scraping</f></td>
     </tr>
     <tr>
       <th scope="row">7</th>
-      <td><f>current</f></td>
-      <td><c>actual</c></td>
-      <td><f>substantial</f></td>
-      <td><f>present</f></td>
+      <td v-on:click="inputClickedFalse"><f>current</f></td>
+      <td v-on:click="inputClickedRight"><c>actual</c></td>
+      <td v-on:click="inputClickedFalse"><f>substantial</f></td>
+      <td v-on:click="inputClickedFalse"><f>present</f></td>
     </tr>
     <tr>
       <th scope="row">8.</th>
       <td><f>Due</f></td>
       <td><f>According</f></td>
       <td><f>Owing</f></td>
-      <td><c>Prior</c></td>
+      <td v-on:click="inputClickedRight"><c>Prior</c></td>
     </tr>
       </tbody>
 </table>
@@ -321,12 +321,12 @@ methods: {
   inputClickedRight: function(event)
   {
       //this.$el.setAttribute("style", "background: green;");
-      event.target.setAttribute("style", "background: green;");
+      event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
     
   },
   inputClickedFalse: function(event)
   {
-    event.target.setAttribute("style", "background: red");
+    event.target.setAttribute("style", "background: 	rgb(255, 64, 0)");
   }
 }
 }
