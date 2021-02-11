@@ -57,6 +57,11 @@
         <b-col class="col-4"></b-col>
         </b-row>
         </b-form>
+        <b-col class="d-none">TEKST HAHAHA
+            <div>
+                
+  </div>
+        </b-col>
     </b-container>
   </body>
 </template>
@@ -74,6 +79,7 @@ export default {
                     userCredential.user.updateProfile({
                         displayName: this.name,
                         displayTOU: this.termsOfUse,
+                        displayLVL: this.level,
                         displayGrammar: this.grammar,
                         displaySpeaking: this.speaking,
                         displayWriting: this.writing,
@@ -98,11 +104,11 @@ export default {
             name: "",
             termsOfUse: false,
             emailVerified: false,
-            level: "",
+            level: "Undefined",
             grammar: 0,
             speaking: 0,
             writing: 0,
-            reading: 0,
+            reading: 100,
             listening: 0,
             status: 'not_accepted',
             file1: null,

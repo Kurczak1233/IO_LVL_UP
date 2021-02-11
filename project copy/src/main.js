@@ -52,7 +52,9 @@ import Offer from '../views/Offer.vue'
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
+  const db =firebase.firestore();
+  db.settings({timestampsInSpanshots: true}); //Firestore
+   
 Vue.prototype.$axios = axios; /*  */
 
 
