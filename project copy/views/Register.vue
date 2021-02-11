@@ -23,6 +23,31 @@
               <b-form-input required type="password" v-model="password" class="form-control" aria-describedby="password" placeholder="Insert your password" id="login"></b-form-input>
             </b-col>
       </b-row>
+        <b-row class="mt-3">
+           <b-col class="col-2 offset-1 pt-1" >
+              <label for="Login">Name:</label>
+           </b-col>
+           <b-col class="col-8">
+              <b-form-input required type="email" v-model="email"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+            </b-col>
+      </b-row>
+      <hr> Additional information:
+        <b-row class="mt-3">
+           <b-col class="col-2 offset-1 pt-1" >
+              <label for="Name">Name:</label>
+           </b-col>
+           <b-col class="col-8">
+              <b-form-input required type="email" v-model="email"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+            </b-col>
+      </b-row>
+        <b-row class="mt-3">
+           <b-col class="col-2 offset-1 pt-1" >
+              <label for="Login">Photo:</label>
+           </b-col>
+           <b-col class="col-8">
+              <b-form-input required type="email" v-model="email"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+            </b-col>
+      </b-row>
         <b-row>
           <b-col class="col-12 offset-1 pt-1">
          <p class="text-md-left text-center"><router-link to="/TermsOFUse"> « Terms of Use</router-link></p>
@@ -51,11 +76,9 @@ export default {
                 const user = firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(userCredential => {
                      if (userCredential) {
                     userCredential.user.updateProfile({
-                        displaySurName: userCredential.surname,
-                        displayName: userCredential.username,
-                        displayEmailVerified: userCredential.emailVerified,
-                        displayPhotoURL: userCredential.photoURL,
-                        displayLevel: userCredential.level
+                        displayName: this.name,
+                        displayPhotoURL: this.photoUrl,
+                        displayTOU: this.termsOfUse
                     })
                    }})
                 
@@ -71,8 +94,12 @@ export default {
         return {
             email: "",
             password: '',
-            error: ''
-
+            error: '',
+            name: "",
+            termsOfUse: false,
+            emailVerified: false,
+            photoUrl: "",
+            level: ""
         }
     }
 }

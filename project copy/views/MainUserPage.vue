@@ -104,6 +104,7 @@ export default {
         return {
             loggedIn: false,
             email: firebase.auth().currentUser.email 
+            
         }
     },
 }
