@@ -50,7 +50,7 @@
                 Hello: <p class="text-danger">{{name}}!</p><!-- Lepiej by było imię!-->
 
                                 <b-row>
-<b-col class="col-12"> Your actual progress:
+<b-col class="col-12"> Your actual progress: 
 <b-row>
   <b-col class="col-10 ml-auto mr-auto">
   <div class="progress">
@@ -95,11 +95,16 @@
 import LoggedInButton from '../src/components/LoggedInButton.vue'
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
+
+window.onload = function(){
+
+}
+
 export default {
      components: {
     LoggedInButton
   },
-    data()
+    data: function()
     {
         return {
             loggedIn: false,
@@ -110,27 +115,34 @@ export default {
             writing: 0,
             reading: 0,
             listening: 0,
-            level: ''
+            level: 'sadsad'
         }
     },
-    methods()
+    mounted: function()
     {
-      var db = firebase.firestore();
+       var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-      retrieveInfo(doc);
-      function retrieveInfo(doc)
-      {
-            this.grammar = doc.data().grammar;
-            this.speaking= doc.data().speaking;
-            this.writing= doc.data().writing;
-            this.reading= doc.data().reading;
-            this.listening= doc.data().listening;
-            this.level= doc.data().level;
-      }
-  });
+    querySnapshot.forEach((doc) => {
+        this.grammar = doc.data().grammar
+        this.reading = doc.data().reading
+        this.speaking = doc.data().speaking
+        this.writing = doc.data().writing
+        this.listening = doc.data().listening
+        this.level = doc.data().level
+    });
 });
     }
+// function assignValues(prop)
+// {
+//       this.grammar = doc.data().grammar;
+//       this.speaking= doc.data().speaking;
+//       this.writing= doc.data().writing;
+//       this.reading= doc.data().reading;
+//       this.listening= doc.data().listening;
+//       this.level = doc.data().level;
+// }
+        
+    
 }                  
 </script>
 
