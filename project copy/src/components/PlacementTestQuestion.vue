@@ -7,7 +7,7 @@
             </b-col>    
         </b-row>
         <b-row>
-          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">Today, Antarctica is mostly devoid of its ancient life. It has no trees or bushes and (1) ... is limited to moss and algae.</b-col>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{description}}</b-col>
             <b-col class="d-flex align-items-center mt-3 mb-3" >
                 <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
@@ -80,22 +80,30 @@ function TaskBuilder() {
     }
 }
 // Dyrektor rozkazujący utworzenie zadania
+
 let task = (new TaskBuilder()).setId("1").setPkt("1")
         .setDescription("Today, Antarctica is mostly devoid of its ancient life. It has no trees or bushes and (1) ... is limited to moss and algae.").setAnswear1("vegetables").setAnswear2("vegetations").setAnswear3("vegetation").setAnswear4("vegetating").correctAnswear("vegetation").build();
+let task2 = (new TaskBuilder()).setId("2").setPkt("1")
+       .setDescription("The (1) ... public interest in Ghost Hunting today makes it easy to forget that not too long ago exploring the paranormal was taboo.").setAnswear1("widespread").setAnswear2("worldwide").setAnswear3("wide").setAnswear4("widespreading").correctAnswear("widespread").build();
+let task3 = (new TaskBuilder()).setId("3").setPkt("1")
+      .setDescription("Man has landed on the moon, probed deep space, and is transforming out lives by (1) ... technological feats - yet he cannot create a rain cloud at will.").setAnswear1("countless").setAnswear2("unless").setAnswear3("many").setAnswear4("limitless").correctAnswear("countless").build();
+let taskList = [task, task2, task3];
+let i = 0;
+let points = 0;
 export default {
     name: 'Speaking',
         data: function()
     {
       return { //Zwracamy pola z naszego taska
-        id: task.id,
-        pkt: task.pkt,
-        description: task.description,
-        answear1: task.answear1,
-        answear2: task.answear2,
-        answear3: task.answear3,
-        answear4: task.answear4,
-        correctAnswear: task.correctAnswear,
-        selected: 'A',
+         id: task.id,
+         pkt: task.pkt,  //Not necessary but whatsoever...
+         description: task.description,
+         answear1: task.answear1,
+         answear2: task.answear2,
+         answear3: task.answear3,
+         answear4: task.answear4,
+         correctAnswear: task.correctAnswear,
+        selected: null,
         options: [
           { item: task.answear1, name: task.answear1 },
           { item: task.answear2, name: task.answear2 },
@@ -112,9 +120,19 @@ export default {
             console.log(this.selected);
             if(task.correctAnswear === this.selected)
             {
-                task.pkt++;
+                points++;
             }
-            console.log(task.pkt);
+            console.log(points);
+            ++i;
+            this.description = taskList[i].description
+            this.answear1 = taskList[i].answear1
+            this.answear2 = taskList[i].answear2
+            this.answear3 = taskList[i].answear3
+            this.answear4 = taskList[i].answear4
+            this.correctAnswear = taskList[i].correctAnswear
+            this.id = taskList[i].id
+            console.log(i);
+            
         }
 //         CreateNewQuestion: function()
 //         {
