@@ -1,7 +1,7 @@
 <template>
   <body>
 
-    <b-container class="col-10 mt-5 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
+    <b-container v-if="questionNumber===0" class="col-10 mt-5 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-danger pt-2 text-size-big">
                 You are attempting a placement test.
@@ -13,13 +13,14 @@
           <b-col class="pt-2 pb-3 text-center"><b>GOOD LUCK!</b></b-col>
         </b-row>
     </b-container>
-    <b-container class="col-10 mt-3 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
+    <b-container v-if="questionNumber===0" class="col-10 mt-3 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="col-12 text-center mt-3 mb-3">
-                    <button class="btn btn-warning">Start the test!</button>
+                    <button class="btn btn-warning" v-on:click="StartTest">Start the test!</button>
             </b-col>
         </b-row>
         </b-container>
+        <PlacementTestQuestion v-if="questionNumber === 1"></PlacementTestQuestion>
   </body>
 </template>
 
@@ -61,6 +62,7 @@ function TaskBuilder() {
 // Dyrektor rozkazujący utworzenie zadania
 let task = (new TaskBuilder()).setName("Mówienie: ") .setPkt("3")
         .setDescription("Jakie są wady/zalety bycia singlem?").setLevel("B1").build();
+import PlacementTestQuestion from "../src/components/PlacementTestQuestion"
 export default {
     name: 'Speaking',
         data: function()
@@ -69,8 +71,20 @@ export default {
         name: task.name,
         pkt: task.pkt,
         description: task.description,
-        level: task.level
+        level: task.level,
+        questionNumber: 0
       }
+    },
+    methods:
+    {
+        StartTest: function()
+        {
+            return this.questionNumber++;
+        }
+    },
+    components:
+    {
+        PlacementTestQuestion
     }
 }
 </script>
