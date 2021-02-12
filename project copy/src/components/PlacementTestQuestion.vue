@@ -20,7 +20,7 @@
 //KONCEPCJA NA STWORZENIE QUIZU, liczenie pkt zadań i wskazywanie v-if/v-else? Jeśli 1 pkt pokaż tą podstronę itd?
 
 //Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
-function Task(id, pkt, description, answear1, answear2, answear3, answear4){
+function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear){
     this.id = id;
     this.pkt = pkt;
     this.description = description;
@@ -28,6 +28,7 @@ function Task(id, pkt, description, answear1, answear2, answear3, answear4){
     this.answear2 = answear2
     this.answear3 = answear3
     this.answear4 = answear4
+    this.correctAnswear = correctAnswear
 }
 //Builder taska (pojedyncze funkcje nadają wartości typom prostym)
 function TaskBuilder() {
@@ -61,14 +62,18 @@ function TaskBuilder() {
             this.answear4 = answear4;
             return this;
         },
+        correctAnswear: function(correctAnswear) {
+            this.correctAnswear = correctAnswear;
+            return this;
+        },
         build: function () {
-            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4);
+            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear);
         }
     }
 }
 // Dyrektor rozkazujący utworzenie zadania
 let task = (new TaskBuilder()).setId("1").setPkt("1")
-        .setDescription("Today, Antarctica is mostly devoid of its ancient life. It has no trees or bushes and (1) ... is limited to moss and algae.").setAnswear1("vegetables").setAnswear2("vegetations").setAnswear3("vegetation").setAnswear4("vegetating").build();
+        .setDescription("Today, Antarctica is mostly devoid of its ancient life. It has no trees or bushes and (1) ... is limited to moss and algae.").setAnswear1("vegetables").setAnswear2("vegetations").setAnswear3("vegetation").setAnswear4("vegetating").correctAnswear("vegetation").build();
 export default {
     name: 'Speaking',
         data: function()
@@ -81,6 +86,7 @@ export default {
         answear2: task.answear2,
         answear3: task.answear3,
         answear4: task.answear4,
+        correctAnswear: task.correctAnswear,
         selected: 'A',
         options: [
           { item: "A", name: task.answear1 },
