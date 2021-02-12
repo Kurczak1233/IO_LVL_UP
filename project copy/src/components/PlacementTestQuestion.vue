@@ -105,7 +105,7 @@ export default {
          correctAnswear: task.correctAnswear,
         selected: null,
         options: [
-          { item: task.answear1, name: task.answear1 },
+          { item: task.answear1 , name: task.answear1 },
           { item: task.answear2, name: task.answear2 },
           { item: task.answear3, name: task.answear3 },
           { item: task.answear4, name: task.answear4 }
@@ -117,21 +117,31 @@ export default {
     {
         CheckAndNextQuestion: function()
         {
-            console.log(this.selected);
-            if(task.correctAnswear === this.selected)
+            console.log(this.correctAnswear)
+            console.log(this.selected)
+            if(this.correctAnswear === this.selected)
             {
                 points++;
             }
-            console.log(points);
             ++i;
+            if(i === 3)
+            {
+                return points;
+            }
+            console.log(points);
             this.description = taskList[i].description
             this.answear1 = taskList[i].answear1
             this.answear2 = taskList[i].answear2
             this.answear3 = taskList[i].answear3
             this.answear4 = taskList[i].answear4
+            this.options = [
+          { item: this.answear1, name: this.answear1 },
+          { item: this.answear2, name: this.answear2 },
+          { item: this.answear3, name: this.answear3 },
+          { item: this.answear4, name: this.answear4 }
+        ]
             this.correctAnswear = taskList[i].correctAnswear
             this.id = taskList[i].id
-            console.log(i);
             
         }
 //         CreateNewQuestion: function()
