@@ -145,6 +145,30 @@ export default {
         return{
           width: `${this.speaking}%`
         }
+      },
+      ReadingWidth()
+      {
+        return{
+          width: `${this.reading}%`
+        }
+      },
+      ListeningWidth()
+      {
+        return{
+          width: `${this.listening}%`
+        }
+      },
+      WritingWidth()
+      {
+        return{
+          width: `${this.writing}%`
+        }
+      },
+       GrammarWidth()
+      {
+        return{
+          width: `${this.grammar}%`
+        }
       }
     }
 // function assignValues(prop)
