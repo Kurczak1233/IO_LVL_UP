@@ -1,7 +1,7 @@
 <template>
   <body>
-    <b-container class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
-        <b-row>
+    <b-container v-if="questionNumber<2" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+        <b-row>{{questionNumber}}
             <b-col class="text-center text-info pt-2 text-size-big">
                 Question {{id}}
             </b-col>    
@@ -21,6 +21,13 @@
             
         </b-row>
     </b-container>
+     <b-container v-else class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+        <b-row>
+            <b-col class="text-center text-info pt-2 text-size-big">
+                You PASSED!
+            </b-col>    
+        </b-row>
+    </b-container>
   </body>
 </template>
 
@@ -28,7 +35,7 @@
 //KONCEPCJA NA STWORZENIE QUIZU, liczenie pkt zadań i wskazywanie v-if/v-else? Jeśli 1 pkt pokaż tą podstronę itd?
 
 //Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
-function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear){
+function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, questionNumber){
     this.id = id;
     this.pkt = pkt;
     this.description = description;
@@ -37,6 +44,7 @@ function Task(id, pkt, description, answear1, answear2, answear3, answear4, corr
     this.answear3 = answear3
     this.answear4 = answear4
     this.correctAnswear = correctAnswear
+    this.questionNumber = questionNumber
 }
 //Builder taska (pojedyncze funkcje nadają wartości typom prostym)
 function TaskBuilder() {
@@ -74,28 +82,33 @@ function TaskBuilder() {
             this.correctAnswear = correctAnswear;
             return this;
         },
+        setQuestionNumber: function(questionNumber) {
+            this.questionNumber = questionNumber;
+            return this;
+        },
         build: function () {
-            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear);
+            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.questionNumber);
         }
     }
 }
 // Dyrektor rozkazujący utworzenie zadania
 
-let task = (new TaskBuilder()).setId("1").setPkt("1")
+let task = (new TaskBuilder()).setId("1").setPkt("1").setQuestionNumber("0")
         .setDescription("Today, Antarctica is mostly devoid of its ancient life. It has no trees or bushes and (1) ... is limited to moss and algae.").setAnswear1("vegetables").setAnswear2("vegetations").setAnswear3("vegetation").setAnswear4("vegetating").correctAnswear("vegetation").build();
 let task2 = (new TaskBuilder()).setId("2").setPkt("1")
        .setDescription("The (1) ... public interest in Ghost Hunting today makes it easy to forget that not too long ago exploring the paranormal was taboo.").setAnswear1("widespread").setAnswear2("worldwide").setAnswear3("wide").setAnswear4("widespreading").correctAnswear("widespread").build();
 let task3 = (new TaskBuilder()).setId("3").setPkt("1")
       .setDescription("Man has landed on the moon, probed deep space, and is transforming out lives by (1) ... technological feats - yet he cannot create a rain cloud at will.").setAnswear1("countless").setAnswear2("unless").setAnswear3("many").setAnswear4("limitless").correctAnswear("countless").build();
 let taskList = [task, task2, task3];
-let i = 0;
 let points = 0;
+let i = 0;
 export default {
     name: 'Speaking',
         data: function()
     {
       return { //Zwracamy pola z naszego taska
          id: task.id,
+         questionNumber: task.questionNumber,
          pkt: task.pkt,  //Not necessary but whatsoever...
          description: task.description,
          answear1: task.answear1,
@@ -124,24 +137,26 @@ export default {
                 points++;
             }
             ++i;
-            if(i === 3)
+            this.questionNumber = task.questionNumber++;
+            console.log(task.questionNumber);
+            if(task.questionNumber < 3)
             {
-                return points;
+                console.log(points);
+                this.description = taskList[i].description
+                this.answear1 = taskList[i].answear1
+                this.answear2 = taskList[i].answear2
+                this.answear3 = taskList[i].answear3
+                this.answear4 = taskList[i].answear4
+                this.options = [
+            { item: this.answear1, name: this.answear1 },
+            { item: this.answear2, name: this.answear2 },
+            { item: this.answear3, name: this.answear3 },
+            { item: this.answear4, name: this.answear4 }
+            ]
+                this.correctAnswear = taskList[i].correctAnswear
+                this.id = taskList[i].id
             }
-            console.log(points);
-            this.description = taskList[i].description
-            this.answear1 = taskList[i].answear1
-            this.answear2 = taskList[i].answear2
-            this.answear3 = taskList[i].answear3
-            this.answear4 = taskList[i].answear4
-            this.options = [
-          { item: this.answear1, name: this.answear1 },
-          { item: this.answear2, name: this.answear2 },
-          { item: this.answear3, name: this.answear3 },
-          { item: this.answear4, name: this.answear4 }
-        ]
-            this.correctAnswear = taskList[i].correctAnswear
-            this.id = taskList[i].id
+
             
         }
 //         CreateNewQuestion: function()
