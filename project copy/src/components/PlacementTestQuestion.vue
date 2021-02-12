@@ -1,7 +1,7 @@
 <template>
   <body>
     <b-container v-if="questionNumber<2" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
-        <b-row>{{questionNumber}}
+        <b-row>
             <b-col class="text-center text-info pt-2 text-size-big">
                 Question {{id}}
             </b-col>    
@@ -24,7 +24,7 @@
      <b-container v-else class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-info pt-2 text-size-big">
-                You PASSED!
+                You scored {{pkt}} points which assigns you as: 
             </b-col>    
         </b-row>
     </b-container>
@@ -93,11 +93,11 @@ function TaskBuilder() {
 }
 // Dyrektor rozkazujący utworzenie zadania
 
-let task = (new TaskBuilder()).setId("1").setPkt("1").setQuestionNumber("0")
+let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0")
         .setDescription("Today, Antarctica is mostly devoid of its ancient life. It has no trees or bushes and (1) ... is limited to moss and algae.").setAnswear1("vegetables").setAnswear2("vegetations").setAnswear3("vegetation").setAnswear4("vegetating").correctAnswear("vegetation").build();
-let task2 = (new TaskBuilder()).setId("2").setPkt("1")
+let task2 = (new TaskBuilder()).setId("2")
        .setDescription("The (1) ... public interest in Ghost Hunting today makes it easy to forget that not too long ago exploring the paranormal was taboo.").setAnswear1("widespread").setAnswear2("worldwide").setAnswear3("wide").setAnswear4("widespreading").correctAnswear("widespread").build();
-let task3 = (new TaskBuilder()).setId("3").setPkt("1")
+let task3 = (new TaskBuilder()).setId("3")
       .setDescription("Man has landed on the moon, probed deep space, and is transforming out lives by (1) ... technological feats - yet he cannot create a rain cloud at will.").setAnswear1("countless").setAnswear2("unless").setAnswear3("many").setAnswear4("limitless").correctAnswear("countless").build();
 let taskList = [task, task2, task3];
 let points = 0;
@@ -137,6 +137,7 @@ export default {
                 points++;
             }
             ++i;
+            this.pkt = points;
             this.questionNumber = task.questionNumber++;
             console.log(task.questionNumber);
             if(task.questionNumber < 3)
