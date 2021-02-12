@@ -29,7 +29,7 @@
                 <p v-else-if="pkt === 2" class="text-size-big text-center text-danger">B1</p> 
                 <p v-else-if="pkt > 2" class="text-size-big text-center text-danger">B2</p> 
                 <b-col class="text-center mb-3" >
-                    <button class="btn btn-warning" type="button">Confirm</button>
+                    <button v-on:click="SetUsersLevel()" class="btn btn-warning" type="button">Confirm</button>
                 </b-col>
             </b-col>    
         </b-row>
@@ -39,7 +39,8 @@
 
 <script>
 //KONCEPCJA NA STWORZENIE QUIZU, liczenie pkt zadań i wskazywanie v-if/v-else? Jeśli 1 pkt pokaż tą podstronę itd?
-
+import { firebase } from '@firebase/app'
+import '@firebase/auth'
 //Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
 function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, questionNumber){
     this.id = id;
@@ -122,6 +123,7 @@ export default {
          answear3: task.answear3,
          answear4: task.answear4,
          correctAnswear: task.correctAnswear,
+         email: firebase.auth().currentUser.email,
         selected: null,
         options: [
           { item: task.answear1 , name: task.answear1 },
@@ -140,9 +142,35 @@ export default {
     },
     methods:
     {
-        CheckPoints: function()
+        SetUsersLevel: function()
         {
-            return points;
+            var db = firebase.firestore();
+            if(this.pkt <= 1)
+            {
+  db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+         db.collection(this.email).doc(doc.id).update({level: "A2"});
+    });
+});
+            }
+            else if(this.pkt ===2)
+            { 
+  db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+         db.collection(this.email).doc(doc.id).update({level: "B1"});
+    });
+});
+
+            }
+            else
+            {
+  db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+         db.collection(this.email).doc(doc.id).update({level: "B2"});
+    });
+});
+            }
+
         },
         CheckAndNextQuestion: function()
         {   

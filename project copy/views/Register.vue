@@ -57,7 +57,7 @@
         <b-col class="col-4"></b-col>
         </b-row>
         </b-form>
-        <b-col class="d-none">TEKST HAHAHA
+        <b-col class="d-none">
             <div>
 
   </div>
@@ -88,7 +88,7 @@ export default {
                   writing: 0,
                   reading: 0,
                   listening: 0,
-                  level: "Unknown"
+                  level: "Unknown",
                 })
                 .then((docRef) => {
                   console.log("Document written with ID: ", docRef.id);
@@ -112,12 +112,6 @@ export default {
             name: "",
             termsOfUse: false,
             emailVerified: false,
-            level: "Undefined",
-            grammar: 0,
-            speaking: 0,
-            writing: 0,
-            reading: 100,
-            listening: 0,
             status: 'not_accepted',
             file1: null,
         }
