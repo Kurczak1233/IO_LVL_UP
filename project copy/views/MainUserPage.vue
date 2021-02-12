@@ -54,7 +54,7 @@
 <b-row>
   <b-col class="col-10 ml-auto mr-auto">
   <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="{ width: {speaking} }"  :aria-valuenow="{ width: speaking }" aria-valuemin="0" aria-valuemax="100">Speaking</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="SpeakingWidth" :aria-valuenow="{ width: speaking }" aria-valuemin="0" aria-valuemax="100">Speaking</div>
 </div>
 <p>
 </p>
@@ -115,7 +115,7 @@ export default {
             writing: 0,
             reading: 0,
             listening: 0,
-            level: 'sadsad'
+            level: ''
         }
     },
     mounted: function()
@@ -123,14 +123,29 @@ export default {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        this.grammar = doc.data().grammar
-        this.reading = doc.data().reading
-        this.speaking = doc.data().speaking
-        this.writing = doc.data().writing
-        this.listening = doc.data().listening
-        this.level = doc.data().level
+      console.log(doc.data().speaking);
+        this.grammar = doc.data().grammar;
+        this.reading = doc.data().reading;
+        this.speaking = doc.data().speaking;
+        this.writing = doc.data().writing;
+        this.listening = doc.data().listening;
+        this.level = doc.data().level;
     });
 });
+    },
+     props: {
+    width: {
+      type: Number,
+      default: 0
+    }
+  },
+    computed: {
+      SpeakingWidth()
+      {
+        return{
+          width: `${this.speaking}%`
+        }
+      }
     }
 // function assignValues(prop)
 // {
