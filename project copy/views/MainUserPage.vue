@@ -5,7 +5,7 @@
         <b-row class="pt-3 pb-3">
           <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
-            <b-list-group horizontal>
+            <b-list-group horizontal v-if="level !== 'Unknown'">
   <b-list-group-item class="rounded-edges-left btn btn-success" variant="success" href="#">Lessons</b-list-group-item>
   <b-list-group-item variant="warning btn btn-warning" href="#">Quizes</b-list-group-item>
   <b-list-group-item class="rounded-edges-right btn btn-danger" variant="danger" href="#">Progress</b-list-group-item>
@@ -50,44 +50,57 @@
                 Hello: <p class="text-danger">{{name}}!</p><!-- Lepiej by było imię!-->
 
                                 <b-row>
-<b-col class="col-12"> Your actual progress: 
-<b-row>
-  <b-col class="col-10 ml-auto mr-auto">
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="SpeakingWidth" :aria-valuenow="SpeakingWidth" aria-valuemin="0" aria-valuemax="100">Speaking</div>
-</div>
-<p>
-</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" :style="WritingWidth" :aria-valuenow="WritingWidth" aria-valuemin="0" aria-valuemax="100">Writing</div>
-</div>
-<p>
-</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated  bg-info" role="progressbar" :style="GrammarWidth" :aria-valuenow="GrammarWidth" aria-valuemin="0" aria-valuemax="100">Grammar</div>
-</div>
-<p>
-</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" :style="ReadingWidth" :aria-valuenow="ReadingWidth" aria-valuemin="0" aria-valuemax="100">Reading</div>
-</div>
-<p>
-</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" :style="ListeningWidth" :aria-valuenow="ListeningWidth" aria-valuemin="0" aria-valuemax="100">Listening</div>
-</div>
-</b-col>
-</b-row>
-<b-row class="mt-5">
-  <b-col class="text center text-danger font-small">
-    You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
-  </b-col>
-</b-row>
+                    <b-col class="col-12"> Your actual progress: 
+                    <b-row>
+                      <b-col class="col-10 ml-auto mr-auto">
+                      <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="SpeakingWidth" :aria-valuenow="SpeakingWidth" aria-valuemin="0" aria-valuemax="100">Speaking</div>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" :style="WritingWidth" :aria-valuenow="WritingWidth" aria-valuemin="0" aria-valuemax="100">Writing</div>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated  bg-info" role="progressbar" :style="GrammarWidth" :aria-valuenow="GrammarWidth" aria-valuemin="0" aria-valuemax="100">Grammar</div>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" :style="ReadingWidth" :aria-valuenow="ReadingWidth" aria-valuemin="0" aria-valuemax="100">Reading</div>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" :style="ListeningWidth" :aria-valuenow="ListeningWidth" aria-valuemin="0" aria-valuemax="100">Listening</div>
+                    </div>
+                    </b-col>
+                    </b-row>
+                    <b-row class="mt-5">
+                      <b-col class="text center text-danger font-small">
+                        You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
+                      </b-col>
+                    </b-row>
                   </b-col>
                 </b-row>
                 </b-col>
           </b-row>
         </b-container>
+      <b-container fluid v-if="level === 'Unknown'">
+        <b-row>
+          <b-col class="col-12 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
+              <b-row>
+                <b-col class="col-12 mb-3 text-center font-large">Your level: <span class="text-danger">{{level}}</span></b-col>
+              </b-row>
+              <b-row class="row text-center pb-1"><b-col>In order to have access to our resources, you have to </b-col></b-row>
+              <b-row class="pb-3">
+                <b-col class="text-center"><button class="btn btn-warning">Take placement test!</button></b-col>
+              </b-row>
+          </b-col>
+        </b-row>
+      </b-container>
     </body>
 </template>
 
