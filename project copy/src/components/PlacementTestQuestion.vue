@@ -8,7 +8,7 @@
         </b-row>
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{description}}</b-col>
-            <b-col class="d-flex align-items-center mt-3 mb-3" >
+            <b-col class="d-flex align-items-center mt-3" >
                 <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
         </b-row>
@@ -23,8 +23,14 @@
     </b-container>
      <b-container v-else class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
-            <b-col class="text-center text-info pt-2 text-size-big">
-                You scored {{pkt}} points which assigns you as: 
+            <b-col class="text-center text-black pt-2 text-size-big">
+                You scored <span class="text-danger">{{pkt}}</span> points which signs your English knowledge as:
+                <p v-if="pkt <= 1" class="text-size-big text-center text-danger">A2</p> 
+                <p v-else-if="pkt === 2" class="text-size-big text-center text-danger">B1</p> 
+                <p v-else-if="pkt > 2" class="text-size-big text-center text-danger">B2</p> 
+                <b-col class="text-center mb-3" >
+                    <button class="btn btn-warning" type="button">Confirm</button>
+                </b-col>
             </b-col>    
         </b-row>
     </b-container>
@@ -126,22 +132,37 @@ export default {
       
       }
     },
+    computed:
+    {
+      state() {
+        return Boolean(this.value)
+      }
+    },
     methods:
     {
-        CheckAndNextQuestion: function()
+        CheckPoints: function()
         {
-            console.log(this.correctAnswear)
-            console.log(this.selected)
+            return points;
+        },
+        CheckAndNextQuestion: function()
+        {   
+            if(this.selected===null)
+            {
+                return this;
+            }
             if(this.correctAnswear === this.selected)
             {
                 points++;
             }
             ++i;
             this.pkt = points;
+            console.log(this.pkt)
+            console.log("Points " + points);
+            console.log("CurrentAnswear " + this.correctAnswear);
+            console.log("CorrectAnswear " + this.selected);
             this.questionNumber = task.questionNumber++;
-            console.log(task.questionNumber);
-            if(task.questionNumber < 3)
-            {
+             if(task.questionNumber < 3)
+             {
                 console.log(points);
                 this.description = taskList[i].description
                 this.answear1 = taskList[i].answear1
@@ -160,43 +181,6 @@ export default {
 
             
         }
-//         CreateNewQuestion: function()
-//         {
-//             function Task(name, pkt, description){
-//     this.name = name;
-//     this.pkt = pkt;
-//     this.description = description;
-// }
-// //Builder taska (pojedyncze funkcje nadają wartości typom prostym)
-// function TaskBuilder() {
-
-//     return {
-//         setName: function(name) {
-//             this.name = name;
-//             return this;
-//         },
-//         setPkt: function(pkt) {
-//             this.pkt = pkt;
-//             return this;
-//         },
-//         setDescription: function(description) {
-//             this.description = description;
-//             return this;
-//         },
-//         build: function () {
-//             return new Task(this.name, this.pkt, this.description);
-//         }
-//     }
-// }
-//         // Dyrektor rozkazujący utworzenie zadania
-//        return (new TaskBuilder()).setName("1") .setPkt("3")
-//         .setDescription("Jakie są wady/zalety bycia singlem?").setLevel("B1").build();
-//         },
-//         StartTest: function()
-//         {
-//             return this.questionNumber++;
-//         }
-//     },
     }
 }
 </script>
