@@ -54,33 +54,33 @@
 <b-row>
   <b-col class="col-10 ml-auto mr-auto">
   <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="SpeakingWidth" :aria-valuenow="{ width: speaking }" aria-valuemin="0" aria-valuemax="100">Speaking</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="SpeakingWidth" :aria-valuenow="SpeakingWidth" aria-valuemin="0" aria-valuemax="100">Speaking</div>
 </div>
 <p>
 </p>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 51%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Writing</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" :style="WritingWidth" :aria-valuenow="WritingWidth" aria-valuemin="0" aria-valuemax="100">Writing</div>
 </div>
 <p>
 </p>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated  bg-info" role="progressbar" style="width: 46%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Grammar</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated  bg-info" role="progressbar" :style="GrammarWidth" :aria-valuenow="GrammarWidth" aria-valuemin="0" aria-valuemax="100">Grammar</div>
 </div>
 <p>
 </p>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" :style="{width: {reading}}" aria-valuemin="0" aria-valuemax="100">Reading</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" :style="ReadingWidth" :aria-valuenow="ReadingWidth" aria-valuemin="0" aria-valuemax="100">Reading</div>
 </div>
 <p>
 </p>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 17%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Listening</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" :style="ListeningWidth" :aria-valuenow="ListeningWidth" aria-valuemin="0" aria-valuemax="100">Listening</div>
 </div>
 </b-col>
 </b-row>
 <b-row class="mt-5">
   <b-col class="text center text-danger font-small">
-    You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!  {{reading}}
+    You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
   </b-col>
 </b-row>
                   </b-col>
