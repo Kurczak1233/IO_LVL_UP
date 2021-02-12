@@ -152,6 +152,7 @@ export default {
          db.collection(this.email).doc(doc.id).update({level: "A2"});
     });
 });
+this.$router.replace({name: "userpage"})
             }
             else if(this.pkt ===2)
             { 
@@ -160,7 +161,7 @@ export default {
          db.collection(this.email).doc(doc.id).update({level: "B1"});
     });
 });
-
+this.$router.replace({name: "userpage"})
             }
             else
             {
@@ -169,6 +170,7 @@ export default {
          db.collection(this.email).doc(doc.id).update({level: "B2"});
     });
 });
+this.$router.replace({name: "userpage"})
             }
 
         },
