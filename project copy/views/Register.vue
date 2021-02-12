@@ -7,25 +7,46 @@
          <b-col class="col-12"><hr></b-col>
       </b-row>
       <b-form @submit.prevent="pressed">
-      <b-row class="mt-3">
+       <b-row class="mt-3">
            <b-col class="col-2 offset-1 pt-1" >
               <label for="Login">Login:</label>
            </b-col>
            <b-col class="col-8">
               <b-form-input required type="email" v-model="email"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
             </b-col>
-      </b-row>
-      <b-row class="mt-3">
+        </b-row>
+        <b-row class="mt-3">
             <b-col class="col-2 offset-1 pt-1" >
               <label for="password">Password:</label>
            </b-col>
            <b-col class="col-8">
               <b-form-input required type="password" v-model="password" class="form-control" aria-describedby="password" placeholder="Insert your password" id="login"></b-form-input>
             </b-col>
-      </b-row>
+        </b-row>
+        <b-row class="mt-3">
+           <b-col class="col-2 offset-1 pt-1" >
+              <label for="Login">Name:</label>
+           </b-col>
+           <b-col class="col-8">
+              <b-form-input required type="text" v-model="name"  class="form-control" aria-describedby="Login" placeholder="Insert your name" id="name"></b-form-input>
+            </b-col>
+        </b-row>
         <b-row>
-          <b-col class="col-12 offset-1 pt-1">
-         <p class="text-md-left text-center"><router-link to="/TermsOFUse"> « Terms of Use</router-link></p>
+          <b-col class="col-12 offset-1 pt-1">              
+          <div>
+            <b-form-checkbox
+              id="checkbox-1"
+              v-model="status"
+              name="checkbox-1"
+              value="accepted"
+              unchecked-value="not_accepted"
+              required
+            >
+              I accept the terms and use
+            </b-form-checkbox>
+
+            <div>State: <strong v-if="status === 'not_accepted'" class="text-danger">{{ status }}</strong><strong v-else class="text-success">{{status}}</strong></div>
+          </div>
           </b-col>
         </b-row>
         <b-row class="pb-5 mt-3">
@@ -36,6 +57,11 @@
         <b-col class="col-4"></b-col>
         </b-row>
         </b-form>
+        <b-col class="d-none">TEKST HAHAHA
+            <div>
+                
+  </div>
+        </b-col>
     </b-container>
   </body>
 </template>
@@ -48,7 +74,20 @@ export default {
     methods: {
       async pressed(){
            try{
-                const user = firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+                const user = firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(userCredential => {
+                     if (userCredential) {
+                    userCredential.user.updateProfile({
+                        displayName: this.name,
+                        displayTOU: this.termsOfUse,
+                        displayLVL: this.level,
+                        displayGrammar: this.grammar,
+                        displaySpeaking: this.speaking,
+                        displayWriting: this.writing,
+                        displayReading: this.reading,
+                        displayListening: this.listening,
+                    })
+                   }})
+                
                 console.log(user)
                 this.$router.replace({name: "userpage"});
            }catch(err)
@@ -61,7 +100,18 @@ export default {
         return {
             email: "",
             password: '',
-            error: ''
+            error: '',
+            name: "",
+            termsOfUse: false,
+            emailVerified: false,
+            level: "Undefined",
+            grammar: 0,
+            speaking: 0,
+            writing: 0,
+            reading: 100,
+            listening: 0,
+            status: 'not_accepted',
+            file1: null,
         }
     }
 }

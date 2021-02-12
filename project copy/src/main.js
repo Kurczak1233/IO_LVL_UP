@@ -52,7 +52,10 @@ import Offer from '../views/Offer.vue'
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
+  // var db = firebase.firestore();
+  // firebase = require("firebase");
+  // Required for side-effects
+  require("firebase/firestore");
 Vue.prototype.$axios = axios; /*  */
 
 
@@ -85,8 +88,20 @@ const routes = [
  ]
  
  Vue.use(VueRouter)
- 
-
+ // FIRESTORE
+ var db = firebase.firestore();
+ db.collection("usersTest").add({
+  first: "Ada",
+  last: "Lovelace",
+  born: 1815
+})
+.then((docRef) => {
+  console.log("Document written with ID: ", docRef.id);
+})
+.catch((error) => {
+  console.error("Error adding document: ", error);
+});
+ //
 const router = new VueRouter({
   routes // short for `routes: routes`
 })

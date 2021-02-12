@@ -29,7 +29,7 @@
           <b-row>
           <b-col class="col-4 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
               <b-row>
-                <b-col class="col-12 mb-3 text-center font-large">Your level: (player-level)</b-col>
+                <b-col class="col-12 mb-3 text-center font-large">Your level: {{level}}</b-col>
               </b-row>
               <b-row>
                 <b-col class="col-5 mt-auto mb-auto text-center font-large"><p class="d-none d-md-block">Available classes:</p></b-col>
@@ -47,14 +47,14 @@
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
-                Hello: <p class="text-danger">{{email}}</p><!-- Lepiej by było imię!-->
+                Hello: <p class="text-danger">{{name}}!</p><!-- Lepiej by było imię!-->
 
                                 <b-row>
 <b-col class="col-12"> Your actual progress:
 <b-row>
   <b-col class="col-10 ml-auto mr-auto">
   <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 22%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Speaking</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="{ width: {speaking} }"  :aria-valuenow="{ width: speaking }" aria-valuemin="0" aria-valuemax="100">Speaking</div>
 </div>
 <p>
 </p>
@@ -69,7 +69,7 @@
 <p>
 </p>
 <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 87%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Reading</div>
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" :style="{width: {reading}}" aria-valuemin="0" aria-valuemax="100">Reading</div>
 </div>
 <p>
 </p>
@@ -80,7 +80,7 @@
 </b-row>
 <b-row class="mt-5">
   <b-col class="text center text-danger font-small">
-    You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
+    You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!  {{reading}}
   </b-col>
 </b-row>
                   </b-col>
@@ -99,14 +99,21 @@ export default {
      components: {
     LoggedInButton
   },
-      data()
+    data()
     {
         return {
             loggedIn: false,
-            email: firebase.auth().currentUser.email 
+            email: firebase.auth().currentUser.email,
+            name: firebase.auth().currentUser.displayName,
+            grammar: firebase.auth().currentUser.displayGrammar,
+            speaking: firebase.auth().currentUser.displaySpeaking,
+            writing: firebase.auth().currentUser.displayWriting,
+            reading: firebase.auth().currentUser.displayReading,
+            listening: firebase.auth().currentUser.displayListening,
+            level: firebase.auth().currentUser.displayLVL
         }
     },
-}
+}                  
 </script>
 
 <style scoped>

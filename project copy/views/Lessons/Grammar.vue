@@ -3,7 +3,7 @@
   <b-row class="">
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_grammar.png?raw=true" alt="Logo grammar"></b-col>
   </b-row>
-<b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
+<b-container class="p-3 mb-3 mr-auto ml-auto margin5 background-bluish" fluid>
 <b><h3><i>THE MICROSCOPE</i></h3></b>
 <b-row class="">
   <b-col class=""><l>An important invention in the development of science and medicine was the microscope. It was (1) ... the principle that light could be (2) ... or bent, by a glass lens. It was soon discovered that tiny objects could be magnified (3) ... size when viewed through a glass lens that had been ground and polished in a specific (4)... . Although the principle was known to the Chinese as early as 1000 A.D, it was not until the 13th and 14th centuries in Europe (5) ... it was put to practical use in the form of eyeglasses.</l>
@@ -19,66 +19,67 @@
 </b-row>   
 <table class="table table-striped">
   <thead>
-    <tr>
-      <th scope="row"><b>1</b></th>
-      <td><c>based upon</c></td>
-      <td><f>based at</f></td>
-      <td><f>based by</f></td>
-      <td><f>based in</f></td>
+    <tr v-on:click.once="solved">
+      <th scope="row"><b>1.</b></th>
+      <td v-on:click.once="inputClickedRight">based upon</td>
+      <td v-on:click="inputClickedFalse">based at</td>
+      <td v-on:click="inputClickedFalse">based by</td>
+      <td v-on:click="inputClickedFalse">based in</td>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row"><b>2</b></th>
-      <td><f>retraced</f></td>
-      <td><f>retracted</f></td>
-      <td><c>refracted</c></td>
-      <td><f>retorted</f></td>
+    <tr v-on:click.once="solved">
+      <th scope="row"><b>2.</b></th>
+      <td v-on:click="inputClickedFalse">retraced</td>
+      <td v-on:click.once="inputClickedRight">retracted</td>
+      <td v-on:click="inputClickedFalse">refracted</td>
+      <td v-on:click="inputClickedFalse">retorted</td>
     </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td><f>on</f></td>
-      <td><c>in</c></td>
-      <td><f>by</f></td>
-      <td><f>with</f></td>
+    <tr v-on:click.once="solved">
+      <th scope="row">3.</th>
+      <td  v-on:click="inputClickedFalse">on</td>
+      <td v-on:click="inputClickedRight">in</td>
+      <td  v-on:click="inputClickedFalse">by</td>
+      <td  v-on:click="inputClickedFalse">with</td>
     </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td><c>manner</c></td>
-      <td><f>fashion</f></td>
-      <td><f>character</f></td>
-      <td><f>procedure</f></td>
+    <tr v-on:click.once="solved">
+      <th scope="row">4.</th>
+      <td v-on:click="inputClickedRight">manner</td>
+      <td v-on:click="inputClickedFalse">fashion</td>
+      <td v-on:click="inputClickedFalse">character</td>
+      <td v-on:click="inputClickedFalse">procedure</td>
     </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td><c>that</c></td>
-      <td><f>than</f></td>
-      <td><f>when</f></td>
-      <td><f>then</f></td>
+    <tr v-on:click.once="solved"> 
+      <th scope="row">5.</th>
+      <td v-on:click="inputClickedRight">that</td>
+      <td v-on:click="inputClickedFalse">than</td>
+      <td v-on:click="inputClickedFalse">when</td>
+      <td v-on:click="inputClickedFalse">then</td>
     </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td><f>rubbing</f></td>
-      <td><f>granting</f></td>
-      <td><c>grinding</c></td>
-      <td><f>scraping</f></td>
+    <tr v-on:click.once="solved">
+      <th scope="row">6.</th>
+      <td v-on:click="inputClickedFalse">rubbing</td>
+      <td v-on:click="inputClickedFalse">granting</td>
+      <td v-on:click="inputClickedRight">grinding</td>
+      <td v-on:click="inputClickedFalse">scraping</td>
     </tr>
-    <tr>
+    <tr v-on:click.once="solved">
       <th scope="row">7</th>
-      <td><f>current</f></td>
-      <td><c>actual</c></td>
-      <td><f>substantial</f></td>
-      <td><f>present</f></td>
+      <td v-on:click="inputClickedFalse">current</td>
+      <td v-on:click="inputClickedRight">actual</td>
+      <td v-on:click="inputClickedFalse">substantial</td>
+      <td v-on:click="inputClickedFalse">present</td>
     </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td><f>Due</f></td>
-      <td><f>According</f></td>
-      <td><f>Owing</f></td>
-      <td><c>Prior</c></td>
+    <tr v-on:click.once="solved">
+      <th scope="row">8.</th>
+      <td v-on:click="inputClickedFalse">Due</td>
+      <td v-on:click="inputClickedFalse">According</td>
+      <td v-on:click="inputClickedFalse">Owing</td>
+      <td v-on:click="inputClickedRight">Prior</td>
     </tr>
       </tbody>
 </table>
+  <!-- <div class="text-center" v-if="QuestionSolved === 8">You scored: {{Pointscounter}} and <p v-if="Pointscounter >= 5" class="text-success">PASSED</p><p v-else class="text-size-big text-danger">FAILED</p> the quiz!</div> -->
     </b-container>  
 
     <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
@@ -317,15 +318,42 @@
 <script>
 export default {
 name: 'Grammar',
+data: function(){
+return{
+  Pointscounter:0,
+  QuestionSolved:0,
+  AbleToGrantPoints: true,
+}
+},
+methods: {
+  score: function() 
+  {
+      return this.Pointscounter++;
+  },
+  inputClickedRight: function(event)
+  {
+      //this.$el.setAttribute("style", "background: green;");
+      event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
+      if(this.AbleToGrantPoints === true)
+      {
+      this.score();
+      event.target.setAttribute("disabled", true);
+      }
+  },
+  inputClickedFalse: function(event)
+  {
+    event.target.setAttribute("style", "background: rgb(255, 64, 0)");
+    this.AbleToGrantPoints = false;
+  },
+  solved: function()
+  {  
+      this.QuestionSolved++;
+  }
+}
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
-l {text-align: left}
-c {color: black}
-c:active {background-color: green}
-f {color: black}
-f:active {background-color: red}
 #banner{
   border-radius: 50px;
 }
@@ -344,5 +372,8 @@ f:active {background-color: red}
 }
 #project-logo{
   height: 80px;
+}
+table td:hover{
+  background-color: #ffc107;
 }
 </style>
