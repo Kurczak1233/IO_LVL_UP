@@ -105,14 +105,32 @@ export default {
             loggedIn: false,
             email: firebase.auth().currentUser.email,
             name: firebase.auth().currentUser.displayName,
-            grammar: firebase.auth().currentUser.displayGrammar,
-            speaking: firebase.auth().currentUser.displaySpeaking,
-            writing: firebase.auth().currentUser.displayWriting,
-            reading: firebase.auth().currentUser.displayReading,
-            listening: firebase.auth().currentUser.displayListening,
-            level: firebase.auth().currentUser.displayLVL
+            grammar: 0,
+            speaking: 0,
+            writing: 0,
+            reading: 0,
+            listening: 0,
+            level: ''
         }
     },
+    methods()
+    {
+      var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+      retrieveInfo(doc);
+      function retrieveInfo(doc)
+      {
+            this.grammar = doc.data().grammar;
+            this.speaking= doc.data().speaking;
+            this.writing= doc.data().writing;
+            this.reading= doc.data().reading;
+            this.listening= doc.data().listening;
+            this.level= doc.data().level;
+      }
+  });
+});
+    }
 }                  
 </script>
 

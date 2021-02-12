@@ -59,7 +59,7 @@
         </b-form>
         <b-col class="d-none">TEKST HAHAHA
             <div>
-                
+
   </div>
         </b-col>
     </b-container>
@@ -79,15 +79,23 @@ export default {
                     userCredential.user.updateProfile({
                         displayName: this.name,
                         displayTOU: this.termsOfUse,
-                        displayLVL: this.level,
-                        displayGrammar: this.grammar,
-                        displaySpeaking: this.speaking,
-                        displayWriting: this.writing,
-                        displayReading: this.reading,
-                        displayListening: this.listening,
                     })
                    }})
-                
+                 var db = firebase.firestore();
+                 db.collection(this.email).add({
+                  grammar: 0,
+                  speaking: 0,
+                  writing: 0,
+                  reading: 0,
+                  listening: 0,
+                  level: "Unknown"
+                })
+                .then((docRef) => {
+                  console.log("Document written with ID: ", docRef.id);
+                })
+                .catch((error) => {
+                  console.error("Error adding document: ", error);
+                });
                 console.log(user)
                 this.$router.replace({name: "userpage"});
            }catch(err)

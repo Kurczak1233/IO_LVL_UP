@@ -91,15 +91,24 @@ const routes = [
  // FIRESTORE
  var db = firebase.firestore();
  db.collection("usersTest").add({
-  first: "Ada",
-  last: "Lovelace",
-  born: 1815
+  grammar: 0,
+  speaking: 0,
+  writing: 0,
+  reading: 0,
+  listening: 0,
+  level: "Unknown"
 })
 .then((docRef) => {
   console.log("Document written with ID: ", docRef.id);
 })
 .catch((error) => {
   console.error("Error adding document: ", error);
+});
+
+db.collection("Users").get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data()}`);
+  });
 });
  //
 const router = new VueRouter({
