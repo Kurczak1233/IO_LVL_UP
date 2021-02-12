@@ -9,8 +9,16 @@
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">Today, Antarctica is mostly devoid of its ancient life. It has no trees or bushes and (1) ... is limited to moss and algae.</b-col>
             <b-col class="d-flex align-items-center mt-3 mb-3" >
-                <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name" disabled-field="notEnabled"></b-form-radio-group>
+                <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
+        </b-row>
+        <b-row>
+            <b-col class="text-center mb-3" >
+                <b-form @submit="CheckAndNextQuestion">
+                    <button class="btn btn-warning" type="submit">Next question</button>
+                </b-form>
+            </b-col>
+            
         </b-row>
     </b-container>
   </body>
@@ -89,16 +97,25 @@ export default {
         correctAnswear: task.correctAnswear,
         selected: 'A',
         options: [
-          { item: "A", name: task.answear1 },
-          { item: "B", name: task.answear2 },
-          { item: 'C', value: "true" , name: task.answear3 },
-          { item: { d: 1 }, name: task.answear4 }
+          { item: task.answear1, name: task.answear1 },
+          { item: task.answear2, name: task.answear2 },
+          { item: task.answear3, name: task.answear3 },
+          { item: task.answear4, name: task.answear4 }
         ]
       
       }
     },
     methods:
     {
+        CheckAndNextQuestion: function()
+        {
+            console.log(this.selected);
+            if(task.correctAnswear === this.selected)
+            {
+                task.pkt++;
+            }
+            console.log(task.pkt);
+        }
 //         CreateNewQuestion: function()
 //         {
 //             function Task(name, pkt, description){
