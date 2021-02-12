@@ -96,7 +96,7 @@
               </b-row>
               <b-row class="row text-center pb-1"><b-col>In order to have access to our resources, you have to </b-col></b-row>
               <b-row class="pb-3">
-                <b-col class="text-center"><button class="btn btn-warning">Take placement test!</button></b-col>
+                <b-col class="text-center"><router-link to="/PlacementTest"><button class="btn btn-warning">Take placement test!</button></router-link></b-col>
               </b-row>
           </b-col>
         </b-row>
