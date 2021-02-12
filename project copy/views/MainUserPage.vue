@@ -25,7 +25,7 @@
       </b-container>
       </b-nav>
       <!---->
-        <b-container fluid>
+        <b-container fluid v-if="level !== 'Unknown'">
           <b-row>
           <b-col class="col-4 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
               <b-row>
