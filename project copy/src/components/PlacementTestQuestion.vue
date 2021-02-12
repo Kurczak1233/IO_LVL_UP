@@ -13,7 +13,7 @@
             </b-col>
         </b-row>
         <b-row>
-            <b-col class="text-center mb-3" >
+            <b-col class="text-center mb-3 mt-3" >
                 <b-form @submit="CheckAndNextQuestion">
                     <button class="btn btn-warning" type="submit">Next question</button>
                 </b-form>
@@ -102,9 +102,9 @@ function TaskBuilder() {
 let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0")
         .setDescription("Today, Antarctica is mostly devoid of its ancient life. It has no trees or bushes and (1) ... is limited to moss and algae.").setAnswear1("vegetables").setAnswear2("vegetations").setAnswear3("vegetation").setAnswear4("vegetating").correctAnswear("vegetation").build();
 let task2 = (new TaskBuilder()).setId("2")
-       .setDescription("The (1) ... public interest in Ghost Hunting today makes it easy to forget that not too long ago exploring the paranormal was taboo.").setAnswear1("widespread").setAnswear2("worldwide").setAnswear3("wide").setAnswear4("widespreading").correctAnswear("widespread").build();
+       .setDescription("The (2) ... public interest in Ghost Hunting today makes it easy to forget that not too long ago exploring the paranormal was taboo.").setAnswear1("widespread").setAnswear2("worldwide").setAnswear3("wide").setAnswear4("widespreading").correctAnswear("widespread").build();
 let task3 = (new TaskBuilder()).setId("3")
-      .setDescription("Man has landed on the moon, probed deep space, and is transforming out lives by (1) ... technological feats - yet he cannot create a rain cloud at will.").setAnswear1("countless").setAnswear2("unless").setAnswear3("many").setAnswear4("limitless").correctAnswear("countless").build();
+      .setDescription("Man has landed on the moon, probed deep space, and is transforming out lives by (3) ... technological feats - yet he cannot create a rain cloud at will.").setAnswear1("countless").setAnswear2("unless").setAnswear3("many").setAnswear4("limitless").correctAnswear("countless").build();
 let taskList = [task, task2, task3];
 let points = 0;
 let i = 0;
