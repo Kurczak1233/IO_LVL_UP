@@ -52,6 +52,8 @@ import WebsiteOfferSection from '../src/components/WebsiteOfferSection.vue'
 import GlobalAchievementsSection from '../src/components/GlobalAchievementsSection.vue'
 import BottomAdvertisementBanner from '../src/components/BottomAdvertisementBanner.vue'
 import Footer from '../src/components/Footer.vue'
+import { firebase } from '@firebase/app'
+import '@firebase/auth'
 
 export default {
   name: 'MainPage',
@@ -62,7 +64,37 @@ export default {
     GlobalAchievementsSection,
     BottomAdvertisementBanner,
     Footer
-  }
+  },
+ created()
+  {
+        this.setupFirebase();
+  },
+  data()
+  {
+        return {
+            loggedIn: false,
+            email: this.$root.email
+        }
+  },
+  methods: {
+        setupFirebase()
+        {
+        firebase.auth().onAuthStateChanged(user=>{
+            this.loggedIn = !!user;
+        })
+        this.email = firebase.auth().currentUser.email 
+        },
+        async signOut(){
+            try{
+                 const data = await firebase.auth().signOut();
+                console.log(data);
+                this.$router.replace({name: "home"})
+            }catch(err)
+            {
+                console.log(err)
+            }
+        }
+    }
 }
 </script>
 
