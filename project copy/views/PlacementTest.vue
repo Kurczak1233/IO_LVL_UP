@@ -21,57 +21,20 @@
         </b-row>
         </b-container>
         <PlacementTestQuestion v-if="questionNumber === 1"></PlacementTestQuestion>
+        
   </body>
 </template>
 
 <script>
 //KONCEPCJA NA STWORZENIE QUIZU, liczenie pkt zadań i wskazywanie v-if/v-else? Jeśli 1 pkt pokaż tą podstronę itd?
 
-//Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
-function Task(name, pkt, description, Islevel){
-    this.name = name;
-    this.pkt = pkt;
-    this.description = description;
-    this.level = Islevel;
-}
-//Builder taska (pojedyncze funkcje nadają wartości typom prostym)
-function TaskBuilder() {
 
-    return {
-        setName: function(name) {
-            this.name = name;
-            return this;
-        },
-        setPkt: function(pkt) {
-            this.pkt = pkt;
-            return this;
-        },
-        setDescription: function(description) {
-            this.description = description;
-            return this;
-        },
-        setLevel: function(level) {
-            this.level = level;
-            return this;
-        },
-        build: function () {
-            return new Task(this.name, this.pkt, this.description, this.level);
-        }
-    }
-}
-// Dyrektor rozkazujący utworzenie zadania
-let task = (new TaskBuilder()).setName("Mówienie: ") .setPkt("3")
-        .setDescription("Jakie są wady/zalety bycia singlem?").setLevel("B1").build();
 import PlacementTestQuestion from "../src/components/PlacementTestQuestion"
 export default {
     name: 'Speaking',
         data: function()
     {
       return { //Zwracamy pola z naszego taska
-        name: task.name,
-        pkt: task.pkt,
-        description: task.description,
-        level: task.level,
         questionNumber: 0
       }
     },

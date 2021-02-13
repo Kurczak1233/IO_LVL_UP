@@ -109,10 +109,6 @@ import LoggedInButton from '../src/components/LoggedInButton.vue'
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 
-window.onload = function(){
-
-}
-
 export default {
      components: {
     LoggedInButton
