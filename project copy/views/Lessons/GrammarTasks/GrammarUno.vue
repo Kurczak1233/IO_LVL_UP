@@ -1,9 +1,9 @@
 <template>
 <b-container class="container text-center">
   <b-row class="">
-    <b-col class="mb-3" cols="12"> Grammar menu: </b-col>
+    <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_grammar.png?raw=true" alt="Logo grammar"></b-col>
   </b-row>
-<!-- <b-container class="p-3 mb-3 mr-auto ml-auto margin5 background-bluish" fluid>
+<b-container class="p-3 mb-3 mr-auto ml-auto margin5 background-bluish" fluid>
 <b><h3><i>THE MICROSCOPE</i></h3></b>
 <b-row class="">
   <b-col class=""><l>An important invention in the development of science and medicine was the microscope. It was (1) ... the principle that light could be (2) ... or bent, by a glass lens. It was soon discovered that tiny objects could be magnified (3) ... size when viewed through a glass lens that had been ground and polished in a specific (4)... . Although the principle was known to the Chinese as early as 1000 A.D, it was not until the 13th and 14th centuries in Europe (5) ... it was put to practical use in the form of eyeglasses.</l>
@@ -78,11 +78,10 @@
       <td v-on:click="inputClickedRight">Prior</td>
     </tr>
       </tbody>
-</table> -->
+</table>
   <!-- <div class="text-center" v-if="QuestionSolved === 8">You scored: {{Pointscounter}} and <p v-if="Pointscounter >= 5" class="text-success">PASSED</p><p v-else class="text-size-big text-danger">FAILED</p> the quiz!</div> -->
-   <!-- </b-container> -->
-</b-container>  
- <!-- 
+    </b-container>  
+
     <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
 <b><h3><i>Czasowniki modalne - Modal Verbs</i></h3></b>
 <b-row class="">
@@ -303,48 +302,78 @@
       <td><f> works </f></td>
       <td><f> work </f></td>
       <td><c> was working </c></td>
-    </tr> -->
+    </tr>
+      </tbody>
+</table>
+
+
+</b-container>
+
+
+
+
+</b-container>
 </template>
 
 <script>
 export default {
-name: 'Grammar'
+name: 'Grammar',
+data: function(){
+return{
+  Pointscounter:0,
+  QuestionSolved:0,
+  AbleToGrantPoints: true,
 }
-// data: function(){
-// return{
-//   Pointscounter:0,
-//   QuestionSolved:0,
-//   AbleToGrantPoints: true,
-// }
-// },
-// methods: {
-//   score: function() 
-//   {
-//       return this.Pointscounter++;
-//   },
-//   inputClickedRight: function(event)
-//   {
-//       //this.$el.setAttribute("style", "background: green;");
-//       event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
-//       if(this.AbleToGrantPoints === true)
-//       {
-//       this.score();
-//       event.target.setAttribute("disabled", true);
-//       }
-//   },
-//   inputClickedFalse: function(event)
-//   {
-//     event.target.setAttribute("style", "background: rgb(255, 64, 0)");
-//     this.AbleToGrantPoints = false;
-//   },
-//   solved: function()
-//   {  
-//       this.QuestionSolved++;
-//   }
-// }
-// }
+},
+methods: {
+  score: function() 
+  {
+      return this.Pointscounter++;
+  },
+  inputClickedRight: function(event)
+  {
+      //this.$el.setAttribute("style", "background: green;");
+      event.target.setAttribute("style", "background: rgb(128, 255, 0); ");
+      if(this.AbleToGrantPoints === true)
+      {
+      this.score();
+      event.target.setAttribute("disabled", true);
+      }
+  },
+  inputClickedFalse: function(event)
+  {
+    event.target.setAttribute("style", "background: rgb(255, 64, 0)");
+    this.AbleToGrantPoints = false;
+  },
+  solved: function()
+  {  
+      this.QuestionSolved++;
+  }
+}
+}
 </script>
 
 <style scoped>
-
+#banner{
+  border-radius: 50px;
+}
+.background-bluish
+{
+  background-color: rgb(105, 208, 245);
+  border-radius: 20px;
+}
+.margin10
+{
+  margin-top: 10%;
+}
+.text-size-big
+{
+  font-size: 2rem;
+}
+#project-logo{
+  height: 80px;
+}
+table td:hover{
+  background-color: #ffc107;
+}
 </style>
