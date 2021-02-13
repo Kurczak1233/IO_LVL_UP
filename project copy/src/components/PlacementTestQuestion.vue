@@ -181,7 +181,7 @@ export default {
             ++i;
             this.pkt = points;
             this.questionNumber = task.questionNumber++;
-            this.selected = null;
+            //this.selected = null;
              if(task.questionNumber < 3)
              {
                 this.description = taskList[i].description
