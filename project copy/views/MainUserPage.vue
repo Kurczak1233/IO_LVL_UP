@@ -158,7 +158,6 @@ export default {
         this.writing = doc.data().writing;
         this.listening = doc.data().listening;
         this.level = doc.data().level;
-        console.log(this.testTake);
     });
 });
     },
