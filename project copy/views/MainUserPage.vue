@@ -88,7 +88,7 @@
                 </b-col>
           </b-row>
         </b-container>
-      <b-container fluid v-if="level === 'Unknown' && testTaken === false">
+      <b-container fluid v-if="level === 'Unknown' && testTake === false">
         <b-row>
           <b-col class="col-12 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
               <b-row>
@@ -162,7 +162,7 @@ export default {
         this.writing = doc.data().writing;
         this.listening = doc.data().listening;
         this.level = doc.data().level;
-        console.log(this.testTaken);
+        console.log(this.testTake);
     });
 });
     },

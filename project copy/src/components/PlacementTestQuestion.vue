@@ -180,15 +180,10 @@ export default {
             }
             ++i;
             this.pkt = points;
-            console.log(this.pkt)
-            console.log("Points " + points);
-            console.log("CurrentAnswear " + this.correctAnswear);
-            console.log("CorrectAnswear " + this.selected);
             this.questionNumber = task.questionNumber++;
             this.selected = null;
              if(task.questionNumber < 3)
              {
-                console.log(points);
                 this.description = taskList[i].description
                 this.answear1 = taskList[i].answear1
                 this.answear2 = taskList[i].answear2
