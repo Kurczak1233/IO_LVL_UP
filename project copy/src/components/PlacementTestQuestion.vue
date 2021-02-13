@@ -135,12 +135,6 @@ export default {
       
       }
     },
-    computed:
-    {
-      state() {
-        return Boolean(this.value)
-      }
-    },
     methods:
     {
         SetUsersLevel: function()
