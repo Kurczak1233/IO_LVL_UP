@@ -30,7 +30,7 @@
                 <p v-else-if="pkt === 2" class="text-size-big text-center text-danger">B1</p> 
                 <p v-else-if="pkt > 2" class="text-size-big text-center text-danger">B2</p> 
                 <b-col class="text-center mb-3" >
-                    <button v-on:click="SetUsersLevel()" class="btn btn-warning" type="button">Confirm</button>
+                    <router-link to="/UserPage"><button v-on:click="SetUsersLevel()" class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>
@@ -153,7 +153,6 @@ export default {
          db.collection(this.email).doc(doc.id).update({level: "A2"});
     });
 });
-this.$router.replace({name: "userpage"})
             }
             else if(this.pkt ===2)
             { 
@@ -162,7 +161,6 @@ this.$router.replace({name: "userpage"})
          db.collection(this.email).doc(doc.id).update({level: "B1"});
     });
 });
-this.$router.replace({name: "userpage"})
             }
             else
             {
@@ -171,16 +169,11 @@ this.$router.replace({name: "userpage"})
          db.collection(this.email).doc(doc.id).update({level: "B2"});
     });
 });
-this.$router.replace({name: "userpage"})
             }
 
         },
         CheckAndNextQuestion: function()
         {   
-            if(this.selected===null)
-            {
-                return this;
-            }
             if(this.correctAnswear === this.selected)
             {
                 points++;

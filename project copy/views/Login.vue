@@ -12,7 +12,7 @@
               <label for="Login">Login:</label>
            </b-col>
            <b-col class="col-8" >
-              <b-form-input required type="email" v-model="email" :state="validation" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+              <b-form-input required type="email" v-model="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
             </b-col>
       </b-row>
       <b-row class="mt-3">
@@ -20,7 +20,7 @@
               <label for="Login">Password:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="password" v-model="password" :state="validation" class="form-control" aria-describedby="Login" placeholder="Insert your password" id="login"></b-form-input>
+              <b-form-input required type="password" v-model="password" class="form-control" aria-describedby="Login" placeholder="Insert your password" id="login"></b-form-input>
             </b-col>
       </b-row>
       <b-row class="mt-3">

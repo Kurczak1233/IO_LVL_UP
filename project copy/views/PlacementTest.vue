@@ -16,7 +16,7 @@
     <b-container v-if="questionNumber===0" class="col-10 mt-3 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="col-12 text-center mt-3 mb-3">
-                    <button class="btn btn-warning" v-on:click="StartTest">Start the test!</button>
+                    <button class="btn btn-warning" v-on:click.once="StartTest">Start the test!</button>
             </b-col>
         </b-row>
         </b-container>

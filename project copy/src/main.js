@@ -148,3 +148,13 @@ firebase.auth().onAuthStateChanged(user=> {
     
   }
 })
+
+window.onunload = async function () {
+      try{
+           await firebase.auth().signOut();
+      }catch(err)
+      {
+          console.log(err)
+      }
+  }
+

@@ -88,7 +88,7 @@
                 </b-col>
           </b-row>
         </b-container>
-      <b-container fluid v-if="level === 'Unknown'">
+      <b-container fluid v-if="level === 'Unknown' && testTaken === false">
         <b-row>
           <b-col class="col-12 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
               <b-row>
@@ -96,7 +96,7 @@
               </b-row>
               <b-row class="row text-center pb-1"><b-col>In order to have access to our resources, you have to </b-col></b-row>
               <b-row class="pb-3">
-                <b-col class="text-center"><router-link to="/PlacementTest"><button class="btn btn-warning">Take placement test!</button></router-link></b-col>
+                <b-col class="text-center"><router-link to="/PlacementTest"><button v-on:click="testTaken" class="btn btn-warning">Take placement test!</button></router-link></b-col>
               </b-row>
           </b-col>
         </b-row>
@@ -124,8 +124,31 @@ export default {
             writing: 0,
             reading: 0,
             listening: 0,
-            level: ''
+            level: '',
+            testTake: false
         }
+    },
+    methods: 
+    {
+        testTaken: function()
+        {
+          this.testTake = true;
+        }
+    },
+    beforeUpdate: function()
+    {
+       var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      console.log(doc.data().speaking);
+        this.grammar = doc.data().grammar;
+        this.reading = doc.data().reading;
+        this.speaking = doc.data().speaking;
+        this.writing = doc.data().writing;
+        this.listening = doc.data().listening;
+        this.level = doc.data().level;
+    });
+});
     },
     mounted: function()
     {
@@ -139,6 +162,7 @@ export default {
         this.writing = doc.data().writing;
         this.listening = doc.data().listening;
         this.level = doc.data().level;
+        console.log(this.testTaken);
     });
 });
     },
