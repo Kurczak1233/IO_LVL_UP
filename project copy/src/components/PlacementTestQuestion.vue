@@ -15,7 +15,8 @@
         <b-row>
             <b-col class="text-center mb-3 mt-3" >
                 <b-form @submit="CheckAndNextQuestion">
-                    <button class="btn btn-warning" type="submit">Next question</button>
+                    <button class="btn btn-warning" v-if="selected === null" disabled type="submit">Next question</button>
+                    <button class="btn btn-warning" v-else type="submit">Next question</button>
                 </b-form>
             </b-col>
             
@@ -191,6 +192,7 @@ this.$router.replace({name: "userpage"})
             console.log("CurrentAnswear " + this.correctAnswear);
             console.log("CorrectAnswear " + this.selected);
             this.questionNumber = task.questionNumber++;
+            this.selected = null;
              if(task.questionNumber < 3)
              {
                 console.log(points);
