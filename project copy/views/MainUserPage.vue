@@ -129,9 +129,9 @@ export default {
     },
     methods: 
     {
-      
+
     },
-    beforeUpdate: function()
+    beforeUpdate: function() //Przed załadowaniem strony załaduj dane.
     {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
@@ -146,7 +146,7 @@ export default {
     });
 });
     },
-    mounted: function()
+    mounted: function() //Pierwszorazowo załaduj dane
     {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
