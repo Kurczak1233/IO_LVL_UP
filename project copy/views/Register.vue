@@ -127,7 +127,7 @@ export default {
                   console.error("Error adding document: ", error);
                 });
                 console.log(user)
-                this.$router.replace({name: "userpage"});
+                this.$router.replace({name: "home"});
            }catch(err)
            {
                console.log(err)
