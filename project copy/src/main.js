@@ -84,7 +84,6 @@ const routes = [
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
    { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
-  //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
  ]
  

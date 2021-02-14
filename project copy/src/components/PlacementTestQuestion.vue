@@ -14,9 +14,9 @@
         </b-row>
         <b-row>
             <b-col class="text-center mb-3 mt-3" >
-                <b-form @submit="CheckAndNextQuestion">
+                <b-form v-on:click="CheckAndNextQuestion">
                     <button class="btn btn-warning" v-if="selected === null" disabled type="submit">Next question</button>
-                    <button class="btn btn-warning" v-else type="submit">Next question</button>
+                    <button class="btn btn-warning" v-else type="button">Next question</button>
                 </b-form>
             </b-col>
             

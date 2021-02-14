@@ -1,14 +1,3 @@
-<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="//ciasteczka.eu/cookiesEU-latest.min.js"></script>
-<script type="text/javascript">
-
-jQuery(document).ready(function(){
-	jQuery.fn.cookiesEU({
-		position:	'top'
-	});
-});
-</script>
-
 <template>
   <body>
      <b-nav> 
@@ -52,7 +41,6 @@ import WebsiteOfferSection from '../src/components/WebsiteOfferSection.vue'
 import GlobalAchievementsSection from '../src/components/GlobalAchievementsSection.vue'
 import BottomAdvertisementBanner from '../src/components/BottomAdvertisementBanner.vue'
 import Footer from '../src/components/Footer.vue'
-import { firebase } from '@firebase/app'
 import '@firebase/auth'
 
 export default {
