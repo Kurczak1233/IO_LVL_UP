@@ -175,7 +175,6 @@ export default {
             ++i;
             this.pkt = points;
             this.questionNumber = task.questionNumber++;
-            //this.selected = null;
              if(task.questionNumber < 3)
              {
                 this.description = taskList[i].description
@@ -191,9 +190,7 @@ export default {
             ]
                 this.correctAnswear = taskList[i].correctAnswear
                 this.id = taskList[i].id
-            }
-
-            
+            }    
         }
     }
 }

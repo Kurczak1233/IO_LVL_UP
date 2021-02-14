@@ -65,36 +65,6 @@ export default {
     BottomAdvertisementBanner,
     Footer
   },
- created()
-  {
-        this.setupFirebase();
-  },
-  data()
-  {
-        return {
-            loggedIn: false,
-            email: this.$root.email
-        }
-  },
-  methods: {
-        setupFirebase()
-        {
-        firebase.auth().onAuthStateChanged(user=>{
-            this.loggedIn = !!user;
-        })
-        this.email = firebase.auth().currentUser.email 
-        },
-        async signOut(){
-            try{
-                 const data = await firebase.auth().signOut();
-                console.log(data);
-                this.$router.replace({name: "home"})
-            }catch(err)
-            {
-                console.log(err)
-            }
-        }
-    }
 }
 </script>
 

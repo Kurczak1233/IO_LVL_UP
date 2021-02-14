@@ -1,9 +1,19 @@
 <template>
-<b-container class="container text-center p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
-    <b-row class="p-4">
-      <b-col class="mb-3 text-size-big mt-auto mb-auto"  cols="12"> Grammar lessons available on <span class="text-danger">{{level}}</span> level </b-col>
+<body>
+  <b-container class="container text-center p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
+      <b-row class="p-4">
+        <b-col class="mb-3 text-size-big mt-auto mb-auto"  cols="12"> Grammar lessons available on <span class="text-danger">{{level}}</span> level </b-col>
+      </b-row>
+  </b-container>
+  
+  <b-container v-if="level==='B2'" class="container  p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col>
+        <span>Tutaj będą dostępne lekcje na B2</span>
+      </b-col>
     </b-row>
-</b-container>  
+  </b-container>
+</body>
 </template>
 
 <script>
