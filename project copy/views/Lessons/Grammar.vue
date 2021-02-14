@@ -27,7 +27,7 @@
           </b-col>
         </b-row>
         <b-row class="p-3 text-medium">
-          Lesson 1. Present perfect simple
+          Lesson 1. <router-link>Present perfect simple</router-link>
         </b-row>
       </b-col>
       <b-col class="col-md-8 p-3">

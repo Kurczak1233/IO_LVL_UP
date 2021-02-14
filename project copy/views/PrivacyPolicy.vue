@@ -8,7 +8,6 @@
       <b-col class="text-center margin5"> PRIVACY POLICY </b-col>
     </b-row>
 </b-container>
-   <b-col> <p> </p> </b-col>
 <b-container class="col-12 mr-auto ml-auto background-bluish" fluid>
 <table class="table table-striped">
   <thead>
