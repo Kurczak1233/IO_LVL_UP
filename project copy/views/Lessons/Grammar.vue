@@ -26,7 +26,7 @@
             <span>Theory</span>
           </b-col>
         </b-row>
-        <b-row class="p-3 text-medium text-center">
+        <b-row class="p-3 text-medium">
           <b-col class="text-center">
             <router-link to="/TheoryB1PPS">Present perfect simple</router-link>
           </b-col>
@@ -51,10 +51,12 @@
           <b-col class="text-center text-size-big border-bottom border-success pb-3">
             <span>Theory</span>
           </b-col>
-        </b-row>
+        </b-row >
         <b-row class="p-3 text-medium">
-          Lesson 2. Present perfect countinous
-        </b-row>
+          <b-col class="text-center">
+            <router-link to="/TheoryB1PPC">Present perfect continous</router-link>
+          </b-col>
+        </b-row>  
       </b-col>
       <b-col class="col-md-8 p-3">
         <b-row> 
