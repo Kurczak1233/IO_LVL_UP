@@ -5,14 +5,52 @@
         <b-col class="mb-3 text-size-big mt-auto mb-auto"  cols="12"> Grammar lessons available on <span class="text-danger">{{level}}</span> level </b-col>
       </b-row>
   </b-container>
-  
-  <b-container v-if="level==='B2'" class="container  p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
+
+  <!--DLA B2-->
+
+  <b-container v-if="level==='B2'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
     <b-row>
       <b-col>
         <span>Tutaj będą dostępne lekcje na B2</span>
       </b-col>
     </b-row>
   </b-container>
+
+<!--DLA B1-->
+
+  <b-container v-if="level==='B1'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col class="col-4 p-3 border-right text-center border-success">
+        <b-row>
+          <b-col class="text-center text-size-big">
+            <span>Theory</span>
+          </b-col>
+        </b-row>
+        <b-row class="p-3">
+          Lesson 1.
+        </b-row>
+      </b-col>
+      <b-col class="col-8 p-3">
+        <b-row>
+          <b-col class="text-center text-size-big">
+            <span>Exercises</span>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+  </b-container>
+
+<!--DLA A2-->
+
+<b-container v-if="level==='A2'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col>
+        <span>Tutaj będą dostępne lekcje na A2</span>
+      </b-col>
+    </b-row>
+  </b-container>
+<!--DLA B1-->
+
 </body>
 </template>
 
