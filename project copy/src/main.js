@@ -26,6 +26,7 @@ import AboutUs from '../views/AboutUs.vue'
 import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
 import PlacementTest from '../views/PlacementTest.vue'
+import TheoryB1PPS from '../views/Lessons/GrammarTheory/TheoryB1PPS.vue'
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy'
@@ -81,6 +82,7 @@ const routes = [
    { path: '/Listening', name: 'listen', component: Listening, meta: {requiresAuth: true}},
    { path: '/File', name: 'file', component: File, meta: {requiresAuth: true}},
    { path: '/PlacementTest', name: 'placementTest', component: PlacementTest, meta: {requiresAuth: true}},
+   { path: '/TheoryB1PPS', name: 'theoryB1PPS', component: TheoryB1PPS, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
    { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
