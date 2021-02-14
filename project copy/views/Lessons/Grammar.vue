@@ -20,25 +20,53 @@
 
   <b-container v-if="level==='B1'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
     <b-row>
-      <b-col class="col-4 p-3 border-right text-center border-success">
+      <b-col class="col-md-4 p-3 border-right text-center border-success">
         <b-row>
-          <b-col class="text-center text-size-big">
+          <b-col class="text-center text-size-big border-bottom border-success pb-3">
             <span>Theory</span>
           </b-col>
         </b-row>
-        <b-row class="p-3">
-          Lesson 1.
+        <b-row class="p-3 text-medium">
+          Lesson 1. Present perfect simple
         </b-row>
       </b-col>
-      <b-col class="col-8 p-3">
-        <b-row>
-          <b-col class="text-center text-size-big">
+      <b-col class="col-md-8 p-3">
+        <b-row> 
+          <b-col class="text-center text-size-big  border-bottom border-success pb-3">
             <span>Exercises</span>
           </b-col>
         </b-row>
       </b-col>
     </b-row>
+    <b-row>
+      
+    </b-row>
   </b-container>
+  <b-container v-if="level==='B1'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col class="col-md-4 p-3 border-right text-center border-success">
+        <b-row>
+          <b-col class="text-center text-size-big border-bottom border-success pb-3">
+            <span>Theory</span>
+          </b-col>
+        </b-row>
+        <b-row class="p-3 text-medium">
+          Lesson 2. Present perfect countinous
+        </b-row>
+      </b-col>
+      <b-col class="col-md-8 p-3">
+        <b-row> 
+          <b-col class="text-center text-size-big  border-bottom border-success pb-3">
+            <span>Exercises</span>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+    <b-row>
+      
+    </b-row>
+  </b-container>
+
 
 <!--DLA A2-->
 
@@ -107,5 +135,9 @@ data: function()
 }
 table td:hover{
   background-color: #ffc107;
+}
+.text-medium
+{
+  font-size: 1.4rem;
 }
 </style>
