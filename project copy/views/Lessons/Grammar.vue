@@ -139,7 +139,7 @@ data: function()
       this.solvedB1PSS3 = this.$route.params.solvedB1PSS3;
 
     },
-    mounted: function()
+    mounted: function() //Initialize site
     {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
@@ -151,6 +151,18 @@ data: function()
         this.solvedB1PSS3 = doc.data().solvedB1PSS3;
         });
     });
+    },
+        beforeUpdate: function() //Before refreshing!
+    {
+       var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      console.log(doc.data().speaking);
+        this.solvedB1PSS1 = doc.data().solvedB1PSS1;
+        this.solvedB1PSS2 = doc.data().solvedB1PSS2;
+        this.solvedB1PSS3 = doc.data().solvedB1PSS3;
+    });
+});
     },
     methods: 
     {
