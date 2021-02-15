@@ -59,7 +59,6 @@
 <script>
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
-//Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
 function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, questionNumber){
     this.id = id;
     this.pkt = pkt;
@@ -71,7 +70,7 @@ function Task(id, pkt, description, answear1, answear2, answear3, answear4, corr
     this.correctAnswear = correctAnswear
     this.questionNumber = questionNumber
 }
-//Builder taska (pojedyncze funkcje nadają wartości typom prostym)
+
 function TaskBuilder() {
 
     return {
@@ -117,15 +116,15 @@ function TaskBuilder() {
     }
 }
 let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0")
-        .setDescription("Question desc").setAnswear1("vegetables").setAnswear2("vegetations").setAnswear3("vegetation").setAnswear4("vegetating").correctAnswear("vegetation").build();
+        .setDescription("He _________ here for 20 years and now he do not anymore.").setAnswear1("have been").setAnswear2("has stolen").setAnswear3("has worked").setAnswear4("hasn't worked").correctAnswear("has worked").build();
 let task2 = (new TaskBuilder()).setId("2")
-       .setDescription("Question desc.").setAnswear1("widespread").setAnswear2("worldwide").setAnswear3("wide").setAnswear4("widespreading").correctAnswear("widespread").build();
+       .setDescription("You can ask questions when we _________ all the items from the agenda..").setAnswear1("had discussed").setAnswear2("has discussed").setAnswear3("have discussed").setAnswear4("has discussion").correctAnswear("widespread").build();
 let task3 = (new TaskBuilder()).setId("3")
-      .setDescription("Question desc.").setAnswear1("countless").setAnswear2("unless").setAnswear3("many").setAnswear4("limitless").correctAnswear("countless").build();
+      .setDescription("It's the first time I _________ a horse..").setAnswear1("had had").setAnswear2("have ridden").setAnswear3("had ridden").setAnswear4("has ridden").correctAnswear("have ridden").build();
 let task4 = (new TaskBuilder()).setId("4")
-      .setDescription("Question desc.").setAnswear1("countless").setAnswear2("unless").setAnswear3("many").setAnswear4("limitless").correctAnswear("countless").build();
+      .setDescription("What _________ yet?").setAnswear1("have he done").setAnswear2("has she done").setAnswear3("have he do").setAnswear4("have they do").correctAnswear("have he done").build();
 let task5 = (new TaskBuilder()).setId("5")
-      .setDescription("Question desc.").setAnswear1("countless").setAnswear2("unless").setAnswear3("many").setAnswear4("limitless").correctAnswear("countless").build();
+      .setDescription("I _________ her before..").setAnswear1("have not seen").setAnswear2("have see").setAnswear3("has seen").setAnswear4("have been seen").correctAnswear("have not seen").build();
 let taskList = [task, task2, task3, task4, task5];
 let points = 0;
 let i = 0;
@@ -133,10 +132,10 @@ export default {
     name: 'Speaking',
         data: function()
     {
-      return { //Zwracamy pola z naszego taska
+      return { 
          id: task.id,
          questionNumber: task.questionNumber,
-         pkt: task.pkt,  //Not necessary but whatsoever...
+         pkt: task.pkt, 
          description: task.description,
          answear1: task.answear1,
          answear2: task.answear2,
