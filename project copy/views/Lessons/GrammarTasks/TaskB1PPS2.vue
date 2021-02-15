@@ -9,21 +9,8 @@
             </b-col>
         </b-row>
     </b-container>
-    <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
-        <b><h3><i>THE MICROSCOPE</i></h3></b>
-<b-row class="">
-  <b-col class="">An important invention in the development of science and medicine was the microscope. It was (1) ... the principle that light could be (2) ... or bent, by a glass lens. It was soon discovered that tiny objects could be magnified (3) ... size when viewed through a glass lens that had been ground and polished in a specific (4)... . Although the principle was known to the Chinese as early as 1000 A.D, it was not until the 13th and 14th centuries in Europe (5) ... it was put to practical use in the form of eyeglasses.
-  </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">In Europe the first microscope was invented by brothers Zacharias and Hans Janssen, two Dutch eyeglass-makers, around 1590. They built a “compound” microscope, so called because of its two lenses. The most significant development and use of the microscope during this period, however, belongs to another Dutch optician, Antonie van Leeuwenhoek (1632-1723). Born in Delft, Holland, he became skilled at (6) ... very sharp and accurate magnifying lenses. Some of his single-lens microscopes were able to
-  </b-col>
-</b-row>   
-<b-row class="">
-  <b-col class="">magnify up the three hundred times (7) ... size, and around 1660 he began serious study using these instruments. He was the first to discover bacteria and other microscopic organisms, calling these tiny creatures “animalcules”. (8) ... to this discovery, very small creatures such as fleas and maggots were thought to “spontaneously generate” from a single source, such as rotting meat in the case of maggots.
-  </b-col>
-</b-row>   
-<b><h3><i>Czasowniki modalne - Modal Verbs</i></h3></b>
+    <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-3" fluid>
+<b><h3><i>Present perfect simple - filling blank spaces</i></h3></b>
 <b-row class="">
   <b-col class="">1. I _______  just cooked the dinner for you. </b-col>
 </b-row>
@@ -55,7 +42,7 @@
   <b-col class="">10. What _______ done?! </b-col>
 </b-row>
 
-<table class="table table-striped">
+<table class="table table-striped mt-1">
   <thead>
     <tr>
       <th scope="row">1</th>
@@ -132,7 +119,7 @@
       </tbody>
 </table>
         <b-row>  
-            <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'gram', params: {solvedB1PSS1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+            <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'gram', params: {solvedB1PSS2: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
         </b-row>
 </b-container>
   </body>
@@ -164,10 +151,6 @@ export default {
         {
             this.formalConsent = true;
         },
-        SendingInfoBack: function()
-        {
-            this.$emit('sth',true);
-        },
         inputClickedRight: function(event)
   {
       //this.$el.setAttribute("style", "background: green;");
@@ -179,7 +162,7 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1PSS1 = true;
+      this.solvedB1PSS2 = true;
       var db = firebase.firestore();
       db.collection(this.email).doc(this.email).set({solvedB1PSS2: this.solvedB1PSS2} ,{merge:true})
   }
