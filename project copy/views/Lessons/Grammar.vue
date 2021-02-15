@@ -38,6 +38,14 @@
             <span>Exercises</span>
           </b-col>
         </b-row>
+        <b-row id="grammar-content">
+          <b-col class="col-8 ">
+            Training
+          </b-col>
+          <b-col class="col-4 text-center">
+            Exam
+          </b-col>
+        </b-row>
       </b-col>
     </b-row>
     <b-row>
