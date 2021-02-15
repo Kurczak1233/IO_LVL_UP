@@ -47,8 +47,13 @@
           </b-col>
           <b-col class="col-4 text-center">
             <p>Exam</p>
-            <b-button variant="warning" disabled class="btn-lg">Button</b-button>
+            <div v-if="solvedB1PSS1 === true && solvedB1PSS2 === true && solvedB1PSS3 === true">
+            <b-button variant="warning" class="btn-lg">Take the exam!</b-button>
+            </div>
+            <div v-else>
+            <b-button variant="warning" disabled class="btn-lg">Take the exam!</b-button>
             <p class="font-size-small text-danger">Complete your tasks first!</p>
+            </div>
           </b-col>
         </b-row>
       </b-col>
@@ -130,15 +135,19 @@ data: function()
     querySnapshot.forEach((doc) => {
       console.log(doc.data().speaking);
         this.level = doc.data().level;
-        
+        this.solvedB1PSS1 = doc.data().solvedB1PSS1;
+        this.solvedB1PSS2 = doc.data().solvedB1PSS2;
+        this.solvedB1PSS3 = doc.data().solvedB1PSS3;
         });
     });
     },
     methods: 
     {
-      TaskSolved: function()
+      Check: function()
       {
-        console.log(this.sth);
+        console.log(this.solvedB1PSS1);
+        console.log(this.solvedB1PSS2);
+        console.log(this.solvedB1PSS3);
       }
     },
 }
