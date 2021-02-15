@@ -15,7 +15,8 @@
         <b-row>
             <b-col class="text-center mb-3 mt-3" >
                 <b-form>
-                    <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-if="selected === null" disabled type="submit">Next question</button>
+                    <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-if="selected === null" disabled type="button">Next question</button>
+                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else-if="questionNumber===1 && selected!==null" type="button">End test</button>
                     <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-else type="button">Next question</button>
                 </b-form>
             </b-col>
@@ -30,7 +31,7 @@
                 <p v-else-if="pkt === 2" class="text-size-big text-center text-danger">B1</p> 
                 <p v-else-if="pkt > 2" class="text-size-big text-center text-danger">B2</p> 
                 <b-col class="text-center mb-3" >
-                    <router-link to="/UserPage"><button v-on:click.once="SetUsersLevel()" class="btn btn-warning" type="button">Confirm</button></router-link>
+                    <router-link to="/UserPage"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>
@@ -139,6 +140,12 @@ export default {
     {
         SetUsersLevel: function()
         {
+            if(this.correctAnswear === this.selected)
+            {
+                points++;
+            }
+            this.pkt = points;
+            this.questionNumber = task.questionNumber++;
             var db = firebase.firestore();
             if(this.pkt <= 1)
             {
@@ -172,7 +179,7 @@ export default {
             {
                 points++;
             }
-            ++i;
+            i++
             this.pkt = points;
             this.questionNumber = task.questionNumber++;
              if(task.questionNumber < 3)
