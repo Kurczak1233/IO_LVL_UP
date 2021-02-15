@@ -28,6 +28,10 @@ import Advanced from '../views/Advanced.vue'
 import PlacementTest from '../views/PlacementTest.vue'
 import TheoryB1PPS from '../views/Lessons/GrammarTheory/TheoryB1PPS.vue'
 import TheoryB1PPC from '../views/Lessons/GrammarTheory/TheoryB1PPC.vue'
+import TaskB1PPS1 from '../views/Lessons/GrammarTasks/TaskB1PPS1.vue'
+import TaskB1PPS2 from '../views/Lessons/GrammarTasks/TaskB1PPS2.vue'
+import TaskB1PPS3 from '../views/Lessons/GrammarTasks/TaskB1PPS3.vue'
+import TaskB1PPS4 from '../views/Lessons/GrammarTasks/TaskB1PPS4.vue'
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy'
@@ -85,10 +89,15 @@ const routes = [
    { path: '/PlacementTest', name: 'placementTest', component: PlacementTest, meta: {requiresAuth: true}},
    { path: '/TheoryB1PPS', name: 'theoryB1PPS', component: TheoryB1PPS, meta: {requiresAuth: true}},
    { path: '/TheoryB1PPC', name: 'theoryB1PPC', component: TheoryB1PPC, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPS1', name: 'taskB1PPS1', component: TaskB1PPS1, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPS2', name: 'taskB1PPS2', component: TaskB1PPS2, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPS3', name: 'taskB1PPS3', component: TaskB1PPS3, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPS4', name: 'taskB1PPS4', component: TaskB1PPS4, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
    { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
    { path: '/login', name:"log", component: Login} 
+
  ]
  
  Vue.use(VueRouter)

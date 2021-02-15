@@ -41,10 +41,10 @@
         <b-row id="grammar-title-content">
           <b-col class="col-8 text-center ">
             Training exercises
-            <b-col  router-link to="/TasksB1PPS1">Present perfect simple task 1</b-col>
-            <b-col  router-link to="/TasksB1PPS2">Present perfect simple task 2</b-col>
-            <b-col  router-link to="/TasksB1PPS3">Present perfect simple task 3</b-col>
-            <b-col  router-link to="/TasksB1PPS4">Present perfect simple task 4</b-col>
+            <b-col><router-link to="/TaskB1PPS1" id="TaskB1PPS1" v-on:click.once="TaskClicked">Present perfect simple task 1</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS2" id="TaskB1PPS2" v-on:click.once="TaskClicked">Present perfect simple task 2</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS3" id="TaskB1PPS3" v-on:click.once="TaskClicked">Present perfect simple task 3</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS4" id="TaskB1PPS4" v-on:click.once="TaskClicked">Present perfect simple task 4</router-link></b-col>
           </b-col>
           <b-col class="col-4 text-center">
             <p>Exam</p>
@@ -133,6 +133,13 @@ data: function()
         this.level = doc.data().level;
     });
 });
+    },
+    methods: 
+    {
+      TaskClicked: function()
+      {
+        this.classList.add("text-warning");
+      }
     }
 }
 </script>
