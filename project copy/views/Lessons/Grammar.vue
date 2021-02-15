@@ -116,7 +116,7 @@
  <b-container class="container text-center p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
 <b-row>
   <b-col class="text-center mt-3">
-      <p class="text-size-big"><router-link to="/MainUserPage" class="text-primary">Return to user page</router-link></p>
+      <p class="text-size-big"><router-link to="/UserPage" class="text-primary">Return to user page</router-link></p>
   </b-col>
 </b-row>
   </b-container>
