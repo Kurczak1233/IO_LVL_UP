@@ -17,7 +17,7 @@
             </b-col>
         </b-row>
     </b-container>
-    <b-container v-if="questionNumber<MaxQuestionsCount && GiveConsent === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+    <b-container v-if="questionNumber<MaxQuestionsCount-1 && GiveConsent === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-info pt-2 text-size-big">
                 Question {{id}}
@@ -40,13 +40,11 @@
             
         </b-row>
     </b-container>
-     <b-container v-if="GiveConsent === true && questionNumber >= MaxQuestionsCount" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+     <b-container v-if="GiveConsent === true && questionNumber >= MaxQuestionsCount-1" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-black pt-2 text-size-big">
-                You scored <span class="text-danger">{{pkt}}</span> points which signs your English knowledge as:
-                <p v-if="pkt <= 1" class="text-size-big text-center text-danger">A2</p> 
-                <p v-else-if="pkt === 2" class="text-size-big text-center text-danger">B1</p> 
-                <p v-else-if="pkt > 2" class="text-size-big text-center text-danger">B2</p> 
+                <p v-if="pkt < 3" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
+                <p v-else-if="pkt >= 3" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
                 <b-col class="text-center mb-3" >
                     <router-link to="/UserPage"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
