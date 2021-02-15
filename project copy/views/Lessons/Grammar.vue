@@ -48,19 +48,17 @@
           <b-col class="col-6 col-md-4 text-center">
             <p>Exam</p>
             <div v-if="solvedB1PSS1 === true && solvedB1PSS2 === true && solvedB1PSS3 === true">
-            <b-button variant="warning" class="btn-lg btn" type="button" aria-describedby="take the exam button">Take the exam</b-button>
+            <router-link to="/ExamB1PPS"><b-button variant="warning" class="btn-lg btn" type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
-            <p class="font-size-small text-danger">Complete your tasks first!</p>
+            <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
             </div>
           </b-col>
         </b-row>
       </b-col>
     </b-row>
-    <b-row>
-      
-    </b-row>
+
   </b-container>
   <b-container v-if="level==='B1'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
     <b-row>
@@ -69,17 +67,30 @@
           <b-col class="text-center text-size-big border-bottom border-success pb-3">
             <span>Theory</span>
           </b-col>
-        </b-row >
+        </b-row>
         <b-row class="p-3 text-medium">
           <b-col class="text-center">
             <router-link to="/TheoryB1PPC">Present perfect continous</router-link>
           </b-col>
-        </b-row>  
+        </b-row>
       </b-col>
       <b-col class="col-md-8 p-3">
         <b-row> 
           <b-col class="text-center text-size-big  border-bottom border-success pb-3">
             <span>Exercises</span>
+          </b-col>
+        </b-row>
+        <b-row id="grammar-title-content">
+          <b-col class="col-6 col-md-8 text-center">
+            <p>Training exercises</p>
+           
+          </b-col>
+          <b-col class="col-6 col-md-4 text-center">
+            <p>Exam</p>
+            <div>
+            <router-link to="/ExamB1PPC"><b-button variant="warning" disabled class="btn-lg">Exam</b-button></router-link>
+            <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
+            </div>
           </b-col>
         </b-row>
       </b-col>
