@@ -41,10 +41,10 @@
         <b-row id="grammar-title-content">
           <b-col class="col-8 text-center ">
             Training exercises
-            <b-col><b-button class="btn btn-success" v-on:click="TaskSolved">bug</b-button><router-link to="/TaskB1PPS1" id="TaskB1PPS1">Present perfect simple task 1</router-link></b-col>
-            <b-col><router-link to="/TaskB1PPS2" id="TaskB1PPS2" v-on:click.once="TaskClicked">Present perfect simple task 2</router-link></b-col>
-            <b-col><router-link to="/TaskB1PPS3" id="TaskB1PPS3" v-on:click.once="TaskClicked">Present perfect simple task 3</router-link></b-col>
-            <b-col><router-link to="/TaskB1PPS4" id="TaskB1PPS4" v-on:click.once="TaskClicked">Present perfect simple task 4</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS1" id="TaskB1PPS1">Present perfect simple task 1</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS2" id="TaskB1PPS2">Present perfect simple task 2</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS3" id="TaskB1PPS3">Present perfect simple task 3</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS4" id="TaskB1PPS4">Present perfect simple task 4</router-link></b-col>
           </b-col>
           <b-col class="col-4 text-center">
             <p>Exam</p>
@@ -111,36 +111,23 @@ data: function()
             loggedIn: false,
             email: firebase.auth().currentUser.email,
             name: firebase.auth().currentUser.displayName,
-            grammar: 0,
-            speaking: 0,
-            writing: 0,
-            reading: 0,
-            listening: 0,
             level: '',
             sth: false
         }
     },
     created: function()
     {
-      console.log("JESTME W CREATED");
-      console.log(this.sth)
       this.sth = this.$route.params.sth;
-      console.log(this.sth);
     },
-    mounted: function() //Pierwszorazowo załaduj dane
+    mounted: function()
     {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
       console.log(doc.data().speaking);
-        this.grammar = doc.data().grammar;
-        this.reading = doc.data().reading;
-        this.speaking = doc.data().speaking;
-        this.writing = doc.data().writing;
-        this.listening = doc.data().listening;
         this.level = doc.data().level;
+        });
     });
-});
     },
     methods: 
     {
