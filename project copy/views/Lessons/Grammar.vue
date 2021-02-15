@@ -126,6 +126,7 @@ data: function()
     querySnapshot.forEach((doc) => {
       console.log(doc.data().speaking);
         this.level = doc.data().level;
+        
         });
     });
     },
