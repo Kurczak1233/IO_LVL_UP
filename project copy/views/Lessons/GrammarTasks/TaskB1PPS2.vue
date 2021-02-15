@@ -43,16 +43,16 @@
   <b-col class="">6.  They _______ their plans..  </b-col>
 </b-row>
 <b-row class="">
-  <b-col class="">7. She _______ to accomplish her task before she lost consciousness.  </b-col>
+  <b-col class="">7. I _______ a new car recently. </b-col>
 </b-row>
 <b-row class="">
-  <b-col class="">8. What _______ do about it? </b-col>
+  <b-col class="">8. You _______ for this firm for two years. (You do not work there anymore) </b-col>
 </b-row>
 <b-row class="">
-  <b-col class="">9. You will _______ earn a lot to afford such car. </b-col>
+  <b-col class="">9.I _______ her before... </b-col>
 </b-row>
 <b-row class="">
-  <b-col class="">10. You _______ go out more. </b-col>
+  <b-col class="">10. What _______ done?! </b-col>
 </b-row>
 
 <table class="table table-striped">
@@ -103,31 +103,31 @@
     </tr>
     <tr>
       <th scope="row">7</th>
-      <td><f>could</f></td>
-           <td><c>was able</c></td>
-      <td><f>have</f></td>
-      <td><f>can</f></td>
+        <td v-on:click="inputClickedFalse">has bought</td>
+        <td v-on:click="inputClickedRight"> have bought</td>
+        <td v-on:click="inputClickedFalse">must have bought</td>
+        <td v-on:click="inputClickedFalse">hasn't bought</td>
     </tr>
     <tr>
       <th scope="row">8</th>
-      <td><f>has to</f></td>
-      <td><f>were you </f></td>
-      <td><f>are</f></td>
-         <td><c>are you going to</c></td>
+        <td  v-on:click="inputClickedFalse">has been working</td>
+        <td v-on:click="inputClickedRight">have worked</td>
+        <td  v-on:click="inputClickedFalse">hadn't worked</td>
+        <td  v-on:click="inputClickedFalse">has worked</td>
     </tr>
     <tr>
       <th scope="row">9</th>
-              <td><c>have to</c></td>
-      <td><f>must not</f></td>
-      <td><f>has to</f></td>
-      <td><f>are</f></td>
+                <td  v-on:click="inputClickedFalse">hasn't been seeing</td>
+        <td v-on:click="inputClickedRight">have not seen</td>
+        <td  v-on:click="inputClickedFalse">hadn't seen</td>
+        <td  v-on:click="inputClickedFalse">has't seen</td>
     </tr>
     <tr>
       <th scope="row">10</th>
-      <td><f>are</f></td>
-              <td><c>should</c></td>
-      <td><f>has</f></td>
-      <td><f>has to</f></td>
+        <td  v-on:click="inputClickedFalse">hasn't you</td>
+        <td  v-on:click="inputClickedFalse">haven't she</td>
+        <td v-on:click="inputClickedRight">hasn't they</td>
+        <td  v-on:click="inputClickedFalse">haven't you</td>
     </tr>
       </tbody>
 </table>
