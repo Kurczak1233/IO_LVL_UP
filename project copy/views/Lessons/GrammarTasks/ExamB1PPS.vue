@@ -46,11 +46,11 @@
                 <p v-if="pkt < 3" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
                 <p v-else-if="pkt >= 3" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
                 <b-col class="text-center mb-3" >
-                    <router-link to="/UserPage"><button class="btn btn-warning" type="button">Confirm</button></router-link>
+                    <router-link :to="{name: 'gram', params: {ExamB1PPSPassed: this.ExamB1PPSPassed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>
-    </b-container> -->
+    </b-container>
   </body>
 </template>
 
@@ -141,12 +141,13 @@ export default {
          answear4: task.answear4,
          GiveConsent: false,
          QuizesCount: 0,
+         ExamB1PPSPassed: false,
          MaxQuestionsCount: taskList.length,
          correctAnswear: task.correctAnswear,
          email: firebase.auth().currentUser.email,
         selected: null,
         options: [
-          { item: task.answear1 , name: task.answear1 },
+          { item: task.answear1, name: task.answear1 },
           { item: task.answear2, name: task.answear2 },
           { item: task.answear3, name: task.answear3 },
           { item: task.answear4, name: task.answear4 }
@@ -193,7 +194,8 @@ export default {
             }
             else if(this.pkt >= 3)
             { 
-                db.collection(this.email).doc(this.email).update({grammar: this.grammar+(1/this.QuizesCount)*100})
+                this.ExamB1PPSPassed = true;
+                db.collection(this.email).doc(this.email).update({grammar: this.grammar+(1/this.QuizesCount)*100});
             }
         },
         CheckAndNextQuestion: function()

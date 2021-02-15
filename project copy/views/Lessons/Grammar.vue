@@ -48,7 +48,7 @@
           <b-col class="col-6 col-md-4 text-center">
             <p>Exam</p>
             <div v-if="solvedB1PSS1 === true && solvedB1PSS2 === true && solvedB1PSS3 === true">
-            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: QuizesCount}}"><b-button  variant="warning" class="btn-lg btn" type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: QuizesCount}}"><b-button  variant="warning" class="btn-lg btn" v-if="ExamB1PPSPassed===false" type="button" aria-describedby="take the exam button">Exam</b-button><b-button  variant="success" disabled class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Passed!</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -83,7 +83,9 @@
         <b-row id="grammar-title-content">
           <b-col class="col-6 col-md-8 text-center">
             <p>Training exercises</p>
-           
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC1" class="text-success" v-if="solvedB1PSC1 === true" id="TaskB1PPC1">Present perfect simple task 1</router-link><router-link to="/TaskB1PPC1" class="text-danger" v-else id="TaskB1PPC1">Present perfect simple task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC2" class="text-success" v-if="solvedB1PSC2 === true" id="TaskB1PPC2">Present perfect simple task 2</router-link><router-link to="/TaskB1PPC2" class="text-danger" v-else id="TaskB1PPC2">Present perfect simple task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC3" class="text-success" v-if="solvedB1PSC3 === true" id="TaskB1PPC3">Present perfect simple task 3</router-link><router-link to="/TaskB1PPC3" class="text-danger" v-else id="TaskB1PPC3">Present perfect simple task 3</router-link></b-col>
           </b-col>
           <b-col class="col-6 col-md-4 text-center">
             <p>Exam</p>
@@ -110,7 +112,14 @@
       </b-col>
     </b-row>
   </b-container>
-<!--DLA B1-->
+
+ <b-container class="container text-center p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
+<b-row>
+  <b-col class="text-center mt-3">
+      <p class="text-size-big"><router-link to="/MainUserPage" class="text-primary">Return to user page</router-link></p>
+  </b-col>
+</b-row>
+  </b-container>
 
 </body>
 </template>
@@ -130,6 +139,7 @@ data: function()
             solvedB1PSS1: false,
             solvedB1PSS2: false,
             solvedB1PSS3: false,
+            ExamB1PPSPassed: false,
             QuizesCount: 2 //Temporary 2! (only 2 quizes)
         }
     },
@@ -138,14 +148,14 @@ data: function()
       this.solvedB1PSS1 = this.$route.params.solvedB1PSS1;
       this.solvedB1PSS2 = this.$route.params.solvedB1PSS2;
       this.solvedB1PSS3 = this.$route.params.solvedB1PSS3;
+      this.ExamB1PPSPassed = this.$route.params.ExamB1PPSPassed;
 
     },
     mounted: function() //Initialize site
     {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-      
+    querySnapshot.forEach((doc) => { 
         this.level = doc.data().level;
         this.solvedB1PSS1 = doc.data().solvedB1PSS1;
         this.solvedB1PSS2 = doc.data().solvedB1PSS2;
