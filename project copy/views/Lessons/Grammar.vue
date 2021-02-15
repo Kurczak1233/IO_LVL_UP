@@ -139,6 +139,9 @@ data: function()
             solvedB1PSS1: false,
             solvedB1PSS2: false,
             solvedB1PSS3: false,
+            solvedB1PSC1: false,
+            solvedB1PSC2: false,
+            solvedB1PSC3: false,
             ExamB1PPSPassed: false,
             QuizesCount: 2 //Temporary 2! (only 2 quizes)
         }

@@ -31,6 +31,9 @@ import TheoryB1PPC from '../views/Lessons/GrammarTheory/TheoryB1PPC.vue'
 import TaskB1PPS1 from '../views/Lessons/GrammarTasks/TaskB1PPS1.vue'
 import TaskB1PPS2 from '../views/Lessons/GrammarTasks/TaskB1PPS2.vue'
 import TaskB1PPS3 from '../views/Lessons/GrammarTasks/TaskB1PPS3.vue'
+import TaskB1PPC1 from '../views/Lessons/GrammarTasks/TaskB1PPC1.vue'
+import TaskB1PPC2 from '../views/Lessons/GrammarTasks/TaskB1PPC2.vue'
+import TaskB1PPC3 from '../views/Lessons/GrammarTasks/TaskB1PPC3.vue'
 import ExamB1PPS from '../views/Lessons/GrammarTasks/ExamB1PPS.vue'
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
@@ -92,6 +95,9 @@ const routes = [
    { path: '/TaskB1PPS1', name: 'taskB1PPS1', component: TaskB1PPS1, meta: {requiresAuth: true}},
    { path: '/TaskB1PPS2', name: 'taskB1PPS2', component: TaskB1PPS2, meta: {requiresAuth: true}},
    { path: '/TaskB1PPS3', name: 'taskB1PPS3', component: TaskB1PPS3, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPC1', name: 'taskB1PPC1', component: TaskB1PPC1, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPC2', name: 'taskB1PPC2', component: TaskB1PPC2, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPC3', name: 'taskB1PPC3', component: TaskB1PPC3, meta: {requiresAuth: true}},
    { path: '/ExamB1PPS', name: 'examB1PPS', component: ExamB1PPS, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
