@@ -30,7 +30,7 @@
                 <p v-else-if="pkt === 2" class="text-size-big text-center text-danger">B1</p> 
                 <p v-else-if="pkt > 2" class="text-size-big text-center text-danger">B2</p> 
                 <b-col class="text-center mb-3" >
-                    <router-link to="/UserPage"><button v-on:click="SetUsersLevel()" class="btn btn-warning" type="button">Confirm</button></router-link>
+                    <router-link to="/UserPage"><button v-on:click.once="SetUsersLevel()" class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>

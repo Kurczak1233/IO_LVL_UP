@@ -82,16 +82,13 @@ export default {
                     })
                    }})
                  var db = firebase.firestore();
-                 db.collection(this.email).doc(this.email).add({
+                 db.collection(this.email).doc(this.email).set({
                   grammar: 0,
                   speaking: 0,
                   writing: 0,
                   reading: 0,
                   listening: 0,
                   level: "Unknown",
-                })
-                .then((docRef) => {
-                  console.log("Document written with ID: ", docRef.id);
                 })
                 .catch((error) => {
                   console.error("Error adding document: ", error);
