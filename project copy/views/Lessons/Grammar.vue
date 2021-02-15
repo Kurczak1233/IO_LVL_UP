@@ -39,12 +39,12 @@
           </b-col>
         </b-row>
         <b-row id="grammar-title-content">
-          <b-col class="col-8 text-center ">
-            Training exercises
-            <b-col><router-link to="/TaskB1PPS1" id="TaskB1PPS1">Present perfect simple task 1</router-link></b-col>
-            <b-col><router-link to="/TaskB1PPS2" id="TaskB1PPS2">Present perfect simple task 2</router-link></b-col>
-            <b-col><router-link to="/TaskB1PPS3" id="TaskB1PPS3">Present perfect simple task 3</router-link></b-col>
-            <b-col><router-link to="/TaskB1PPS4" id="TaskB1PPS4">Present perfect simple task 4</router-link></b-col>
+          <b-col class="col-8 text-center">
+            <p>Training exercises</p>
+            <b-col><router-link to="/TaskB1PPS1" class="text-danger" v-if="solvedB1PSS1 === false" id="TaskB1PPS1">Present perfect simple task 1</router-link><router-link to="/TaskB1PPS1" class="text-success" v-else id="TaskB1PPS1">Present perfect simple task 1</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS2" class="text-danger" v-if="solvedB1PSS2 === false" id="TaskB1PPS2">Present perfect simple task 2</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS3" class="text-danger" v-if="solvedB1PSS3 === false" id="TaskB1PPS3">Present perfect simple task 3</router-link></b-col>
+            <b-col><router-link to="/TaskB1PPS4" class="text-danger" v-if="solvedB1PSS4 === false" id="TaskB1PPS4">Present perfect simple task 4</router-link></b-col>
           </b-col>
           <b-col class="col-4 text-center">
             <p>Exam</p>
@@ -112,12 +112,15 @@ data: function()
             email: firebase.auth().currentUser.email,
             name: firebase.auth().currentUser.displayName,
             level: '',
-            sth: false
+            solvedB1PSS1: false,
+            solvedB1PSS2: false,
+            solvedB1PSS3: false,
+            solvedB1PSS4: false
         }
     },
     created: function()
     {
-      this.sth = this.$route.params.sth;
+      this.solvedB1PSS1 = this.$route.params.solvedB1PSS1;
     },
     mounted: function()
     {

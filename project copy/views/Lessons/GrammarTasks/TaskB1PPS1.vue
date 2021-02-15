@@ -3,7 +3,7 @@
     <b-container v-if="formalConsent === false" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center p-3"><p>You are in tasks section, please remember that you are constantly <b>LEARNING</b> so, do not forget to make notes, and if necessary - repeat quizes!</p>
-                <p>You won't be scoring any points there, so do not panic if you chose wrong answear, just pick a new one.</p>
+                <p>You won't be scoring any points there, so do not panic if you chose a wrong answear, just pick a new one.</p>
                 <p>Finishing all quizes will allow you to make an attempt in solving the exam!</p>
                 <b-col class="mt-3"><b-button class="btn btn-warning" type="button" v-on:click="GiveConsent">Confirm</b-button></b-col>
             </b-col>
