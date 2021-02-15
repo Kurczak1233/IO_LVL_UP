@@ -41,7 +41,7 @@
         <b-row id="grammar-title-content">
           <b-col class="col-8 text-center ">
             Training exercises
-            <b-col><router-link to="/TaskB1PPS1" id="TaskB1PPS1" v-on:click.once="TaskClicked">Present perfect simple task 1</router-link></b-col>
+            <b-col><b-button class="btn btn-success" v-on:click="TaskSolved">bug</b-button><router-link to="/TaskB1PPS1" id="TaskB1PPS1">Present perfect simple task 1</router-link></b-col>
             <b-col><router-link to="/TaskB1PPS2" id="TaskB1PPS2" v-on:click.once="TaskClicked">Present perfect simple task 2</router-link></b-col>
             <b-col><router-link to="/TaskB1PPS3" id="TaskB1PPS3" v-on:click.once="TaskClicked">Present perfect simple task 3</router-link></b-col>
             <b-col><router-link to="/TaskB1PPS4" id="TaskB1PPS4" v-on:click.once="TaskClicked">Present perfect simple task 4</router-link></b-col>
@@ -117,7 +117,15 @@ data: function()
             reading: 0,
             listening: 0,
             level: '',
+            sth: false
         }
+    },
+    created: function()
+    {
+      console.log("JESTME W CREATED");
+      console.log(this.sth)
+      this.sth = this.$route.params.sth;
+      console.log(this.sth);
     },
     mounted: function() //Pierwszorazowo załaduj dane
     {
@@ -136,11 +144,11 @@ data: function()
     },
     methods: 
     {
-      TaskClicked: function()
+      TaskSolved: function()
       {
-        this.classList.add("text-warning");
+        console.log(this.sth);
       }
-    }
+    },
 }
 </script>
 

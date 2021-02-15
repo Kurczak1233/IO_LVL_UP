@@ -1,6 +1,6 @@
 <template>
   <body>
-    <b-container class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+    <b-container v-if="formalConsent === false" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center p-3"><p>You are in tasks section, please remember that you are constantly <b>LEARNING</b> so, do not forget to make notes, and if necessary - repeat quizes!</p>
                 <p>You won't be scoring any points there, so do not panic if you chose wrong answear, just pick a new one.</p>
@@ -8,6 +8,9 @@
                 <b-col class="mt-3"><b-button class="btn btn-warning" type="button" v-on:click="GiveConsent">Confirm</b-button></b-col>
             </b-col>
         </b-row>
+    </b-container>
+    <b-container v-if="formalConsent === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+        <b-col class="mt-3"><b-button class="btn btn-warning" type="button"><router-link :to="{name: 'gram', params: {sth: true}}" class="text-primary">Send sth back!</router-link></b-button></b-col>
     </b-container>
      <!-- <b-container v-else class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
@@ -97,31 +100,51 @@
 // let taskList = [task, task2, task3];
 // let points = 0;
 // let i = 0;
-// export default {
-//     name: 'Speaking',
-//         data: function()
-//     {
-//       return { //Zwracamy pola z naszego taska
-//          id: task.id,
-//          questionNumber: task.questionNumber,
-//          pkt: task.pkt,  //Not necessary but whatsoever...
-//          description: task.description,
-//          answear1: task.answear1,
-//          answear2: task.answear2,
-//          answear3: task.answear3,
-//          answear4: task.answear4,
-//          correctAnswear: task.correctAnswear,
-//          email: firebase.auth().currentUser.email,
-//         selected: null,
-//         options: [
-//           { item: task.answear1 , name: task.answear1 },
-//           { item: task.answear2, name: task.answear2 },
-//           { item: task.answear3, name: task.answear3 },
-//           { item: task.answear4, name: task.answear4 }
-//         ]
+export default {
+    name: 'Speaking',
+        data: function()
+    {
+      return {
+          formalConsent: false
+        //  id: task.id,
+        //  questionNumber: task.questionNumber,
+        //  pkt: task.pkt,  //Not necessary but whatsoever...
+        //  description: task.description,
+        //  answear1: task.answear1,
+        //  answear2: task.answear2,
+        //  answear3: task.answear3,
+        //  answear4: task.answear4,
+        //  correctAnswear: task.correctAnswear,
+        //  email: firebase.auth().currentUser.email,
+        // selected: null,
+        // options: [
+        //   { item: task.answear1 , name: task.answear1 },
+        //   { item: task.answear2, name: task.answear2 },
+        //   { item: task.answear3, name: task.answear3 },
+        //   { item: task.answear4, name: task.answear4 }
+        // ]
       
-//       }
-//     },
+      }
+    },
+    model: {
+    prop: 'checked',
+    event: 'change'
+  },
+  props: {
+    sth: Boolean
+  },
+    methods:
+    {
+        GiveConsent: function()
+        {
+            this.formalConsent = true;
+        },
+        SendingInfoBack: function()
+        {
+            this.$emit('sth',true);
+        }
+    }
+}
 //     methods:
 //     {
 //         SetUsersLevel: function()
