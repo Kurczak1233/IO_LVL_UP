@@ -142,6 +142,7 @@ export default {
          answear3: task.answear3,
          answear4: task.answear4,
          GiveConsent: false,
+         QuizesCount: 0,
          MaxQuestionsCount: taskList.length,
          correctAnswear: task.correctAnswear,
          email: firebase.auth().currentUser.email,
@@ -159,6 +160,11 @@ export default {
     {
         console.log(this.MaxQuestionsCount);
         console.log(this.GiveConsent)
+        console.log(this.QuizesCount)
+    },
+    created: function()
+    {
+        this.QuizesCount = this.$route.params.QuizesCount;
     },
     methods:
     {
@@ -174,31 +180,15 @@ export default {
             }
             this.pkt = points;
             this.questionNumber = task.questionNumber++;
-            // var db = firebase.firestore();
-//             if(this.pkt <= 1)
-//             {
-//   db.collection(this.email).get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//          db.collection(this.email).doc(doc.id).update({level: "A2"});
-//     });
-// });
-//             }
-//             else if(this.pkt ===2)
-//             { 
-//   db.collection(this.email).get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//          db.collection(this.email).doc(doc.id).update({level: "B1"});
-//     });
-// });
-//             }
-//             else
-//             {
-//   db.collection(this.email).get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//          db.collection(this.email).doc(doc.id).update({level: "B2"});
-//     });
-// });
-            // }
+             var db = firebase.firestore();
+            if(this.pkt < 3)
+            {
+                //EXAM FAILED!
+            }
+            else if(this.pkt >= 3)
+            { 
+                db.collection(this.email).doc(this.email).update({grammar: this.grammar+1/this.QuizesCount*100})
+            }
 
         },
         CheckAndNextQuestion: function()
@@ -210,7 +200,7 @@ export default {
             i++
             this.pkt = points;
             this.questionNumber = task.questionNumber++;
-             if(task.questionNumber < 3)
+             if(task.questionNumber < this.MaxQuestionsCount)
              {
                 this.description = taskList[i].description
                 this.answear1 = taskList[i].answear1

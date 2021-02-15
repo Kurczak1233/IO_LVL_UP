@@ -88,7 +88,7 @@
           <b-col class="col-6 col-md-4 text-center">
             <p>Exam</p>
             <div>
-            <router-link to="/ExamB1PPC"><b-button variant="warning" disabled class="btn-lg">Exam</b-button></router-link>
+            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: this.QuizesCount}}"><b-button variant="warning" disabled class="btn-lg">Exam</b-button></router-link>
             <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
             </div>
           </b-col>
@@ -129,7 +129,8 @@ data: function()
             level: '',
             solvedB1PSS1: false,
             solvedB1PSS2: false,
-            solvedB1PSS3: false
+            solvedB1PSS3: false,
+            QuizesCount: 2 //Temporary 2! (only 2 quizes)
         }
     },
     created: function()
