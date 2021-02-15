@@ -48,7 +48,7 @@
           <b-col class="col-6 col-md-4 text-center">
             <p>Exam</p>
             <div v-if="solvedB1PSS1 === true && solvedB1PSS2 === true && solvedB1PSS3 === true">
-            <router-link to="/ExamB1PPS"><b-button variant="warning" class="btn-lg btn" type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: QuizesCount}}"><b-button  variant="warning" class="btn-lg btn" type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -88,7 +88,7 @@
           <b-col class="col-6 col-md-4 text-center">
             <p>Exam</p>
             <div>
-            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: this.QuizesCount}}"><b-button variant="warning" disabled class="btn-lg">Exam</b-button></router-link>
+            <router-link to="/"><b-button variant="warning" disabled class="btn-lg">Exam</b-button></router-link>
             <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
             </div>
           </b-col>
@@ -145,7 +145,7 @@ data: function()
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      console.log(doc.data().speaking);
+      
         this.level = doc.data().level;
         this.solvedB1PSS1 = doc.data().solvedB1PSS1;
         this.solvedB1PSS2 = doc.data().solvedB1PSS2;
@@ -158,7 +158,7 @@ data: function()
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      console.log(doc.data().speaking);
+      
         this.solvedB1PSS1 = doc.data().solvedB1PSS1;
         this.solvedB1PSS2 = doc.data().solvedB1PSS2;
         this.solvedB1PSS3 = doc.data().solvedB1PSS3;

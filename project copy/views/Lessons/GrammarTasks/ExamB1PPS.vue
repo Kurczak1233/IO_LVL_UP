@@ -118,7 +118,7 @@ function TaskBuilder() {
 let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0")
         .setDescription("He _________ here for 20 years and now he do not anymore.").setAnswear1("have been").setAnswear2("has stolen").setAnswear3("has worked").setAnswear4("hasn't worked").correctAnswear("has worked").build();
 let task2 = (new TaskBuilder()).setId("2")
-       .setDescription("You can ask questions when we _________ all the items from the agenda..").setAnswear1("had discussed").setAnswear2("has discussed").setAnswear3("have discussed").setAnswear4("has discussion").correctAnswear("widespread").build();
+       .setDescription("You can ask questions when we _________ all the items from the agenda..").setAnswear1("had discussed").setAnswear2("has discussed").setAnswear3("have discussed").setAnswear4("has discussion").correctAnswear("have discussed").build();
 let task3 = (new TaskBuilder()).setId("3")
       .setDescription("It's the first time I _________ a horse..").setAnswear1("had had").setAnswear2("have ridden").setAnswear3("had ridden").setAnswear4("has ridden").correctAnswear("have ridden").build();
 let task4 = (new TaskBuilder()).setId("4")
@@ -158,9 +158,17 @@ export default {
     },
     mounted: function()
     {
-        console.log(this.MaxQuestionsCount);
-        console.log(this.GiveConsent)
-        console.log(this.QuizesCount)
+        var db = firebase.firestore();
+        db.collection(this.email).doc(this.email).get().then((doc) => {
+    if (doc.exists) {
+        this.grammar = doc.data().grammar;
+
+    } else {
+        console.log("No such document!");
+    }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
     },
     created: function()
     {
@@ -187,9 +195,8 @@ export default {
             }
             else if(this.pkt >= 3)
             { 
-                db.collection(this.email).doc(this.email).update({grammar: this.grammar+1/this.QuizesCount*100})
+                db.collection(this.email).doc(this.email).update({grammar: this.grammar+(1/this.QuizesCount)*100})
             }
-
         },
         CheckAndNextQuestion: function()
         {   

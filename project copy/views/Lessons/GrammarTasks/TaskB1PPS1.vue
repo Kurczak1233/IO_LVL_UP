@@ -105,13 +105,6 @@ export default {
           solvedB1PSS1: false
       }
     },
-    model: {
-    prop: 'checked',
-    event: 'change'
-  },
-  props: {
-    sth: Boolean
-  },
     methods:
     {
         GiveConsent: function()
