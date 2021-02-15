@@ -38,12 +38,18 @@
             <span>Exercises</span>
           </b-col>
         </b-row>
-        <b-row id="grammar-content">
-          <b-col class="col-8 ">
-            Training
+        <b-row id="grammar-title-content">
+          <b-col class="col-8 text-center ">
+            Training exercises
+            <b-col  router-link to="/TasksB1PPS1">Present perfect simple task 1</b-col>
+            <b-col  router-link to="/TasksB1PPS2">Present perfect simple task 2</b-col>
+            <b-col  router-link to="/TasksB1PPS3">Present perfect simple task 3</b-col>
+            <b-col  router-link to="/TasksB1PPS4">Present perfect simple task 4</b-col>
           </b-col>
           <b-col class="col-4 text-center">
-            Exam
+            <p>Exam</p>
+            <b-button variant="warning" disabled class="btn-lg">Button</b-button>
+            <p class="font-size-small text-danger">Complete your tasks first!</p>
           </b-col>
         </b-row>
       </b-col>
@@ -151,5 +157,9 @@ table td:hover{
 .text-medium
 {
   font-size: 1.4rem;
+}
+.font-size-small
+{
+  font-size: 0.6rem;
 }
 </style>
