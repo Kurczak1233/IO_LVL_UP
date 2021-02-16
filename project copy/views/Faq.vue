@@ -3,29 +3,22 @@
   <b-row class="">
     <b-col class="mb-2" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_JS.png?raw=true" alt="Logo listening"></b-col>
   </b-row>
-<b-container class="col-12 mr-auto ml-auto margin5 background-bluish" fluid>
+<b-container class="col-12 mr-auto mb-3 ml-auto margin5 background-bluish" fluid>
   <b-row>
-      <b-col class="text-center margin5"> FAQ </b-col>
-    </b-row>
+      <b-col class="text-center"> FAQ </b-col>
+  </b-row>
 </b-container>
-   <b-col> <p> </p> </b-col>
-<b-container class="col-12 mr-auto ml-auto background-bluish" fluid>
-<table class="table table-striped">
-  <thead>
-    <tr>
-       <b-col class="text-left margin4"> <p> </p> <p> ? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu nulla at neque rhoncus eleifend. Aenean ac arcu sem? </p> <p>  Praesent mattis, neque eu molestie mollis, leo elit pellentesque lorem, eu sagittis lacus augue vitae orci. Donec mauris massa, dictum luctus pellentesque mollis, eleifend tristique nisl. Cras aliquam laoreet lacus eget hendrerit. Maecenas ultrices massa augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p> <p> ? Praesent hendrerit odio eget velit aliquet, eget porttitor nisl congue. </p> <p> Vestibulum et volutpat arcu, sed iaculis felis. Praesent tortor metus, imperdiet quis maximus ut, egestas vel nibh. Proin laoreet, turpis nec scelerisque fringilla, libero turpis tristique dui, at volutpat lorem massa ac dui. Duis sit amet commodo lectus. </p> <p> ? Donec eleifend metus et diam bibendum accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris finibus, purus a fringilla semper, diam arcu tristique sem, id tempus enim urna ut nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec mauris massa, dictum luctus pellentesque mollis, eleifend tristique nisl. Cras aliquam laoreet lacus eget hendrerit. Maecenas ultrices massa augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent hendrerit odio eget velit aliquet, eget porttitor nisl congue. Vestibulum et volutpat arcu, sed iaculis felis. Praesent tortor metus, imperdiet quis maximus ut, egestas vel nibh. Proin laoreet, turpis nec scelerisque fringilla, libero turpis tristique dui, at volutpat lorem massa ac dui. Duis sit amet commodo lectus. Donec eleifend metus et diam bibendum accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris finibus, purus a fringilla semper, diam arcu tristique sem, id tempus enim urna ut nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Aliquam erat volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p> <p> ? Morbi vehicula malesuada ligula. Nam at laoreet massa, et consequat erat. Proin a sapien eget lorem scelerisque faucibus quis eleifend nulla. </p> <p> Pellentesque nec turpis sodales, sollicitudin turpis a, faucibus est. Maecenas accumsan convallis nisi a luctus. Vestibulum sollicitudin massa at arcu iaculis, eu pellentesque velit porttitor. Proin vel nisl porttitor lectus rhoncus scelerisque. Praesent blandit, quam sit amet condimentum luctus, nunc nulla laoreet odio, sit amet vehicula ex purus quis neque. Vivamus rhoncus leo elit, vel venenatis elit condimentum nec. Sed dapibus metus felis, a porta lorem iaculis sagittis. Nunc tempus ultrices purus id tristique. Nulla quis pulvinar lectus. Suspendisse elementum hendrerit ex, vitae ullamcorper tellus congue nec. Maecenas feugiat tempus mollis. </p> <p> ?  Nulla dapibus lacinia malesuada. Nam non rutrum massa. Sed a finibus ante. </p> <p> Phasellus nec hendrerit metus, sit amet pulvinar diam. Donec tristique tincidunt leo, non venenatis turpis congue ut. Praesent ac mi vel arcu sollicitudin feugiat. Aenean vitae semper odio. </p> <p> ? Pellentesque id velit sit amet turpis commodo hendrerit vitae in urna. Nulla eget velit ac turpis blandit maximus a id nulla. </p> <p> Curabitur pellentesque neque et justo dignissim, dignissim tempor urna auctor. Donec pellentesque, justo eu cursus molestie, ligula lacus consequat metus, a maximus ligula diam vel ipsum. Integer sed diam vel mauris iaculis venenatis. Fusce eget porta nibh. Vivamus sit amet ex vitae justo volutpat faucibus. Integer volutpat sodales urna vitae dictum. Sed vitae dui libero. </p>
+<b-container class="col-12 mr-auto ml-auto background-bluish p-3" fluid>
+      <b-col class="text-left margin4"><p>Often asked questions:<p><p> consectetur adipiscing elit. Duis eu nulla at neque rhoncus eleifend. Aenean ac arcu sem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit reiciendis amet optio earum commodi minus laudantium vitae id voluptate at facere, sed nobis eligendi et quisquam odit repellat dolor vero. Est ipsum eum corporis cumque quod praesentium, ad at consectetur similique tempora veniam modi facilis sed officiis, doloremque illo quaerat ex! Ipsa, facere in! Sit recusandae ipsa nemo libero eveniet, iste doloremque repudiandae quidem in, tempore facilis veritatis sint mollitia, quasi culpa alias quos pariatur? Maxime, aliquam mollitia quo cupiditate nostrum sed illum porro totam voluptates a doloremque voluptatem velit iure sunt ipsum ratione! Est quod saepe atque unde velit harum, commodi necessitatibus animi veniam aut illo amet nobis, optio fugit minus? Voluptates autem quasi praesentium quisquam nam distinctio ullam velit pariatur iusto ab harum quas obcaecati eos temporibus numquam voluptatibus facere, modi vel reprehenderit quidem dolorem odit consectetur! Cupiditate aut ut enim! Reprehenderit atque tenetur fuga, aspernatur suscipit blanditiis dolores, ipsam magnam officiis vero similique molestias voluptas cumque facilis? Qui tenetur harum fugiat ipsa corporis reiciendis totam quam velit dolor odit, fuga temporibus consectetur et ipsum necessitatibus at! Assumenda, laudantium molestiae ipsa illo omnis tenetur minima atque a voluptas nesciunt vitae dolores enim commodi sint, impedit voluptatum perferendis sequi?</p>
         <p class="text-md-left text-center"><router-link to="/MainPage"> « « « Back to Main Page</router-link></p>
- </b-col>
-    </tr>
-  </thead>
-  </table>
+      </b-col>
     </b-container>
 </b-container>
 </template>
 
 <script>
 export default {
-name: 'contatcs',
+name: 'contatcs'
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

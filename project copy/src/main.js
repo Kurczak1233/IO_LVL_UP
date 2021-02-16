@@ -25,7 +25,16 @@ import File from '../views/Lessons/File.vue'
 import AboutUs from '../views/AboutUs.vue'
 import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
-
+import PlacementTest from '../views/PlacementTest.vue'
+import TheoryB1PPS from '../views/Lessons/GrammarTheory/TheoryB1PPS.vue'
+import TheoryB1PPC from '../views/Lessons/GrammarTheory/TheoryB1PPC.vue'
+import TaskB1PPS1 from '../views/Lessons/GrammarTasks/TaskB1PPS1.vue'
+import TaskB1PPS2 from '../views/Lessons/GrammarTasks/TaskB1PPS2.vue'
+import TaskB1PPS3 from '../views/Lessons/GrammarTasks/TaskB1PPS3.vue'
+import TaskB1PPC1 from '../views/Lessons/GrammarTasks/TaskB1PPC1.vue'
+import TaskB1PPC2 from '../views/Lessons/GrammarTasks/TaskB1PPC2.vue'
+import TaskB1PPC3 from '../views/Lessons/GrammarTasks/TaskB1PPC3.vue'
+import ExamB1PPS from '../views/Lessons/GrammarTasks/ExamB1PPS.vue'
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy'
@@ -52,7 +61,10 @@ import Offer from '../views/Offer.vue'
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
+  // var db = firebase.firestore();
+  // firebase = require("firebase");
+  // Required for side-effects
+  require("firebase/firestore");
 Vue.prototype.$axios = axios; /*  */
 
 
@@ -77,16 +89,47 @@ const routes = [
    { path: '/Grammar', name: 'gram', component: Grammar, meta: {requiresAuth: true}},
    { path: '/Listening', name: 'listen', component: Listening, meta: {requiresAuth: true}},
    { path: '/File', name: 'file', component: File, meta: {requiresAuth: true}},
+   { path: '/PlacementTest', name: 'placementTest', component: PlacementTest, meta: {requiresAuth: true}},
+   { path: '/TheoryB1PPS', name: 'theoryB1PPS', component: TheoryB1PPS, meta: {requiresAuth: true}},
+   { path: '/TheoryB1PPC', name: 'theoryB1PPC', component: TheoryB1PPC, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPS1', name: 'taskB1PPS1', component: TaskB1PPS1, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPS2', name: 'taskB1PPS2', component: TaskB1PPS2, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPS3', name: 'taskB1PPS3', component: TaskB1PPS3, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPC1', name: 'taskB1PPC1', component: TaskB1PPC1, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPC2', name: 'taskB1PPC2', component: TaskB1PPC2, meta: {requiresAuth: true}},
+   { path: '/TaskB1PPC3', name: 'taskB1PPC3', component: TaskB1PPC3, meta: {requiresAuth: true}},
+   { path: '/ExamB1PPS', name: 'examB1PPS', component: ExamB1PPS, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
    { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
-  //  { path: '/reg', redirect: '/register'}, /*Dla testu*/
    { path: '/login', name:"log", component: Login} 
+
  ]
  
  Vue.use(VueRouter)
- 
+ // FIRESTORE
+ var db = firebase.firestore();
+ db.collection("usersTest").add({
+  grammar: 0,
+  speaking: 0,
+  writing: 0,
+  reading: 0,
+  listening: 0,
+  level: "Unknown"
+})
+.then((docRef) => {
+  console.log("Document written with ID: ", docRef.id);
+})
+.catch((error) => {
+  console.error("Error adding document: ", error);
+});
 
+db.collection("Users").get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data()}`);
+  });
+});
+ //
 const router = new VueRouter({
   routes // short for `routes: routes`
 })
@@ -123,3 +166,13 @@ firebase.auth().onAuthStateChanged(user=> {
     
   }
 })
+
+window.onunload = async function () {
+      try{
+           await firebase.auth().signOut();
+      }catch(err)
+      {
+          console.log(err)
+      }
+  }
+

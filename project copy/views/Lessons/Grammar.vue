@@ -1,334 +1,203 @@
 <template>
-<b-container class="container text-center">
-  <b-row class="">
-    <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_grammar.png?raw=true" alt="Logo grammar"></b-col>
-  </b-row>
-<b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-<b><h3><i>THE MICROSCOPE</i></h3></b>
-<b-row class="">
-  <b-col class=""><l>An important invention in the development of science and medicine was the microscope. It was (1) ... the principle that light could be (2) ... or bent, by a glass lens. It was soon discovered that tiny objects could be magnified (3) ... size when viewed through a glass lens that had been ground and polished in a specific (4)... . Although the principle was known to the Chinese as early as 1000 A.D, it was not until the 13th and 14th centuries in Europe (5) ... it was put to practical use in the form of eyeglasses.</l>
+<body>
+  <b-container class="container text-center p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
+      <b-row class="p-4">
+        <b-col class="mb-3 text-size-big mt-auto mb-auto"  cols="12"> Grammar lessons available on <span class="text-danger">{{level}}</span> level </b-col>
+      </b-row>
+  </b-container>
+
+  <!--DLA B2-->
+
+  <b-container v-if="level==='B2'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col>
+        <span>Tutaj będą dostępne lekcje na B2</span>
+      </b-col>
+    </b-row>
+  </b-container>
+
+<!--DLA B1-->
+
+  <b-container v-if="level==='B1'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col class="col-md-4 p-3 border-right text-center border-success">
+        <b-row>
+          <b-col class="text-center text-size-big border-bottom border-success pb-3">
+            <span>Theory</span>
+          </b-col>
+        </b-row>
+        <b-row class="p-3 text-medium">
+          <b-col class="text-center">
+            <router-link to="/TheoryB1PPS">Present perfect simple</router-link>
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col class="col-md-8 p-3">
+        <b-row> 
+          <b-col class="text-center text-size-big  border-bottom border-success pb-3">
+            <span>Exercises</span>
+          </b-col>
+        </b-row>
+        <b-row id="grammar-title-content">
+          <b-col class="col-6 col-md-8 text-center">
+            <p>Training exercises</p>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS1" class="text-success" v-if="solvedB1PPS1 === true" id="TaskB1PPS1">FCE preparation task 1</router-link><router-link to="/TaskB1PPS1" class="text-danger" v-else id="TaskB1PPS1">FCE preparation task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS2" class="text-success" v-if="solvedB1PPS2 === true" id="TaskB1PPS2">Present perfect simple task 2</router-link><router-link to="/TaskB1PPS2" class="text-danger" v-else id="TaskB1PPS2">Present perfect simple task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS3" class="text-success" v-if="solvedB1PPS3 === true" id="TaskB1PPS3">Present perfect simple task 3</router-link><router-link to="/TaskB1PPS3" class="text-danger" v-else id="TaskB1PPS3">Present perfect simple task 3</router-link></b-col>
+          </b-col>
+          <b-col class="col-6 col-md-4 text-center">
+            <p>Exam</p>
+            <div v-if="solvedB1PPS1 === true && solvedB1PPS2 === true && solvedB1PPS3 === true">
+            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1PPSPassed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            </div>
+            <div v-else>
+            <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
+            <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
+            </div>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+
+  </b-container>
+  <b-container v-if="level==='B1'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col class="col-md-4 p-3 border-right text-center border-success">
+        <b-row>
+          <b-col class="text-center text-size-big border-bottom border-success pb-3">
+            <span>Theory</span>
+          </b-col>
+        </b-row>
+        <b-row class="p-3 text-medium">
+          <b-col class="text-center">
+            <router-link to="/TheoryB1PPC">Present perfect continous</router-link>
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col class="col-md-8 p-3">
+        <b-row> 
+          <b-col class="text-center text-size-big  border-bottom border-success pb-3">
+            <span>Exercises</span>
+          </b-col>
+        </b-row>
+        <b-row id="grammar-title-content">
+          <b-col class="col-6 col-md-8 text-center">
+            <p>Training exercises</p>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC1" class="text-success" v-if="solvedB1PPC1 === true" id="TaskB1PPC1">FCE preparation task 1</router-link><router-link to="/TaskB1PPC1" class="text-danger" v-else id="TaskB1PPC1">FCE preparation task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC2" class="text-success" v-if="solvedB1PPC2 === true" id="TaskB1PPC2">Present perfect continous task 2</router-link><router-link to="/TaskB1PPC2" class="text-danger" v-else id="TaskB1PPC2">Present perfect continous task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC3" class="text-success" v-if="solvedB1PPC3 === true" id="TaskB1PPC3">Present perfect continous task 3</router-link><router-link to="/TaskB1PPC3" class="text-danger" v-else id="TaskB1PPC3">Present perfect continous task 3</router-link></b-col>
+          </b-col>
+          <b-col class="col-6 col-md-4 text-center">
+            <p>Exam</p>
+            <div v-if="solvedB1PPC1 === true && solvedB1PPC2 === true && solvedB1PPC3 === true">
+            <router-link :to="{name: 'examB1PPC', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1PPCPassed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
+            </div>
+            <div v-else>
+            <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
+            <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
+            </div>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+    <b-row>
+      
+    </b-row>
+  </b-container>
+
+
+<!--DLA A2-->
+
+<b-container v-if="level==='A2'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col>
+        <span>Tutaj będą dostępne lekcje na A2</span>
+      </b-col>
+    </b-row>
+  </b-container>
+
+ <b-container class="container text-center p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
+<b-row>
+  <b-col class="text-center mt-3">
+      <p class="text-size-big"><router-link to="/UserPage" class="text-primary">Return to user page</router-link></p>
   </b-col>
 </b-row>
-<b-row class="">
-  <b-col class=""><l>In Europe the first microscope was invented by brothers Zacharias and Hans Janssen, two Dutch eyeglass-makers, around 1590. They built a “compound” microscope, so called because of its two lenses. The most significant development and use of the microscope during this period, however, belongs to another Dutch optician, Antonie van Leeuwenhoek (1632-1723). Born in Delft, Holland, he became skilled at (6) ... very sharp and accurate magnifying lenses. Some of his single-lens microscopes were able to</l>
-  </b-col>
-</b-row>   
-<b-row class="">
-  <b-col class=""><l>magnify up the three hundred times (7) ... size, and around 1660 he began serious study using these instruments. He was the first to discover bacteria and other microscopic organisms, calling these tiny creatures “animalcules”. (8) ... to this discovery, very small creatures such as fleas and maggots were thought to “spontaneously generate” from a single source, such as rotting meat in the case of maggots.</l>
-  </b-col>
-</b-row>   
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="row"><b>1</b></th>
-      <td><c>based upon</c></td>
-      <td><f>based at</f></td>
-      <td><f>based by</f></td>
-      <td><f>based in</f></td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><b>2</b></th>
-      <td><f>retraced</f></td>
-      <td><f>retracted</f></td>
-      <td><c>refracted</c></td>
-      <td><f>retorted</f></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td><f>on</f></td>
-      <td><c>in</c></td>
-      <td><f>by</f></td>
-      <td><f>with</f></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td><c>manner</c></td>
-      <td><f>fashion</f></td>
-      <td><f>character</f></td>
-      <td><f>procedure</f></td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td><c>that</c></td>
-      <td><f>than</f></td>
-      <td><f>when</f></td>
-      <td><f>then</f></td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td><f>rubbing</f></td>
-      <td><f>granting</f></td>
-      <td><c>grinding</c></td>
-      <td><f>scraping</f></td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td><f>current</f></td>
-      <td><c>actual</c></td>
-      <td><f>substantial</f></td>
-      <td><f>present</f></td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td><f>Due</f></td>
-      <td><f>According</f></td>
-      <td><f>Owing</f></td>
-      <td><c>Prior</c></td>
-    </tr>
-      </tbody>
-</table>
-    </b-container>  
+  </b-container>
 
-    <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-<b><h3><i>Czasowniki modalne - Modal Verbs</i></h3></b>
-<b-row class="">
-  <b-col class="">1. I _______ swim when I was a boy. </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">2. How _______ you!  </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">3. The killers _______ to be executed tomorrow.  </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">4. She _______ go home!  </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">5. You _______ go there alone!  </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">6. You _______ worry about this anymore.  </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">7. She _______ to accomplish her task before she lost consciousness.  </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">8. What _______ do about it? </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">9. You will _______ earn a lot to afford such car. </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">10. You _______ go out more. </b-col>
-</b-row>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="row">1</th>
-          <td><c>could</c></td>
-      <td><f>was</f></td>
-      <td><f>have to</f></td>
-      <td><f>must</f></td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">2</th>
-      <td><f>have</f></td>
-      <td><f>must</f></td>
-         <td><c>dare</c></td>
-      <td><f>used</f></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td><f>was</f></td>
-           <td><c>are</c></td>
-      <td><f>was able</f></td>
-      <td><f>has to</f></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-           <td><c>has to</c></td>
-      <td><f>have to</f></td>
-      <td><f>are going to</f></td>
-      <td><f>used</f></td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-           <td><c>must not</c></td>
-      <td><f>has to </f></td>
-      <td><f>must not </f></td>
-      <td><f>was not</f></td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td><f>had better</f></td>
-             <td><c>need not</c></td>
-      <td><f>are </f></td>
-      <td><f>was</f></td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td><f>could</f></td>
-           <td><c>was able</c></td>
-      <td><f>have</f></td>
-      <td><f>can</f></td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td><f>has to</f></td>
-      <td><f>were you </f></td>
-      <td><f>are</f></td>
-         <td><c>are you going to</c></td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-              <td><c>have to</c></td>
-      <td><f>must not</f></td>
-      <td><f>has to</f></td>
-      <td><f>are</f></td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
-      <td><f>are</f></td>
-              <td><c>should</c></td>
-      <td><f>has</f></td>
-      <td><f>has to</f></td>
-    </tr>
-      </tbody>
-</table>
-
-</b-container>
-
-<b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
-<b>  <b-col class=""><h3><i> Czas Past Continuous - Past Continuous Tense </i></h3> </b-col>
-</b>
-<b-row class="">
-  <b-col class=""> 1. He came while we ____________ </b-col>
-</b-row>
-<b-row class="">
-  <b-col class=""> 2. The professor ____________ when the telephone rang </b-col>
-</b-row>
-<b-row class="">
-  <b-col class=""> 3. When Mrs Jones came in her son ____________ </b-col>
-</b-row>
-<b-row class="">
-  <b-col class="">4. Frank ____________ fast, but I couldn't reach him. </b-col>
-</b-row>
-<b-row class="">
-  <b-col class=""> 5. We were at home ____________ TV when the accident happened. </b-col>
-</b-row>
-<b-row class="">
-  <b-col class=""> 6. Although the baby ____________ loudly, my neighbour came to see what was happening. </b-col>
-</b-row>
-<b-row class="">
-  <b-col class=""> 7. What was Isabelle's husband ____________ there? </b-col>
-</b-row>
-<b-row class="">
-  <b-col class=""> 8. Paul broke his leg when he ____________ a horse. </b-col>
-</b-row>
-<b-row class="">
-  <b-col class=""> 9. Where ____________ when you found this coin? </b-col>
-</b-row>
-<b-row class="">
-  <b-col class=""> 10. She ____________ in a bank when I last saw her. </b-col>
-</b-row>
-
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="row">1</th>
-          <td><c> were sleeping </c></td>
-      <td><f>slept </f></td>
-      <td><f> was sleeping </f></td>
-      <td><f>are sleeping </f></td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">2 </th>
-      <td><f>read</f></td>
-      <td><f>reads</f></td>
-      <td><f>were reading</f></td>
-      <td><c> was reading </c></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td><f>were not sleeping </f></td>
-      <td><f> didn't sleep </f></td>
-      <td><c>  was not sleeping </c></td>
-      <td><f> doesn't sleep </f></td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td><c> wasn't running </c></td>
-      <td><f> weren't running </f></td>
-      <td><f> didn't run </f></td>
-      <td><f> doesn't run </f></td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-           <td><c> watching </c></td>
-      <td><f> watches </f></td>
-      <td><f> watch </f></td>
-      <td><f> watched </f></td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td><f> weren't crying </f></td>
-             <td><c>wasn't crying </c></td>
-      <td><f> not cry  </f></td>
-      <td><f>don't cry </f></td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td><f> does </f></td>
-           <td><f> did </f></td>
-      <td><f> do </f></td>
-      <td><c> doing </c></td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td><f> were riding </f></td>
-      <td><c> was riding </c></td>
-      <td><f> rode  </f></td>
-         <td><f> ridden </f></td>
-    </tr>
-    <tr>
-      <th scope="row">9</th>
-      <td><f> did you dig   </f></td>
-      <td><c> were you digging  </c></td>
-      <td><f> do you dig  </f></td>
-      <td><f> you are digging </f></td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
-      <td><f> were working  </f></td>
-      <td><f> works </f></td>
-      <td><f> work </f></td>
-      <td><c> was working </c></td>
-    </tr>
-      </tbody>
-</table>
-
-
-</b-container>
-
-
-
-
-</b-container>
+</body>
 </template>
 
 <script>
+import { firebase } from '@firebase/app'
+import '@firebase/auth'
 export default {
 name: 'Grammar',
+data: function()
+    {
+        return {
+            loggedIn: false,
+            email: firebase.auth().currentUser.email,
+            name: firebase.auth().currentUser.displayName,
+            level: '',
+            solvedB1PPS1: false,
+            solvedB1PPS2: false,
+            solvedB1PPS3: false,
+            solvedB1PPC1: false,
+            solvedB1PPC2: false,
+            solvedB1PPC3: false,
+            ExamB1PPSPassed: false,
+            ExamB1PPCPassed: false,
+            QuizesCount: 2 //Temporary 2! (only 2 quizes)
+        }
+    },
+    created: function()
+    {
+      this.solvedB1PPS1 = this.$route.params.solvedB1PPS1;
+      this.solvedB1PPS2 = this.$route.params.solvedB1PPS2;
+      this.solvedB1PPS3 = this.$route.params.solvedB1PPS3;
+      this.ExamB1PPSPassed = this.$route.params.ExamB1PPSPassed;
+
+    },
+    mounted: function() //Initialize site
+    {
+       var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => { 
+        this.level = doc.data().level;
+        this.solvedB1PPS1 = doc.data().solvedB1PPS1;
+        this.solvedB1PPS2 = doc.data().solvedB1PPS2;
+        this.solvedB1PPS3 = doc.data().solvedB1PPS3;
+        this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
+        });
+    });
+    },
+        beforeUpdate: function() //Before refreshing!
+    {
+       var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      
+        this.solvedB1PPS1 = doc.data().solvedB1PPS1;
+        this.solvedB1PPS2 = doc.data().solvedB1PPS2;
+        this.solvedB1PPS3 = doc.data().solvedB1PPS3;
+        this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
+    });
+});
+    },
+    methods: 
+    {
+      Check: function()
+      {
+        console.log(this.solvedB1PPS1);
+        console.log(this.solvedB1PPS2);
+        console.log(this.solvedB1PPS3);
+      }
+    },
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
-l {text-align: left}
-c {color: black}
-c:active {background-color: green}
-f {color: black}
-f:active {background-color: red}
-#banner{
-  border-radius: 50px;
-}
 .background-bluish
 {
   background-color: rgb(105, 208, 245);
@@ -342,7 +211,15 @@ f:active {background-color: red}
 {
   font-size: 2rem;
 }
-#project-logo{
-  height: 80px;
+table td:hover{
+  background-color: #ffc107;
+}
+.text-medium
+{
+  font-size: 1.4rem;
+}
+.font-size-small
+{
+  font-size: 0.6rem;
 }
 </style>

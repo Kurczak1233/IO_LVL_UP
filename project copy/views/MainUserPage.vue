@@ -5,7 +5,7 @@
         <b-row class="pt-3 pb-3">
           <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
-            <b-list-group horizontal>
+            <b-list-group horizontal v-if="level !== 'Unknown'">
   <b-list-group-item class="rounded-edges-left btn btn-success" variant="success" href="#">Lessons</b-list-group-item>
   <b-list-group-item variant="warning btn btn-warning" href="#">Quizes</b-list-group-item>
   <b-list-group-item class="rounded-edges-right btn btn-danger" variant="danger" href="#">Progress</b-list-group-item>
@@ -24,12 +24,11 @@
         </b-row>
       </b-container>
       </b-nav>
-      <!---->
-        <b-container fluid>
+        <b-container fluid v-if="level !== 'Unknown'">
           <b-row>
           <b-col class="col-4 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
               <b-row>
-                <b-col class="col-12 mb-3 text-center font-large">Your level: (player-level)</b-col>
+                <b-col class="col-12 mb-3 text-center font-large">Your level: {{level}}</b-col>
               </b-row>
               <b-row>
                 <b-col class="col-5 mt-auto mb-auto text-center font-large"><p class="d-none d-md-block">Available classes:</p></b-col>
@@ -47,47 +46,61 @@
               </b-row>
           </b-col>
           <b-col class="col-8 text-center color-bluish font-large" fluid id="main">
-                Hello: <p class="text-danger">{{email}}</p><!-- Lepiej by było imię!-->
+                Hello: <p class="text-danger">{{name}}!</p><!-- Lepiej by było imię!-->
 
                                 <b-row>
-<b-col class="col-12"> Your actual progress:
-<b-row>
-  <b-col class="col-10 ml-auto mr-auto">
-  <div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 22%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">Speaking</div>
-</div>
-<p>
-</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 51%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Writing</div>
-</div>
-<p>
-</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated  bg-info" role="progressbar" style="width: 46%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Grammar</div>
-</div>
-<p>
-</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 87%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Reading</div>
-</div>
-<p>
-</p>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 17%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Listening</div>
-</div>
-</b-col>
-</b-row>
-<b-row class="mt-5">
-  <b-col class="text center text-danger font-small">
-    You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
-  </b-col>
-</b-row>
+                    <b-col class="col-12"> Your actual progress: 
+                    <b-row>
+                      <b-col class="col-10 ml-auto mr-auto">
+                      <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="SpeakingWidth" :aria-valuenow="SpeakingWidth" aria-valuemin="0" aria-valuemax="100">Speaking</div>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" :style="WritingWidth" :aria-valuenow="WritingWidth" aria-valuemin="0" aria-valuemax="100">Writing</div>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated  bg-info" role="progressbar" :style="GrammarWidth" :aria-valuenow="GrammarWidth" aria-valuemin="0" aria-valuemax="100">Grammar</div>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" :style="ReadingWidth" :aria-valuenow="ReadingWidth" aria-valuemin="0" aria-valuemax="100">Reading</div>
+                    </div>
+                    <p>
+                    </p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" :style="ListeningWidth" :aria-valuenow="ListeningWidth" aria-valuemin="0" aria-valuemax="100">Listening</div>
+                    </div>
+                    </b-col>
+                    </b-row>
+                    <b-row class="mt-5">
+                      <b-col class="text center text-danger font-small">
+                        You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
+                      </b-col>
+                    </b-row>
                   </b-col>
                 </b-row>
                 </b-col>
+                
           </b-row>
         </b-container>
+      <b-container fluid v-if="level === 'Unknown'">
+        <b-row>
+          <b-col class="col-12 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
+              <b-row>
+                <b-col class="col-12 mb-3 text-center font-large">Your level: <span class="text-danger">{{level}}</span></b-col>
+              </b-row>
+              <b-row class="row text-center pb-1"><b-col>In order to have access to our resources, you have to </b-col></b-row>
+              <b-row class="pb-3">
+                <b-col class="text-center"><router-link to="/PlacementTest"><button class="btn btn-warning">Take placement test!</button></router-link></b-col>
+              </b-row>
+          </b-col>
+        </b-row>
+      </b-container>
     </body>
 </template>
 
@@ -95,18 +108,109 @@
 import LoggedInButton from '../src/components/LoggedInButton.vue'
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
+
 export default {
      components: {
     LoggedInButton
   },
-      data()
+    data: function()
     {
         return {
             loggedIn: false,
-            email: firebase.auth().currentUser.email 
+            email: firebase.auth().currentUser.email,
+            name: firebase.auth().currentUser.displayName,
+            grammar: 0,
+            speaking: 0,
+            writing: 0,
+            reading: 0,
+            listening: 0,
+            level: '',
         }
     },
-}
+    methods: 
+    {
+
+    },
+    beforeUpdate: function() //Przed załadowaniem strony załaduj dane.
+    {
+       var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      console.log(doc.data().speaking);
+        this.grammar = doc.data().grammar;
+        this.reading = doc.data().reading;
+        this.speaking = doc.data().speaking;
+        this.writing = doc.data().writing;
+        this.listening = doc.data().listening;
+        this.level = doc.data().level;
+    });
+});
+    },
+    mounted: function() //Pierwszorazowo załaduj dane
+    {
+       var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      console.log(doc.data().speaking);
+        this.grammar = doc.data().grammar;
+        this.reading = doc.data().reading;
+        this.speaking = doc.data().speaking;
+        this.writing = doc.data().writing;
+        this.listening = doc.data().listening;
+        this.level = doc.data().level;
+    });
+});
+    },
+     props: {
+    width: {
+      type: Number,
+      default: 0
+    }
+  },
+    computed: {
+      SpeakingWidth()
+      {
+        return{
+          width: `${this.speaking}%`
+        }
+      },
+      ReadingWidth()
+      {
+        return{
+          width: `${this.reading}%`
+        }
+      },
+      ListeningWidth()
+      {
+        return{
+          width: `${this.listening}%`
+        }
+      },
+      WritingWidth()
+      {
+        return{
+          width: `${this.writing}%`
+        }
+      },
+       GrammarWidth()
+      {
+        return{
+          width: `${this.grammar}%`
+        }
+      }
+    }
+// function assignValues(prop)
+// {
+//       this.grammar = doc.data().grammar;
+//       this.speaking= doc.data().speaking;
+//       this.writing= doc.data().writing;
+//       this.reading= doc.data().reading;
+//       this.listening= doc.data().listening;
+//       this.level = doc.data().level;
+// }
+        
+    
+}                  
 </script>
 
 <style scoped>

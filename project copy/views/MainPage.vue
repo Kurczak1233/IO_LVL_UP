@@ -1,14 +1,3 @@
-<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="//ciasteczka.eu/cookiesEU-latest.min.js"></script>
-<script type="text/javascript">
-
-jQuery(document).ready(function(){
-	jQuery.fn.cookiesEU({
-		position:	'top'
-	});
-});
-</script>
-
 <template>
   <body>
      <b-nav> 
@@ -18,7 +7,7 @@ jQuery(document).ready(function(){
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
   <b-list-group-item class="rounded-edges-left" variant="primary" router-link to="/Offer">Offer</b-list-group-item>
-  <b-list-group-item class="" variant="primary" router-link to="/Contacts">Contact</b-list-group-item>
+  <b-list-group-item class="" variant="primary" router-link to="/Contact">Contact</b-list-group-item>
   <b-list-group-item class="rounded-edges-right" variant="primary" router-link to="/aboutus">About us</b-list-group-item>
             </b-list-group>
 </b-col>
@@ -52,6 +41,7 @@ import WebsiteOfferSection from '../src/components/WebsiteOfferSection.vue'
 import GlobalAchievementsSection from '../src/components/GlobalAchievementsSection.vue'
 import BottomAdvertisementBanner from '../src/components/BottomAdvertisementBanner.vue'
 import Footer from '../src/components/Footer.vue'
+import '@firebase/auth'
 
 export default {
   name: 'MainPage',
@@ -62,14 +52,13 @@ export default {
     GlobalAchievementsSection,
     BottomAdvertisementBanner,
     Footer
-  }
+  },
 }
 </script>
 
 <style scoped>
 :root{
     box-sizing:border-box;
-    
 }
 body {
 font-family: 'Fraunces', serif;
