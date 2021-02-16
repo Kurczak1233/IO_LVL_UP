@@ -6,20 +6,19 @@
          <b-col class="col-12 text-size-big text-center pt-2">LOGGING PANEL</b-col>
          <b-col class="col-12"><hr></b-col>
       </b-row>
-      <b-form @submit.prevent="pressed">
+      <b-form @submit.prevent="pressed" class="needs-validation" novalidate>
       <b-row class="mt-3">
            <b-col class="col-2 offset-1 pt-1" >
               <label for="Login">Login:</label>
            </b-col>
            <b-col class="col-8" >
-              <b-form-input required type="email" :state="emailValidation" v-model="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
-              <b-form-invalid-feedback :state="emailValidation">
-                  <p>Your user ID must be 5-21 characters long it must be an email!</p>
-                  <p>You cannot use any capital letters!</p>
+              <b-form-input required type="email" v-model="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+              <!-- <b-form-invalid-feedback :state="emailValidation">
+                  <p>Your user ID must be 5-21 characters long. It must be an email!</p>
               </b-form-invalid-feedback>
               <b-form-valid-feedback :state="emailValidation">
                   Looks good
-              </b-form-valid-feedback>
+              </b-form-valid-feedback> -->
             </b-col>
       </b-row>
       <b-row class="mt-3">
@@ -27,21 +26,17 @@
               <label for="password">Password:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="password" :state="passwordValidation" v-model="password" class="form-control" aria-describedby="Password" placeholder="Insert your password" id="password"></b-form-input>
-               <b-form-invalid-feedback :state="passwordValidation">
-                  Your user ID must be 5-21 characters long it must be an email!
-              </b-form-invalid-feedback>
-              <b-form-valid-feedback :state="passwordValidation">
-                  Looks good
-              </b-form-valid-feedback>
+              <b-form-input required type="password" v-model="password" class="form-control" aria-describedby="Password" placeholder="Insert your password" id="password"></b-form-input>
             </b-col>
       </b-row>
-      <b-row class="mt-3">
-        </b-row>
-        <b-row class="pb-5 mt-3">
-        <b-col class="col-4 offset-4 pt-1">
-        <b-button type="submit" class="form-control btn btn-control btn-success">Log in</b-button>
-        </b-col>
+      <b-row><b-col><p class="error text-center"  v-if="ShowErrorMessage === true">Something went wrong! The password or the login is incorrect!</p></b-col></b-row>
+        <b-row>
+          <b-col  v-if="ShowErrorMessage === false" class="col-4 offset-4 pt-1 mt-3 pb-5">
+            <b-button type="submit" class="form-control btn btn-control btn-success">Log in</b-button>
+          </b-col>
+            <b-col  v-if="ShowErrorMessage === true" class="col-4 offset-4 pb-5">
+            <b-button type="submit" class="form-control btn btn-control btn-success">Log in</b-button>
+          </b-col>
         </b-row>
       </b-form>
     </b-container>
@@ -62,7 +57,8 @@ export default {
         return{
             email: '',
             password: '',
-            error: 'Login or password are incorrect. Please try again.',
+            error: '',
+            ShowErrorMessage: false,
         }
     },
     methods:
@@ -75,6 +71,7 @@ export default {
             }catch(err)
             {
                 console.log(err)
+                this.ShowErrorMessage = true;
             }
         },
         checkEmailValidation: function()
@@ -89,21 +86,21 @@ export default {
         },
         checkPasswordValidation: function()
         {
-          for(let i = 0; i < this.password.lenght; i++)
-          {
-              if(this.email[i] === this.email[i].toUpperCase())
-              {
-                return false
-              }
-          }
+            if(this.password === null)
+            {
+              return this.error = "Password is required!";
+            }
         }
     },
     computed: {
+      emailLengthValidation() {
+        return this.email.length > 4 && this.email.length < 21
+      },
       emailValidation() {
-        return this.email.length > 4 && this.email.length < 21 && this.checkEmailValidation() === true
+        return this.checkEmailValidation() === true
       },
       passwordValidation() {
-        return this.email.length > 4 && this.email.length < 21 && this.checkPasswordValidation() === true
+          return this.checkPasswordValidation();
       }
     }
 }
@@ -131,5 +128,10 @@ body
 }
 #project-logo{
   height: 80px;
+}
+.error
+{
+  font-size: 0.8rem;
+  color: rgb(189, 44, 44);
 }
 </style>
