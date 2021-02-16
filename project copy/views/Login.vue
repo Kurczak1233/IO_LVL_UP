@@ -68,35 +68,7 @@ export default {
                 this.ShowErrorMessage = true;
             }
         },
-        checkEmailValidation: function()
-        {
-        for(let i = 0; i < this.email.length; i++)
-        {  
-          if(this.email[i] === '@' && this.email[0] !== '@' && this.email[i] !== this.email[i].toUpperCase())
-          {
-              return true;
-          }
-        }
-        },
-        checkPasswordValidation: function()
-        {
-            if(this.password === null)
-            {
-              return this.error = "Password is required!";
-            }
-        }
     },
-    computed: {
-      emailLengthValidation() {
-        return this.email.length > 4 && this.email.length < 21
-      },
-      emailValidation() {
-        return this.checkEmailValidation() === true
-      },
-      passwordValidation() {
-          return this.checkPasswordValidation();
-      }
-    }
 }
 </script>
 
