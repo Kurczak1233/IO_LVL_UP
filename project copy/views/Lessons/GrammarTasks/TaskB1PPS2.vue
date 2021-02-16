@@ -119,7 +119,7 @@
       </tbody>
 </table>
         <b-row>  
-            <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'gram', params: {solvedB1PSS2: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+            <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'gram', params: {solvedB1PPS2: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
         </b-row>
 </b-container>
   </body>
@@ -135,7 +135,7 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1PSS2: false
+          solvedB1PPS2: false
       }
     },
     model: {
@@ -162,9 +162,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1PSS2 = true;
+      this.solvedB1PPS2 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1PSS2: this.solvedB1PSS2} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1PPS2: this.solvedB1PPS2} ,{merge:true})
   }
     }
 }
