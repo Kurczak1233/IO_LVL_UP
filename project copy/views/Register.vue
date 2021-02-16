@@ -6,13 +6,19 @@
          <b-col class="col-12 text-size-big text-center pt-2">CREATE ACCOUNT</b-col>
          <b-col class="col-12"><hr></b-col>
       </b-row>
-      <b-form @submit.prevent="pressed">
+      <b-form @submit.prevent="pressed" > <!--@submit.prevent="pressed"--> <!--@submit.stop.prevent-->
        <b-row class="mt-3">
            <b-col class="col-2 offset-1 pt-1" >
               <label for="Login">Login:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="email" v-model="email"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+              <b-form-input required type="email" :state="validationEmail" v-model="email"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+                  <b-form-invalid-feedback  :state="validationEmail">
+                    Your user ID must be 5-20 characters long and must be an email.  
+                  </b-form-invalid-feedback>
+                  <b-form-valid-feedback :state="validationEmail">
+                    Looks Good.
+                  </b-form-valid-feedback>
             </b-col>
         </b-row>
         <b-row class="mt-3">
@@ -101,6 +107,11 @@ export default {
            }
       }   
     },
+      computed: {
+      validationEmail() {
+        return this.email.length > 4 && this.email.length < 21
+      }
+    },
     data() {
         return {
             loggedIn: false,
@@ -112,6 +123,7 @@ export default {
             emailVerified: false,
             status: 'not_accepted',
             file1: null,
+            ButtonClicked: false,
         }
     }
 }

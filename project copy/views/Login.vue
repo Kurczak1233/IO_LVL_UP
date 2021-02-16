@@ -13,12 +13,6 @@
            </b-col>
            <b-col class="col-8" >
               <b-form-input required type="email" v-model="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
-              <!-- <b-form-invalid-feedback :state="emailValidation">
-                  <p>Your user ID must be 5-21 characters long. It must be an email!</p>
-              </b-form-invalid-feedback>
-              <b-form-valid-feedback :state="emailValidation">
-                  Looks good
-              </b-form-valid-feedback> -->
             </b-col>
       </b-row>
       <b-row class="mt-3">
