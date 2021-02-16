@@ -14,7 +14,7 @@
            <b-col class="col-8">
               <b-form-input required type="email" :state="validationEmail" v-model="email"  class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
                   <b-form-invalid-feedback  :state="validationEmail">
-                    Your user ID must be 5-30 characters long and must be an email.  
+                    Email must be 5-30 characters long. No uppercase allowed!  
                   </b-form-invalid-feedback>
                   <b-form-valid-feedback :state="validationEmail">
                     Looks Good.
