@@ -41,7 +41,7 @@
         <b-row id="grammar-title-content">
           <b-col class="col-6 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS1" class="text-success" v-if="solvedB1PSS1 === true" id="TaskB1PPS1">Present perfect simple task 1</router-link><router-link to="/TaskB1PPS1" class="text-danger" v-else id="TaskB1PPS1">Present perfect simple task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS1" class="text-success" v-if="solvedB1PSS1 === true" id="TaskB1PPS1">FCE preparation task 1</router-link><router-link to="/TaskB1PPS1" class="text-danger" v-else id="TaskB1PPS1">Present perfect simple task 1</router-link></b-col>
             <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS2" class="text-success" v-if="solvedB1PSS2 === true" id="TaskB1PPS2">Present perfect simple task 2</router-link><router-link to="/TaskB1PPS2" class="text-danger" v-else id="TaskB1PPS2">Present perfect simple task 2</router-link></b-col>
             <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS3" class="text-success" v-if="solvedB1PSS3 === true" id="TaskB1PPS3">Present perfect simple task 3</router-link><router-link to="/TaskB1PPS3" class="text-danger" v-else id="TaskB1PPS3">Present perfect simple task 3</router-link></b-col>
           </b-col>
@@ -83,14 +83,14 @@
         <b-row id="grammar-title-content">
           <b-col class="col-6 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC1" class="text-success" v-if="solvedB1PSC1 === true" id="TaskB1PPC1">Present perfect simple task 1</router-link><router-link to="/TaskB1PPC1" class="text-danger" v-else id="TaskB1PPC1">Present perfect simple task 1</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC2" class="text-success" v-if="solvedB1PSC2 === true" id="TaskB1PPC2">Present perfect simple task 2</router-link><router-link to="/TaskB1PPC2" class="text-danger" v-else id="TaskB1PPC2">Present perfect simple task 2</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC3" class="text-success" v-if="solvedB1PSC3 === true" id="TaskB1PPC3">Present perfect simple task 3</router-link><router-link to="/TaskB1PPC3" class="text-danger" v-else id="TaskB1PPC3">Present perfect simple task 3</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC1" class="text-success" v-if="solvedB1PSC1 === true" id="TaskB1PPC1">FCE preparation task 1</router-link><router-link to="/TaskB1PPC1" class="text-danger" v-else id="TaskB1PPC1">Present perfect continous task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC2" class="text-success" v-if="solvedB1PSC2 === true" id="TaskB1PPC2">Present perfect continous task 2</router-link><router-link to="/TaskB1PPC2" class="text-danger" v-else id="TaskB1PPC2">Present perfect continous task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC3" class="text-success" v-if="solvedB1PSC3 === true" id="TaskB1PPC3">Present perfect continous task 3</router-link><router-link to="/TaskB1PPC3" class="text-danger" v-else id="TaskB1PPC3">Present perfect continous task 3</router-link></b-col>
           </b-col>
           <b-col class="col-6 col-md-4 text-center">
             <p>Exam</p>
             <div>
-            <router-link to="/"><b-button variant="warning" disabled class="btn-lg">Exam</b-button></router-link>
+            <router-link :to="{name: 'examB1PPC', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1PPCPassed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
             </div>
           </b-col>
@@ -143,6 +143,7 @@ data: function()
             solvedB1PSC2: false,
             solvedB1PSC3: false,
             ExamB1PPSPassed: false,
+            ExamB1PPCPassed: false,
             QuizesCount: 2 //Temporary 2! (only 2 quizes)
         }
     },
