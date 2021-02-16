@@ -163,8 +163,13 @@ data: function()
         this.solvedB1PSS1 = doc.data().solvedB1PSS1;
         this.solvedB1PSS2 = doc.data().solvedB1PSS2;
         this.solvedB1PSS3 = doc.data().solvedB1PSS3;
+        this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
         });
     });
+    console.log("Zad 1: " + this.solvedB1PSS1)
+    console.log("Zad 2: " + this.solvedB1PSS2)
+    console.log("Zad 3: " + this.solvedB1PSS3)
+    console.log("Exam: " + this.ExamB1PPSPassed)
     },
         beforeUpdate: function() //Before refreshing!
     {
@@ -175,6 +180,7 @@ data: function()
         this.solvedB1PSS1 = doc.data().solvedB1PSS1;
         this.solvedB1PSS2 = doc.data().solvedB1PSS2;
         this.solvedB1PSS3 = doc.data().solvedB1PSS3;
+        this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
     });
 });
     },

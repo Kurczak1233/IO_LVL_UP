@@ -196,6 +196,7 @@ export default {
             { 
                 this.ExamB1PPSPassed = true;
                 db.collection(this.email).doc(this.email).update({grammar: this.grammar+(1/this.QuizesCount)*100});
+                db.collection(this.email).doc(this.email).update({ExamB1PPSPassed: this.ExamB1PPSPassed});
             }
         },
         CheckAndNextQuestion: function()
