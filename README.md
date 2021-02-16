@@ -4,4 +4,4 @@ Despite the fact, that the application is not finished, I am glad that, I have s
 
 This is my absolutely first contact with this kind of javascript frameworks.
 
-You can look what we have created above in GitHub Pages or here: kurczak1233.github.io/io_lvl_up
+You can look what we have created above in GitHub Pages or <a src="kurczak1233.github.io/io_lvl_up">here</a> 
