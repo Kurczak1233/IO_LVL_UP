@@ -48,7 +48,7 @@
           <b-col class="col-6 col-md-4 text-center">
             <p>Exam</p>
             <div v-if="solvedB1PSS1 === true && solvedB1PSS2 === true && solvedB1PSS3 === true">
-            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: QuizesCount}}"><b-button  variant="warning" class="btn-lg btn" v-if="ExamB1PPSPassed===false" type="button" aria-describedby="take the exam button">Exam</b-button><b-button  variant="success" disabled class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Passed!</b-button></router-link>
+            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1PPSPassed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
