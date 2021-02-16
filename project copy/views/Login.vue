@@ -12,15 +12,28 @@
               <label for="Login">Login:</label>
            </b-col>
            <b-col class="col-8" >
-              <b-form-input required type="email" v-model="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+              <b-form-input required type="email" :state="emailValidation" v-model="email" class="form-control" aria-describedby="Login" placeholder="Insert your email" id="login"></b-form-input>
+              <b-form-invalid-feedback :state="emailValidation">
+                  <p>Your user ID must be 5-21 characters long it must be an email!</p>
+                  <p>You cannot use any capital letters!</p>
+              </b-form-invalid-feedback>
+              <b-form-valid-feedback :state="emailValidation">
+                  Looks good
+              </b-form-valid-feedback>
             </b-col>
       </b-row>
       <b-row class="mt-3">
             <b-col class="col-2 offset-1 pt-1" >
-              <label for="Login">Password:</label>
+              <label for="password">Password:</label>
            </b-col>
            <b-col class="col-8">
-              <b-form-input required type="password" v-model="password" class="form-control" aria-describedby="Login" placeholder="Insert your password" id="login"></b-form-input>
+              <b-form-input required type="password" :state="passwordValidation" v-model="password" class="form-control" aria-describedby="Password" placeholder="Insert your password" id="password"></b-form-input>
+               <b-form-invalid-feedback :state="passwordValidation">
+                  Your user ID must be 5-21 characters long it must be an email!
+              </b-form-invalid-feedback>
+              <b-form-valid-feedback :state="passwordValidation">
+                  Looks good
+              </b-form-valid-feedback>
             </b-col>
       </b-row>
       <b-row class="mt-3">
@@ -63,7 +76,35 @@ export default {
             {
                 console.log(err)
             }
+        },
+        checkEmailValidation: function()
+        {
+        for(let i = 0; i < this.email.length; i++)
+        {  
+          if(this.email[i] === '@' && this.email[0] !== '@' && this.email[i] !== this.email[i].toUpperCase())
+          {
+              return true;
+          }
         }
+        },
+        checkPasswordValidation: function()
+        {
+          for(let i = 0; i < this.password.lenght; i++)
+          {
+              if(this.email[i] === this.email[i].toUpperCase())
+              {
+                return false
+              }
+          }
+        }
+    },
+    computed: {
+      emailValidation() {
+        return this.email.length > 4 && this.email.length < 21 && this.checkEmailValidation() === true
+      },
+      passwordValidation() {
+        return this.email.length > 4 && this.email.length < 21 && this.checkPasswordValidation() === true
+      }
     }
 }
 </script>
