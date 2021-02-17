@@ -143,6 +143,7 @@ data: function()
             ExamB1PPSPassed: false,
             ExamB1PPCPassed: false,
             IsInGrammar: true,
+            level: '',
             QuizesCount: 2 //Temporary 2! (only 2 quizes)
         }
     },
@@ -159,6 +160,7 @@ data: function()
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => { 
+        this.level = doc.data().level;
         this.solvedB1PPS1 = doc.data().solvedB1PPS1;
         this.solvedB1PPS2 = doc.data().solvedB1PPS2;
         this.solvedB1PPS3 = doc.data().solvedB1PPS3;
@@ -176,7 +178,7 @@ data: function()
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      
+       this.level = doc.data().level;
         this.solvedB1PPS1 = doc.data().solvedB1PPS1;
         this.solvedB1PPS2 = doc.data().solvedB1PPS2;
         this.solvedB1PPS3 = doc.data().solvedB1PPS3;
