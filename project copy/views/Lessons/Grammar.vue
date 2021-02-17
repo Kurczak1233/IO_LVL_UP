@@ -1,11 +1,7 @@
 <template>
 <body>
-   <UserNavigation></UserNavigation>
-  <b-container class="container text-center p-3 mb-3 mt-3 mr-auto ml-auto margin5 background-bluish" fluid>   
-      <b-row class="p-4">
-        <b-col class="mb-3 text-size-big mt-auto mb-auto"  cols="12"> Grammar lessons available on  <span class="text-danger">{{level}}</span> level </b-col>
-      </b-row>
-  </b-container>
+   <UserNavigation :IsInGrammar="IsInGrammar"></UserNavigation>
+    <LessonsHeader :level="level"></LessonsHeader>
 
   <!--DLA B2-->
 
@@ -117,25 +113,19 @@
     </b-row>
   </b-container>
 
- <b-container class="container text-center p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
-<b-row>
-  <b-col class="text-center mt-3">
-      <p class="text-size-big"><router-link to="/UserPage" class="text-primary">Return to user page</router-link></p>
-  </b-col>
-</b-row>
-  </b-container>
-
 </body>
 </template>
 
 <script>
-import UserNavigation from '../../src//components/UserNavigation.vue'
+import UserNavigation from '../../src/components/UserNavigation.vue'
+import LessonsHeader from '../../src/components/LessonsHeader.vue'
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 export default {
 components: 
 {
   UserNavigation,
+  LessonsHeader
 },
 name: 'Grammar',
 data: function()
@@ -144,7 +134,6 @@ data: function()
             loggedIn: false,
             email: firebase.auth().currentUser.email,
             name: firebase.auth().currentUser.displayName,
-            level: '',
             solvedB1PPS1: false,
             solvedB1PPS2: false,
             solvedB1PPS3: false,
@@ -153,6 +142,7 @@ data: function()
             solvedB1PPC3: false,
             ExamB1PPSPassed: false,
             ExamB1PPCPassed: false,
+            IsInGrammar: true,
             QuizesCount: 2 //Temporary 2! (only 2 quizes)
         }
     },
@@ -169,7 +159,6 @@ data: function()
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => { 
-        this.level = doc.data().level;
         this.solvedB1PPS1 = doc.data().solvedB1PPS1;
         this.solvedB1PPS2 = doc.data().solvedB1PPS2;
         this.solvedB1PPS3 = doc.data().solvedB1PPS3;
@@ -183,6 +172,7 @@ data: function()
     },
         beforeUpdate: function() //Before refreshing!
     {
+      console.log(this.IsInGrammar);
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
@@ -197,16 +187,7 @@ data: function()
         this.ExamB1PPCPassed = doc.data().ExamB1PPCPassed;
     });
 });
-    },
-    methods: 
-    {
-      Check: function()
-      {
-        console.log(this.solvedB1PPS1);
-        console.log(this.solvedB1PPS2);
-        console.log(this.solvedB1PPS3);
-      }
-    },
+    }
 }
 </script>
 

@@ -1,4 +1,7 @@
 <template>
+<body>
+  <UserNavigation :IsInListening="IsInListening"></UserNavigation>
+  <LessonsHeader :level="level"></LessonsHeader>
 <b-container class="container text-center">
   <b-row class="">
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_listening.png?raw=true" alt="Logo listening"></b-col>
@@ -55,11 +58,36 @@
 </table>
     </b-container>  
 </b-container>
+</body>
 </template>
 
 <script>
+import UserNavigation from '../../src//components/UserNavigation.vue'
+import LessonsHeader from '../../src/components/LessonsHeader.vue'
+import { firebase } from '@firebase/app'
+import '@firebase/auth'
 export default {
 name: 'Listening',
+components: 
+{
+  UserNavigation,
+  LessonsHeader
+},
+data: function()
+{
+  return{
+    IsInListening: true
+  }
+},
+    mounted: function() //Initialize site
+    {
+       var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => { 
+        this.level = doc.data().level;
+        });
+    });
+    }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

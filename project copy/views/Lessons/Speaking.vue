@@ -1,5 +1,7 @@
 <template>
   <body>
+     <UserNavigation :IsInSpeaking="IsInSpeaking"></UserNavigation>
+     <LessonsHeader :level="level"></LessonsHeader>
     <b-container class="container text-center">
     <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_speaking.png?raw=true" alt="Logo speaking"></b-col>
     </b-container>
@@ -23,6 +25,8 @@
 </template>
 
 <script>
+import UserNavigation from '../../src/components/UserNavigation.vue'
+import LessonsHeader from '../../src/components/LessonsHeader.vue'
 //Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
 function Task(name, pkt, description, Islevel){
     this.name = name;
@@ -58,16 +62,33 @@ function TaskBuilder() {
 // Dyrektor rozkazujący utworzenie zadania
 let task = (new TaskBuilder()).setName("Mówienie: ") .setPkt("10")
         .setDescription("Jakie są wady/zalety bycia singlem?").setLevel("B1").build();
+import { firebase } from '@firebase/app'
+import '@firebase/auth'
 export default {
     name: 'Speaking',
+    components: 
+    {
+      UserNavigation,
+      LessonsHeader
+    },
         data: function()
     {
       return { //Zwracamy pola z naszego taska
         name: task.name,
         pkt: task.pkt,
         description: task.description,
-        level: task.level
+        level: task.level,
+        IsInSpeaking: true
       }
+    },
+    mounted: function() //Initialize site
+    {
+       var db = firebase.firestore();
+      db.collection(this.email).get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => { 
+        this.level = doc.data().level;
+        });
+    });
     }
 }
 </script>
