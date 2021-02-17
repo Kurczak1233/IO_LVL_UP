@@ -117,7 +117,7 @@ function TaskBuilder() {
 let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0")
         .setDescription("She ________ French words for hours, but she still doesn't remember all of them. (learn)").setAnswear1("have been learning").setAnswear2("has been learning").setAnswear3("has been learned").setAnswear4("have been learned").correctAnswear("has been learning").build();
 let task2 = (new TaskBuilder()).setId("2")
-       .setDescription("My father _______  for 15 minutes. (not smoke)").setAnswear1("has not been smoking").setAnswear2("have not been smoking").setAnswear3("have not smoked").setAnswear4("has not smoked").correctAnswear("has not been smoking").build();
+       .setDescription("My father _______  for 15 minutes. (smoke)").setAnswear1("has been smoking").setAnswear2("have been smoking").setAnswear3("have smoked").setAnswear4("has smoked").correctAnswear("has been smoking").build();
 let task3 = (new TaskBuilder()).setId("3")
       .setDescription("Sorry, I'm late,  ________ for long? (you wait)").setAnswear1("has you have wait").setAnswear2("have wait").setAnswear3("have you been waiting").setAnswear4("has been waiting").correctAnswear("have you been waiting").build();
 let task4 = (new TaskBuilder()).setId("4")
