@@ -32,7 +32,8 @@
         <b-row>
             <b-col class="text-center mb-3 mt-3" >
                 <b-form>
-                    <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-if="selected === null" disabled type="button">Next question</button>
+                    <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-if="selected === null && questionNumber!==(MaxQuestionsCount-2)" disabled type="button">Next question</button>
+                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else-if="questionNumber===(MaxQuestionsCount-2) && selected===null" disabled type="button">End test</button>
                     <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else-if="questionNumber===(MaxQuestionsCount-2) && selected!==null" type="button">End test</button>
                     <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-else type="button">Next question</button>
                 </b-form>
