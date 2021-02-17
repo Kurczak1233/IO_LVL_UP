@@ -15,8 +15,8 @@
     <template #button-content>
        <b-icon icon="list" font-scale="3"></b-icon>
     </template>
-    <b-dropdown-item router-link to="/NIE MA!">Home</b-dropdown-item>
-    <b-dropdown-item router-link to="/NIE MA!">Contact</b-dropdown-item>
+    <b-dropdown-item router-link to="/Offer">Offer</b-dropdown-item>
+    <b-dropdown-item router-link to="/Contact">Contact</b-dropdown-item>
     <b-dropdown-item router-link to="/aboutus">About us</b-dropdown-item>
   </b-dropdown></b-col>
           <b-col class="col-4 col-xl-2  mt-auto mb-auto text-success"><router-link to="/register"><b-button class="form-control btn btn-warning">Register <b-icon class="d-none d-sm-inline" icon="person-plus-fill" font-scale="1"></b-icon></b-button></router-link></b-col>
