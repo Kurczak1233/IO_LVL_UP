@@ -1,8 +1,9 @@
 <template>
 <body>
-  <b-container class="container text-center p-3 mb-3 mt-5 mr-auto ml-auto margin5 background-bluish" fluid>
+   <UserNavigation></UserNavigation>
+  <b-container class="container text-center p-3 mb-3 mt-3 mr-auto ml-auto margin5 background-bluish" fluid>   
       <b-row class="p-4">
-        <b-col class="mb-3 text-size-big mt-auto mb-auto"  cols="12"> Grammar lessons available on <span class="text-danger">{{level}}</span> level </b-col>
+        <b-col class="mb-3 text-size-big mt-auto mb-auto"  cols="12"> Grammar lessons available on  <span class="text-danger">{{level}}</span> level </b-col>
       </b-row>
   </b-container>
 
@@ -91,7 +92,6 @@
             <p>Exam</p>
             <div v-if="solvedB1PPC1 === true && solvedB1PPC2 === true && solvedB1PPC3 === true">
             <router-link :to="{name: 'examB1PPC', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1PPCPassed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
-            <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -129,9 +129,14 @@
 </template>
 
 <script>
+import UserNavigation from '../../src//components/UserNavigation.vue'
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 export default {
+components: 
+{
+  UserNavigation,
+},
 name: 'Grammar',
 data: function()
     {
@@ -168,7 +173,11 @@ data: function()
         this.solvedB1PPS1 = doc.data().solvedB1PPS1;
         this.solvedB1PPS2 = doc.data().solvedB1PPS2;
         this.solvedB1PPS3 = doc.data().solvedB1PPS3;
+        this.solvedB1PPC1 = doc.data().solvedB1PPC1;
+        this.solvedB1PPC2 = doc.data().solvedB1PPC2;
+        this.solvedB1PPC3 = doc.data().solvedB1PPC3;
         this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
+        this.ExamB1PPCPassed = doc.data().ExamB1PPCPassed;
         });
     });
     },
@@ -181,7 +190,11 @@ data: function()
         this.solvedB1PPS1 = doc.data().solvedB1PPS1;
         this.solvedB1PPS2 = doc.data().solvedB1PPS2;
         this.solvedB1PPS3 = doc.data().solvedB1PPS3;
+        this.solvedB1PPC1 = doc.data().solvedB1PPC1;
+        this.solvedB1PPC2 = doc.data().solvedB1PPC2;
+        this.solvedB1PPC3 = doc.data().solvedB1PPC3;
         this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
+        this.ExamB1PPCPassed = doc.data().ExamB1PPCPassed;
     });
 });
     },
