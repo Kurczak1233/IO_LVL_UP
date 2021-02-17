@@ -6,7 +6,7 @@
           <b-col class="col-3 text-size-big text-success d-none d-xl-block"><router-link to="/"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
           <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
             <b-list-group horizontal>
-  <b-list-group-item class="rounded-edges-left" variant="primary" router-link to="/Offer">Offer</b-list-group-item>
+  <b-list-group-item class="rounded-edges-left" variant="primary" router-link to="/Offer">Offffffer</b-list-group-item>
   <b-list-group-item class="" variant="primary" router-link to="/Contact">Contact</b-list-group-item>
   <b-list-group-item class="rounded-edges-right" variant="primary" router-link to="/aboutus">About us</b-list-group-item>
             </b-list-group>
