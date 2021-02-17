@@ -19,7 +19,7 @@
         </b-col>
         <b-col class="col-12 col-md-2 offset-md-1">
             <p class="text-md-left text-center mb-2  medium-font font-weight-bold"> Social</p>
-            <p class="text-md-left text-center "><b-link class="h5" href="https://pl.linkedin.com">LinkedddddIn</b-link></p>
+            <p class="text-md-left text-center "><b-link class="h5" href="https://pl.linkedin.com">LinkedIn</b-link></p>
             <p class="text-md-left text-center "><b-link class="h5" href="https://www.facebook.com">Facebook</b-link></p>
             <p class="text-md-left text-center "><b-link class="h5" href="https://twitter.com/home?lang=pl">Twitter</b-link></p>
             <p class="text-md-left text-center "><b-link class="h5" href="https://www.youtube.com">YouTube</b-link></p>
