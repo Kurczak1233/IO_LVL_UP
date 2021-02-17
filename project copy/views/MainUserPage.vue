@@ -1,29 +1,6 @@
 <template>
     <body>
-             <b-nav> 
-      <b-container fluid class="mb-4 pt-auto pb-auto color-bluish">
-        <b-row class="pt-3 pb-3">
-          <b-col class="col-3 text-size-big ml-auto mr-auto text-success d-none d-xl-block"><router-link to="/UserPage"><img id="project-logo" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Asia/project%20copy/src/assets/logov2.png?raw=true" alt="Logo strony">IO_LVL_UP</router-link></b-col>
-          <b-col class="col-4 text-success mb-auto mt-auto ml-auto mr-auto d-none d-xl-block">
-            <b-list-group horizontal v-if="level !== 'Unknown'">
-  <b-list-group-item class="rounded-edges-left btn btn-success" variant="success" href="#">Lessons</b-list-group-item>
-  <b-list-group-item variant="warning btn btn-warning" href="#">Quizes</b-list-group-item>
-  <b-list-group-item class="rounded-edges-right btn btn-danger" variant="danger" href="#">Progress</b-list-group-item>
-            </b-list-group>
-</b-col>
-          <b-col class="col-3 d-xl-none">  
-            <b-dropdown size="lg"  variant="link" toggle-class="text-decoration-none" no-caret>   
-    <template #button-content>
-       <b-icon icon="list" font-scale="3"></b-icon>
-    </template>
-    <b-dropdown-item href="#">An item</b-dropdown-item>
-    <b-dropdown-item href="#">Another item</b-dropdown-item>
-            </b-dropdown>
-        </b-col>
-          <b-col class="col-xl-2 col-8 text-success text-center mt-auto mb-auto mr-4"><LoggedInButton></LoggedInButton></b-col>
-        </b-row>
-      </b-container>
-      </b-nav>
+      <UserNavigation :level="level"></UserNavigation>
         <b-container fluid v-if="level !== 'Unknown'">
           <b-row>
           <b-col class="col-4 pt-3 text-center color-bluish border-right border-bottom-4 border-success" fluid id="aside">
@@ -105,13 +82,14 @@
 </template>
 
 <script>
-import LoggedInButton from '../src/components/LoggedInButton.vue'
+import UserNavigation from '../src/components/UserNavigation.vue'
+
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 
 export default {
      components: {
-    LoggedInButton
+    UserNavigation
   },
     data: function()
     {
@@ -127,10 +105,6 @@ export default {
             level: '',
         }
     },
-    methods: 
-    {
-
-    },
     beforeUpdate: function() //Przed załadowaniem strony załaduj dane.
     {
        var db = firebase.firestore();
@@ -143,8 +117,8 @@ export default {
         this.writing = doc.data().writing;
         this.listening = doc.data().listening;
         this.level = doc.data().level;
+        });
     });
-});
     },
     mounted: function() //Pierwszorazowo załaduj dane
     {
@@ -158,15 +132,9 @@ export default {
         this.writing = doc.data().writing;
         this.listening = doc.data().listening;
         this.level = doc.data().level;
+        });
     });
-});
     },
-     props: {
-    width: {
-      type: Number,
-      default: 0
-    }
-  },
     computed: {
       SpeakingWidth()
       {
