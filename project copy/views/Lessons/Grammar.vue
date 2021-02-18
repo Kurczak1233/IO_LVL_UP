@@ -4,7 +4,6 @@
     <LessonsHeader :level="level"></LessonsHeader>
 
   <!--DLA B2-->
-
   <b-container v-if="level==='B2'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
     <b-row>
       <b-col>
@@ -15,7 +14,7 @@
 
 <!--DLA B1-->
 
-  <b-container v-if="level==='B1'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+  <b-container v-if="level==='B1'" id="B1Quiz" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
     <b-row>
       <b-col class="col-md-4 p-3 border-right text-center border-success">
         <b-row>
@@ -57,7 +56,7 @@
     </b-row>
 
   </b-container>
-  <b-container v-if="level==='B1'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+  <b-container v-if="level==='B1'" id="B1Quiz" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
     <b-row>
       <b-col class="col-md-4 p-3 border-right text-center border-success">
         <b-row>
@@ -96,9 +95,6 @@
           </b-col>
         </b-row>
       </b-col>
-    </b-row>
-    <b-row>
-      
     </b-row>
   </b-container>
 
@@ -144,7 +140,7 @@ data: function()
             ExamB1PPCPassed: false,
             IsInGrammar: true,
             level: '',
-            QuizesCount: 2 //Temporary 2! (only 2 quizes)
+            QuizesCount: 2//Temporary 2! (only 2 quizes)
         }
     },
     // created: function()
@@ -157,6 +153,7 @@ data: function()
     // },
     mounted: function() //Initialize site
     {
+      console.log(this.QuizesCount);
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => { 
