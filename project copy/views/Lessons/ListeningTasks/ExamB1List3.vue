@@ -16,7 +16,7 @@
             </b-col>
         </b-row>
     </b-container>
-    <b-container v-if="GiveConsent === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+    <b-container v-if="GiveConsent === true && PassedOrNot === false" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-secondary text-center mt-3 mb-3 font-bigger">
                 Read the question part first. Then start the audio file and solve the questions.
@@ -81,8 +81,8 @@
             <b-col class="text-center mb-3 mt-3" >
                 <b-form>
                    
-                    <button class="btn btn-warning" v-if="taskList[4].userChoice!==null && taskList[3].userChoice!==null && taskList[2].userChoice!==null && taskList[1].userChoice!==null && taskList[0].userChoice!==null" type="button">End test</button>
-                     <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else disabled type="button">End test</button>
+                    <button class="btn btn-warning" v-on:click.once="SubmitForm" v-if="taskList[4].userChoice!==null && taskList[3].userChoice!==null && taskList[2].userChoice!==null && taskList[1].userChoice!==null && taskList[0].userChoice!==null" type="button">End test</button>
+                     <button class="btn btn-warning" v-else disabled type="button">End test</button>
                 </b-form>
             </b-col>
         </b-row>
@@ -96,10 +96,10 @@
      <b-container v-if="PassedOrNot === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-black pt-2 text-size-big">
-                <p v-if="pkt < 3" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
-                <p v-else-if="pkt >= 3" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
+                <p v-if="points < 3" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
+                <p v-else-if="points >= 3" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
                 <b-col class="text-center mb-3" >
-                    <router-link :to="{name: 'gram', params: {ExamB1PPCPassed: this.ExamB1PPCPassed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
+                    <router-link :to="{name: 'gram', params: {ExamB1List3Passed: this.ExamB1List3Passed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>
@@ -110,9 +110,8 @@
 <script>
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
-function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, userChoice){
+function Task(id, description, answear1, answear2, answear3, answear4, correctAnswear, userChoice){
     this.id = id;
-    this.pkt = pkt;
     this.description = description;
     this.answear1 = answear1
     this.answear2 = answear2
@@ -128,10 +127,6 @@ function TaskBuilder() {
     return {
         setId: function(id) {
             this.id = id;
-            return this;
-        },
-        setPkt: function(pkt) {
-            this.pkt = pkt;
             return this;
         },
         setDescription: function(description) {
@@ -167,11 +162,11 @@ function TaskBuilder() {
             return this;
         },
         build: function () {
-            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.userChoice, this.options);
+            return new Task(this.id, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.userChoice, this.options);
         }
     }
 }
-let task = (new TaskBuilder()).setId("1").setPkt("0").userChoice(null)
+let task = (new TaskBuilder()).setId("1").userChoice(null)
         .setDescription("Speaker 1 speaks about:").setAnswear1("computer games prevent children learning other languages").setAnswear2("has been learning").setAnswear3("has been learned").setAnswear4("have been learned").correctAnswear("has been learning").build();
 let task2 = (new TaskBuilder()).setId("2").userChoice(null)
        .setDescription("Speaker 2 speaks about:").setAnswear1("has been smoking").setAnswear2("have been smoking").setAnswear3("have smoked").setAnswear4("has smoked").correctAnswear("has been smoking").build();
@@ -182,8 +177,7 @@ let task4 = (new TaskBuilder()).setId("4").userChoice(null)
 let task5 = (new TaskBuilder()).setId("5").userChoice(null)
       .setDescription("Speaker 5 speaks about:").setAnswear1("Have he been studying").setAnswear2("Has he been studying").setAnswear3("Did he studied").setAnswear4("Have he studied").correctAnswear("Has he been studying").build();
 let taskList = [task, task2, task3, task4, task5];
-let points = 0;
-let i = 0;
+
 export default {
     name: 'Speaking',
         data: function()
@@ -194,14 +188,15 @@ export default {
          email: firebase.auth().currentUser.email,
          taskList: taskList,
          PassedOrNot: false,
+         QuizesCount: 3,
+         points: 0,
         selected: null,
-        options: [
-          { item: taskList.answear1, name: taskList.answear1 },
+         options: [
+          { item: task.answear1, name: task.answear1 },
           { item: task.answear2, name: task.answear2 },
           { item: task.answear3, name: task.answear3 },
           { item: task.answear4, name: task.answear4 }
         ]
-      
       }
     },
     mounted: function()
@@ -228,48 +223,33 @@ export default {
         {
             this.GiveConsent = true;
         },
-        SetUsersLevel: function()
-        {
+        SubmitForm: function()
+        {  
+            for(let i = 0; i < this.taskList.length; i++)
+            {
+                
+                if(this.taskList[i].correctAnswear === this.taskList[i].userChoice)
+                {
+                    this.points++; 
+                }
+            }
             this.PassedOrNot = true;
-            if(this.correctAnswear === this.selected)
-            {
-                points++;
-            }
-            this.pkt = points;
              var db = firebase.firestore();
-            if(this.pkt < 3)
+            if(this.points < 3)
             {
-                //EXAM FAILED!
+                for(let i = 0; i < this.taskList.length; i++)
+                {   
+                    console.log(this.taskList[i].userChoice);
+                    this.taskList[i].userChoice = null;
+                    console.log(this.taskList[i].userChoice);
+                }
             }
-            else if(this.pkt >= 3)
+            else if(this.points >= 3)
             { 
                 this.ExamB1List3Passed = true;
                 db.collection(this.email).doc(this.email).update({grammar: this.grammar+(1/this.QuizesCount)*100});
                 db.collection(this.email).doc(this.email).update({ExamB1List3Passed: this.ExamB1List3Passed});
             }
-        },
-        CheckAndNextQuestion: function()
-        {   
-            if(this.correctAnswear === this.userChoice)
-            {
-                points++;
-            }
-            i++
-            this.pkt = points;
-                this.description = taskList[i].description
-                this.answear1 = taskList[i].answear1
-                this.answear2 = taskList[i].answear2
-                this.answear3 = taskList[i].answear3
-                this.answear4 = taskList[i].answear4
-                this.options = [
-            { item: this.answear1, name: this.answear1 },
-            { item: this.answear2, name: this.answear2 },
-            { item: this.answear3, name: this.answear3 },
-            { item: this.answear4, name: this.answear4 }
-            ]
-                this.correctAnswear = taskList[i].correctAnswear
-                this.id = taskList[i].id
-         
         }
     }
 }
