@@ -3,7 +3,7 @@
   <UserNavigation :IsInListening="IsInListening"></UserNavigation>
   <LessonsHeader :level="level"></LessonsHeader>
 
-<b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
+<b-container class= fluid>
 <b><h3><i>Kendall Jenner</i></h3></b>
 
 <b-row class="mt-2 mb-2">
@@ -72,7 +72,17 @@ components:
 data: function()
 {
   return{
-    IsInListening: true
+    IsInListening: true,
+    solvedB1List1: false,        
+    solvedB1List2: false,
+    solvedB1List3: false,
+    solvedB1List4: false,
+    solvedB1List5: false,
+    ExamB1List1: false,
+    ExamB1List2: false,
+    ExamB1List3: false,
+    level: '',
+    QuizesCount: 3
   }
 },
     mounted: function() //Initialize site
