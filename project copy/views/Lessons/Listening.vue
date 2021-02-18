@@ -29,7 +29,7 @@
           <b-col class="col-12 col-md-4 mt-3 mt-md-0 text-center">
             <p>Exam</p>
             <div v-if="solvedB1List1 === true && solvedB1List2 === true">
-            <router-link :to="{name: 'ExamB1List1', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1List2===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <router-link :to="{name: 'ExamB1List1', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1List1Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -57,7 +57,7 @@
           <b-col class="col-12 col-md-4 mt-3 mt-md-0 text-center">
             <p>Exam</p>
             <div v-if="solvedB1List3 === true && solvedB1List4 === true">
-            <router-link :to="{name: 'ExamB1List2', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1List2===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <router-link :to="{name: 'ExamB1List2', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1List2Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -84,7 +84,7 @@
           <b-col class="col-12 col-md-4 mt-3 mt-md-0 text-center">
             <p>Exam</p>
             <div v-if="solvedB1List5 === true">
-            <router-link :to="{name: 'ExamB1List3', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1List3===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <router-link :to="{name: 'ExamB1List3Passed', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1List3Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -154,6 +154,23 @@ data: function()
         });
     });
     },
+//     beforeUpdate: function() //Before refreshing!
+//     {
+//        var db = firebase.firestore();
+//       db.collection(this.email).get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//        this.level = doc.data().level;
+//         this.solvedB1List1 = doc.data().solvedB1List1;
+//         this.solvedB1List2 = doc.data().solvedB1List2;
+//         this.solvedB1List3 = doc.data().solvedB1List3;
+//         this.solvedB1List4 = doc.data().solvedB1List4;
+//         this.solvedB1List5 = doc.data().solvedB1List5;
+//         this.ExamB1List1Passed = doc.data().ExamB1List1Passed;
+//         this.ExamB1List2Passed = doc.data().ExamB1List2Passed;
+//         this.ExamB1List3Passed = doc.data().ExamB1List3Passed;
+//     });
+// });
+// }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

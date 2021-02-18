@@ -169,22 +169,22 @@ data: function()
         });
     });
     },
-// //         beforeUpdate: function() //Before refreshing!
-// //     {
-// //        var db = firebase.firestore();
-// //       db.collection(this.email).get().then((querySnapshot) => {
-// //     querySnapshot.forEach((doc) => {
-// //        this.level = doc.data().level;
-// //         this.solvedB1PPS1 = doc.data().solvedB1PPS1;
-// //         this.solvedB1PPS2 = doc.data().solvedB1PPS2;
-// //         this.solvedB1PPS3 = doc.data().solvedB1PPS3;
-// //         this.solvedB1PPC1 = doc.data().solvedB1PPC1;
-// //         this.solvedB1PPC2 = doc.data().solvedB1PPC2;
-// //         this.solvedB1PPC3 = doc.data().solvedB1PPC3;
-// //         this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
-// //         this.ExamB1PPCPassed = doc.data().ExamB1PPCPassed;
-// //     });
-// // });
+//         beforeUpdate: function() //Before refreshing!
+//     {
+//        var db = firebase.firestore();
+//       db.collection(this.email).get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//        this.level = doc.data().level;
+//         this.solvedB1PPS1 = doc.data().solvedB1PPS1;
+//         this.solvedB1PPS2 = doc.data().solvedB1PPS2;
+//         this.solvedB1PPS3 = doc.data().solvedB1PPS3;
+//         this.solvedB1PPC1 = doc.data().solvedB1PPC1;
+//         this.solvedB1PPC2 = doc.data().solvedB1PPC2;
+//         this.solvedB1PPC3 = doc.data().solvedB1PPC3;
+//         this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
+//         this.ExamB1PPCPassed = doc.data().ExamB1PPCPassed;
+//     });
+// });
 //     }
 }
 </script>

@@ -15,7 +15,7 @@
             <thead>
                 <tr>
                 <th scope="row">1</th>
-                <td>Kendall spends a load of time in her house. </td>
+                <th>Kendall spends a load of time in her house. </th>
                 <td v-on:click="inputClickedFalse">True</td>
                 <td v-on:click="inputClickedRight">False</td>
                 </tr>
@@ -23,31 +23,31 @@
             <tbody>
                 <tr>
                 <th scope="row">2</th>
-                <td>She used to walk dogs for a living.</td>
+                <th>She used to walk dogs for a living.</th>
                 <td v-on:click="inputClickedRight">True</td>
                 <td v-on:click="inputClickedFalse">False</td>
                 </tr>
                 <tr>
                 <th scope="row">3</th>
-                <td>Cancelled flights piss her off</td>
+                <th>Cancelled flights piss her off</th>
                 <td v-on:click="inputClickedFalse">True</td>
                 <td v-on:click="inputClickedRight">False</td>
                 </tr>
                 <tr>
                 <th scope="row">5</th>
-                <td>She spent a fortune on a vehicle.</td>
+                <th>She spent a fortune on a vehicle.</th>
                 <td v-on:click="inputClickedRight">True</td>
                 <td v-on:click="inputClickedFalse">False</td>
                 </tr>
                 <tr>
                 <th scope="row">6</th>
-                <td>Chloe is her least favourite sister.</td>
+                <th>Chloe is her least favourite sister.</th>
                 <td v-on:click="inputClickedFalse">True</td>
                 <td v-on:click="inputClickedRight">False</td>
                 </tr>
                 <tr>
                 <th scope="row">7</th>
-                <td>She wishes she could become more independent.</td>
+                <th>She wishes she could become more independent.</th>
                 <td v-on:click="inputClickedFalse">True </td>
                 <td v-on:click="inputClickedRight">False</td>
                 </tr>
@@ -57,6 +57,9 @@
             <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/listening.mp3?raw=true" controls ></audio>
 
             </b-col>
+            </b-row>
+            <b-row>  
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'listen', params: {solvedB1List3: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -66,13 +69,13 @@
 import { firebase } from '@firebase/app'
 //import '@firebase/auth'
 export default {
-    name: 'Listening task5',
+    name: 'Listening',
         data: function()
     {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1List5: false
+          solvedB1List3: false
       }
     },
     methods:
@@ -92,9 +95,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1List5 = true;
+      this.solvedB1List3 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1List5: this.solvedB1List5} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1List3: this.solvedB1List3} ,{merge:true})
   }
     }
 }
