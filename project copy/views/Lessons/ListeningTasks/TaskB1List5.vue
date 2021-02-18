@@ -69,7 +69,7 @@
 import { firebase } from '@firebase/app'
 //import '@firebase/auth'
 export default {
-    name: 'Listening task5',
+    name: 'Listening',
         data: function()
     {
       return {
