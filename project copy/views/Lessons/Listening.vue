@@ -129,9 +129,9 @@ data: function()
     solvedB1List3: false,
     solvedB1List4: false,
     solvedB1List5: false,
-    ExamB1List1: false,
-    ExamB1List2: false,
-    ExamB1List3: false,
+    ExamB1List1Passed: false,
+    ExamB1List2Passed: false,
+    ExamB1List3Passed: false,
     level: '',
     QuizesCount: 3
   }
@@ -143,14 +143,14 @@ data: function()
     querySnapshot.forEach((doc) => { 
         this.level = doc.data().level;
         console.log(this.level);
-        this.solvedB1PPS1 = doc.data().solvedB1PPS1;
-        this.solvedB1PPS2 = doc.data().solvedB1PPS2;
-        this.solvedB1PPS3 = doc.data().solvedB1PPS3;
-        this.solvedB1PPC1 = doc.data().solvedB1PPC1;
-        this.solvedB1PPC2 = doc.data().solvedB1PPC2;
-        this.solvedB1PPC3 = doc.data().solvedB1PPC3;
-        this.ExamB1PPSPassed = doc.data().ExamB1PPSPassed;
-        this.ExamB1PPCPassed = doc.data().ExamB1PPCPassed;
+        this.solvedB1List1 = doc.data().solvedB1List1;
+        this.solvedB1List2 = doc.data().solvedB1List2;
+        this.solvedB1List3 = doc.data().solvedB1List3;
+        this.solvedB1List4 = doc.data().solvedB1List4;
+        this.solvedB1List5 = doc.data().solvedB1List5;
+        this.ExamB1List1Passed = doc.data().ExamB1List1Passed;
+        this.ExamB1List2Passed = doc.data().ExamB1List2Passed;
+        this.ExamB1List3Passed = doc.data().ExamB1List3Passed;
         });
     });
     },
