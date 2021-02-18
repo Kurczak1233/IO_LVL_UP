@@ -204,7 +204,7 @@ export default {
         var db = firebase.firestore();
         db.collection(this.email).doc(this.email).get().then((doc) => {
     if (doc.exists) {
-        this.grammar = doc.data().grammar;
+        this.listening = doc.data().listening;
 
     } else {
         console.log("No such document!");
@@ -247,7 +247,7 @@ export default {
             else if(this.points >= 3)
             { 
                 this.ExamB1List3Passed = true;
-                db.collection(this.email).doc(this.email).update({grammar: this.grammar+(1/this.QuizesCount)*100});
+                db.collection(this.email).doc(this.email).update({listening: this.listening+(1/this.QuizesCount)*100});
                 db.collection(this.email).doc(this.email).update({ExamB1List3Passed: this.ExamB1List3Passed});
             }
         }
