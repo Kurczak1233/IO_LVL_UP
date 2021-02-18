@@ -18,14 +18,19 @@
     </b-container>
     <b-container v-if="GiveConsent === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
+            <b-col class="text-secondary text-center mt-3 mb-3 font-bigger">
+                Read the question part first. Then start the audio file and solve the questions.
+            </b-col>
+        </b-row>
+        <b-row>
             <b-col class="text-center text-info pt-2 text-size-big">
-                Question {{id}}
+                Question {{taskList[0].id}}
             </b-col>    
         </b-row>
         <b-row>
-          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{description}}</b-col>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[0].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+                <b-form-radio-group v-model="taskList[0].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
         </b-row>
         <b-row>
@@ -36,9 +41,9 @@
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[1].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+                <b-form-radio-group v-model="taskList[1].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
-        </b-row>
+        </b-row> 
         <b-row>
             <b-col class="text-center text-info pt-2 text-size-big">
                 Question {{taskList[2].id}}
@@ -47,16 +52,36 @@
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[2].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+                <b-form-radio-group v-model="taskList[2].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+            </b-col>
+        </b-row> 
+        <b-row>
+            <b-col class="text-center text-info pt-2 text-size-big">
+                Question {{taskList[3].id}}
+            </b-col>    
+        </b-row>
+        <b-row>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[3].description}}</b-col>
+            <b-col class="d-flex align-items-center mt-3" >
+                <b-form-radio-group v-model="taskList[3].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
         </b-row>
+         <b-row>
+            <b-col class="text-center text-info pt-2 text-size-big">
+                Question {{taskList[4].id}}
+            </b-col>    
+        </b-row>
+        <b-row>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[4].description}}</b-col>
+            <b-col class="d-flex align-items-center mt-3" >
+                <b-form-radio-group v-model="taskList[4].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+            </b-col>
+        </b-row>          
         <b-row>
             <b-col class="text-center mb-3 mt-3" >
                 <b-form>
-                    <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-if="selected === null && questionNumber!==(MaxQuestionsCount-2)" disabled type="button">Next question</button>
-                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else-if="questionNumber===(MaxQuestionsCount-2) && selected===null" disabled type="button">End test</button>
-                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else-if="questionNumber===(MaxQuestionsCount-2) && selected!==null" type="button">End test</button>
-                    <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-else type="button">Next question</button>
+                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-if="selected===null" disabled type="button">End test</button>
+                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else type="button">End test</button>
                 </b-form>
             </b-col>
             
@@ -79,7 +104,7 @@
 <script>
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
-function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, questionNumber){
+function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, questionNumber, userChoice){
     this.id = id;
     this.pkt = pkt;
     this.description = description;
@@ -89,6 +114,7 @@ function Task(id, pkt, description, answear1, answear2, answear3, answear4, corr
     this.answear4 = answear4
     this.correctAnswear = correctAnswear
     this.questionNumber = questionNumber
+    this.userChoice = userChoice
 }
 
 function TaskBuilder() {
@@ -130,20 +156,24 @@ function TaskBuilder() {
             this.questionNumber = questionNumber;
             return this;
         },
+        userChoice: function(userChoice) {
+            this.userChoice = userChoice;
+            return this;
+        },
         build: function () {
-            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.questionNumber);
+            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.questionNumber, this.userChoice);
         }
     }
 }
-let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0")
+let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0").userChoice(null)
         .setDescription("She ________ French words for hours, but she still doesn't remember all of them. (learn)").setAnswear1("have been learning").setAnswear2("has been learning").setAnswear3("has been learned").setAnswear4("have been learned").correctAnswear("has been learning").build();
-let task2 = (new TaskBuilder()).setId("2")
+let task2 = (new TaskBuilder()).setId("2").userChoice(null)
        .setDescription("My father _______  for 15 minutes. (smoke)").setAnswear1("has been smoking").setAnswear2("have been smoking").setAnswear3("have smoked").setAnswear4("has smoked").correctAnswear("has been smoking").build();
-let task3 = (new TaskBuilder()).setId("3")
+let task3 = (new TaskBuilder()).setId("3").userChoice(null)
       .setDescription("Sorry, I'm late,  ________ for long? (you wait)").setAnswear1("has you have wait").setAnswear2("have wait").setAnswear3("have you been waiting").setAnswear4("has been waiting").correctAnswear("have you been waiting").build();
-let task4 = (new TaskBuilder()).setId("4")
+let task4 = (new TaskBuilder()).setId("4").userChoice(null)
       .setDescription("We ________ Lisa recently. (not see)").setAnswear1("have see").setAnswear2("have not been seeing").setAnswear3("have not seen").setAnswear4("has been seeing").correctAnswear("have not seen").build();
-let task5 = (new TaskBuilder()).setId("5")
+let task5 = (new TaskBuilder()).setId("5").userChoice(null)
       .setDescription(" ________ hard today? (he study)").setAnswear1("Have he been studying").setAnswear2("Has he been studying").setAnswear3("Did he studied").setAnswear4("Have he studied").correctAnswear("Has he been studying").build();
 let taskList = [task, task2, task3, task4, task5];
 let points = 0;
@@ -163,10 +193,12 @@ export default {
          answear4: task.answear4,
          GiveConsent: false,
          QuizesCount: 0,
-         ExamB1PPCPassed: false,
+         ExamB1List3Passed: false,
          MaxQuestionsCount: taskList.length,
          correctAnswear: task.correctAnswear,
          email: firebase.auth().currentUser.email,
+         taskList: taskList,
+         userChoice: task.userChoice,
         selected: null,
         options: [
           { item: task.answear1, name: task.answear1 },
@@ -216,9 +248,9 @@ export default {
             }
             else if(this.pkt >= 3)
             { 
-                this.ExamB1PPCPassed = true;
+                this.ExamB1List3Passed = true;
                 db.collection(this.email).doc(this.email).update({grammar: this.grammar+(1/this.QuizesCount)*100});
-                db.collection(this.email).doc(this.email).update({ExamB1PPCPassed: this.ExamB1PPCPassed});
+                db.collection(this.email).doc(this.email).update({ExamB1List3Passed: this.ExamB1List3Passed});
             }
         },
         CheckAndNextQuestion: function()
