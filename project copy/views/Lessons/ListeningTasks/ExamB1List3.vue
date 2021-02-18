@@ -30,7 +30,7 @@
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[0].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="taskList[0].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+                <b-form-radio-group  stacked v-model="taskList[0].userChoice" :options="taskList[0].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
         </b-row>
         <b-row>
@@ -41,7 +41,7 @@
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[1].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="taskList[1].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+                <b-form-radio-group stacked v-model="taskList[1].userChoice" :options="taskList[1].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
         </b-row> 
         <b-row>
@@ -52,7 +52,7 @@
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[2].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="taskList[2].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+                <b-form-radio-group stacked v-model="taskList[2].userChoice" :options="taskList[2].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
         </b-row> 
         <b-row>
@@ -63,7 +63,7 @@
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[3].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="taskList[3].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+                <b-form-radio-group stacked v-model="taskList[3].userChoice" :options="taskList[3].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
         </b-row>
          <b-row>
@@ -74,20 +74,26 @@
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[4].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="taskList[4].userChoice" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+                <b-form-radio-group stacked v-model="taskList[4].userChoice" :options="taskList[4].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
         </b-row>          
         <b-row>
             <b-col class="text-center mb-3 mt-3" >
                 <b-form>
-                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-if="selected===null" disabled type="button">End test</button>
-                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else type="button">End test</button>
+                   
+                    <button class="btn btn-warning" v-if="taskList[4].userChoice!==null && taskList[3].userChoice!==null && taskList[2].userChoice!==null && taskList[1].userChoice!==null && taskList[0].userChoice!==null" type="button">End test</button>
+                     <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else disabled type="button">End test</button>
                 </b-form>
             </b-col>
-            
         </b-row>
+            <b-row class="mt-4 mb-3">
+               <b-col class="text-center">
+                   <audio src="https://raw.githubusercontent.com/Kurczak1233/IO_LVL_UP/main/project%20copy/src/assets/Exam%203%20Listening.mp3" controls ></audio>
+                </b-col>
+            </b-row>
     </b-container>
-     <b-container v-if="GiveConsent === true && questionNumber >= MaxQuestionsCount-1" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+
+     <b-container v-if="PassedOrNot === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-black pt-2 text-size-big">
                 <p v-if="pkt < 3" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
@@ -104,7 +110,7 @@
 <script>
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
-function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, questionNumber, userChoice){
+function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, userChoice){
     this.id = id;
     this.pkt = pkt;
     this.description = description;
@@ -113,8 +119,8 @@ function Task(id, pkt, description, answear1, answear2, answear3, answear4, corr
     this.answear3 = answear3
     this.answear4 = answear4
     this.correctAnswear = correctAnswear
-    this.questionNumber = questionNumber
     this.userChoice = userChoice
+    this.options = [answear1, answear2, answear3, answear4]
 }
 
 function TaskBuilder() {
@@ -152,29 +158,29 @@ function TaskBuilder() {
             this.correctAnswear = correctAnswear;
             return this;
         },
-        setQuestionNumber: function(questionNumber) {
-            this.questionNumber = questionNumber;
-            return this;
-        },
         userChoice: function(userChoice) {
             this.userChoice = userChoice;
             return this;
         },
+        options: function(options) {
+            this.options = options;
+            return this;
+        },
         build: function () {
-            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.questionNumber, this.userChoice);
+            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.userChoice, this.options);
         }
     }
 }
-let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0").userChoice(null)
-        .setDescription("She ________ French words for hours, but she still doesn't remember all of them. (learn)").setAnswear1("have been learning").setAnswear2("has been learning").setAnswear3("has been learned").setAnswear4("have been learned").correctAnswear("has been learning").build();
+let task = (new TaskBuilder()).setId("1").setPkt("0").userChoice(null)
+        .setDescription("Speaker 1 speaks about:").setAnswear1("computer games prevent children learning other languages").setAnswear2("has been learning").setAnswear3("has been learned").setAnswear4("have been learned").correctAnswear("has been learning").build();
 let task2 = (new TaskBuilder()).setId("2").userChoice(null)
-       .setDescription("My father _______  for 15 minutes. (smoke)").setAnswear1("has been smoking").setAnswear2("have been smoking").setAnswear3("have smoked").setAnswear4("has smoked").correctAnswear("has been smoking").build();
+       .setDescription("Speaker 2 speaks about:").setAnswear1("has been smoking").setAnswear2("have been smoking").setAnswear3("have smoked").setAnswear4("has smoked").correctAnswear("has been smoking").build();
 let task3 = (new TaskBuilder()).setId("3").userChoice(null)
-      .setDescription("Sorry, I'm late,  ________ for long? (you wait)").setAnswear1("has you have wait").setAnswear2("have wait").setAnswear3("have you been waiting").setAnswear4("has been waiting").correctAnswear("have you been waiting").build();
+      .setDescription("Speaker 3 speaks about:").setAnswear1("has you have wait").setAnswear2("have wait").setAnswear3("have you been waiting").setAnswear4("has been waiting").correctAnswear("have you been waiting").build();
 let task4 = (new TaskBuilder()).setId("4").userChoice(null)
-      .setDescription("We ________ Lisa recently. (not see)").setAnswear1("have see").setAnswear2("have not been seeing").setAnswear3("have not seen").setAnswear4("has been seeing").correctAnswear("have not seen").build();
+      .setDescription("Speaker 4 speaks about:").setAnswear1("have see").setAnswear2("have not been seeing").setAnswear3("have not seen").setAnswear4("has been seeing").correctAnswear("have not seen").build();
 let task5 = (new TaskBuilder()).setId("5").userChoice(null)
-      .setDescription(" ________ hard today? (he study)").setAnswear1("Have he been studying").setAnswear2("Has he been studying").setAnswear3("Did he studied").setAnswear4("Have he studied").correctAnswear("Has he been studying").build();
+      .setDescription("Speaker 5 speaks about:").setAnswear1("Have he been studying").setAnswear2("Has he been studying").setAnswear3("Did he studied").setAnswear4("Have he studied").correctAnswear("Has he been studying").build();
 let taskList = [task, task2, task3, task4, task5];
 let points = 0;
 let i = 0;
@@ -183,25 +189,14 @@ export default {
         data: function()
     {
       return { 
-         id: task.id,
-         questionNumber: task.questionNumber,
-         pkt: task.pkt, 
-         description: task.description,
-         answear1: task.answear1,
-         answear2: task.answear2,
-         answear3: task.answear3,
-         answear4: task.answear4,
          GiveConsent: false,
-         QuizesCount: 0,
          ExamB1List3Passed: false,
-         MaxQuestionsCount: taskList.length,
-         correctAnswear: task.correctAnswear,
          email: firebase.auth().currentUser.email,
          taskList: taskList,
-         userChoice: task.userChoice,
+         PassedOrNot: false,
         selected: null,
         options: [
-          { item: task.answear1, name: task.answear1 },
+          { item: taskList.answear1, name: taskList.answear1 },
           { item: task.answear2, name: task.answear2 },
           { item: task.answear3, name: task.answear3 },
           { item: task.answear4, name: task.answear4 }
@@ -235,12 +230,12 @@ export default {
         },
         SetUsersLevel: function()
         {
+            this.PassedOrNot = true;
             if(this.correctAnswear === this.selected)
             {
                 points++;
             }
             this.pkt = points;
-            this.questionNumber = task.questionNumber++;
              var db = firebase.firestore();
             if(this.pkt < 3)
             {
@@ -255,15 +250,12 @@ export default {
         },
         CheckAndNextQuestion: function()
         {   
-            if(this.correctAnswear === this.selected)
+            if(this.correctAnswear === this.userChoice)
             {
                 points++;
             }
             i++
             this.pkt = points;
-            this.questionNumber = task.questionNumber++;
-             if(task.questionNumber < this.MaxQuestionsCount)
-             {
                 this.description = taskList[i].description
                 this.answear1 = taskList[i].answear1
                 this.answear2 = taskList[i].answear2
@@ -277,7 +269,7 @@ export default {
             ]
                 this.correctAnswear = taskList[i].correctAnswear
                 this.id = taskList[i].id
-            }    
+         
         }
     }
 }
