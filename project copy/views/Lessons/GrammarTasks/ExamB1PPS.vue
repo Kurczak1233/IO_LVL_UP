@@ -3,12 +3,11 @@
     <b-container v-if="GiveConsent===false" class="col-10 mt-5 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-danger pt-2 text-size-big">
-                You are attempting a placement test.
+                You are attempting an exam.
             </b-col>    
         </b-row>
         <b-row>
-          <b-col class="col-12 pt-3"><b> Available points: </b> </b-col>
-          <b-col class="col-12">Points will determine the level you are currently being on.</b-col>
+         <b-col class="col-12">You will have to pass this exam if you want to gain access to end test. You can repeat this test if you do not pass.</b-col>
           <b-col class="pt-2 pb-3 text-center"><b>GOOD LUCK!</b></b-col>
         </b-row>
         <b-row>
