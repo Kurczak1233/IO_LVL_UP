@@ -2,10 +2,6 @@
 <body>
 <UserNavigation :IsInReading="IsInReading"></UserNavigation>
 <LessonsHeader :level="level"></LessonsHeader>
-<b-container class="container text-center">
-  <b-row class="">
-    <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_reading.png?raw=true" alt="Logo reading"></b-col>
-  </b-row>
 <b-container class="col-240 col-md-120 col-xl-100 mr-auto ml-auto margin5 background-bluish" fluid>
 <b><h3><i>Food</i></h3></b>
 <b-row class="">
@@ -155,8 +151,6 @@
     </tr>
       </tbody>
 </table>
-
-</b-container>
 
 </b-container>
 </body>
