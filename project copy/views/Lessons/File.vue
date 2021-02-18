@@ -1,8 +1,4 @@
 <template>
-<b-container class="container text-center">
-  <b-row class="">
-    <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_JS.png?raw=true" alt="Logo listening"></b-col>
-  </b-row>
 <b-container class="col-45 col-md-35 col-xl-10 mr-auto ml-auto margin5 background-bluish" fluid>
 <b>Download</b>
   
@@ -43,7 +39,6 @@
       </tbody>
 </table>
     </b-container>  
-</b-container>
 </template>
 
 <script>

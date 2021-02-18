@@ -2,9 +2,7 @@
   <body>
     <UserNavigation :IsInWriting="IsInWriting"></UserNavigation>
     <LessonsHeader :level="level"></LessonsHeader>
-    <b-container class="container text-center">
-    <b-col class="mb-3" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_writing.png?raw=true" alt="Logo writing"></b-col>
-    </b-container>
+
     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
         <b-row>
           <b-col class="col-12"><b>Temat:</b> {{name}} <br> <b> Liczba punktów do uzyskania: </b> {{pkt}} <br> <b> Treść: </b> {{description}} <br> <b> Stopień trudności: </b> {{level}}</b-col>

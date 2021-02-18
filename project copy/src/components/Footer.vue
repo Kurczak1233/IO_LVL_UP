@@ -24,7 +24,7 @@
             <p class="text-md-left text-center "><b-link class="h5" href="https://twitter.com/home?lang=pl">Twitter</b-link></p>
             <p class="text-md-left text-center "><b-link class="h5" href="https://www.youtube.com">YouTube</b-link></p>
         </b-col>
-        <b-col class="col-12 text-small text-grey pt-3">Copyright 2021 IO_LVL_UP<sup>&#169;</sup>. All rights reserved worldwide. Version 0.5.0.1</b-col>
+        <b-col class="col-12 text-small text-grey pt-3">Copyright 2021 IO_LVL_UP<sup>&#169;</sup>. All rights reserved worldwide. Version 0.5.1.1</b-col>
     </b-row>
 </b-container>
 </template>
