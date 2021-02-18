@@ -16,44 +16,44 @@
                 <tr>
                 <th scope="row">1</th>
                 <td>Kendall spends a load of time in her house. </td>
-                <td>True</td>
-                <td>False x</td>
+                <td v-on:click="inputClickedFalse">True</td>
+                <td v-on:click="inputClickedRight">False</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                 <th scope="row">2</th>
                 <td>She used to walk dogs for a living.</td>
-                <td>True x</td>
-                <td>False</td>
+                <td v-on:click="inputClickedRight">True</td>
+                <td v-on:click="inputClickedFalse">False</td>
                 </tr>
                 <tr>
                 <th scope="row">3</th>
                 <td>Cancelled flights piss her off</td>
-                <td>True</td>
-                <td>False x</td>
+                <td v-on:click="inputClickedFalse">True</td>
+                <td v-on:click="inputClickedRight">False</td>
                 </tr>
                 <tr>
                 <th scope="row">5</th>
                 <td>She spent a fortune on a vehicle.</td>
-                <td>True x</td>
-                <td>False</td>
+                <td v-on:click="inputClickedRight">True</td>
+                <td v-on:click="inputClickedFalse">False</td>
                 </tr>
                 <tr>
                 <th scope="row">6</th>
                 <td>Chloe is her least favourite sister.</td>
-                <td>True</td>
-                <td>False x</td>
+                <td v-on:click="inputClickedFalse">True</td>
+                <td v-on:click="inputClickedRight">False</td>
                 </tr>
                 <tr>
                 <th scope="row">7</th>
                 <td>She wishes she could become more independent.</td>
-                <td>True </td>
-                <td>False x</td>
+                <td v-on:click="inputClickedFalse">True </td>
+                <td v-on:click="inputClickedRight">False</td>
                 </tr>
                 </tbody>
             </table>
-            <b-row class="mt-2 mb-2">
+            <b-row class="mt-4 mb-3">
             <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/listening.mp3?raw=true" controls ></audio>
 
             </b-col>
