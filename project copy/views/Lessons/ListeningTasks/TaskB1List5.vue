@@ -15,7 +15,7 @@
             <thead>
                 <tr>
                 <th scope="row">1</th>
-                <td>Kendall spends a load of time in her house. </td>
+                <th>Kendall spends a load of time in her house. </th>
                 <td v-on:click="inputClickedFalse">True</td>
                 <td v-on:click="inputClickedRight">False</td>
                 </tr>
@@ -23,31 +23,31 @@
             <tbody>
                 <tr>
                 <th scope="row">2</th>
-                <td>She used to walk dogs for a living.</td>
+                <th>She used to walk dogs for a living.</th>
                 <td v-on:click="inputClickedRight">True</td>
                 <td v-on:click="inputClickedFalse">False</td>
                 </tr>
                 <tr>
                 <th scope="row">3</th>
-                <td>Cancelled flights piss her off</td>
+                <th>Cancelled flights piss her off</th>
                 <td v-on:click="inputClickedFalse">True</td>
                 <td v-on:click="inputClickedRight">False</td>
                 </tr>
                 <tr>
                 <th scope="row">5</th>
-                <td>She spent a fortune on a vehicle.</td>
+                <th>She spent a fortune on a vehicle.</th>
                 <td v-on:click="inputClickedRight">True</td>
                 <td v-on:click="inputClickedFalse">False</td>
                 </tr>
                 <tr>
                 <th scope="row">6</th>
-                <td>Chloe is her least favourite sister.</td>
+                <th>Chloe is her least favourite sister.</th>
                 <td v-on:click="inputClickedFalse">True</td>
                 <td v-on:click="inputClickedRight">False</td>
                 </tr>
                 <tr>
                 <th scope="row">7</th>
-                <td>She wishes she could become more independent.</td>
+                <th>She wishes she could become more independent.</th>
                 <td v-on:click="inputClickedFalse">True </td>
                 <td v-on:click="inputClickedRight">False</td>
                 </tr>

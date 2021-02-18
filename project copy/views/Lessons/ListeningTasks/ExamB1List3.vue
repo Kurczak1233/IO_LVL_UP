@@ -2,13 +2,12 @@
   <body>
     <b-container v-if="GiveConsent===false" class="col-10 mt-5 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
         <b-row>
-            <b-col class="text-center text-danger pt-2 text-size-big">
-                You are attempting a placement test.
+             <b-col class="text-center text-danger pt-2 text-size-big">
+                You are attempting an exam.
             </b-col>    
         </b-row>
         <b-row>
-          <b-col class="col-12 pt-3"><b> Available points: </b> </b-col>
-          <b-col class="col-12">Points will determine the level you are currently being on.</b-col>
+         <b-col class="col-12">You will have to pass this exam if you want to gain access to end test. You can repeat this test if you do not pass.</b-col>
           <b-col class="pt-2 pb-3 text-center"><b>GOOD LUCK!</b></b-col>
         </b-row>
         <b-row>
@@ -17,7 +16,7 @@
             </b-col>
         </b-row>
     </b-container>
-    <b-container v-if="questionNumber<MaxQuestionsCount-1 && GiveConsent === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+    <b-container v-if="GiveConsent === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-info pt-2 text-size-big">
                 Question {{id}}
@@ -25,6 +24,28 @@
         </b-row>
         <b-row>
           <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{description}}</b-col>
+            <b-col class="d-flex align-items-center mt-3" >
+                <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col class="text-center text-info pt-2 text-size-big">
+                Question {{taskList[1].id}}
+            </b-col>    
+        </b-row>
+        <b-row>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[1].description}}</b-col>
+            <b-col class="d-flex align-items-center mt-3" >
+                <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col class="text-center text-info pt-2 text-size-big">
+                Question {{taskList[2].id}}
+            </b-col>    
+        </b-row>
+        <b-row>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[2].description}}</b-col>
             <b-col class="d-flex align-items-center mt-3" >
                 <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>

@@ -43,6 +43,9 @@ import TaskB1List2 from '../views/Lessons/ListeningTasks/TaskB1List2.vue'
 import TaskB1List3 from '../views/Lessons/ListeningTasks/TaskB1List3.vue'
 import TaskB1List4 from '../views/Lessons/ListeningTasks/TaskB1List4.vue'
 import TaskB1List5 from '../views/Lessons/ListeningTasks/TaskB1List5.vue'
+import ExamB1List1 from '../views/Lessons/ListeningTasks/ExamB1List1.vue'
+import ExamB1List2 from '../views/Lessons/ListeningTasks/ExamB1List2.vue'
+import ExamB1List3 from '../views/Lessons/ListeningTasks/ExamB1List3.vue'
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy'
@@ -111,6 +114,9 @@ const routes = [
    { path: '/TaskB1List3', name: 'taskB1List3', component: TaskB1List3, meta: {requiresAuth: true}},
    { path: '/TaskB1List4', name: 'taskB1List4', component: TaskB1List4, meta: {requiresAuth: true}},
    { path: '/TaskB1List5', name: 'taskB1List5', component: TaskB1List5, meta: {requiresAuth: true}},
+   { path: '/ExamB1List1', name: 'ExamB1List1', component: ExamB1List1, meta: {requiresAuth: true}},
+   { path: '/ExamB1List2', name: 'ExamB1List2', component: ExamB1List2, meta: {requiresAuth: true}},
+   { path: '/ExamB1List3', name: 'ExamB1List3', component: ExamB1List3, meta: {requiresAuth: true}},
    { path: '/ExamB1PPS', name: 'examB1PPS', component: ExamB1PPS, meta: {requiresAuth: true}},
    { path: '/ExamB1PPC', name: 'examB1PPC', component: ExamB1PPC, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
