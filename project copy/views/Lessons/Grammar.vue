@@ -174,7 +174,6 @@ data: function()
     },
         beforeUpdate: function() //Before refreshing!
     {
-      console.log(this.IsInGrammar);
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {

@@ -17,9 +17,13 @@
                         <template #button-content>
                             <b-icon icon="list" font-scale="3"></b-icon>
                         </template>
-                        <b-dropdown-item type="button" class="btn" to="/">Lessons</b-dropdown-item>
-                        <b-dropdown-item type="button" class="btn" to="/">Quizes</b-dropdown-item>
-                        <b-dropdown-item type="button" class="btn" to="/">Progress</b-dropdown-item>
+                        <b-dropdown-item type="button" class="btn bg-red" to="/UserPage">User Menu</b-dropdown-item>
+                        <b-dropdown-divider></b-dropdown-divider>
+                        <b-dropdown-item variant="primary" type="button" class="btn" to="/Speaking">Speaking</b-dropdown-item>
+                        <b-dropdown-item variant="success" type="button" class="btn" to="/Writing">Writing</b-dropdown-item>
+                        <b-dropdown-item variant="info" type="button" class="btn" to="/Grammar">Grammar</b-dropdown-item>
+                        <b-dropdown-item variant="danger" type="button" class="btn" to="/Reading">Reading</b-dropdown-item>
+                        <b-dropdown-item variant="warning" type="button" class="btn" to="/Listening">Listening</b-dropdown-item>
                     </b-dropdown>
                 </b-col>
             <b-col class="offset-xl-2 col-xl-2 col-8 text-success text-center mt-auto mb-auto"><LoggedInButton></LoggedInButton></b-col>
