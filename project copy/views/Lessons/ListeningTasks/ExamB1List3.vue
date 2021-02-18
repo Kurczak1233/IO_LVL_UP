@@ -167,15 +167,15 @@ function TaskBuilder() {
     }
 }
 let task = (new TaskBuilder()).setId("1").userChoice(null)
-        .setDescription("Speaker 1 speaks about:").setAnswear1("computer games prevent children learning other languages").setAnswear2("has been learning").setAnswear3("has been learned").setAnswear4("have been learned").correctAnswear("has been learning").build();
+        .setDescription("Speaker 1 speaks about:").setAnswear1("Computer games prevent children learning other languages").setAnswear2("Computer games do not prevent children learning other languages").setAnswear3("Computer games are in general very beneficial").setAnswear4("Children are overwhelmed by computer games").correctAnswear("Computer games prevent children learning other languages").build();
 let task2 = (new TaskBuilder()).setId("2").userChoice(null)
-       .setDescription("Speaker 2 speaks about:").setAnswear1("has been smoking").setAnswear2("have been smoking").setAnswear3("have smoked").setAnswear4("has smoked").correctAnswear("has been smoking").build();
+       .setDescription("Speaker 2 speaks about:").setAnswear1("The nature of computer games could improve society").setAnswear2("Restrictions are discouraging gamers from buying games legally").setAnswear3("Computer games are encouraging gamers from buying games legally").setAnswear4("People are unnecessarily worried about the harmful effects of gaming").correctAnswear("Restrictions are discouraging gamers from buying games legally").build();
 let task3 = (new TaskBuilder()).setId("3").userChoice(null)
-      .setDescription("Speaker 3 speaks about:").setAnswear1("has you have wait").setAnswear2("have wait").setAnswear3("have you been waiting").setAnswear4("has been waiting").correctAnswear("have you been waiting").build();
+      .setDescription("Speaker 3 speaks about:").setAnswear1("Computer games do not prevent children learning other languages").setAnswear2("Game regulators need to take several things into account").setAnswear3("Game regulators can be careless while taking things into account").setAnswear4("Games are very addictive").correctAnswear("Game regulators need to take several things into account").build();
 let task4 = (new TaskBuilder()).setId("4").userChoice(null)
-      .setDescription("Speaker 4 speaks about:").setAnswear1("have see").setAnswear2("have not been seeing").setAnswear3("have not seen").setAnswear4("has been seeing").correctAnswear("have not seen").build();
+      .setDescription("Speaker 4 speaks about:").setAnswear1("We should be aware of negative consequences of gaming").setAnswear2("Too many children are addicted to computer games").setAnswear3("Games are worthless and we should not rely on them in any way").setAnswear4("The nature of computer games could improve society").correctAnswear("The nature of computer games could improve society").build();
 let task5 = (new TaskBuilder()).setId("5").userChoice(null)
-      .setDescription("Speaker 5 speaks about:").setAnswear1("Have he been studying").setAnswear2("Has he been studying").setAnswear3("Did he studied").setAnswear4("Have he studied").correctAnswear("Has he been studying").build();
+      .setDescription("Speaker 5 speaks about:").setAnswear1("Restrictions are discouraging gamers from buying games legally").setAnswear2("The nature of computer games could improve society").setAnswear3("People are unnecessarily worried about the harmful effects of gaming").setAnswear4("The nature of gaming remains undiscovered").correctAnswear("People are unnecessarily worried about the harmful effects of gaming").build();
 let taskList = [task, task2, task3, task4, task5];
 
 export default {
