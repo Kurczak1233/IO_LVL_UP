@@ -23,8 +23,8 @@
         <b-row id="grammar-title-content">
           <b-col class="col-12 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List1" class="text-success" v-if="solvedB1List3 === true" id="TaskB1List1">Listening 3 practise</router-link><router-link to="/TaskB1List1" class="text-danger" v-else id="TaskB1List3">Listening 1 practise</router-link></b-col> 
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List2" class="text-success" v-if="solvedB1List4 === true" id="TaskB1List2">Listening 4 practise</router-link><router-link to="/TaskB1List2" class="text-danger" v-else id="TaskB1List4">Listening 2 practise</router-link></b-col> 
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List1" class="text-success" v-if="solvedB1List1 === true" id="TaskB1List1">Listening 3 practise</router-link><router-link to="/TaskB1List1" class="text-danger" v-else id="TaskB1List3">Listening 1 practise</router-link></b-col> 
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List2" class="text-success" v-if="solvedB1List2 === true" id="TaskB1List2">Listening 4 practise</router-link><router-link to="/TaskB1List2" class="text-danger" v-else id="TaskB1List4">Listening 2 practise</router-link></b-col> 
           </b-col>
           <b-col class="col-12 col-md-4 mt-3 mt-md-0 text-center">
             <p>Exam</p>
@@ -79,7 +79,7 @@
         <b-row id="grammar-title-content">
           <b-col class="col-12 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List5" class="text-success" v-if="solvedB1List5 === true" id="TaskB1List5">FCE preparation task 1</router-link><router-link to="/TaskB1PPC1" class="text-danger" v-else id="TaskB1PPC1">FCE preparation task 1</router-link></b-col> 
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List5" class="text-success" v-if="solvedB1List5 === true" id="TaskB1List5">FCE preparation task 1</router-link><router-link to="/TaskB1List5" class="text-danger" v-else id="TaskB1PPC1">FCE preparation task 1</router-link></b-col> 
           </b-col>
           <b-col class="col-12 col-md-4 mt-3 mt-md-0 text-center">
             <p>Exam</p>
@@ -103,54 +103,6 @@
       </b-col>
     </b-row>
   </b-container>
-<b><h3><i>Kendall Jenner</i></h3></b>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="row">1</th>
-      <td>Kendall spends a load of time in her house. </td>
-      <td>True</td>
-      <td>False x</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">2</th>
-      <td>She used to walk dogs for a living.</td>
-      <td>True x</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Cancelled flights piss her off</td>
-      <td>True</td>
-      <td>False x</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>She spent a fortune on a vehicle.</td>
-      <td>True x</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Chloe is her least favourite sister.</td>
-      <td>True</td>
-      <td>False x</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>She wishes she could become more independent.</td>
-      <td>True </td>
-      <td>False x</td>
-    </tr>
-      </tbody>
-</table>
-<b-row class="mt-2 mb-2">
-  <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/listening.mp3?raw=true" controls ></audio>
-
-  </b-col>
-</b-row>   
 </body>
 </template>
 

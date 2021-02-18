@@ -26,6 +26,7 @@ import AboutUs from '../views/AboutUs.vue'
 import Begginer from '../views/Begginer.vue'
 import Advanced from '../views/Advanced.vue'
 import PlacementTest from '../views/PlacementTest.vue'
+//Grammar//
 import TheoryB1PPS from '../views/Lessons/GrammarTheory/TheoryB1PPS.vue'
 import TheoryB1PPC from '../views/Lessons/GrammarTheory/TheoryB1PPC.vue'
 import TaskB1PPS1 from '../views/Lessons/GrammarTasks/TaskB1PPS1.vue'
@@ -36,6 +37,12 @@ import TaskB1PPC2 from '../views/Lessons/GrammarTasks/TaskB1PPC2.vue'
 import TaskB1PPC3 from '../views/Lessons/GrammarTasks/TaskB1PPC3.vue'
 import ExamB1PPS from '../views/Lessons/GrammarTasks/ExamB1PPS.vue'
 import ExamB1PPC from '../views/Lessons/GrammarTasks/ExamB1PPC.vue'
+//Listeing//
+import TaskB1List1 from '../views/Lessons/ListeningTasks/TaskB1List1.vue'
+import TaskB1List2 from '../views/Lessons/ListeningTasks/TaskB1List2.vue'
+import TaskB1List3 from '../views/Lessons/ListeningTasks/TaskB1List3.vue'
+import TaskB1List4 from '../views/Lessons/ListeningTasks/TaskB1List4.vue'
+import TaskB1List5 from '../views/Lessons/ListeningTasks/TaskB1List5.vue'
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy'
@@ -99,6 +106,11 @@ const routes = [
    { path: '/TaskB1PPC1', name: 'taskB1PPC1', component: TaskB1PPC1, meta: {requiresAuth: true}},
    { path: '/TaskB1PPC2', name: 'taskB1PPC2', component: TaskB1PPC2, meta: {requiresAuth: true}},
    { path: '/TaskB1PPC3', name: 'taskB1PPC3', component: TaskB1PPC3, meta: {requiresAuth: true}},
+   { path: '/TaskB1List1', name: 'taskB1List1', component: TaskB1List1, meta: {requiresAuth: true}},
+   { path: '/TaskB1List2', name: 'taskB1List2', component: TaskB1List2, meta: {requiresAuth: true}},
+   { path: '/TaskB1List3', name: 'taskB1List3', component: TaskB1List3, meta: {requiresAuth: true}},
+   { path: '/TaskB1List4', name: 'taskB1List4', component: TaskB1List4, meta: {requiresAuth: true}},
+   { path: '/TaskB1List5', name: 'taskB1List5', component: TaskB1List5, meta: {requiresAuth: true}},
    { path: '/ExamB1PPS', name: 'examB1PPS', component: ExamB1PPS, meta: {requiresAuth: true}},
    { path: '/ExamB1PPC', name: 'examB1PPC', component: ExamB1PPC, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
