@@ -104,10 +104,10 @@ In the same way, all those years of classes add up to a fit-for-purpose dancing 
 
 But they should not be misled: there is a difference between hard work and hardship. Dancers have an everyday familiarity with the first. Hardship it isn't.
 
-  <button type="button" v-on:click="checkForm" class="btn btn-primary my-1">Check answears</button>
+  <button type="button" v-on:click="checkForm" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
 </form>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read3: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read4: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -123,7 +123,7 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1Read3: false,
+          solvedB1Read4: false,
           answear1: '',
           answear2: '',
           answear3: '',
@@ -135,12 +135,10 @@ export default {
     methods:
     {
         checkForm: function() {
-                console.log(this.answear1);
-                console.log(this.answear2);
                 let correctAnswears = ["D", "G", "F", "A", "E", "C"];
                 let answearsIds =["Answear1", "Answear2", "Answear3", "Answear4", "Answear5", "Answear6"];
                 let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
-                console.log(correctAnswears[0]); //OK
+                console.log(correctAnswears[0]);
                 for(let i = 0; i<correctAnswears.length;i++)
                 {
                     if(correctAnswears[i] === answears[i])
@@ -168,9 +166,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1Read3 = true;
+      this.solvedB1Read4 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1Read3: this.solvedB1Read3} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1Read4: this.solvedB1Read4} ,{merge:true})
   }
     }
 }
