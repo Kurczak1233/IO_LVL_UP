@@ -88,7 +88,7 @@
         </b-row>
             <b-row class="mt-4 mb-3">
                <b-col class="text-center">
-                   <audio src="https://raw.githubusercontent.com/Kurczak1233/IO_LVL_UP/main/project%20copy/src/assets/Exam%203%20Listening.mp3" controls ></audio>
+                   <audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/List%20B1%20Exam%201.mp3?raw=true" controls ></audio>
                 </b-col>
             </b-row>
     </b-container>

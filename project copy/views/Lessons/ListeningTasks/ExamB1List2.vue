@@ -88,7 +88,7 @@
         </b-row>
             <b-row class="mt-4 mb-3">
                <b-col class="text-center">
-                   <audio src="https://raw.githubusercontent.com/Kurczak1233/IO_LVL_UP/main/project%20copy/src/assets/Exam%203%20Listening.mp3" controls ></audio>
+                   <audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/List%20b1%20exam%202.mp3?raw=true" controls ></audio>
                 </b-col>
             </b-row>
     </b-container>
@@ -110,16 +110,15 @@
 <script>
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
-function Task(id, description, answear1, answear2, answear3, answear4, correctAnswear, userChoice){
+function Task(id, description, answear1, answear2, answear3, correctAnswear, userChoice){
     this.id = id;
     this.description = description;
     this.answear1 = answear1
     this.answear2 = answear2
     this.answear3 = answear3
-    this.answear4 = answear4
     this.correctAnswear = correctAnswear
     this.userChoice = userChoice
-    this.options = [answear1, answear2, answear3, answear4]
+    this.options = [answear1, answear2, answear3]
 }
 
 function TaskBuilder() {
@@ -145,10 +144,6 @@ function TaskBuilder() {
             this.answear3 = answear3;
             return this;
         },
-        setAnswear4: function(answear4) {
-            this.answear4 = answear4;
-            return this;
-        },
         correctAnswear: function(correctAnswear) {
             this.correctAnswear = correctAnswear;
             return this;
@@ -167,16 +162,22 @@ function TaskBuilder() {
     }
 }
 let task = (new TaskBuilder()).setId("1").userChoice(null)
-        .setDescription("Speaker 1 speaks about:").setAnswear1("Computer games prevent children learning other languages").setAnswear2("Computer games do not prevent children learning other languages").setAnswear3("Computer games are in general very beneficial").setAnswear4("Children are overwhelmed by computer games").correctAnswear("Computer games prevent children learning other languages").build();
+        .setDescription("You hear someone talking about camping. What advice does she give?").setAnswear1("Avoid using shower gels.").setAnswear2("Avoid bathing in the water.").setAnswear3("Avoid pitching a tent near water.").correctAnswear("Avoid using shower gels.").build();
 let task2 = (new TaskBuilder()).setId("2").userChoice(null)
-       .setDescription("Speaker 2 speaks about:").setAnswear1("The nature of computer games could improve society").setAnswear2("Restrictions are discouraging gamers from buying games legally").setAnswear3("Computer games are encouraging gamers from buying games legally").setAnswear4("People are unnecessarily worried about the harmful effects of gaming").correctAnswear("Restrictions are discouraging gamers from buying games legally").build();
+       .setDescription("You hear someone having a conversation. What is the woman doing?").setAnswear1(" Accusing someone of causing a problem.").setAnswear2("Suggesting doing an activity.").setAnswear3("Apologising for a situation.").correctAnswear("Suggesting doing an activity.").build();
 let task3 = (new TaskBuilder()).setId("3").userChoice(null)
-      .setDescription("Speaker 3 speaks about:").setAnswear1("Computer games do not prevent children learning other languages").setAnswear2("Game regulators need to take several things into account").setAnswear3("Game regulators can be careless while taking things into account").setAnswear4("Games are very addictive").correctAnswear("Game regulators need to take several things into account").build();
+      .setDescription("You hear someone talking on the telephone. What does the speaker want the listener to do?").setAnswear1("Meet someone.").setAnswear2("Give someone a lift.").setAnswear3("Call someone.").correctAnswear("Call someone.").build();
 let task4 = (new TaskBuilder()).setId("4").userChoice(null)
-      .setDescription("Speaker 4 speaks about:").setAnswear1("We should be aware of negative consequences of gaming").setAnswear2("Too many children are addicted to computer games").setAnswear3("Games are worthless and we should not rely on them in any way").setAnswear4("The nature of computer games could improve society").correctAnswear("The nature of computer games could improve society").build();
+      .setDescription("You hear someone talking about arguments. What is the speaker doing?").setAnswear1("Explaining a personal opinion.").setAnswear2("Expressing regret.").setAnswear3("Giving advice.").correctAnswear("Explaining a personal opinion.").build();
 let task5 = (new TaskBuilder()).setId("5").userChoice(null)
-      .setDescription("Speaker 5 speaks about:").setAnswear1("Restrictions are discouraging gamers from buying games legally").setAnswear2("The nature of computer games could improve society").setAnswear3("People are unnecessarily worried about the harmful effects of gaming").setAnswear4("The nature of gaming remains undiscovered").correctAnswear("People are unnecessarily worried about the harmful effects of gaming").build();
-let taskList = [task, task2, task3, task4, task5];
+      .setDescription("You hear part of a conversation. What are the speaker's intentions?").setAnswear1("To explain how she was able to win something.").setAnswear2("To extend an invitation.").setAnswear3("To advertise her good fortune.").correctAnswear("To extend an invitation.").build();
+let task6 = (new TaskBuilder()).setId("5").userChoice(null)
+      .setDescription("You hear someone talking about a magazine. What is the speaker doing?").setAnswear1("Describing the attributes of the magazine.").setAnswear2("Persuading people to buy the magazine.").setAnswear3("Explaining why it doesn't sell very well.").correctAnswear("Describing the attributes of the magazine.").build();
+let task7 = (new TaskBuilder()).setId("5").userChoice(null)
+      .setDescription("You hear someone speaking about their job. What is their job?").setAnswear1("Estate agent.").setAnswear2("Customer relations.").setAnswear3("Travel agent.").correctAnswear("Customer relations.").build();
+let task8 = (new TaskBuilder()).setId("5").userChoice(null)
+      .setDescription("You hear someone talking about music. What are they doing?").setAnswear1("Describing why music is important for children.").setAnswear2("Advertising a forthcoming event.").setAnswear3("Advertising a forthcoming event.").build();
+let taskList = [task, task2, task3, task4, task5, task6, task7, task8];
 
 export default {
     name: 'Speaking',
