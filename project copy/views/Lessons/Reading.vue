@@ -36,14 +36,14 @@
         <b-row id="grammar-title-content">
           <b-col class="col-12 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task1" class="text-success" v-if="solvedB1Read1 === true" id="ReadingB1Task1">FCE preparation task 1</router-link><router-link to="/TaskB1PPS1" class="text-danger" v-else id="TaskB1PPS1">FCE preparation task 1</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task2" class="text-success" v-if="solvedB1Read2 === true" id="ReadingB1Task2">Reading task 2</router-link><router-link to="/TaskB1PPS2" class="text-danger" v-else id="TaskB1PPS2">Reading task 2</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task3" class="text-success" v-if="solvedB1Read3 === true" id="ReadingB1Task3">Reading task 3</router-link><router-link to="/TaskB1PPS3" class="text-danger" v-else id="TaskB1PPS3">Reading task 3</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task1" class="text-success" v-if="solvedB1Read1 === true" id="ReadingB1Task1">FCE preparation task 1</router-link><router-link to="/ReadingB1Task1" class="text-danger" v-else id="ReadingB1Task1">FCE preparation task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task2" class="text-success" v-if="solvedB1Read2 === true" id="ReadingB1Task2">Reading task 2</router-link><router-link to="/ReadingB1Task2" class="text-danger" v-else id="ReadingB1Task2">Reading task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task3" class="text-success" v-if="solvedB1Read3 === true" id="ReadingB1Task3">Reading task 3</router-link><router-link to="/ReadingB1Task3" class="text-danger" v-else id="ReadingB1Task3">Reading task 3</router-link></b-col>
           </b-col>
           <b-col class="col-12 col-md-4 text-center">
             <p>Exam</p>
             <div v-if="solvedB1Read1 === true && solvedB1Read2 === true && solvedB1Read3 === true">
-            <router-link :to="{name: 'examB1PPS', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1Read1Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <router-link :to="{name: 'ExamB1Reading1', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1Read1Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -78,13 +78,13 @@
         <b-row id="grammar-title-content">
           <b-col class="col-12 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task4" class="text-success" v-if="solvedB1Read4 === true" id="ReadingB1Task4">FCE preparation task 1</router-link><router-link to="/TaskB1PPC1" class="text-danger" v-else id="TaskB1PPC1">FCE preparation task 1</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task5" class="text-success" v-if="solvedB1Read5 === true" id="ReadingB1Task5">Reading task 2</router-link><router-link to="/TaskB1PPC2" class="text-danger" v-else id="TaskB1PPC2">Reading task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task4" class="text-success" v-if="solvedB1Read4 === true" id="ReadingB1Task4">FCE preparation task 1</router-link><router-link to="/ReadingB1Task4" class="text-danger" v-else id="ReadingB1Task4">FCE preparation task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task5" class="text-success" v-if="solvedB1Read5 === true" id="ReadingB1Task5">Reading task 2</router-link><router-link to="/ReadingB1Task5" class="text-danger" v-else id="ReadingB1Task5">Reading task 2</router-link></b-col>
           </b-col>
           <b-col class="col-12 col-md-4 text-center">
             <p>Exam</p>
             <div v-if="solvedB1Read4 === true && solvedB1Read5 === true">
-            <router-link :to="{name: 'examB1PPC', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1Read2Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <router-link :to="{name: 'ExamB1Reading2', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1Read2Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -146,14 +146,13 @@ data: function()
     querySnapshot.forEach((doc) => { 
         this.level = doc.data().level;
         console.log(this.level);
-        this.solvedB1List1 = doc.data().solvedB1List1;
-        this.solvedB1List2 = doc.data().solvedB1List2;
-        this.solvedB1List3 = doc.data().solvedB1List3;
-        this.solvedB1List4 = doc.data().solvedB1List4;
-        this.solvedB1List5 = doc.data().solvedB1List5;
-        this.ExamB1List1Passed = doc.data().ExamB1List1Passed;
-        this.ExamB1List2Passed = doc.data().ExamB1List2Passed;
-        this.ExamB1List3Passed = doc.data().ExamB1List3Passed;
+        this.solvedB1Read1 = doc.data().solvedB1Read1;
+        this.solvedB1Read2 = doc.data().solvedB1Read2;
+        this.solvedB1Read3 = doc.data().solvedB1Read3;
+        this.solvedB1Read4 = doc.data().solvedB1Read4;
+        this.solvedB1Read5 = doc.data().solvedB1Read5;
+        this.ExamB1Read1Passed = doc.data().ExamB1Read1Passed;
+        this.ExamB1Read2Passed = doc.data().ExamB1Read2Passed;
         });
     });
     },
