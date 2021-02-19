@@ -10,51 +10,60 @@
         </b-row>
     </b-container>
      <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-3" fluid>
-        <b><h3><i>Kendall Jenner</i></h3></b>
+        <b><h3><i>Listening 4</i></h3></b>
             <table class="table table-striped">
-            <thead>
                 <tr>
                 <th scope="row">1</th>
-                <th>Kendall spends a load of time in her house. </th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>When asked why she rowed across the Pacific, Ros explained that</th>
+                <td v-on:click="inputClickedFalse">she feels it was a mistake.</td>
+                <td v-on:click="inputClickedFalse">she had very strong reasons.</td>
+                <td v-on:click="inputClickedRight">she wasn't sure.</td>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
                 <th scope="row">2</th>
-                <th>She used to walk dogs for a living.</th>
-                <td v-on:click="inputClickedRight">True</td>
-                <td v-on:click="inputClickedFalse">False</td>
+                <th>Why did Ros choose to row rather than do another activity?</th>
+                <td v-on:click="inputClickedRight">She felt it suited her personality.</td>
+                <td v-on:click="inputClickedFalse">She couldn't explain it.</td>
+                <td v-on:click="inputClickedFalse">She had some experience of rowing.</td>
                 </tr>
                 <tr>
                 <th scope="row">3</th>
-                <th>Cancelled flights piss her off</th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>The time Ros spent at university prepared her for a career as</th>
+                <td v-on:click="inputClickedFalse">an adviser.</td>
+                <td v-on:click="inputClickedRight">a legal analyst.</td>
+                <td v-on:click="inputClickedFalse">an entrepreneur.</td>
+                </tr>
+                <tr>
+                <th scope="row">4</th>
+                <th>How does Ros describe her life in London before undertaking her adventure?</th>
+                <td v-on:click="inputClickedFalse">Satisfying.</td>
+                <td v-on:click="inputClickedFalse">Unfulfilled.</td>
+                <td v-on:click="inputClickedRight">Challenging.</td>
                 </tr>
                 <tr>
                 <th scope="row">5</th>
-                <th>She spent a fortune on a vehicle.</th>
-                <td v-on:click="inputClickedRight">True</td>
-                <td v-on:click="inputClickedFalse">False</td>
+                <th>When speaking about social media, what point does Ros make about the timing of her row?</th>
+                <td v-on:click="inputClickedRight">She was fortunate to do it at the right time.</td>
+                <td v-on:click="inputClickedFalse">She should have waited.</td>
+                <td v-on:click="inputClickedFalse">She should have done it earlier.</td>
                 </tr>
                 <tr>
                 <th scope="row">6</th>
-                <th>Chloe is her least favourite sister.</th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>Ros describes the incident when she was rescued by the US coast guard</th>
+                <td v-on:click="inputClickedFalse">with indifference. </td>
+                <td v-on:click="inputClickedRight">with gratitude.</td>
+                <td v-on:click="inputClickedFalse">with regret.</td>
                 </tr>
                 <tr>
                 <th scope="row">7</th>
-                <th>She wishes she could become more independent.</th>
-                <td v-on:click="inputClickedFalse">True </td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>How does Ros describe the experience of being airlifted into a helicopter?</th>
+                <td v-on:click="inputClickedFalse">It was very unpleasant. </td>
+                <td v-on:click="inputClickedFalse">It was nothing out of the ordinary.</td>
+                <td v-on:click="inputClickedRight">It was part of the adventure she was having.</td>
                 </tr>
-                </tbody>
             </table>
             <b-row class="mt-4 mb-3">
-            <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/listening.mp3?raw=true" controls ></audio>
+            <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/List%20Task%204.mp3?raw=true" controls ></audio>
 
             </b-col>
             </b-row>

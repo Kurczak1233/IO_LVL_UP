@@ -23,8 +23,8 @@
         <b-row id="grammar-title-content">
           <b-col class="col-12 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List1" class="text-success" v-if="solvedB1List1 === true" id="TaskB1List1">Listening 3 practise</router-link><router-link to="/TaskB1List1" class="text-danger" v-else id="TaskB1List3">Listening 1 practise</router-link></b-col> 
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List2" class="text-success" v-if="solvedB1List2 === true" id="TaskB1List2">Listening 4 practise</router-link><router-link to="/TaskB1List2" class="text-danger" v-else id="TaskB1List4">Listening 2 practise</router-link></b-col> 
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List1" class="text-success" v-if="solvedB1List1 === true" id="TaskB1List1">Listening 1 practise</router-link><router-link to="/TaskB1List1" class="text-danger" v-else id="TaskB1List3">Listening 1 practise</router-link></b-col> 
+            <b-col class="mt-1 mb-1"><router-link to="/TaskB1List2" class="text-success" v-if="solvedB1List2 === true" id="TaskB1List2">Listening 2 practise</router-link><router-link to="/TaskB1List2" class="text-danger" v-else id="TaskB1List4">Listening 2 practise</router-link></b-col> 
           </b-col>
           <b-col class="col-12 col-md-4 mt-3 mt-md-0 text-center">
             <p>Exam</p>
