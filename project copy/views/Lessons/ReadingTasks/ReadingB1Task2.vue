@@ -27,15 +27,18 @@
    </p>
 <b-container>
          <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                  <b-col><b>1. What can be inferred from the text?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">a) This is Holly’s first time living away from home.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) Holly visited the house before deciding to move in. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) Holly is new to this part of the town.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) Holly already knows someone who lives in this house.</b-col>
             </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
-                <b-col><b>2. Where is Knox Road?</b></b-col>
+         </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                  <b-col><b>2. Where is Knox Road?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">a) in a town centre.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) in a suburb. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) in a village.</b-col>
@@ -44,14 +47,17 @@
          </b-row>
          <hr>
             <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
-                 <b-col><b>3. Which word best describes 126 Knox Road?</b></b-col>
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                <b-col><b>3. Which word best describes 126 Knox Road?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) austere.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) run-down. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) quaint.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) pristine.</b-col>
             </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
+         </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                 <b-col><b>4. What can be inferred about the character of Holly?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">a) She is a daydreamer.  </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) She is ambitious. </b-col>
@@ -60,15 +66,18 @@
             </b-col>
          </b-row>
          <hr>
-           <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
-                 <b-col><b>5.  Which one is NOT true of 126 Knox Road?</b></b-col>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                <b-col><b>5.  Which one is NOT true of 126 Knox Road?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">a) There isn’t a front garden.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) The window frames need painting. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) There isn’t a doorbell or a door knocker.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) The downstairs curtains are drawn.</b-col>
             </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
+         </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                 <b-col><b>6. What can be inferred about the man who opened the door?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) He owns the property. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) He had not expected Holly. </b-col>
@@ -77,15 +86,18 @@
             </b-col>
          </b-row>
          <hr>
-                     <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
-                 <b-col><b>7. Which one is NOT true of Holly’s room?</b></b-col>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                <b-col><b>7. Which one is NOT true of Holly’s room?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) It is on the fourth floor.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) It is furnished.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">c) It has an en suite bathroom.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) It is at the front of the house.</b-col>
             </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
+         </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                 <b-col><b>8. Which best describes the change in Holly’s emotions?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) nervous → optimistic.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) optimistic → disillusioned. </b-col>

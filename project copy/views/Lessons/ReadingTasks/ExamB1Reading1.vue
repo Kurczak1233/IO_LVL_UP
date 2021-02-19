@@ -20,7 +20,6 @@
         </b-row>
     </b-container>
      <b-container v-if="formalConsent === true && PassedOrNot === false" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
-        <b><h3><i>Social networks</i></h3></b>
 <b>Extract</b>
 
 <p>Six months ago I made a rash promise. The leader of the youth club in our village rang me in March saying, ''We're thinking of running a children's playscheme for a day in October half-term. Would you be prepared to help?'' My response was ''Sure, why not?'' In truth I was a little flattered to be asked, even though working as a care assistant with old people hardly qualified me for the role. Still, I duly put the date in my diary and of course I forgot all about it. I don't know if you've noticed this but time has a habit of speeding along faster than a police car chasing a robber and, before I knew it, the day was dawning.</p>
@@ -38,85 +37,64 @@
      <b-container>
          <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. According to the text, social networks:</b></b-col>
-                    <b-form-radio v-model="answear1" name="some-radios" value="A">Option A</b-form-radio>
-                    <b-form-radio v-model="answear1" name="some-radios" value="B">Option B</b-form-radio>
-                    <b-form-radio v-model="answear1" name="some-radios" value="C">Option B</b-form-radio>
-                    <b-form-radio v-model="answear1" name="some-radios" value="D">Option B</b-form-radio>
+                 <b-col><b>1. When the first day of the job arrived the writer was surprised</b></b-col>
+                    <b-form-radio v-model="answear1" name="answear1" value="A">that the day had come round so quickly.</b-form-radio>
+                    <b-form-radio v-model="answear1" name="answear1" value="B">because she'd forgotten to write down the date.</b-form-radio>
+                    <b-form-radio v-model="answear1" name="answear1" value="C">because she witnessed a car chase on the way.</b-form-radio>
+                    <b-form-radio v-model="answear1" name="answear1" value="D">that she woke up at dawn.</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
-         <b-row class="mt-3 mb-3">
+            <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. According to the text, social networks:</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) advertise on business web sites.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) are being used by businesses for marketing. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) are about friendships.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) can damage business reputations.</b-col>
-            </b-col>
-         </b-row>
-         <hr>
-         <b-row class="mt-3 mb-3">
-             <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. According to the text, social networks:</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) advertise on business web sites.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) are being used by businesses for marketing. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) are about friendships.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) can damage business reputations.</b-col>
-            </b-col>
-         </b-row>
-         <hr>
-         <b-row class="mt-3 mb-3">
-             <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. According to the text, social networks:</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) advertise on business web sites.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) are being used by businesses for marketing. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) are about friendships.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) can damage business reputations.</b-col>
-            </b-col>
-         </b-row>
-         <hr>
-         <b-row class="mt-3 mb-3">
-             <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. According to the text, social networks:</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) advertise on business web sites.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) are being used by businesses for marketing. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) are about friendships.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) can damage business reputations.</b-col>
-            </b-col>
-         </b-row>
-         <hr>
-         <b-row class="mt-3 mb-3">
-             <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. According to the text, social networks:</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) advertise on business web sites.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) are being used by businesses for marketing. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) are about friendships.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) can damage business reputations.</b-col>
-            </b-col>
-         </b-row>
-         <hr>
-         <b-row class="mt-3 mb-3">
-             <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. According to the text, social networks:</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) advertise on business web sites.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) are being used by businesses for marketing. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) are about friendships.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) can damage business reputations.</b-col>
-            </b-col>
-         </b-row>
+                 <b-col><b>2. When the writer arrived to start her job she</b></b-col>
+                    <b-form-radio v-model="answear2" name="answear2" value="A">put the children into pairs.</b-form-radio>
+                    <b-form-radio v-model="answear2" name="answear2" value="B">realised she should have done more preparation.</b-form-radio>
+                    <b-form-radio v-model="answear2" name="answear2" value="C">felt confident she could deal with 10 and 11 year</b-form-radio>
+                    <b-form-radio v-model="answear2" name="answear2" value="D">saw the children had brought their own electronic games to play with.</b-form-radio>
+                </b-col>
+            </b-row>
          <hr>
             <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. According to the text, social networks:</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) advertise on business web sites.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) are being used by businesses for marketing. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) are about friendships.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) can damage business reputations.</b-col>
-            </b-col>
-         </b-row>
+                 <b-col><b>3. According to the writer, the parents were</b></b-col>
+                    <b-form-radio v-model="answear3" name="answear3" value="A"> happy to stay with their children all day.</b-form-radio>
+                    <b-form-radio v-model="answear3" name="answear3" value="B">worried about children from the other schools.</b-form-radio>
+                    <b-form-radio v-model="answear3" name="answear3" value="C">nervous that their children might not behave themselves.</b-form-radio>
+                    <b-form-radio v-model="answear3" name="answear3" value="D">glad to leave their children.</b-form-radio>
+                </b-col>
+            </b-row>
          <hr>
-
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>4. The writer's best moment</b></b-col>
+                    <b-form-radio v-model="answear4" name="answear4" value="A">occurred in the middle of the day.</b-form-radio>
+                    <b-form-radio v-model="answear4" name="answear4" value="B">took her by surprise.</b-form-radio>
+                    <b-form-radio v-model="answear4" name="answear4" value="C">was hard to put into words.</b-form-radio>
+                    <b-form-radio v-model="answear4" name="answear4" value="D">was when the day was over.</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>5. According to the writer, adults</b></b-col>
+                    <b-form-radio v-model="answear5" name="answear5" value="A">think that being a child is a privilege.</b-form-radio>
+                    <b-form-radio v-model="answear5" name="answear5" value="B">sometimes forget that children have worries too.</b-form-radio>
+                    <b-form-radio v-model="answear5" name="answear5" value="C">are usually exhausted by bringing up their children.</b-form-radio>
+                    <b-form-radio v-model="answear5" name="answear5" value="D">don't have a stressful life.</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>6. What is the writer's attitude by the end of the day?</b></b-col>
+                    <b-form-radio v-model="answear6" name="answear6" value="A">She could imagine doing the job again next time.</b-form-radio>
+                    <b-form-radio v-model="answear6" name="answear6" value="B">She was sad to say good bye to the chidlren.</b-form-radio>
+                    <b-form-radio v-model="answear6" name="answear6" value="C">She was disappointed with the experience.</b-form-radio>
+                    <b-form-radio v-model="answear6" name="answear6" value="D">He hopes the playscheme will be longer in future.</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
      </b-container>
             <b-row>  
                 <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>

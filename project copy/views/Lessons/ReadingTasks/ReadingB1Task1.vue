@@ -126,6 +126,7 @@
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">d) groups of people separated over wide areas.</b-col>
             </b-col>
          </b-row>
+         <hr>
      </b-container>
             <b-row>  
                 <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
