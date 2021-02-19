@@ -54,6 +54,8 @@ import ReadingB1Task2 from '../views/Lessons/ReadingTasks/ReadingB1Task2.vue'
 import ReadingB1Task3 from '../views/Lessons/ReadingTasks/ReadingB1Task3.vue'
 import ReadingB1Task4 from '../views/Lessons/ReadingTasks/ReadingB1Task4.vue'
 import ReadingB1Task5 from '../views/Lessons/ReadingTasks/ReadingB1Task5.vue'
+import ExamB1Reading1 from '../views/Lessons/ReadingTasks/ExamB1Reading1.vue'
+import ExamB1Reading2 from '../views/Lessons/ReadingTasks/ExamB1Reading2.vue'
 
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
@@ -135,6 +137,8 @@ const routes = [
    { path: '/ReadingB1Task3', name: 'ReadingB1Task3', component: ReadingB1Task3, meta: {requiresAuth: true}},
    { path: '/ReadingB1Task4', name: 'ReadingB1Task4', component: ReadingB1Task4, meta: {requiresAuth: true}},
    { path: '/ReadingB1Task5', name: 'ReadingB1Task5', component: ReadingB1Task5, meta: {requiresAuth: true}},
+   { path: '/ExamB1Reading1', name: 'ExamB1Reading1', component: ExamB1Reading1, meta: {requiresAuth: true}},
+   { path: '/ExamB1Reading2', name: 'ExamB1Reading2', component: ExamB1Reading2, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
    { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},

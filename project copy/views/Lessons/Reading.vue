@@ -36,9 +36,9 @@
         <b-row id="grammar-title-content">
           <b-col class="col-12 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS1" class="text-success" v-if="solvedB1Read1 === true" id="TaskB1PPS1">FCE preparation task 1</router-link><router-link to="/TaskB1PPS1" class="text-danger" v-else id="TaskB1PPS1">FCE preparation task 1</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS2" class="text-success" v-if="solvedB1Read2 === true" id="TaskB1PPS2">Reading task 2</router-link><router-link to="/TaskB1PPS2" class="text-danger" v-else id="TaskB1PPS2">Reading task 2</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPS3" class="text-success" v-if="solvedB1Read3 === true" id="TaskB1PPS3">Reading task 3</router-link><router-link to="/TaskB1PPS3" class="text-danger" v-else id="TaskB1PPS3">Reading task 3</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task1" class="text-success" v-if="solvedB1Read1 === true" id="ReadingB1Task1">FCE preparation task 1</router-link><router-link to="/TaskB1PPS1" class="text-danger" v-else id="TaskB1PPS1">FCE preparation task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task2" class="text-success" v-if="solvedB1Read2 === true" id="ReadingB1Task2">Reading task 2</router-link><router-link to="/TaskB1PPS2" class="text-danger" v-else id="TaskB1PPS2">Reading task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task3" class="text-success" v-if="solvedB1Read3 === true" id="ReadingB1Task3">Reading task 3</router-link><router-link to="/TaskB1PPS3" class="text-danger" v-else id="TaskB1PPS3">Reading task 3</router-link></b-col>
           </b-col>
           <b-col class="col-12 col-md-4 text-center">
             <p>Exam</p>
@@ -78,8 +78,8 @@
         <b-row id="grammar-title-content">
           <b-col class="col-12 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC1" class="text-success" v-if="solvedB1Read4 === true" id="TaskB1PPC1">FCE preparation task 1</router-link><router-link to="/TaskB1PPC1" class="text-danger" v-else id="TaskB1PPC1">FCE preparation task 1</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/TaskB1PPC2" class="text-success" v-if="solvedB1Read5 === true" id="TaskB1PPC2">Reading task 2</router-link><router-link to="/TaskB1PPC2" class="text-danger" v-else id="TaskB1PPC2">Reading task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task4" class="text-success" v-if="solvedB1Read4 === true" id="ReadingB1Task4">FCE preparation task 1</router-link><router-link to="/TaskB1PPC1" class="text-danger" v-else id="TaskB1PPC1">FCE preparation task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task5" class="text-success" v-if="solvedB1Read5 === true" id="ReadingB1Task5">Reading task 2</router-link><router-link to="/TaskB1PPC2" class="text-danger" v-else id="TaskB1PPC2">Reading task 2</router-link></b-col>
           </b-col>
           <b-col class="col-12 col-md-4 text-center">
             <p>Exam</p>
