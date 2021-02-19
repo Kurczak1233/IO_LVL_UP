@@ -65,7 +65,7 @@
         </b-row>
         <b-row class="p-3 text-medium">
           <b-col class="text-center">
-            <router-link to="/TheoryB1PPC">Present perfect continous</router-link>
+            <router-link to="/TheoryB1ReadingTips2">How to improve your test results - pracitcal tips</router-link>
           </b-col>
         </b-row>
       </b-col>

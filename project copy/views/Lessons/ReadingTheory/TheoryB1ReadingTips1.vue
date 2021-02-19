@@ -10,7 +10,7 @@
         <b-container class="col-12 mr-auto ml-auto background-bluish p-3" fluid>
         <b-row>
             <b-col class="text-left margin4">
-        In the last post we began our discussion about improving your listening skills to help prepare for the IELTS examination. In this segment, we’ll continue our discussion of another key area you need to prepare for before taking your exam – Reading.
+        In this segment, we’ll continue our discussion of another key area you need to prepare for before taking your exam – Reading.
 
         Reading English can seem difficult because you might know the spelling of different words, but not necessarily their meanings. Reading comprehension is a fundamental skill everyone learns, regardless of their native language.
 
@@ -49,7 +49,7 @@
         </b-row>
         <b-row>
         <b-col class="text-center mt-3">
-            <p class="text-size-big"><router-link to="/Reading" class="text-primary">Return to grammar</router-link></p>
+            <p class="text-size-big"><router-link to="/Reading" class="text-primary">Return to reading</router-link></p>
         </b-col>
         </b-row>
             </b-container>
