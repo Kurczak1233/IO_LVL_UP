@@ -69,6 +69,7 @@ Has he much more to learn, I wondered. "I've spent an incredible amount of my li
     <option value="G">G</option>
   </select>
 So, would you say it's been plain sailing? "I feel I've been lucky to a degree; many people hit problems breaking into the arts. It can be a vicious circle really. You can't become a member of Equity, which is the actors' and dancers' union, without good contracts. and you can't get good contracts without being a member of Equity. My advice to people who want to get into the arts would be to go out into the world, and try everything else first.
+
   <label class="my-1 mr-2" for="Answear6">6)</label>
   <select v-model="answear6" class="custom-select my-1 mr-sm-2" id="Answear6">
     <option value="A">A</option>

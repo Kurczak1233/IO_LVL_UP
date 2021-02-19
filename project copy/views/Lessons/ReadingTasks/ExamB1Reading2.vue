@@ -118,13 +118,17 @@ A native fruit of West Africa, the fruit was discovered by western explorers aro
 </b-row>
 </form>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {ExamB1Read1Passed: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">End test!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {ExamB1Read1Passed: true}}" ><b-button class="btn btn-warning" type="button">End test!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
 </template>
 
 <script>
+window.onload = function()
+{
+    console.log(this.QuizesCount);
+}
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 export default {
@@ -142,7 +146,23 @@ export default {
           answear5: '',
           answear6: '',
           points: 0,
+          QuizesCount: 2,
+          reading: 0
       }
+    },
+    mounted: function()
+    {
+        var db = firebase.firestore();
+        db.collection(this.email).doc(this.email).get().then((doc) => {
+    if (doc.exists) {
+        this.reading = doc.data().reading;
+
+    } else {
+        console.log("No such document!");
+    }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
     },
     methods:
     {
@@ -150,7 +170,6 @@ export default {
                 let correctAnswears = ["E", "A", "D", "B", "C", "G"];
                 let answearsIds =["Answear1", "Answear2", "Answear3", "Answear4", "Answear5", "Answear6"];
                 let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
-                console.log(correctAnswears[0]);
                 for(let i = 0; i<correctAnswears.length;i++)
                 {
                     if(correctAnswears[i] === answears[i])

@@ -94,7 +94,7 @@ The human body is designed to adapt to the demands we make of it, provided we ma
 
 
 
-In the same way, all those years of classes add up to a fit-for-purpose dancing machine. This level of physical fluency doesn't hurt; it feels good.
+<p>In the same way, all those years of classes add up to a fit-for-purpose dancing machine. This level of physical fluency doesn't hurt; it feels good.</p>
 
   <label class="my-1 mr-2" for="Answear6">6)</label>
   <select v-model="answear6" class="custom-select my-1 mr-sm-2" id="Answear6">

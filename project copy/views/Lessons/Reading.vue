@@ -156,6 +156,17 @@ data: function()
         });
     });
     },
+        created: function()
+    {
+      this.solvedB1Read1 = this.$route.params.solvedB1Read1;
+      this.solvedB1Read2 = this.$route.params.solvedB1Read2;
+      this.solvedB1Read3 = this.$route.params.solvedB1Read3;
+      this.solvedB1Read4 = this.$route.params.solvedB1Read4;
+      this.solvedB1Read5 = this.$route.params.solvedB1Read5;
+      this.ExamB1Read1Passed = this.$route.params.ExamB1Read1Passed;
+      this.ExamB1Read2Passed = this.$route.params.ExamB1Read2Passed;
+
+    },
 //     beforeUpdate: function() //Before refreshing!
 //     {
 //        var db = firebase.firestore();
