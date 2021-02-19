@@ -75,7 +75,7 @@
             </b-col>
             </b-row>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'listen', params: {solvedB1List4: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'listen', params: {solvedB1List2: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -91,7 +91,7 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1List4: false
+          solvedB1List2: false
       }
     },
     methods:
@@ -111,9 +111,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1List4 = true;
+      this.solvedB1List2 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1List4: this.solvedB1List4} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1List2: this.solvedB1List2} ,{merge:true})
   }
     }
 }
