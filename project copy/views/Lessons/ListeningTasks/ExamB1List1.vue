@@ -99,7 +99,7 @@
                 <p v-if="points < 3" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
                 <p v-else-if="points >= 3" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
                 <b-col class="text-center mb-3" >
-                    <router-link :to="{name: 'gram', params: {ExamB1List3Passed: this.ExamB1List3Passed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
+                    <router-link :to="{name: 'listen', params: {ExamB1List3Passed: this.ExamB1List3Passed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>

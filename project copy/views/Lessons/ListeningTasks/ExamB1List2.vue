@@ -76,12 +76,44 @@
             <b-col class="d-flex align-items-center mt-3" >
                 <b-form-radio-group stacked v-model="taskList[4].userChoice" :options="taskList[4].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
-        </b-row>          
+        </b-row>
+        <b-row>
+            <b-col class="text-center text-info pt-2 text-size-big">
+                Question {{taskList[5].id}}
+            </b-col>    
+        </b-row>
+        <b-row>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[5].description}}</b-col>
+            <b-col class="d-flex align-items-center mt-3" >
+                <b-form-radio-group stacked v-model="taskList[5].userChoice" :options="taskList[5].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col class="text-center text-info pt-2 text-size-big">
+                Question {{taskList[6].id}}
+            </b-col>    
+        </b-row>
+        <b-row>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[6].description}}</b-col>
+            <b-col class="d-flex align-items-center mt-3" >
+                <b-form-radio-group stacked v-model="taskList[6].userChoice" :options="taskList[6].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+            </b-col>
+        </b-row>
+                 <b-row>
+            <b-col class="text-center text-info pt-2 text-size-big">
+                Question {{taskList[7].id}}
+            </b-col>    
+        </b-row>
+        <b-row>
+          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[7].description}}</b-col>
+            <b-col class="d-flex align-items-center mt-3" >
+                <b-form-radio-group stacked v-model="taskList[7].userChoice" :options="taskList[7].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+            </b-col>
+        </b-row>                         
         <b-row>
             <b-col class="text-center mb-3 mt-3" >
                 <b-form>
-                   
-                    <button class="btn btn-warning" v-on:click.once="SubmitForm" v-if="taskList[4].userChoice!==null && taskList[3].userChoice!==null && taskList[2].userChoice!==null && taskList[1].userChoice!==null && taskList[0].userChoice!==null" type="button">End test</button>
+                    <button class="btn btn-warning" v-on:click.once="SubmitForm" v-if="taskList[7].userChoice!==null && taskList[6].userChoice!==null && taskList[5].userChoice!==null && taskList[4].userChoice!==null && taskList[3].userChoice!==null && taskList[2].userChoice!==null && taskList[1].userChoice!==null && taskList[0].userChoice!==null" type="button">End test</button>
                      <button class="btn btn-warning" v-else disabled type="button">End test</button>
                 </b-form>
             </b-col>
@@ -96,10 +128,10 @@
      <b-container v-if="PassedOrNot === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-black pt-2 text-size-big">
-                <p v-if="points < 3" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
-                <p v-else-if="points >= 3" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
+                <p v-if="points < 5" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
+                <p v-else-if="points >= 5" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
                 <b-col class="text-center mb-3" >
-                    <router-link :to="{name: 'gram', params: {ExamB1List3Passed: this.ExamB1List3Passed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
+                    <router-link :to="{name: 'listen', params: {ExamB1List2Passed: this.ExamB1List2Passed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>
@@ -157,7 +189,7 @@ function TaskBuilder() {
             return this;
         },
         build: function () {
-            return new Task(this.id, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.userChoice, this.options);
+            return new Task(this.id, this.description, this.answear1, this.answear2,this.answear3, this.correctAnswear, this.userChoice, this.options);
         }
     }
 }
@@ -171,12 +203,12 @@ let task4 = (new TaskBuilder()).setId("4").userChoice(null)
       .setDescription("You hear someone talking about arguments. What is the speaker doing?").setAnswear1("Explaining a personal opinion.").setAnswear2("Expressing regret.").setAnswear3("Giving advice.").correctAnswear("Explaining a personal opinion.").build();
 let task5 = (new TaskBuilder()).setId("5").userChoice(null)
       .setDescription("You hear part of a conversation. What are the speaker's intentions?").setAnswear1("To explain how she was able to win something.").setAnswear2("To extend an invitation.").setAnswear3("To advertise her good fortune.").correctAnswear("To extend an invitation.").build();
-let task6 = (new TaskBuilder()).setId("5").userChoice(null)
+let task6 = (new TaskBuilder()).setId("6").userChoice(null)
       .setDescription("You hear someone talking about a magazine. What is the speaker doing?").setAnswear1("Describing the attributes of the magazine.").setAnswear2("Persuading people to buy the magazine.").setAnswear3("Explaining why it doesn't sell very well.").correctAnswear("Describing the attributes of the magazine.").build();
-let task7 = (new TaskBuilder()).setId("5").userChoice(null)
+let task7 = (new TaskBuilder()).setId("7").userChoice(null)
       .setDescription("You hear someone speaking about their job. What is their job?").setAnswear1("Estate agent.").setAnswear2("Customer relations.").setAnswear3("Travel agent.").correctAnswear("Customer relations.").build();
-let task8 = (new TaskBuilder()).setId("5").userChoice(null)
-      .setDescription("You hear someone talking about music. What are they doing?").setAnswear1("Describing why music is important for children.").setAnswear2("Advertising a forthcoming event.").setAnswear3("Advertising a forthcoming event.").build();
+let task8 = (new TaskBuilder()).setId("8").userChoice(null)
+      .setDescription("You hear someone talking about music. What are they doing?").setAnswear1("Describing why music is important for children.").setAnswear2("Advertising a forthcoming event.").setAnswear3("Explaining why they like a piece of music.").correctAnswear("Advertising a forthcoming event.").build();
 let taskList = [task, task2, task3, task4, task5, task6, task7, task8];
 
 export default {
@@ -185,7 +217,7 @@ export default {
     {
       return { 
          GiveConsent: false,
-         ExamB1List3Passed: false,
+         ExamB1List2Passed: false,
          email: firebase.auth().currentUser.email,
          taskList: taskList,
          PassedOrNot: false,
@@ -195,8 +227,7 @@ export default {
          options: [
           { item: task.answear1, name: task.answear1 },
           { item: task.answear2, name: task.answear2 },
-          { item: task.answear3, name: task.answear3 },
-          { item: task.answear4, name: task.answear4 }
+          { item: task.answear3, name: task.answear3 }
         ]
       }
     },
@@ -216,7 +247,7 @@ export default {
     },
     created: function()
     {
-        this.QuizesCount = this.$route.params.QuizesCount;
+        this.QuizesCount = this.$route.params.QuizesCount; //Another way of passing attributes between components
     },
     methods:
     {
@@ -226,30 +257,33 @@ export default {
         },
         SubmitForm: function()
         {  
+            
             for(let i = 0; i < this.taskList.length; i++)
             {
-                
                 if(this.taskList[i].correctAnswear === this.taskList[i].userChoice)
                 {
                     this.points++; 
                 }
             }
+            console.log(this.points);
             this.PassedOrNot = true;
              var db = firebase.firestore();
             if(this.points < 3)
             {
                 for(let i = 0; i < this.taskList.length; i++)
                 {   
-                    console.log(this.taskList[i].userChoice);
                     this.taskList[i].userChoice = null;
-                    console.log(this.taskList[i].userChoice);
                 }
             }
             else if(this.points >= 3)
             { 
-                this.ExamB1List3Passed = true;
+                for(let i = 0; i < this.taskList.length; i++)
+                {   
+                    this.taskList[i].userChoice = null;
+                }
+                this.ExamB1List2Passed = true;
                 db.collection(this.email).doc(this.email).update({listening: this.listening+(1/this.QuizesCount)*100});
-                db.collection(this.email).doc(this.email).update({ExamB1List3Passed: this.ExamB1List3Passed});
+                db.collection(this.email).doc(this.email).update({ExamB1List2Passed: this.ExamB1List2Passed});
             }
         }
     }
