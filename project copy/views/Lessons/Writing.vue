@@ -3,92 +3,143 @@
     <UserNavigation :IsInWriting="IsInWriting"></UserNavigation>
     <LessonsHeader :level="level"></LessonsHeader>
 
-    <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto background-bluish" fluid>
+   <!--DLA B2-->
+  <b-container v-if="level==='B2'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col>
+        <span>Tutaj będą dostępne lekcje na B2</span>
+      </b-col>
+    </b-row>
+  </b-container>
+
+<!--DLA B1-->
+  <b-container v-if="level==='B1'" id="B1Quiz" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col class="col-md-4 p-3 border-right text-center border-success">
         <b-row>
-          <b-col class="col-12"><b>Temat:</b> {{name}} <br> <b> Liczba punktów do uzyskania: </b> {{pkt}} <br> <b> Treść: </b> {{description}} <br> <b> Stopień trudności: </b> {{level}}</b-col>
-        </b-row>
-    </b-container>
-     <b-container class="col-10 col-md-8 col-xl-5 mr-auto ml-auto mt-3 background-bluish" fluid>
-        <b-row>
-          <b-col class="col-12 text-center">Proszę załączyć swoje rozwiązanie</b-col>
-          <b-col class="col-12 text-center"><form action="..." enctype="multipart/form-data">
-            <input type="file" name="nazwa">
-            </form>
+          <b-col class="text-center text-size-big border-bottom border-success pb-3">
+            <span>Theory</span>
           </b-col>
         </b-row>
-    </b-container>
+        <b-row class="p-3 text-medium">
+          <b-col class="text-center">
+            <router-link to="/TheoryB1ReadingTips1">How to improve your reading - pracitcal tips</router-link>
+          </b-col>
+        </b-row>
+      </b-col>
+      <b-col class="col-md-8 p-3">
+        <b-row> 
+          <b-col class="text-center text-size-big  border-bottom border-success pb-3">
+            <span>Exercises</span>
+          </b-col>
+        </b-row>
+        <b-row id="grammar-title-content">
+          <b-col class="col-12 col-md-8 text-center">
+            <p>Training exercises</p>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task1" class="text-success" v-if="solvedB1Writing1 === true" id="ReadingB1Task1">FCE preparation task 1</router-link><router-link to="/ReadingB1Task1" class="text-danger" v-else id="ReadingB1Task1">FCE preparation task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task2" class="text-success" v-if="solvedB1Writing1 === true" id="ReadingB1Task2">Writing task 2</router-link><router-link to="/ReadingB1Task2" class="text-danger" v-else id="ReadingB1Task2">Writing task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task3" class="text-success" v-if="solvedB1Writing1 === true" id="ReadingB1Task3">Writing task 3</router-link><router-link to="/ReadingB1Task3" class="text-danger" v-else id="ReadingB1Task3">Writing task 3</router-link></b-col>
+          </b-col>
+          <b-col class="col-12 col-md-4 text-center">
+            <p>Exam</p>
+            <div v-if="solvedB1Writing1 === true && solvedB1Writing2 === true && solvedB1Writing3 === true">
+            <router-link :to="{name: 'ExamB1Reading1', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1Writing1Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            </div>
+            <div v-else>
+            <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
+            <p class="font-size-small text-danger">Complete your tasks first to attempt the exam!</p>
+            </div>
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+  </b-container>
+  
+<!--DLA A2-->
+
+<b-container v-if="level==='A2'" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
+    <b-row>
+      <b-col>
+        <span>Tutaj będą dostępne lekcje na A2</span>
+      </b-col>
+    </b-row>
+  </b-container>
   </body>
 </template>
 
 <script>
 import UserNavigation from '../../src//components/UserNavigation.vue'
 import LessonsHeader from '../../src/components/LessonsHeader.vue'
-//Tworzenie zadania o imieniu, opisie i parametrze ukończenia.
-function Task(name, pkt, description, Islevel){
-    this.name = name;
-    this.pkt = pkt;
-    this.description = description;
-    this.level = Islevel;
-}
-//Builder taska (pojedyncze funkcje nadają wartości typom prostym)
-function TaskBuilder() {
-
-    return {
-        setName: function(name) {
-            this.name = name;
-            return this;
-        },
-        setPkt: function(pkt) {
-            this.pkt = pkt;
-            return this;
-        },
-        setDescription: function(description) {
-            this.description = description;
-            return this;
-        },
-        setLevel: function(level) {
-            this.level = level;
-            return this;
-        },
-        build: function () {
-            return new Task(this.name, this.pkt, this.description, this.level);
-        }
-    }
-}
-// Dyrektor rozkazujący utworzenie zadania
-let task = (new TaskBuilder()).setName("Rozprawka: ") .setPkt("8")
-        .setDescription("Obejrzałeś ostatnio finał talent show. Osoba która wygrała, według Ciebie nie była najlepsza. Napisz rozprawkę w której uzasadnisz swój wybór.").setLevel("B1").build();
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 export default {
-    name: 'Writing',
-    components:
-    {
-      UserNavigation,
-      LessonsHeader
-    },
-        data: function()
-    {
-      return { //Zwracamy pola z naszego taska
-        name: task.name,
-        pkt: task.pkt,
-        description: task.description,
-        level: task.level,
-        IsInWriting: true
-      }
-    },
-        mounted: function() //Initialize site
+name: 'Listening',
+components: 
+{
+  UserNavigation,
+  LessonsHeader
+},
+data: function()
+{
+  return{
+    email: firebase.auth().currentUser.email,
+    name: firebase.auth().currentUser.displayName,
+    IsInWriting: true,
+    solvedB1Writing1: false,        
+    solvedB1Writing2: false,
+    solvedB1Writing3: false,
+    ExamB1Writing1Passed: false,
+    level: '',
+    QuizesCount: 2
+  }
+},
+    mounted: function() //Initialize site
     {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => { 
         this.level = doc.data().level;
+        console.log(this.level);
+        this.solvedB1Read1 = doc.data().solvedB1Read1;
+        this.solvedB1Read2 = doc.data().solvedB1Read2;
+        this.solvedB1Read3 = doc.data().solvedB1Read3;
+        this.solvedB1Read4 = doc.data().solvedB1Read4;
+        this.solvedB1Read5 = doc.data().solvedB1Read5;
+        this.ExamB1Read1Passed = doc.data().ExamB1Read1Passed;
+        this.ExamB1Read2Passed = doc.data().ExamB1Read2Passed;
         });
     });
-    }
+    },
+        created: function()
+    {
+      this.solvedB1Read1 = this.$route.params.solvedB1Read1;
+      this.solvedB1Read2 = this.$route.params.solvedB1Read2;
+      this.solvedB1Read3 = this.$route.params.solvedB1Read3;
+      this.solvedB1Read4 = this.$route.params.solvedB1Read4;
+      this.solvedB1Read5 = this.$route.params.solvedB1Read5;
+      this.ExamB1Read1Passed = this.$route.params.ExamB1Read1Passed;
+      this.ExamB1Read2Passed = this.$route.params.ExamB1Read2Passed;
+
+    },
+//     beforeUpdate: function() //Before refreshing!
+//     {
+//        var db = firebase.firestore();
+//       db.collection(this.email).get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//        this.level = doc.data().level;
+//         this.solvedB1List1 = doc.data().solvedB1List1;
+//         this.solvedB1List2 = doc.data().solvedB1List2;
+//         this.solvedB1List3 = doc.data().solvedB1List3;
+//         this.solvedB1List4 = doc.data().solvedB1List4;
+//         this.solvedB1List5 = doc.data().solvedB1List5;
+//         this.ExamB1List1Passed = doc.data().ExamB1List1Passed;
+//         this.ExamB1List2Passed = doc.data().ExamB1List2Passed;
+//         this.ExamB1List3Passed = doc.data().ExamB1List3Passed;
+//     });
+// });
+// }
 }
 </script>
-
 <style >
 body
 {
@@ -114,5 +165,9 @@ body
 }
 #banner{
   border-radius: 50px;
+}
+.font-size-small
+{
+  font-size: 0.6rem;
 }
 </style>

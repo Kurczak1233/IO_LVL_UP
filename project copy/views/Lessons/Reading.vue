@@ -53,7 +53,6 @@
         </b-row>
       </b-col>
     </b-row>
-
   </b-container>
   <b-container v-if="level==='B1'" id="B1Quiz" class="container  p-3 mb-3 mt-1 mr-auto ml-auto margin5 background-bluish" fluid>
     <b-row>
