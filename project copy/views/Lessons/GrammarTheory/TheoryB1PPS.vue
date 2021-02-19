@@ -1,8 +1,7 @@
 <template>
+<body>
+<UserNavigation :IsInGrammar="IsInGrammar"></UserNavigation>
 <b-container class="container text-center mb-3">
-  <b-row class="">
-    <b-col class="mb-2" cols="12"> <img id="banner" class="img-fluid" src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Daniel/project%20copy/src/assets/Baner_JS.png?raw=true" alt="Logo listening"></b-col>
-  </b-row>
 <b-container class="col-12 mr-auto m-3 mb-4 p-2 ml-auto margin5 background-bluish" fluid>
   <b-row>
       <b-col class="text-center text-size-big"> Present perfect simple </b-col>
@@ -81,11 +80,23 @@ They've gone to Japan for three weeks (now they're in Japan).
 </b-row>
     </b-container>
 </b-container>
+</body>
 </template>
 
 <script>
+import UserNavigation from '../../../src/components/UserNavigation.vue'
 export default {
-name: 'contatcs'
+name: 'TheoryB1PPC',
+components: 
+{
+  UserNavigation,
+},
+data: function()
+{
+  return{
+    IsInGrammar: true,
+  }
+},
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
