@@ -20,6 +20,8 @@
         <b-row>
             <b-col class="text-secondary text-center mt-3 mb-3 font-bigger">
                 Read the question part first. Then start the audio file and solve the questions.
+                    <hr>
+                    <b>You will hear a conversation with an architect.</b>
             </b-col>
         </b-row>
         <b-row>
@@ -98,22 +100,11 @@
             <b-col class="d-flex align-items-center mt-3" >
                 <b-form-radio-group stacked v-model="taskList[6].userChoice" :options="taskList[6].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
             </b-col>
-        </b-row>
-                 <b-row>
-            <b-col class="text-center text-info pt-2 text-size-big">
-                Question {{taskList[7].id}}
-            </b-col>    
-        </b-row>
-        <b-row>
-          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{taskList[7].description}}</b-col>
-            <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group stacked v-model="taskList[7].userChoice" :options="taskList[7].options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
-            </b-col>
-        </b-row>                         
+        </b-row>                
         <b-row>
             <b-col class="text-center mb-3 mt-3" >
                 <b-form>
-                    <button class="btn btn-warning" v-on:click.once="SubmitForm" v-if="taskList[7].userChoice!==null && taskList[6].userChoice!==null && taskList[5].userChoice!==null && taskList[4].userChoice!==null && taskList[3].userChoice!==null && taskList[2].userChoice!==null && taskList[1].userChoice!==null && taskList[0].userChoice!==null" type="button">End test</button>
+                    <button class="btn btn-warning" v-on:click.once="SubmitForm" v-if="taskList[6].userChoice!==null && taskList[5].userChoice!==null && taskList[4].userChoice!==null && taskList[3].userChoice!==null && taskList[2].userChoice!==null && taskList[1].userChoice!==null && taskList[0].userChoice!==null" type="button">End test</button>
                      <button class="btn btn-warning" v-else disabled type="button">End test</button>
                 </b-form>
             </b-col>
@@ -128,8 +119,8 @@
      <b-container v-if="PassedOrNot === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-black pt-2 text-size-big">
-                <p v-if="points < 5" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
-                <p v-else-if="points >= 5" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
+                <p v-if="points < 4" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
+                <p v-else-if="points >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
                 <b-col class="text-center mb-3" >
                     <router-link :to="{name: 'listen', params: {ExamB1List2Passed: this.ExamB1List2Passed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
@@ -194,22 +185,20 @@ function TaskBuilder() {
     }
 }
 let task = (new TaskBuilder()).setId("1").userChoice(null)
-        .setDescription("You hear someone talking about camping. What advice does she give?").setAnswear1("Avoid using shower gels.").setAnswear2("Avoid bathing in the water.").setAnswear3("Avoid pitching a tent near water.").correctAnswear("Avoid using shower gels.").build();
+        .setDescription("The original inspiration for the nature of the house was given by").setAnswear1("the architect.").setAnswear2("the client.").setAnswear3("a magazine.").correctAnswear("the client.").build();
 let task2 = (new TaskBuilder()).setId("2").userChoice(null)
-       .setDescription("You hear someone having a conversation. What is the woman doing?").setAnswear1(" Accusing someone of causing a problem.").setAnswear2("Suggesting doing an activity.").setAnswear3("Apologising for a situation.").correctAnswear("Suggesting doing an activity.").build();
+       .setDescription("The architect decides").setAnswear1("where to position all the elements the client wants.").setAnswear2("how high the building needs to be.").setAnswear3("where to position the garden.").correctAnswear("where to position all the elements the client wants.").build();
 let task3 = (new TaskBuilder()).setId("3").userChoice(null)
-      .setDescription("You hear someone talking on the telephone. What does the speaker want the listener to do?").setAnswear1("Meet someone.").setAnswear2("Give someone a lift.").setAnswear3("Call someone.").correctAnswear("Call someone.").build();
+      .setDescription("The architect mentions locating the kitchen so that").setAnswear1("it gets sunlight throughout the day.").setAnswear2("it gets sunlight in the evening.").setAnswear3("it get sunlight in the morning.").correctAnswear("it get sunlight in the morning.").build();
 let task4 = (new TaskBuilder()).setId("4").userChoice(null)
-      .setDescription("You hear someone talking about arguments. What is the speaker doing?").setAnswear1("Explaining a personal opinion.").setAnswear2("Expressing regret.").setAnswear3("Giving advice.").correctAnswear("Explaining a personal opinion.").build();
+      .setDescription("The courtyard was designed to").setAnswear1("protect the inhabitants from the wind.").setAnswear2("give the inhabitants uninterrupted views of the ocean.").setAnswear3("allow the inhabitants easy access to the pool.").correctAnswear("protect the inhabitants from the wind.").build();
 let task5 = (new TaskBuilder()).setId("5").userChoice(null)
-      .setDescription("You hear part of a conversation. What are the speaker's intentions?").setAnswear1("To explain how she was able to win something.").setAnswear2("To extend an invitation.").setAnswear3("To advertise her good fortune.").correctAnswear("To extend an invitation.").build();
+      .setDescription("The water used in the design").setAnswear1("has important funtions other than being a place to spend time in.").setAnswear2("is meant for aesthetic reasons only.").setAnswear3("is meant only for the inhabitants to use as a pool.").correctAnswear("has important funtions other than being a place to spend time in.").build();
 let task6 = (new TaskBuilder()).setId("6").userChoice(null)
-      .setDescription("You hear someone talking about a magazine. What is the speaker doing?").setAnswear1("Describing the attributes of the magazine.").setAnswear2("Persuading people to buy the magazine.").setAnswear3("Explaining why it doesn't sell very well.").correctAnswear("Describing the attributes of the magazine.").build();
+      .setDescription("The architect defines the concept and then").setAnswear1("prefers to do the project himself.").setAnswear2("passes the detail work to his staff.").setAnswear3("employs another firm to define the details.").correctAnswear("passes the detail work to his staff.").build();
 let task7 = (new TaskBuilder()).setId("7").userChoice(null)
-      .setDescription("You hear someone speaking about their job. What is their job?").setAnswear1("Estate agent.").setAnswear2("Customer relations.").setAnswear3("Travel agent.").correctAnswear("Customer relations.").build();
-let task8 = (new TaskBuilder()).setId("8").userChoice(null)
-      .setDescription("You hear someone talking about music. What are they doing?").setAnswear1("Describing why music is important for children.").setAnswear2("Advertising a forthcoming event.").setAnswear3("Explaining why they like a piece of music.").correctAnswear("Advertising a forthcoming event.").build();
-let taskList = [task, task2, task3, task4, task5, task6, task7, task8];
+      .setDescription("How does the architect feel about the project?").setAnswear1("It was hard work but worth it.").setAnswear2("The cost was high but justified.").setAnswear3("He is proud of what has been achieved.").correctAnswear("He is proud of what has been achieved.").build();
+let taskList = [task, task2, task3, task4, task5, task6, task7];
 
 export default {
     name: 'Speaking',
