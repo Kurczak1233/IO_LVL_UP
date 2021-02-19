@@ -7,7 +7,7 @@
             </b-col>    
         </b-row>
         <b-row>
-         <b-col class="col-12">
+         <b-col class="col-12 text-center">
              You will have to pass this exam if you want to gain access to end test. You can repeat this test if you do not pass.
          </b-col>
           <b-col class="pt-2 pb-3 text-center"><b>GOOD LUCK!</b></b-col>
@@ -150,7 +150,7 @@ window.onload = function()
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 export default {
-    name: 'Listening',
+    name: 'ReadingExam1',
         data: function()
     {
       return {

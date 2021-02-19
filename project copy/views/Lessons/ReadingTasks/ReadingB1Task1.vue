@@ -48,14 +48,17 @@
 
      <b-container>
          <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                  <b-col><b>1. According to the text, social networks:</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) advertise on business web sites.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) are being used by businesses for marketing. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) are about friendships.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) can damage business reputations.</b-col>
             </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
+         </b-row>
+         <hr>
+          <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                 <b-col><b>2. Why do advertisers like social nework sites?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) They are cost-effective to advertise on.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) Most users have high disposable income. </b-col>
@@ -65,14 +68,17 @@
          </b-row>
          <hr>
             <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                  <b-col><b>3. What does the expression '<b>sprung up</b>' in paragraph 4 mean?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) there has been rapid development of social networking sites.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) the development of social networking is unplanned. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) everybody is trying to copy Facebook.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) social networking works in all languages.</b-col>
             </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
+         </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                 <b-col><b>4. What does the word <b>'Few'</b> at the beginning of paragraph <b>6</b> mean?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) Not any.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) Some. </b-col>
@@ -81,15 +87,18 @@
             </b-col>
          </b-row>
          <hr>
-                     <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                  <b-col><b>5. What should users not do on social networks?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">a) be too free with their personal information.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) download viruses. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) contact predators.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) upload copyrighted music.</b-col>
             </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
+         </b-row>
+         <hr>
+        <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                 <b-col><b>6. What does the word <b>'deeper'</b> in paragraph <b>6</b> mean?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) more spiritual.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) more detailed. </b-col>
@@ -98,15 +107,18 @@
             </b-col>
          </b-row>
          <hr>
-                     <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                  <b-col><b>7. Personal information on social network sites</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">a) can be used in court.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) gives a good description of the user's personality. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) is sold to the government.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) is translated into many languages.</b-col>
             </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
+         </b-row>
+         <hr>
+          <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
                 <b-col><b>8. Social networking is great for</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) academic organisations.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) people who write too much information about themselves. </b-col>
@@ -114,7 +126,6 @@
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">d) groups of people separated over wide areas.</b-col>
             </b-col>
          </b-row>
-         <hr>
      </b-container>
             <b-row>  
                 <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
