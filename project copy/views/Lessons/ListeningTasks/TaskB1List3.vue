@@ -10,56 +10,65 @@
         </b-row>
     </b-container>
      <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-3" fluid>
-        <b><h3><i>Kendall Jenner</i></h3></b>
+        <b><h3><i>Listening 4</i></h3></b>
             <table class="table table-striped">
-            <thead>
                 <tr>
                 <th scope="row">1</th>
-                <th>Kendall spends a load of time in her house. </th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>When asked how strong she is, Andrea explains</th>
+                <td v-on:click="inputClickedRight">that she could lift a big animal.</td>
+                <td v-on:click="inputClickedFalse">that she could lift a vehicle.</td>
+                <td v-on:click="inputClickedFalse">that she could pull a hippo.</td>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
                 <th scope="row">2</th>
-                <th>She used to walk dogs for a living.</th>
-                <td v-on:click="inputClickedRight">True</td>
-                <td v-on:click="inputClickedFalse">False</td>
+                <th>How does Andrea describe her feeling towards sport as a kid?</th>
+                <td v-on:click="inputClickedFalse">She had no interest in sport at that time.</td>
+                <td v-on:click="inputClickedRight">She enjoyed some events, but was not really convinced.</td>
+                <td v-on:click="inputClickedFalse">She was always passionate about sport.</td>
                 </tr>
                 <tr>
                 <th scope="row">3</th>
-                <th>Cancelled flights piss her off</th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>Andrea says her initial reason for getting involved in weight lifting was</th>
+                <td v-on:click="inputClickedFalse">to motivate her younger sister.</td>
+                <td v-on:click="inputClickedFalse">to compete with her older sister.</td>
+                <td v-on:click="inputClickedRight">to support her sister's attempt to lose weight.</td>
+                </tr>
+                <tr>
+                <th scope="row">4</th>
+                <th>How did Andrea feel when some men refused to train with her?</th>
+                <td v-on:click="inputClickedRight">She didn't care because she was enjoying herself.</td>
+                <td v-on:click="inputClickedFalse">She felt humiliated.</td>
+                <td v-on:click="inputClickedFalse">She felt she had something to prove.</td>
                 </tr>
                 <tr>
                 <th scope="row">5</th>
-                <th>She spent a fortune on a vehicle.</th>
-                <td v-on:click="inputClickedRight">True</td>
-                <td v-on:click="inputClickedFalse">False</td>
+                <th>Andrea explains that when she entered the strong woman competition in 2015,</th>
+                <td v-on:click="inputClickedFalse">she was well informed because she had done her research.</td>
+                <td v-on:click="inputClickedFalse">she had a lot of experience.</td>
+                <td v-on:click="inputClickedRight">she knew next to nothing about the details.</td>
                 </tr>
                 <tr>
                 <th scope="row">6</th>
-                <th>Chloe is her least favourite sister.</th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>How did the coach she approached react to her request for help?</th>
+                <td v-on:click="inputClickedRight">With disbelief. </td>
+                <td v-on:click="inputClickedFalse">With admiration. </td>
+                <td v-on:click="inputClickedFalse">With irritation.</td>
                 </tr>
                 <tr>
                 <th scope="row">7</th>
-                <th>She wishes she could become more independent.</th>
-                <td v-on:click="inputClickedFalse">True </td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>What drives her to push herself as much as she does?</th>
+                <td v-on:click="inputClickedFalse">The pressure from her family. </td>
+                <td v-on:click="inputClickedRight">The pleasure of being the best.</td>
+                <td v-on:click="inputClickedFalse">The pride that her kids can see her win.</td>
                 </tr>
-                </tbody>
             </table>
             <b-row class="mt-4 mb-3">
-            <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/List%20Task%203.mp3?raw=true" controls ></audio>
+            <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/List%20Task%204.mp3?raw=true" controls ></audio>
 
             </b-col>
             </b-row>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'listen', params: {solvedB1List3: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'listen', params: {solvedB1List4: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -75,7 +84,7 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1List3: false
+          solvedB1List4: false
       }
     },
     methods:
@@ -95,9 +104,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1List3 = true;
+      this.solvedB1List4 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1List3: this.solvedB1List3} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1List4: this.solvedB1List4} ,{merge:true})
   }
     }
 }

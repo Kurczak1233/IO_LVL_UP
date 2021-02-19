@@ -10,56 +10,72 @@
         </b-row>
     </b-container>
      <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-3" fluid>
-        <b><h3><i>Kendall Jenner</i></h3></b>
+        <b><h3><i>Listening 4</i></h3></b>
             <table class="table table-striped">
-            <thead>
                 <tr>
                 <th scope="row">1</th>
-                <th>Kendall spends a load of time in her house. </th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>Why does she like the activity?</th>
+                <td v-on:click="inputClickedFalse">Because it's very demanding.</td>
+                <td v-on:click="inputClickedFalse">Because young people do it..</td>
+                <td v-on:click="inputClickedRight">Because age is not a restriction.</td>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
                 <th scope="row">2</th>
-                <th>She used to walk dogs for a living.</th>
-                <td v-on:click="inputClickedRight">True</td>
-                <td v-on:click="inputClickedFalse">False</td>
+                <th>What problem does she describe?</th>
+                <td v-on:click="inputClickedRight">Getting blocked on an idea.</td>
+                <td v-on:click="inputClickedFalse">Getting new ideas.</td>
+                <td v-on:click="inputClickedFalse">Applying the ideas she has.</td>
                 </tr>
                 <tr>
                 <th scope="row">3</th>
-                <th>Cancelled flights piss her off</th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>What is she doing?</th>
+                <td v-on:click="inputClickedFalse">Explaining why a problem exists.</td>
+                <td v-on:click="inputClickedRight">Describing a situation.</td>
+                <td v-on:click="inputClickedFalse">Trying to persuade someone to do something.</td>
+                </tr>
+                <tr>
+                <th scope="row">4</th>
+                <th>What is the speaker saying?</th>
+                <td v-on:click="inputClickedFalse">She will never go back.</td>
+                <td v-on:click="inputClickedFalse">She will tell her friends about it.</td>
+                <td v-on:click="inputClickedRight">She is going to be nice to someone.</td>
                 </tr>
                 <tr>
                 <th scope="row">5</th>
-                <th>She spent a fortune on a vehicle.</th>
-                <td v-on:click="inputClickedRight">True</td>
-                <td v-on:click="inputClickedFalse">False</td>
+                <th>How does the woman feel?</th>
+                <td v-on:click="inputClickedRight">Irritated.</td>
+                <td v-on:click="inputClickedFalse">Worried.</td>
+                <td v-on:click="inputClickedFalse">Excited.</td>
                 </tr>
                 <tr>
                 <th scope="row">6</th>
-                <th>Chloe is her least favourite sister.</th>
-                <td v-on:click="inputClickedFalse">True</td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>What is important to her?</th>
+                <td v-on:click="inputClickedFalse">Knowing what she has to cook. </td>
+                <td v-on:click="inputClickedRight">Knowing where things are.</td>
+                <td v-on:click="inputClickedFalse">Knowing the quality of the ingredients.</td>
                 </tr>
                 <tr>
                 <th scope="row">7</th>
-                <th>She wishes she could become more independent.</th>
-                <td v-on:click="inputClickedFalse">True </td>
-                <td v-on:click="inputClickedRight">False</td>
+                <th>What problem is she describing?</th>
+                <td v-on:click="inputClickedFalse">Getting the right price. </td>
+                <td v-on:click="inputClickedFalse">Getting the right location.</td>
+                <td v-on:click="inputClickedRight">Getting a good location at the right price.</td>
                 </tr>
-                </tbody>
+                <tr>
+                <th scope="row">8</th>
+                <th>What is she describing?</th>
+                <td v-on:click="inputClickedRight">Why she took up the activity. </td>
+                <td v-on:click="inputClickedFalse">Why she enjoys it.</td>
+                <td v-on:click="inputClickedFalse">Why other people would enjoy it.</td>
+                </tr>
             </table>
             <b-row class="mt-4 mb-3">
-            <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/List%20Task%202.mp3?raw=true" controls ></audio>
+            <b-col class="text-center"><audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/List%20Task%204.mp3?raw=true" controls ></audio>
 
             </b-col>
             </b-row>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'listen', params: {solvedB1List2: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'listen', params: {solvedB1List4: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -75,7 +91,7 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1List2: false
+          solvedB1List4: false
       }
     },
     methods:
@@ -95,9 +111,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1List2 = true;
+      this.solvedB1List4 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1List2: this.solvedB1List2} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1List4: this.solvedB1List4} ,{merge:true})
   }
     }
 }
