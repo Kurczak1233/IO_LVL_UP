@@ -2,14 +2,24 @@
     <body>
     <b-container v-if="formalConsent === false" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
-            <b-col class="text-center p-3"><p>You are in tasks section, please remember that you are constantly <b>LEARNING</b> so, do not forget to make notes, and if necessary - repeat quizes!</p>
-                <p>You won't be scoring any points here, so do not panic if you chose a wrong answear, just pick a new one.</p>
-                <p>Finishing all quizes will allow you to make an attempt in solving the exam!</p>
-                <b-col class="mt-3"><b-button class="btn btn-warning" type="button" v-on:click="GiveConsent">Confirm</b-button></b-col>
+             <b-col class="text-center text-danger pt-2 text-size-big">
+                You are attempting an exam.
+            </b-col>    
+        </b-row>
+        <b-row>
+         <b-col class="col-12">
+             You will have to pass this exam if you want to gain access to end test. You can repeat this test if you do not pass.
+         </b-col>
+          <b-col class="pt-2 pb-3 text-center"><b>GOOD LUCK!</b></b-col>
+          
+        </b-row>
+                <b-row>
+            <b-col class="col-12 text-center mt-3 mb-3">
+                    <button class="btn btn-warning" v-on:click.once="GiveConsent">Start the test!</button>
             </b-col>
         </b-row>
     </b-container>
-     <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
+     <b-container v-if="formalConsent === true && PassedOrNot === false" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
         <b><h3><i>Never mind the tongue twister - here's the tongue trickster. Frank Parsons reports on the craze for a strange type of fruit.</i></h3></b>
 Imagine drinking a glass of pure, freshly-squeezed lemon juice with nothing added. It's enough to turn your stomach.
 <form class="form-inline">
@@ -96,7 +106,7 @@ A native fruit of West Africa, the fruit was discovered by western explorers aro
      Left uncultivated, the miracle fruit grows in bushes reaching six metres in height. It produces crops twice yearly, usually after the rainy season, and has attractive white flowers.
     Despite being around for centuries it is only in recent years that the miracle fruit has been cultivated as a potential sweetener. There has been some albeit limited interest from the diet food industy. Not only that - the fruit can aid patients receiving medical treatment that may leave an unpleasant taste in the mouth.
      <b-col class="text-center col-12">
-<button type="button" v-on:click.once="checkForm" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
+<button type="button" v-on:click.once="checkForm" aria-describedby="Check answears button" class="btn btn-warning my-1">Check answears</button>
     </b-col>
 <b-row>
     <b-col>
@@ -117,10 +127,18 @@ A native fruit of West Africa, the fruit was discovered by western explorers aro
     </b-col>
 </b-row>
 </form>
-            <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {ExamB1Read1Passed: true}}" ><b-button class="btn btn-warning" type="button">End test!</b-button></router-link></b-col>
-            </b-row>   
      </b-container>
+          <b-container v-if="PassedOrNot === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+        <b-row>
+            <b-col class="text-center text-black pt-2 text-size-big">
+                <p v-if="points < 4" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
+                <p v-else-if="points >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
+                <b-col class="text-center mb-3" >
+                    <router-link :to="{name: 'read', params: {ExamB1Read2Passed: this.ExamB1Read2Passed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
+                </b-col>
+            </b-col>    
+        </b-row>
+    </b-container>
     </body>
 </template>
 
@@ -138,7 +156,7 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          ExamB1Read1Passed: false,
+          ExamB1Read2Passed: false,
           answear1: '',
           answear2: '',
           answear3: '',
@@ -147,7 +165,8 @@ export default {
           answear6: '',
           points: 0,
           QuizesCount: 2,
-          reading: 0
+          reading: 0,
+          PassedOrNot: false
       }
     },
     mounted: function()
@@ -170,6 +189,7 @@ export default {
                 let correctAnswears = ["E", "A", "D", "B", "C", "G"];
                 let answearsIds =["Answear1", "Answear2", "Answear3", "Answear4", "Answear5", "Answear6"];
                 let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
+                this.PassedOrNot = true;
                 for(let i = 0; i<correctAnswears.length;i++)
                 {
                     if(correctAnswears[i] === answears[i])
@@ -193,9 +213,9 @@ export default {
         },
         AddSolvedToUserDb: function()
         {
-            this.ExamB1Read1Passed = true;
+            this.ExamB1Read2Passed = true;
             var db = firebase.firestore();
-            db.collection(this.email).doc(this.email).set({ExamB1Read1Passed: this.ExamB1Read1Passed} ,{merge:true})
+            db.collection(this.email).doc(this.email).set({ExamB1Read2Passed: this.ExamB1Read2Passed} ,{merge:true})
             db.collection(this.email).doc(this.email).update({reading: this.reading+(1/this.QuizesCount)*100});
         }
     }
