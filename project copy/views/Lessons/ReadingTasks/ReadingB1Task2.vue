@@ -96,7 +96,7 @@
          <hr>
      </b-container>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read2: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -112,7 +112,7 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1Read1: false
+          solvedB1Read2: false
       }
     },
     methods:
@@ -132,9 +132,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1Read1 = true;
+      this.solvedB1Read2 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1Read1: this.solvedB1Read1} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1Read2: this.solvedB1Read2} ,{merge:true})
   }
     }
 }
