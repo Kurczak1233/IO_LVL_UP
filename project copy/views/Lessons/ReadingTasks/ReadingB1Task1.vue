@@ -9,7 +9,7 @@
             </b-col>
         </b-row>
     </b-container>
-     <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-3" fluid>
+     <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
         <b><h3><i>Social networks</i></h3></b>
 <b>Business applications</b>
 <p>
@@ -57,7 +57,7 @@
             </b-col>
             <b-col class="col-5 mr-auto ml-auto mb-2">
                 <b-col><b>2. Why do advertisers like social nework sites?</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) They are cost-effective to advertise on..</b-col>
+                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) They are cost-effective to advertise on.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) Most users have high disposable income. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">c) Detailed information on each user allows targeted ads.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) They can influence consumer behaviour.</b-col>
@@ -90,7 +90,7 @@
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) upload copyrighted music.</b-col>
             </b-col>
             <b-col class="col-5 mr-auto ml-auto mb-2">
-                <b-col><b>6. What does the word <b>'deeper'</b> in paragraph <b>6</b> mean??</b></b-col>
+                <b-col><b>6. What does the word <b>'deeper'</b> in paragraph <b>6</b> mean?</b></b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) more spiritual.</b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">b) more detailed. </b-col>
                 <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) more profound.</b-col>
