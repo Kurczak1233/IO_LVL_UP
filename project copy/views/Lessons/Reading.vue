@@ -23,7 +23,7 @@
         </b-row>
         <b-row class="p-3 text-medium">
           <b-col class="text-center">
-            <router-link to="/TheoryB1PPS">How to improve your reading - pracitcal tips</router-link>
+            <router-link to="/TheoryB1ReadingTips1">How to improve your reading - pracitcal tips</router-link>
           </b-col>
         </b-row>
       </b-col>

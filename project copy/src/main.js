@@ -46,6 +46,9 @@ import TaskB1List5 from '../views/Lessons/ListeningTasks/TaskB1List5.vue'
 import ExamB1List1 from '../views/Lessons/ListeningTasks/ExamB1List1.vue'
 import ExamB1List2 from '../views/Lessons/ListeningTasks/ExamB1List2.vue'
 import ExamB1List3 from '../views/Lessons/ListeningTasks/ExamB1List3.vue'
+//Reading//
+import TheoryB1ReadingTips1 from '../views/Lessons/ReadingTheory/TheoryB1ReadingTips1.vue'
+
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy'
@@ -119,6 +122,7 @@ const routes = [
    { path: '/ExamB1List3', name: 'ExamB1List3', component: ExamB1List3, meta: {requiresAuth: true}},
    { path: '/ExamB1PPS', name: 'examB1PPS', component: ExamB1PPS, meta: {requiresAuth: true}},
    { path: '/ExamB1PPC', name: 'examB1PPC', component: ExamB1PPC, meta: {requiresAuth: true}},
+   { path: '/TheoryB1ReadingTips1', name: 'theoryB1ReadingTips1', component: TheoryB1ReadingTips1, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
    { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
