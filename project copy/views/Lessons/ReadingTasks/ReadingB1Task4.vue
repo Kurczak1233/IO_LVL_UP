@@ -21,6 +21,7 @@ As a former dancer in the Royal Ballet Company here in Britain, I would beg to q
     <option value="D">D</option>
     <option value="E">E</option>
     <option value="F">F</option>
+    <option value="G">G</option>
   </select>
 
 With expert teaching and daily practice, its various demands are easily within the capacity of the healthy human body. Contrary to popular belief, there is no need to break bones or tear muscles to achieve ballet positions. It is simply a question of sufficient conditioning of the muscular system.
@@ -36,6 +37,7 @@ Over the course of my dancing life I worked my way through at least 10,000 balle
     <option value="D">D</option>
     <option value="E">E</option>
     <option value="F">F</option>
+    <option value="G">G</option>
   </select>
 
 
@@ -53,6 +55,7 @@ Those first classes I took were remarkably similar to the last. In fact, taking 
     <option value="D">D</option>
     <option value="E">E</option>
     <option value="F">F</option>
+    <option value="G">G</option>
   </select>
 
 
@@ -69,6 +72,7 @@ These classes serve two distinct purposes: they are the way we warm our bodies a
     <option value="D">D</option>
     <option value="E">E</option>
     <option value="F">F</option>
+    <option value="G">G</option>
   </select>
 
 
@@ -85,6 +89,7 @@ The human body is designed to adapt to the demands we make of it, provided we ma
     <option value="D">D</option>
     <option value="E">E</option>
     <option value="F">F</option>
+    <option value="G">G</option>
   </select>
 
 
@@ -99,12 +104,33 @@ In the same way, all those years of classes add up to a fit-for-purpose dancing 
     <option value="D">D</option>
     <option value="E">E</option>
     <option value="F">F</option>
+    <option value="G">G</option>
   </select>
 
 
 But they should not be misled: there is a difference between hard work and hardship. Dancers have an everyday familiarity with the first. Hardship it isn't.
 
-  <button type="button" v-on:click="checkForm" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
+    <b-col class="text-center col-12">
+<button type="button" v-on:click="checkForm" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
+    </b-col>
+<b-row>
+    <b-col>
+        <b>Sentences</b>
+<p><b>A</b>. Through endless tries at the usual exercises and frequent failures, ballet dancers develop the natural pathways in the brain necessary to control accurate, fast and smooth movement.</p>
+
+<p><b>B</b>. The ballet shoe offers some support, but the real strength is in the muscles, built up through training.</p>
+
+<p><b>C</b>. As technology takes away activity from the lives of many, perhaps the ballet dancer's physicality is ever more difficult for most people to imagine.</p>
+
+<p><b>D</b>. Ballet technique is certainly extreme but it is not, in itself, dangerous.</p>
+
+<p><b>E</b>. The principle is identical in the gym - pushing yourself to the limit, but not beyond, will eventually bring the desired result.</p>
+
+<p><b>F</b>. No one avoids this: it is ballet's great democratiser, the well established members of the company working alongside the newest recruits.</p>
+
+<p><b>G</b>. It takes at least a decade of high-quality, regular practice to become an expert in any physical discipline.</p>
+    </b-col>
+</b-row>
 </form>
             <b-row>  
                 <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read4: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>

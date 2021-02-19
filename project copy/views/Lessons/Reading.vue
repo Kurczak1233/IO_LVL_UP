@@ -136,7 +136,7 @@ data: function()
     ExamB1Read1Passed: false,
     ExamB1Read2Passed: false,
     level: '',
-    QuizesCount: 3
+    QuizesCount: 2
   }
 },
     mounted: function() //Initialize site
