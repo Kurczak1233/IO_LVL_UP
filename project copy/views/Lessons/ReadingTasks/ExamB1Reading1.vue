@@ -20,7 +20,7 @@
         </b-row>
     </b-container>
      <b-container v-if="formalConsent === true && PassedOrNot === false" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
-<b>Extract</b>
+<h3><b>Extract</b></h3>
 
 <p>Six months ago I made a rash promise. The leader of the youth club in our village rang me in March saying, ''We're thinking of running a children's playscheme for a day in October half-term. Would you be prepared to help?'' My response was ''Sure, why not?'' In truth I was a little flattered to be asked, even though working as a care assistant with old people hardly qualified me for the role. Still, I duly put the date in my diary and of course I forgot all about it. I don't know if you've noticed this but time has a habit of speeding along faster than a police car chasing a robber and, before I knew it, the day was dawning.</p>
 
@@ -95,49 +95,96 @@
                 </b-col>
             </b-row>
          <hr>
+            <b-col class="text-center col-12">
+                <button type="button" v-on:click.once="checkForm" aria-describedby="Check answears button" class="btn btn-warning my-1">End test!</button>
+            </b-col>
      </b-container>
-            <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
-            </b-row>   
-     </b-container>
+    </b-container>
+    <b-container v-if="PassedOrNot === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+        <b-row>
+            <b-col class="text-center text-black pt-2 text-size-big">
+                <p v-if="points < 4" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> the test! Learn some more and try again</p> 
+                <p v-else-if="points >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> the test!</p> 
+                <b-col class="text-center mb-3" >
+                    <router-link :to="{name: 'read', params: {ExamB1Read1Passed: this.ExamB1Read1Passed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
+                </b-col>
+            </b-col>    
+        </b-row>
+    </b-container>
     </body>
 </template>
 
 <script>
+window.onload = function()
+{
+    console.log(this.QuizesCount);
+}
 import { firebase } from '@firebase/app'
-//import '@firebase/auth'
+import '@firebase/auth'
 export default {
-    name: 'Listening',
+    name: 'ReadingExam1',
         data: function()
     {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1Read1: false,
-          PassedOrNot: false,
+          ExamB1Read1Passed: false,
+          answear1: '',
+          answear2: '',
+          answear3: '',
+          answear4: '',
+          answear5: '',
+          answear6: '',
+          points: 0,
+          QuizesCount: 2,
+          reading: 0,
+          PassedOrNot: false
       }
+    },
+    mounted: function()
+    {
+        var db = firebase.firestore();
+        db.collection(this.email).doc(this.email).get().then((doc) => {
+    if (doc.exists) {
+        this.reading = doc.data().reading;
+
+    } else {
+        console.log("No such document!");
+    }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
     },
     methods:
     {
+        checkForm: function() {
+                let correctAnswears = ["A", "B", "D", "C", "B", "A"];
+                let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
+                this.PassedOrNot = true;
+                for(let i = 0; i<correctAnswears.length;i++)
+                {
+                    if(correctAnswears[i] === answears[i])
+                    {
+                        this.points++;
+                    }
+                }
+                if(this.points>=4)
+                {
+                    this.AddSolvedToUserDb();
+                }
+                
+        },
         GiveConsent: function()
         {
             this.formalConsent = true;
         },
-        inputClickedRight: function(event)
-  {
-      //this.$el.setAttribute("style", "background: green;");
-    event.target.setAttribute("style", "background-color: rgb(128, 255, 0); "); 
-  },
-  inputClickedFalse: function(event)
-  {
-    event.target.setAttribute("style", "background-color: rgb(255, 64, 0)");
-  },
-  AddSolvedToUserDb: function()
-  {
-      this.solvedB1Read1 = true;
-      var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1Read1: this.solvedB1Read1} ,{merge:true})
-  }
+        AddSolvedToUserDb: function()
+        {
+            this.ExamB1Read1Passed = true;
+            var db = firebase.firestore();
+            db.collection(this.email).doc(this.email).set({ExamB1Read1Passed: this.ExamB1Read1Passed} ,{merge:true})
+            db.collection(this.email).doc(this.email).update({reading: this.reading+(1/this.QuizesCount)*100});
+        }
     }
 }
 </script>

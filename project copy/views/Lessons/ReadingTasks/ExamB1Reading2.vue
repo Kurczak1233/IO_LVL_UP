@@ -106,7 +106,7 @@ A native fruit of West Africa, the fruit was discovered by western explorers aro
      Left uncultivated, the miracle fruit grows in bushes reaching six metres in height. It produces crops twice yearly, usually after the rainy season, and has attractive white flowers.
     Despite being around for centuries it is only in recent years that the miracle fruit has been cultivated as a potential sweetener. There has been some albeit limited interest from the diet food industy. Not only that - the fruit can aid patients receiving medical treatment that may leave an unpleasant taste in the mouth.
      <b-col class="text-center col-12">
-<button type="button" v-on:click.once="checkForm" aria-describedby="Check answears button" class="btn btn-warning my-1">Check answears</button>
+<button type="button" v-on:click.once="checkForm" aria-describedby="Check answears button" class="btn btn-warning my-1">End test</button>
     </b-col>
 <b-row>
     <b-col>
@@ -187,7 +187,6 @@ export default {
     {
         checkForm: function() {
                 let correctAnswears = ["E", "A", "D", "B", "C", "G"];
-                let answearsIds =["Answear1", "Answear2", "Answear3", "Answear4", "Answear5", "Answear6"];
                 let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
                 this.PassedOrNot = true;
                 for(let i = 0; i<correctAnswears.length;i++)
@@ -195,10 +194,6 @@ export default {
                     if(correctAnswears[i] === answears[i])
                     {
                         this.points++;
-                        document.getElementById(answearsIds[i]).setAttribute("style", "background-color: rgb(128, 255, 0);")
-                    }
-                    else{
-                        document.getElementById(answearsIds[i]).setAttribute("style", "background-color: rgb(255, 64, 0)")
                     }
                 }
                 if(this.points>=4)
