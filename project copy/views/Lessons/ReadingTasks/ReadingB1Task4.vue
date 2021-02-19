@@ -106,59 +106,6 @@ But they should not be misled: there is a difference between hard work and hards
 
   <button type="button" v-on:click="checkForm" class="btn btn-primary my-1">Check answears</button>
 </form>
-<b-container>
-         <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. In the first paragraph, what is Caitlin's main point about the island?</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) It can be dangerous to try to cross from the mainland.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) It is much smaller than it looks from the mainland. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">c) It is only completely cut off at certain times.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) It can be a difficult place for people to live in.</b-col>
-            </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
-                <b-col><b>2. What does Caitlin suggest about her father?</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) His writing prevents him from doing things he wants to do with his family.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) His initial reaction to his son's request is different from usual. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) His true feelings are easily hidden from his daughter. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">d) His son's arrival is one event he will take time off for. </b-col>
-            </b-col>
-         </b-row>
-         <hr>
-            <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
-                 <b-col><b>3. Caitlin emphasises her feelings of discomfort because she</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) is embarrassed that she doesn't understand what her brother is talking about.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) feels confused about why she can't relate to her brother any more. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">c) is upset by the unexpected change in her brother's behaviour.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) feels foolish that her brother's attention is so important to her.</b-col>
-            </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
-                <b-col><b>4. In the fourth paragraph, what is Caitlin's purpose in describing the island?</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">a) to express her positive feelings about it. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) to explain how the road was built. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) to illustrate what kind of weather was usual. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) to describe her journey home.</b-col>
-            </b-col>
-         </b-row>
-         <hr>
-           <b-row class="mt-3 mb-3">
-             <b-col class="col-5 mr-auto ml-auto mb-2 ">
-                 <b-col><b>5. In 'because of that' in the forth paragraph, 'that' refers to the fact that</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) locals think it is odd to walk anywhere.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) it is easier for people to take the bus than walk. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">c) people have everything they need on the island.</b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">d) there is nowhere in particular to walk to from the island.</b-col>
-            </b-col>
-            <b-col class="col-5 mr-auto ml-auto mb-2">
-                <b-col><b>6. What do we learn about Caitlin's reactions to the boy?</b></b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">a) She felt his air of confidence contrasted with his physical appearance. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">b) She was able to come up with a reason for him being there. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedRight">c) She realised her first impression of him was inaccurate. </b-col>
-                <b-col id="answear" class="col-12 border border-dark" v-on:click="inputClickedFalse">d) She thought she had seen him somewhere before.</b-col>
-            </b-col>
-         </b-row>
-         <hr>
-     </b-container>
             <b-row>  
                 <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read3: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
@@ -188,12 +135,23 @@ export default {
     methods:
     {
         checkForm: function() {
-            console.log(this.answear1)
-            console.log(this.answear2)
-            console.log(this.answear3)
-            console.log(this.answear4)
-            console.log(this.answear5)
-            console.log(this.answear6)
+                console.log(this.answear1);
+                console.log(this.answear2);
+                let correctAnswears = ["D", "G", "F", "A", "E", "C"];
+                let answearsIds =["Answear1", "Answear2", "Answear3", "Answear4", "Answear5", "Answear6"];
+                let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
+                console.log(correctAnswears[0]); //OK
+                for(let i = 0; i<correctAnswears.length;i++)
+                {
+                    if(correctAnswears[i] === answears[i])
+                    {
+                        document.getElementById(answearsIds[i]).setAttribute("style", "background-color: rgb(128, 255, 0);")
+                    }
+                    else{
+                        document.getElementById(answearsIds[i]).setAttribute("style", "background-color: rgb(255, 64, 0)")
+                    }
+                } 
+                
         },
         GiveConsent: function()
         {
