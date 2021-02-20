@@ -5,17 +5,21 @@
     <b-col class="text-center col-12">
     <b><h3><i class="text-center">TASK 1</i></h3></b>
     <p>Answer the questions in part 1 – 4 below.</p>
+    <p>You will have about 1 min on this part</p>
     </b-col>
 </b-row>
     <hr>
 <b-row>
     <b-col class="col-12 mt-3 text-center">
-<p>Where are you from?</p>
-<p>What do you most like about the place where you live?</p>
-<p>What do you think is the best time of the year? Why?</p>
-<p>What do you usually do at the weekend?</p>
-<p>How often do you listen to music?</p>
-<p>Tell us about a musical artist you quite like.</p>
+<p>Tell us about a day you’ve really enjoyed recently.</p>
+<p>Are you planning to do anything special this weekend?</p>
+<p>How much time do you spend at home?</p>
+<p>What did you do on your last birthday?</p>
+<p>Do you like cooking?</p>
+<p>What’s your favourite food?</p>
+<p>What’s your favourite day of the week?</p>
+<p>What’s your favourite part of the day?</p>
+<p>Which time of year is your favourite?</p>
     </b-col>
 </b-row>
 <hr>
@@ -24,6 +28,7 @@
         <b><h3><i class="text-center">TASK 2</i></h3></b>
         <p>In this part of the test I’m going to give you two photographs. I would like you to talk about your photographs on your own for about a minute.</p>
         <p><i>Tip: While talking focus on differences between those pictures not on the content. Time is short!</i></p>
+        <p>You will have about 1 min on this part</p>
     </b-col>
 </b-row>
 <hr>
@@ -40,18 +45,34 @@
     <b-col class="text-center col-12">
     <b><h3><i class="text-center">TASK 3</i></h3></b>
     <p>In this part noramlly you will be discussing with your partner. You have to discuss all of the propsed solutions of the shown problem</p>
+    <p>You will have about 1.5 min on this part</p>
     </b-col>
 </b-row>
 <hr>
 <b-row>
     <b-col class="col-12 mt-3 text-center">
-        <b-img v-bind="CollaborativeTask" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/SpeakingB1Task2%20.jpg?raw=true"></b-img>
+        <b-img v-bind="CollaborativeTask" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/SpeakingB1Task1Colab.png?raw=true"></b-img>
     </b-col>
 </b-row>
-
-
+<hr>
+<b-row>
+    <b-col class="text-center col-12">
+    <b><h3><i class="text-center">TASK 4</i></h3></b>
+    <p>In this part you will hear a more peculiar questions about some issues. You have to answear them</p>
+    <p>You will have about 1 min on this part</p>
+    </b-col>
+</b-row>
+<hr>
+<b-row>
+    <b-col class="col-12 mt-3 text-center">
+<p><b>Do you think you have to spend a lot of money to have a good holiday?</b></p>
+<p><b>Some people say we travel too much these days and shouldn't go on so many holidays. What do you think?</b></p>
+<p><b>Why do you think people like to go away on holiday?</b></p>
+    </b-col>
+</b-row>
+<hr>
         <b-row>  
-            <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'gram', params: {solvedB1PPC2: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+            <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'speak', params: {solvedB1Speaking1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
         </b-row>
 </b-container>
   </body>
@@ -74,7 +95,7 @@ export default {
               height:200,
           },
           email: firebase.auth().currentUser.email,
-          solvedB1Read1: false
+          solvedB1Speaking1: false
       }
     },
     methods:
@@ -94,9 +115,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1Read1 = true;
+      this.solvedB1Speaking1 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1Read1: this.solvedB1Read1} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1Speaking1: this.solvedB1Speaking1} ,{merge:true})
   }
     }
 }

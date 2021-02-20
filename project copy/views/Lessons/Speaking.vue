@@ -17,9 +17,9 @@
     <b-row>
           <b-col class="col-12 text-center">
             <p class="text-size-big">Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/SpeakingB1Task1" class="text-success" v-if="solvedB1Writing1 === true" id="SpeakingB1Task1">Speaking task 1</router-link><router-link to="/SpeakingB1Task1" class="text-danger" v-else id="SpeakingB1Task1">Speaking task 1</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/SpeakingB1Task2" class="text-success" v-if="solvedB1Writing1 === true" id="SpeakingB1Task2">Speaking task 2</router-link><router-link to="/SpeakingB1Task2" class="text-danger" v-else id="SpeakingB1Task2">Speaking task 2</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/SpeakingB1Task3" class="text-success" v-if="solvedB1Writing1 === true" id="SpeakingB1Task3">Speaking task 3</router-link><router-link to="/SpeakingB1Task3" class="text-danger" v-else id="SpeakingB1Task3">Speaking task 3</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/SpeakingB1Task1" class="text-success" v-if="solvedB1Speaking1 === true" id="SpeakingB1Task1">Speaking task 1</router-link><router-link to="/SpeakingB1Task1" class="text-danger" v-else id="SpeakingB1Task1">Speaking task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/SpeakingB1Task2" class="text-success" v-if="solvedB1Speaking2 === true" id="SpeakingB1Task2">Speaking task 2</router-link><router-link to="/SpeakingB1Task2" class="text-danger" v-else id="SpeakingB1Task2">Speaking task 2</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/SpeakingB1Task3" class="text-success" v-if="solvedB1Speaking3 === true" id="SpeakingB1Task3">Speaking task 3</router-link><router-link to="/SpeakingB1Task3" class="text-danger" v-else id="SpeakingB1Task3">Speaking task 3</router-link></b-col>
           </b-col>
         </b-row>
   </b-container>
