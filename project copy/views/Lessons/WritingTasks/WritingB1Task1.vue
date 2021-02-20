@@ -9,41 +9,107 @@
             </b-col>
         </b-row>
     </b-container>
-     <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
+     <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-10 mr-auto ml-auto background-bluish p-5" fluid>
         <b><h3><i>Tricky words section</i></h3></b>
 <b-row>
+  
   <form class="form-inline">
     
-    <b-col>
-      <label class="my-1 mr-2" for="answear1">1) ... - noun: a list of questions; survey (Kwestionariusz)</label>
-        <input type="text" v-model="answear1" value="" id="answear1">
+    <b-col class="col-12 mb-2">
+      <b-button-toolbar>
+      <label class="my-1 mr-2 d-inline" for="answear1">1) Noun: a list of questions; survey (Kwestionariusz)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear1" id="answear1"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+        <b-button v-on:click="Hint1" id="hint1" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
     </b-col>
-        
-        <label class="my-1 mr-2" for="answear1">2) ... - adjective: not conscious; without awareness (Nieprzytomny)</label>
-      <input type="text" v-model="answear2" value="" id="answear2">
-        
-        <label class="my-1 mr-2" for="answear1">3) ... - noun: adjective: unusually mature, especially in mental development (Przedwczesny)</label>
-      <input type="text" v-model="answear3" value="" id="answear3">
-        
-        <label class="my-1 mr-2" for="answear1">4) ... - noun: noun: a person who maintains a connection between people or groups (Łącznik (osoba))</label>
-      <input type="text" v-model="answear4" value="" id="answear4">
-        
-        <label class="my-1 mr-2" for="answear1">5) ... - noun: continuous observation of a person, place, or activity in order to gather information (Inwigilacja)</label>
-      <input type="text" v-model="answear5" value="" id="answear5">
-        
-        <label class="my-1 mr-2" for="answear1">6) ... - noun: a widely cultivated plant with brightly-colored showy flower heads (Chryzantema)</label>
-      <input type="text" v-model="answear6" value="" id="answear6">
-        
-        <label class="my-1 mr-2" for="answear1">7) ... - noun: a tendency, habit or mannerism that is peculiar to an individual; a quirk (Idiosynkcacja)</label>
-      <input type="text" v-model="answear7" value="" id="answear7">
-        
-        <label class="my-1 mr-2" for="answear1">8) ... - noun: a person hired to drive a private automobile or limousine (Szofer)</label>
-      <input type="text" v-model="answear8" value="" id="answear8">
-     
+    <b-col class="col-12 mb-2">
+        <b-button-toolbar>
+          <label class="my-1 mr-2 d-inline" for="answear1">2) Adjective: not conscious; without awareness (Nieprzytomny)</label>
+          <b-input-group  size="sm" class="mr-1">
+          <b-form-input type="text" v-model="answear2"  id="answear2"></b-form-input>
+          </b-input-group>
+          <b-button-group>
+            <b-button v-on:click="Hint2" id="hint2" size="sm" class="btn btn-primary">Hint</b-button>
+          </b-button-group>
+      </b-button-toolbar>
+    </b-col>
+    <b-col class="col-12 mb-2">
+      <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">3) .Noun: adjective: unusually mature, especially in mental development (Przedwczesny)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear3"  id="answear3"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint3" id="hint3" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+      </b-col>
+    <b-col class="col-12 mb-2">  
+        <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">4) Noun: noun: a person who maintains a connection between people or groups (Łącznik (osoba))</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear4"  id="answear4"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint4" id="hint4" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">5) Noun: continuous observation of a person, place, or activity in order to gather information (Inwigilacja)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear5"  id="answear5"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint5" id="hint5" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">6) Noun: a widely cultivated plant with brightly-colored showy flower heads (Chryzantema)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear6"  id="answear6"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint6" id="hint6" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">7) Noun: a tendency, habit or mannerism that is peculiar to an individual; a quirk (Idiosynkcacja)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear7"  id="answear7"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint7" id="hint7" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">8) Noun: a person hired to drive a private automobile or limousine (Szofer)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear8"  id="answear8"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint8" id="hint8" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+     </b-col>
      </form>
+    <b-col class="text-center col-12 mb-2">
+        <button type="button" v-on:click="checkForm" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
+    </b-col>
   </b-row>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read4: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Writing1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -59,19 +125,67 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1Read4: false,
+          solvedB1Writing1: false,
           answear1: '',
           answear2: '',
           answear3: '',
           answear4: '',
           answear5: '',
           answear6: '',
+          answear7: '',
+          answear8: '',
+          button1Clicked: 0,
+          button2Clicked: 0,
+          button3Clicked: 0,
+          button4Clicked: 0,
+          button5Clicked: 0,
+          button6Clicked: 0,
+          button7Clicked: 0,
+          button8Clicked: 0,
       }
     },
     methods:
     {
+        Hint1: function(button, answear)
+        {
+          this.button1Clicked++;
+          let answear = "questionnaire";
+          let newString = "";
+          for(let i = 0; i < this.button1Clicked; i++)
+          {
+              document.getElementById("answear1").setAttribute("value", newString+=answear[i])
+          } 
+        },
+        Hint2: function()
+        {
+
+        },
+        Hint3: function()
+        {
+
+        },
+        Hint4: function()
+        {
+
+        },
+        Hint5: function()
+        {
+
+        },
+        Hint6: function()
+        {
+
+        },
+        Hint7: function()
+        {
+
+        },
+        Hint8: function()
+        {
+
+        },
         checkForm: function() {
-                let correctAnswears = ["D", "G", "F", "A", "E", "C"];
+                let correctAnswears = ["questionnaire", "unconscious", "precocious", "liaison", "surveillance", "chrysanthemum","idiosyncrasy","chauffeur"];
                 let answearsIds =["Answear1", "Answear2", "Answear3", "Answear4", "Answear5", "Answear6"];
                 let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
                 console.log(correctAnswears[0]);
@@ -102,9 +216,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1Read4 = true;
+      this.solvedB1Writing1 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1Read4: this.solvedB1Read4} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1Writing1: this.solvedB1Writing1} ,{merge:true})
   }
     }
 }
