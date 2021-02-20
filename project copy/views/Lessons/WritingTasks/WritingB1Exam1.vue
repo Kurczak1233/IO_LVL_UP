@@ -23,7 +23,7 @@
         <b><h3><i>Tricky words section</i></h3></b>
 <b-row>
   
-  <form class="form-inline">
+  <form class="form-inline" autocomplete="off">
     
     <b-col class="col-12 mb-2">
       <b-button-toolbar>
