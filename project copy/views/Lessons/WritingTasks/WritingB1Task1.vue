@@ -19,7 +19,7 @@
       <b-button-toolbar>
       <label class="my-1 mr-2 d-inline" for="answear1">1) Noun: a list of questions; survey (Kwestionariusz)</label>
       <b-input-group  size="sm" class="mr-1">
-        <b-form-input type="text" v-model="answear1" id="answear1"></b-form-input>
+        <input type="text" v-model="answear1" id="answear1">
         </b-input-group>
         <b-button-group>
         <b-button v-on:click="Hint1" id="hint1" size="sm" class="btn btn-primary">Hint</b-button>
@@ -28,7 +28,7 @@
     </b-col>
     <b-col class="col-12 mb-2">
         <b-button-toolbar>
-          <label class="my-1 mr-2 d-inline" for="answear1">2) Adjective: not conscious; without awareness (Nieprzytomny)</label>
+          <label class="my-1 mr-2 d-inline" for="answear2">2) Adjective: not conscious; without awareness (Nieprzytomny)</label>
           <b-input-group  size="sm" class="mr-1">
           <b-form-input type="text" v-model="answear2"  id="answear2"></b-form-input>
           </b-input-group>
@@ -39,7 +39,7 @@
     </b-col>
     <b-col class="col-12 mb-2">
       <b-button-toolbar>
-        <label class="my-1 mr-2 d-inline" for="answear1">3) .Noun: adjective: unusually mature, especially in mental development (Przedwczesny)</label>
+        <label class="my-1 mr-2 d-inline" for="answear3">3) .Noun: adjective: unusually mature, especially in mental development (Przedwczesny)</label>
       <b-input-group  size="sm" class="mr-1">
         <b-form-input type="text" v-model="answear3"  id="answear3"></b-form-input>
         </b-input-group>
@@ -50,7 +50,7 @@
       </b-col>
     <b-col class="col-12 mb-2">  
         <b-button-toolbar>
-        <label class="my-1 mr-2 d-inline" for="answear1">4) Noun: noun: a person who maintains a connection between people or groups (Łącznik (osoba))</label>
+        <label class="my-1 mr-2 d-inline" for="answear4">4) Noun: noun: a person who maintains a connection between people or groups (Łącznik (osoba))</label>
       <b-input-group  size="sm" class="mr-1">
         <b-form-input type="text" v-model="answear4"  id="answear4"></b-form-input>
         </b-input-group>
@@ -61,7 +61,7 @@
         </b-col>
         <b-col class="col-12 mb-2">
           <b-button-toolbar>
-        <label class="my-1 mr-2 d-inline" for="answear1">5) Noun: continuous observation of a person, place, or activity in order to gather information (Inwigilacja)</label>
+        <label class="my-1 mr-2 d-inline" for="answear5">5) Noun: continuous observation of a person, place, or activity in order to gather information (Inwigilacja)</label>
       <b-input-group  size="sm" class="mr-1">
         <b-form-input type="text" v-model="answear5"  id="answear5"></b-form-input>
         </b-input-group>
@@ -146,43 +146,96 @@ export default {
     },
     methods:
     {
-        Hint1: function(button, answear)
+        Hint1: function()
         {
           this.button1Clicked++;
           let answear = "questionnaire";
           let newString = "";
-          for(let i = 0; i < this.button1Clicked; i++)
+          for(let i = 0; i < answear.length; i++)
           {
-              document.getElementById("answear1").setAttribute("value", newString+=answear[i])
-          } 
+            if(document.getElementById("answear1").value[i] !== answear[i])
+            {
+                          console.log(this.answear1[i]);
+            console.log(answear[i]);
+              newString += answear[i];
+              console.log(newString);
+              document.getElementById("answear1").value = newString
+              break;
+            }
+            else{
+              newString += answear[i];
+            }
+          }
         },
         Hint2: function()
         {
-
+          this.button2Clicked++;
+          let answear = "unconscious";
+          let newString = "";
+          for(let i = 0; i < this.button2Clicked; i++)
+          {
+              document.getElementById("answear2").setAttribute("value", newString+=answear[i])
+          } 
         },
         Hint3: function()
         {
-
+          this.button3Clicked++;
+          let answear = "precocious";
+          let newString = "";
+          for(let i = 0; i < this.button3Clicked; i++)
+          {
+              document.getElementById("answear3").setAttribute("value", newString+=answear[i])
+          } 
         },
         Hint4: function()
         {
-
+          this.button4Clicked++;
+          let answear = "liaison";
+          let newString = "";
+          for(let i = 0; i < this.button4Clicked; i++)
+          {
+              document.getElementById("answear4").setAttribute("value", newString+=answear[i])
+          } 
         },
         Hint5: function()
         {
-
+          this.button5Clicked++;
+          let answear = "surveillance";
+          let newString = "";
+          for(let i = 0; i < this.button5Clicked; i++)
+          {
+              document.getElementById("answear5").setAttribute("value", newString+=answear[i])
+          } 
         },
         Hint6: function()
         {
-
+          this.button6Clicked++;
+          let answear = "chrysanthemum";
+          let newString = "";
+          for(let i = 0; i < this.button6Clicked; i++)
+          {
+              document.getElementById("answear6").setAttribute("value", newString+=answear[i])
+          } 
         },
         Hint7: function()
         {
-
+          this.button7Clicked++;
+          let answear = "idiosyncrasy";
+          let newString = "";
+          for(let i = 0; i < this.button7Clicked; i++)
+          {
+              document.getElementById("answear7").setAttribute("value", newString+=answear[i])
+          } 
         },
         Hint8: function()
         {
-
+          this.button8Clicked++;
+          let answear = "chauffeur";
+          let newString = "";
+          for(let i = 0; i < this.button8Clicked; i++)
+          {
+              document.getElementById("answear8").setAttribute("value", newString+=answear[i])
+          } 
         },
         checkForm: function() {
                 let correctAnswears = ["questionnaire", "unconscious", "precocious", "liaison", "surveillance", "chrysanthemum","idiosyncrasy","chauffeur"];
