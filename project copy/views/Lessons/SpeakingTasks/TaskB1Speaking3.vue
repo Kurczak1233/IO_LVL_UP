@@ -95,8 +95,24 @@ export default {
               height:200,
           },
           email: firebase.auth().currentUser.email,
-          solvedB1Speaking3: false
+          solvedB1Speaking3: false,
+          QuizesCount: 3,
+          speaking: 0,
       }
+    },
+     mounted: function()
+    {
+        var db = firebase.firestore();
+        db.collection(this.email).doc(this.email).get().then((doc) => {
+    if (doc.exists) {
+        this.speaking = doc.data().speaking;
+
+    } else {
+        console.log("No such document!");
+    }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
     },
     methods:
     {
@@ -117,7 +133,8 @@ export default {
   {
       this.solvedB1Speaking3 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1Speaking3: this.solvedB1Speaking3} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1Speaking3: this.solvedB1Speaking3} ,{merge:true});
+      db.collection(this.email).doc(this.email).update({speaking: this.speaking+(1/this.QuizesCount)*100});
   }
     }
 }
