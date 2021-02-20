@@ -37,7 +37,7 @@
 <b-img v-bind="Images" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/SpeakingB1Task1.png?raw=true"></b-img>
     </b-col>
     <b-col class="col-6 mt-3 text-center">
-<b-img v-bind="Images" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/SpeakingB1Task2%20.jpg?raw=true"></b-img>
+<b-img v-bind="Images" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/SpeakingB1Task3(2).jpg?raw=true"></b-img>
     </b-col>
 </b-row>
 <hr>

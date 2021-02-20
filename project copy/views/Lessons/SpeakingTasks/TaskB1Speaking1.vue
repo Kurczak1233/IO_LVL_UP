@@ -65,9 +65,9 @@
 <hr>
 <b-row>
     <b-col class="col-12 mt-3 text-center">
-<p><b>Do you think you have to spend a lot of money to have a good holiday?</b></p>
-<p><b>Some people say we travel too much these days and shouldn't go on so many holidays. What do you think?</b></p>
-<p><b>Why do you think people like to go away on holiday?</b></p>
+<p><b>If you could change one thing about your life, what would you change?</b></p>
+<p><b>Many people say life's too busy these days. Why do you think they say this?</b></p>
+<p><b>Many people want to become famous nowadays. Why do you think this is?</b></p>
     </b-col>
 </b-row>
 <hr>
