@@ -28,8 +28,11 @@
 </b-row>
 <hr>
 <b-row>
-    <b-col class="col-12 mt-3 text-center">
-<b-img src=""></b-img>
+    <b-col class="col-6 mt-3 text-center">
+<b-img v-bind="Images" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/SpeakingB1Task1.jpg?raw=true"></b-img>
+    </b-col>
+    <b-col class="col-6 mt-3 text-center">
+<b-img v-bind="Images" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/SpeakingB1Task2.jpg?raw=true"></b-img>
     </b-col>
 </b-row>
 <hr>
@@ -159,6 +162,11 @@ export default {
         data: function()
     {
       return {
+          Images:
+          {
+              width: 300,
+              height: 200,
+          },
           email: firebase.auth().currentUser.email,
           solvedB1Read1: false
       }
