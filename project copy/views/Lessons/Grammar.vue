@@ -143,14 +143,18 @@ data: function()
             QuizesCount: 2//Temporary 2! (only 2 quizes)
         }
     },
-    // created: function()
-    // {
-    //   this.solvedB1PPS1 = this.$route.params.solvedB1PPS1;
-    //   this.solvedB1PPS2 = this.$route.params.solvedB1PPS2;
-    //   this.solvedB1PPS3 = this.$route.params.solvedB1PPS3;
-    //   this.ExamB1PPSPassed = this.$route.params.ExamB1PPSPassed;
+    created: function()
+    {
+      this.solvedB1PPS1 = this.$route.params.solvedB1PPS1;
+      this.solvedB1PPS2 = this.$route.params.solvedB1PPS2;
+      this.solvedB1PPS3 = this.$route.params.solvedB1PPS3;
+      this.solvedB1PPC1 = this.$route.params.solvedB1PPC1;
+      this.solvedB1PPC2 = this.$route.params.solvedB1PPC2;
+      this.solvedB1PPC3 = this.$route.params.solvedB1PPC3;
+      this.ExamB1PPSPassed = this.$route.params.ExamB1PPSPassed;
+      this.ExamB1PPCPassed = this.$route.params.ExamB1PPCPassed;
 
-    // },
+    },
     mounted: function() //Initialize site
     {
       console.log(this.QuizesCount);
@@ -185,7 +189,7 @@ data: function()
 //         this.ExamB1PPCPassed = doc.data().ExamB1PPCPassed;
 //     });
 // });
-//     }
+    // }
 }
 </script>
 
