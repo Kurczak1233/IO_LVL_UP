@@ -34,7 +34,7 @@
 <hr>
 <b-row>
     <b-col class="col-6 mt-3 text-center">
-<b-img v-bind="Images" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Kurczak1233/project%20copy/src/assets/SpeakingB1Task3.png?raw=true"></b-img>
+<b-img v-bind="Images" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/Kurczak1233/project%20copy/src/assets/Speaking%203%20addiditonal.jpg?raw=true"></b-img>
     </b-col>
     <b-col class="col-6 mt-3 text-center">
 <b-img v-bind="Images" fluid src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/SpeakingB1Task3(2).jpg?raw=true"></b-img>
@@ -72,7 +72,7 @@
 </b-row>
 <hr>
         <b-row>  
-            <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'speak', params: {solvedB1Speaking1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+            <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'speak', params: {solvedB1Speaking3: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
         </b-row>
 </b-container>
   </body>
@@ -95,7 +95,7 @@ export default {
               height:200,
           },
           email: firebase.auth().currentUser.email,
-          solvedB1Speaking1: false
+          solvedB1Speaking3: false
       }
     },
     methods:
@@ -115,9 +115,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1Speaking1 = true;
+      this.solvedB1Speaking3 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1Speaking1: this.solvedB1Speaking1} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1Speaking3: this.solvedB1Speaking3} ,{merge:true})
   }
     }
 }
