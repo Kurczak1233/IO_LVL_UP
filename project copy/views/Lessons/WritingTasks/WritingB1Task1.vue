@@ -19,10 +19,10 @@
       <b-button-toolbar>
       <label class="my-1 mr-2 d-inline" for="answear1">1) Noun: a list of questions; survey (Kwestionariusz)</label>
       <b-input-group  size="sm" class="mr-1">
-        <input type="text" v-model="answear1" id="answear1">
+        <b-form-input type="text" v-model="answear1" id="answear1"></b-form-input>
         </b-input-group>
         <b-button-group>
-        <b-button v-on:click="Hint1" id="hint1" size="sm" class="btn btn-primary">Hint</b-button>
+        <b-button v-on:click="Hint('answear1', 0, 'questionnaire')" id="hint1" size="sm" class="btn btn-primary">Hint</b-button>
         </b-button-group>
       </b-button-toolbar>
     </b-col>
@@ -33,7 +33,7 @@
           <b-form-input type="text" v-model="answear2"  id="answear2"></b-form-input>
           </b-input-group>
           <b-button-group>
-            <b-button v-on:click="Hint2" id="hint2" size="sm" class="btn btn-primary">Hint</b-button>
+            <b-button v-on:click="Hint('answear2', 0, 'unconscious')" id="hint2" size="sm" class="btn btn-primary">Hint</b-button>
           </b-button-group>
       </b-button-toolbar>
     </b-col>
@@ -44,7 +44,7 @@
         <b-form-input type="text" v-model="answear3"  id="answear3"></b-form-input>
         </b-input-group>
         <b-button-group>
-          <b-button v-on:click="Hint3" id="hint3" size="sm" class="btn btn-primary">Hint</b-button>
+          <b-button v-on:click="Hint('answear3', 0, 'precocious')" id="hint3" size="sm" class="btn btn-primary">Hint</b-button>
         </b-button-group>
       </b-button-toolbar>
       </b-col>
@@ -55,7 +55,7 @@
         <b-form-input type="text" v-model="answear4"  id="answear4"></b-form-input>
         </b-input-group>
         <b-button-group>
-          <b-button v-on:click="Hint4" id="hint4" size="sm" class="btn btn-primary">Hint</b-button>
+          <b-button v-on:click="Hint('answear4', 0, 'liaison')" id="hint4" size="sm" class="btn btn-primary">Hint</b-button>
         </b-button-group>
       </b-button-toolbar>
         </b-col>
@@ -66,7 +66,7 @@
         <b-form-input type="text" v-model="answear5"  id="answear5"></b-form-input>
         </b-input-group>
         <b-button-group>
-          <b-button v-on:click="Hint5" id="hint5" size="sm" class="btn btn-primary">Hint</b-button>
+          <b-button v-on:click="Hint('answear5', 0, 'surveillance')" id="hint5" size="sm" class="btn btn-primary">Hint</b-button>
         </b-button-group>
       </b-button-toolbar>
         </b-col>
@@ -77,7 +77,7 @@
         <b-form-input type="text" v-model="answear6"  id="answear6"></b-form-input>
         </b-input-group>
         <b-button-group>
-          <b-button v-on:click="Hint6" id="hint6" size="sm" class="btn btn-primary">Hint</b-button>
+          <b-button v-on:click="Hint('answear6', 0, 'chrysanthemum')" id="hint6" size="sm" class="btn btn-primary">Hint</b-button>
         </b-button-group>
       </b-button-toolbar>
         </b-col>
@@ -88,7 +88,7 @@
         <b-form-input type="text" v-model="answear7"  id="answear7"></b-form-input>
         </b-input-group>
         <b-button-group>
-          <b-button v-on:click="Hint7" id="hint7" size="sm" class="btn btn-primary">Hint</b-button>
+          <b-button v-on:click="Hint('answear7', 0, 'idiosyncrasy')" id="hint7" size="sm" class="btn btn-primary">Hint</b-button>
         </b-button-group>
       </b-button-toolbar>
         </b-col>
@@ -99,7 +99,7 @@
         <b-form-input type="text" v-model="answear8"  id="answear8"></b-form-input>
         </b-input-group>
         <b-button-group>
-          <b-button v-on:click="Hint8" id="hint8" size="sm" class="btn btn-primary">Hint</b-button>
+          <b-button v-on:click="Hint('answear8', 0, 'chauffeur')" id="hint8" size="sm" class="btn btn-primary">Hint</b-button>
         </b-button-group>
       </b-button-toolbar>
      </b-col>
@@ -146,20 +146,19 @@ export default {
     },
     methods:
     {
-        Hint1: function()
+        Hint: function(id, buttonClicked, answear)
         {
-          this.button1Clicked++;
-          let answear = "questionnaire";
+          this.buttonClicked = buttonClicked;
+          this.id = id;
+          this.answear = answear;
+          buttonClicked++;
           let newString = "";
           for(let i = 0; i < answear.length; i++)
           {
-            if(document.getElementById("answear1").value[i] !== answear[i])
+            if(document.getElementById(id).value[i] !== answear[i])
             {
-                          console.log(this.answear1[i]);
-            console.log(answear[i]);
               newString += answear[i];
-              console.log(newString);
-              document.getElementById("answear1").value = newString
+              document.getElementById(id).value = newString
               break;
             }
             else{
@@ -167,81 +166,13 @@ export default {
             }
           }
         },
-        Hint2: function()
-        {
-          this.button2Clicked++;
-          let answear = "unconscious";
-          let newString = "";
-          for(let i = 0; i < this.button2Clicked; i++)
-          {
-              document.getElementById("answear2").setAttribute("value", newString+=answear[i])
-          } 
-        },
-        Hint3: function()
-        {
-          this.button3Clicked++;
-          let answear = "precocious";
-          let newString = "";
-          for(let i = 0; i < this.button3Clicked; i++)
-          {
-              document.getElementById("answear3").setAttribute("value", newString+=answear[i])
-          } 
-        },
-        Hint4: function()
-        {
-          this.button4Clicked++;
-          let answear = "liaison";
-          let newString = "";
-          for(let i = 0; i < this.button4Clicked; i++)
-          {
-              document.getElementById("answear4").setAttribute("value", newString+=answear[i])
-          } 
-        },
-        Hint5: function()
-        {
-          this.button5Clicked++;
-          let answear = "surveillance";
-          let newString = "";
-          for(let i = 0; i < this.button5Clicked; i++)
-          {
-              document.getElementById("answear5").setAttribute("value", newString+=answear[i])
-          } 
-        },
-        Hint6: function()
-        {
-          this.button6Clicked++;
-          let answear = "chrysanthemum";
-          let newString = "";
-          for(let i = 0; i < this.button6Clicked; i++)
-          {
-              document.getElementById("answear6").setAttribute("value", newString+=answear[i])
-          } 
-        },
-        Hint7: function()
-        {
-          this.button7Clicked++;
-          let answear = "idiosyncrasy";
-          let newString = "";
-          for(let i = 0; i < this.button7Clicked; i++)
-          {
-              document.getElementById("answear7").setAttribute("value", newString+=answear[i])
-          } 
-        },
-        Hint8: function()
-        {
-          this.button8Clicked++;
-          let answear = "chauffeur";
-          let newString = "";
-          for(let i = 0; i < this.button8Clicked; i++)
-          {
-              document.getElementById("answear8").setAttribute("value", newString+=answear[i])
-          } 
-        },
         checkForm: function() {
-                let correctAnswears = ["questionnaire", "unconscious", "precocious", "liaison", "surveillance", "chrysanthemum","idiosyncrasy","chauffeur"];
-                let answearsIds =["Answear1", "Answear2", "Answear3", "Answear4", "Answear5", "Answear6"];
-                let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
-                console.log(correctAnswears[0]);
+                let correctAnswears = ['questionnaire', "unconscious", "precocious", "liaison", "surveillance", "chrysanthemum","idiosyncrasy","chauffeur"];
+                let answearsIds =["answear1", "answear2", "answear3", "answear4", "answear5", "answear6", "answear7", "answear8"];
+                let answears = [document.getElementById("answear1").value,document.getElementById("answear2").value,document.getElementById("answear3").value,document.getElementById("answear4").value,document.getElementById("answear5").value,document.getElementById("answear6").value, document.getElementById("answear7").value, document.getElementById("answear8").value];
+                console.log(answears[0]);
+                console.log(this.answear1);
+                console.log("przerwa")
                 for(let i = 0; i<correctAnswears.length;i++)
                 {
                     if(correctAnswears[i] === answears[i])
