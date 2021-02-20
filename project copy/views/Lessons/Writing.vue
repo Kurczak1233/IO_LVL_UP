@@ -41,7 +41,7 @@
           </b-col>
           <b-col class="col-12 col-md-4 text-center">
             <p>Exam</p>
-            <div v-if="solvedB1Writing1 === true && solvedB1Writing2 === true && solvedB1Writing3 === true">
+            <div v-if="solvedB1Writing1 === true && solvedB1Writing2 === true">
             <router-link :to="{name: 'WritingB1Exam1', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1Writing1Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
@@ -89,7 +89,7 @@ data: function()
     solvedB1Writing3: false,
     ExamB1Writing1Passed: false,
     level: '',
-    QuizesCount: 2
+    QuizesCount: 1
   }
 },
     mounted: function() //Initialize site
@@ -98,7 +98,6 @@ data: function()
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => { 
         this.level = doc.data().level;
-        console.log(this.level);
         this.solvedB1Writing1 = doc.data().solvedB1Writing1;
         this.solvedB1Writing2 = doc.data().solvedB1Writing2;
         this.solvedB1Writing3 = doc.data().solvedB1Writing3;

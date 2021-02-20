@@ -39,7 +39,7 @@
     </b-col>
     <b-col class="col-12 mb-2">
       <b-button-toolbar>
-        <label class="my-1 mr-2 d-inline" for="answear3">3) .Noun: adjective: unusually mature, especially in mental development (Przedwczesny)</label>
+        <label class="my-1 mr-2 d-inline" for="answear3">3) Adjective: unusually mature, especially in mental development (Przedwczesny)</label>
       <b-input-group  size="sm" class="mr-1">
         <b-form-input type="text" v-model="answear3"  id="answear3"></b-form-input>
         </b-input-group>
@@ -109,7 +109,7 @@
     </b-col>
   </b-row>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Writing1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'write', params: {solvedB1Writing1: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -170,9 +170,6 @@ export default {
                 let correctAnswears = ['questionnaire', "unconscious", "precocious", "liaison", "surveillance", "chrysanthemum","idiosyncrasy","chauffeur"];
                 let answearsIds =["answear1", "answear2", "answear3", "answear4", "answear5", "answear6", "answear7", "answear8"];
                 let answears = [document.getElementById("answear1").value,document.getElementById("answear2").value,document.getElementById("answear3").value,document.getElementById("answear4").value,document.getElementById("answear5").value,document.getElementById("answear6").value, document.getElementById("answear7").value, document.getElementById("answear8").value];
-                console.log(answears[0]);
-                console.log(this.answear1);
-                console.log("przerwa")
                 for(let i = 0; i<correctAnswears.length;i++)
                 {
                     if(correctAnswears[i] === answears[i])

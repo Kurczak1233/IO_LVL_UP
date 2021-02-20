@@ -157,7 +157,6 @@ data: function()
     },
     mounted: function() //Initialize site
     {
-      console.log(this.QuizesCount);
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => { 

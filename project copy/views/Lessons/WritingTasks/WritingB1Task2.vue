@@ -9,131 +9,107 @@
             </b-col>
         </b-row>
     </b-container>
-     <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
-        <b><h3><i>A former classical ballet dancer explains what ballet training actually involves</i></h3></b>
-As a former dancer in the Royal Ballet Company here in Britain, I would beg to question this.
-<form class="form-inline">
-  <label class="my-1 mr-2" for="Answear1">1)</label>
-  <select v-model="answear1" class="custom-select my-1 mr-sm-2" id="Answear1">
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="G">G</option>
-  </select>
-
-With expert teaching and daily practice, its various demands are easily within the capacity of the healthy human body. Contrary to popular belief, there is no need to break bones or tear muscles to achieve ballet positions. It is simply a question of sufficient conditioning of the muscular system.
-
-Over the course of my dancing life I worked my way through at least 10,000 ballet classes. I took my first at a school of dance at the age of seven and my last 36 years later at the Royal Opera House in London. In the years between, ballet class was the first thing I did every day. It starts at an early age, this daily ritual, because it has to.
-
-
-  <label class="my-1 mr-2" for="Answear2">2)</label>
-  <select v-model="answear2" class="custom-select my-1 mr-sm-2" id="Answear2">
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="G">G</option>
-  </select>
-
-
-
-But for a ballet dancer in particular, this lengthy period has to come before the effects of adolescence set in, while maximum flexibility can still be achieved.
-
-Those first classes I took were remarkably similar to the last. In fact, taking into account the occasional new idea, ballet classes have changed little since 1820, when the details of ballet technique were first written down, and are easily recognised in any country. Starting with the left hand on the barre, the routine unrolls over some 75 minutes.
-
-
-  <label class="my-1 mr-2" for="Answear3">3)</label>
-  <select v-model="answear3" class="custom-select my-1 mr-sm-2" id="Answear3">
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="G">G</option>
-  </select>
-
-
-
-Even the leading dancers have to do it.
-
-These classes serve two distinct purposes: they are the way we warm our bodies and the mechanism by which we improve basic technique. In class after class, we prove the old saying that 'practice makes perfect'.
-
-  <label class="my-1 mr-2" for="Answear4">4)</label>
-  <select v-model="answear4" class="custom-select my-1 mr-sm-2" id="Answear4">
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="G">G</option>
-  </select>
-
-
-And it is also this daily repetition which enables us to strengthen the muscles required in jumping, spinning or lifting our legs to angles impossible to the average person.
-
-The human body is designed to adapt to the demands we make of it, provided we make them carefully and over time.
-
-
-  <label class="my-1 mr-2" for="Answear5">5)</label>
-  <select v-model="answear5" class="custom-select my-1 mr-sm-2" id="Answear5">
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="G">G</option>
-  </select>
-
-
-
-<p>In the same way, all those years of classes add up to a fit-for-purpose dancing machine. This level of physical fluency doesn't hurt; it feels good.</p>
-
-  <label class="my-1 mr-2" for="Answear6">6)</label>
-  <select v-model="answear6" class="custom-select my-1 mr-sm-2" id="Answear6">
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-    <option value="E">E</option>
-    <option value="F">F</option>
-    <option value="G">G</option>
-  </select>
-
-
-But they should not be misled: there is a difference between hard work and hardship. Dancers have an everyday familiarity with the first. Hardship it isn't.
-
-    <b-col class="text-center col-12">
-<button type="button" v-on:click="checkForm" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
-    </b-col>
+     <b-container v-if="formalConsent === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-10 mr-auto ml-auto background-bluish p-5" fluid>
+        <b><h3><i>Tricky words section</i></h3></b>
 <b-row>
-    <b-col>
-        <b>Sentences</b>
-<p><b>A</b>. Through endless tries at the usual exercises and frequent failures, ballet dancers develop the natural pathways in the brain necessary to control accurate, fast and smooth movement.</p>
-
-<p><b>B</b>. The ballet shoe offers some support, but the real strength is in the muscles, built up through training.</p>
-
-<p><b>C</b>. As technology takes away activity from the lives of many, perhaps the ballet dancer's physicality is ever more difficult for most people to imagine.</p>
-
-<p><b>D</b>. Ballet technique is certainly extreme but it is not, in itself, dangerous.</p>
-
-<p><b>E</b>. The principle is identical in the gym - pushing yourself to the limit, but not beyond, will eventually bring the desired result.</p>
-
-<p><b>F</b>. No one avoids this: it is ballet's great democratiser, the well established members of the company working alongside the newest recruits.</p>
-
-<p><b>G</b>. It takes at least a decade of high-quality, regular practice to become an expert in any physical discipline.</p>
+  
+  <form class="form-inline">
+    
+    <b-col class="col-12 mb-2">
+      <b-button-toolbar>
+      <label class="my-1 mr-2 d-inline" for="answear1">1) Verb; adjust or adapt. (Pomieścić)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear1" id="answear1"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+        <b-button v-on:click="Hint('answear1', 0, 'accommodate')" id="hint1" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
     </b-col>
-</b-row>
-</form>
+    <b-col class="col-12 mb-2">
+        <b-button-toolbar>
+          <label class="my-1 mr-2 d-inline" for="answear2">2) Noun: someone you haven't known well. (Dalszy znajomy)</label>
+          <b-input-group  size="sm" class="mr-1">
+          <b-form-input type="text" v-model="answear2"  id="answear2"></b-form-input>
+          </b-input-group>
+          <b-button-group>
+            <b-button v-on:click="Hint('answear2', 0, 'acquaintance')" id="hint2" size="sm" class="btn btn-primary">Hint</b-button>
+          </b-button-group>
+      </b-button-toolbar>
+    </b-col>
+    <b-col class="col-12 mb-2">
+      <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear3">3) Noun: someone who has no competence in some field. (Amator)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear3"  id="answear3"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint('answear3', 0, 'amateur')" id="hint3" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+      </b-col>
+    <b-col class="col-12 mb-2">  
+        <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear4">4) Noun: Making deals; All actions which require money. (Biznes))</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear4"  id="answear4"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint('answear4', 0, 'business')" id="hint4" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear5">5) Verb: past participle of catch. (łapać)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear5"  id="answear5"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint('answear5', 0, 'caught')" id="hint5" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">6) Adjective: a very attentive/industious/hard-working person. (Sumienny)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear6"  id="answear6"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint('answear6', 0, 'conscientious')" id="hint6" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">7) Verb: To deliberately tell a lie to someone. (Oszustwo)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear7"  id="answear7"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint('answear7', 0, 'deceive')" id="hint7" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">8) Verb: to make a negative impress on someone (Zawieść)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="answear8"  id="answear8"></b-form-input>
+        </b-input-group>
+        <b-button-group>
+          <b-button v-on:click="Hint('answear8', 0, 'disappoint')" id="hint8" size="sm" class="btn btn-primary">Hint</b-button>
+        </b-button-group>
+      </b-button-toolbar>
+     </b-col>
+     </form>
+    <b-col class="text-center col-12 mb-2">
+        <button type="button" v-on:click="checkForm" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
+    </b-col>
+  </b-row>
             <b-row>  
-                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'read', params: {solvedB1Read4: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
+                <b-col class="mt-3 mb-3 text-center"><router-link :to="{name: 'write', params: {solvedB1Writing2: true}}" ><b-button class="btn btn-warning" type="button" v-on:click="AddSolvedToUserDb">Solved!</b-button></router-link></b-col>
             </b-row>   
      </b-container>
     </body>
@@ -149,22 +125,51 @@ export default {
       return {
           formalConsent: false,
           email: firebase.auth().currentUser.email,
-          solvedB1Read4: false,
+          solvedB1Writing2: false,
           answear1: '',
           answear2: '',
           answear3: '',
           answear4: '',
           answear5: '',
           answear6: '',
+          answear7: '',
+          answear8: '',
+          button1Clicked: 0,
+          button2Clicked: 0,
+          button3Clicked: 0,
+          button4Clicked: 0,
+          button5Clicked: 0,
+          button6Clicked: 0,
+          button7Clicked: 0,
+          button8Clicked: 0,
       }
     },
     methods:
     {
+        Hint: function(id, buttonClicked, answear)
+        {
+          this.buttonClicked = buttonClicked;
+          this.id = id;
+          this.answear = answear;
+          buttonClicked++;
+          let newString = "";
+          for(let i = 0; i < answear.length; i++)
+          {
+            if(document.getElementById(id).value[i] !== answear[i])
+            {
+              newString += answear[i];
+              document.getElementById(id).value = newString
+              break;
+            }
+            else{
+              newString += answear[i];
+            }
+          }
+        },
         checkForm: function() {
-                let correctAnswears = ["D", "G", "F", "A", "E", "C"];
-                let answearsIds =["Answear1", "Answear2", "Answear3", "Answear4", "Answear5", "Answear6"];
-                let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
-                console.log(correctAnswears[0]);
+                let correctAnswears = ['accommodate', "acquaintance", "amateur", "business", "caught", "conscientious","deceive","disappoint"];
+                let answearsIds =["answear1", "answear2", "answear3", "answear4", "answear5", "answear6", "answear7", "answear8"];
+                let answears = [document.getElementById("answear1").value,document.getElementById("answear2").value,document.getElementById("answear3").value,document.getElementById("answear4").value,document.getElementById("answear5").value,document.getElementById("answear6").value, document.getElementById("answear7").value, document.getElementById("answear8").value];
                 for(let i = 0; i<correctAnswears.length;i++)
                 {
                     if(correctAnswears[i] === answears[i])
@@ -192,9 +197,9 @@ export default {
   },
   AddSolvedToUserDb: function()
   {
-      this.solvedB1Read4 = true;
+      this.solvedB1Writing2 = true;
       var db = firebase.firestore();
-      db.collection(this.email).doc(this.email).set({solvedB1Read4: this.solvedB1Read4} ,{merge:true})
+      db.collection(this.email).doc(this.email).set({solvedB1Writing2: this.solvedB1Writing2} ,{merge:true})
   }
     }
 }
