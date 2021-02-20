@@ -23,7 +23,7 @@
         </b-row>
         <b-row class="p-3 text-medium">
           <b-col class="text-center">
-            <router-link to="/TheoryB1ReadingTips1">How to improve your reading - pracitcal tips</router-link>
+            <router-link to="/TheoryB1WritingTips1">How to improve your writing - tips</router-link>
           </b-col>
         </b-row>
       </b-col>
@@ -36,14 +36,13 @@
         <b-row id="grammar-title-content">
           <b-col class="col-12 col-md-8 text-center">
             <p>Training exercises</p>
-            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task1" class="text-success" v-if="solvedB1Writing1 === true" id="ReadingB1Task1">FCE preparation task 1</router-link><router-link to="/ReadingB1Task1" class="text-danger" v-else id="ReadingB1Task1">FCE preparation task 1</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task2" class="text-success" v-if="solvedB1Writing1 === true" id="ReadingB1Task2">Writing task 2</router-link><router-link to="/ReadingB1Task2" class="text-danger" v-else id="ReadingB1Task2">Writing task 2</router-link></b-col>
-            <b-col class="mt-1 mb-1"><router-link to="/ReadingB1Task3" class="text-success" v-if="solvedB1Writing1 === true" id="ReadingB1Task3">Writing task 3</router-link><router-link to="/ReadingB1Task3" class="text-danger" v-else id="ReadingB1Task3">Writing task 3</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/WritingB1Task1" class="text-success" v-if="solvedB1Writing1 === true" id="WritingB1Task1">FCE preparation task 1</router-link><router-link to="/WritingB1Task1" class="text-danger" v-else id="WritingB1Task1">FCE preparation task 1</router-link></b-col>
+            <b-col class="mt-1 mb-1"><router-link to="/WritingB1Task2" class="text-success" v-if="solvedB1Writing1 === true" id="WritingB1Task2">Writing task 2</router-link><router-link to="/WritingB1Task2" class="text-danger" v-else id="WritingB1Task2">Writing task 2</router-link></b-col>
           </b-col>
           <b-col class="col-12 col-md-4 text-center">
             <p>Exam</p>
-            <div v-if="solvedB1Writing1 === true && solvedB1Writing2 === true && solvedB1Writing3 === true">
-            <router-link :to="{name: 'ExamB1Reading1', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1Writing1Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
+            <div v-if="solvedB1Writing1 === true && solvedB1Writing2 === true">
+            <router-link :to="{name: 'WritingB1Exam1', params: {QuizesCount: QuizesCount}}"><b-button  variant="success" disabled class="btn-lg btn" v-if="ExamB1Writing1Passed===true" type="button" aria-describedby="take the exam button">Passed!</b-button><b-button  variant="warning" class="btn-lg btn" v-else type="button" aria-describedby="take the exam button">Exam</b-button></router-link>
             </div>
             <div v-else>
             <b-button variant="warning" disabled class="btn-lg">Exam</b-button>
@@ -90,7 +89,7 @@ data: function()
     solvedB1Writing3: false,
     ExamB1Writing1Passed: false,
     level: '',
-    QuizesCount: 2
+    QuizesCount: 1
   }
 },
     mounted: function() //Initialize site
@@ -99,26 +98,21 @@ data: function()
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => { 
         this.level = doc.data().level;
-        console.log(this.level);
-        this.solvedB1Read1 = doc.data().solvedB1Read1;
-        this.solvedB1Read2 = doc.data().solvedB1Read2;
-        this.solvedB1Read3 = doc.data().solvedB1Read3;
-        this.solvedB1Read4 = doc.data().solvedB1Read4;
-        this.solvedB1Read5 = doc.data().solvedB1Read5;
-        this.ExamB1Read1Passed = doc.data().ExamB1Read1Passed;
-        this.ExamB1Read2Passed = doc.data().ExamB1Read2Passed;
+        this.solvedB1Writing1 = doc.data().solvedB1Writing1;
+        this.solvedB1Writing2 = doc.data().solvedB1Writing2;
+        this.solvedB1Writing3 = doc.data().solvedB1Writing3;
+        this.ExamB1Writing1Passed = doc.data().ExamB1Writing1Passed;
+
         });
     });
     },
         created: function()
     {
-      this.solvedB1Read1 = this.$route.params.solvedB1Read1;
-      this.solvedB1Read2 = this.$route.params.solvedB1Read2;
-      this.solvedB1Read3 = this.$route.params.solvedB1Read3;
-      this.solvedB1Read4 = this.$route.params.solvedB1Read4;
-      this.solvedB1Read5 = this.$route.params.solvedB1Read5;
-      this.ExamB1Read1Passed = this.$route.params.ExamB1Read1Passed;
-      this.ExamB1Read2Passed = this.$route.params.ExamB1Read2Passed;
+      this.solvedB1Writing1 = this.$route.params.solvedB1Writing1;
+      this.solvedB1Writing2 = this.$route.params.solvedB1Writing2;
+      this.solvedB1Writing3 = this.$route.params.solvedB1Writing3;
+      this.ExamB1Writing1Passed = this.$route.params.ExamB1Writing1Passed;
+
 
     },
 //     beforeUpdate: function() //Before refreshing!

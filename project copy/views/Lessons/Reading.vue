@@ -144,7 +144,6 @@ data: function()
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => { 
         this.level = doc.data().level;
-        console.log(this.level);
         this.solvedB1Read1 = doc.data().solvedB1Read1;
         this.solvedB1Read2 = doc.data().solvedB1Read2;
         this.solvedB1Read3 = doc.data().solvedB1Read3;
