@@ -59,8 +59,8 @@ import ExamB1Reading2 from '../views/Lessons/ReadingTasks/ExamB1Reading2.vue'
 //Writing//
 import WritingB1Task1 from '../views/Lessons/WritingTasks/WritingB1Task1.vue'
 import WritingB1Task2 from '../views/Lessons/WritingTasks/WritingB1Task2.vue'
-import WritingB1Task3 from '../views/Lessons/WritingTasks/WritingB1Task3.vue'
 import WritingB1Exam1 from '../views/Lessons/WritingTasks/WritingB1Exam1.vue'
+import TheoryB1WritingTips1 from '../views/Lessons/WritingTheory/TheoryB1WritingTips1.vue'
 
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
@@ -146,8 +146,8 @@ const routes = [
    { path: '/ExamB1Reading2', name: 'ExamB1Reading2', component: ExamB1Reading2, meta: {requiresAuth: true}},
    { path: '/WritingB1Task1', name: 'WritingB1Task1', component: WritingB1Task1, meta: {requiresAuth: true}},
    { path: '/WritingB1Task2', name: 'WritingB1Task2', component: WritingB1Task2, meta: {requiresAuth: true}},
-   { path: '/WritingB1Task3', name: 'WritingB1Task3', component: WritingB1Task3, meta: {requiresAuth: true}},
    { path: '/WritingB1Exam1', name: 'WritingB1Exam1', component: WritingB1Exam1, meta: {requiresAuth: true}},
+   { path: '/TheoryB1WritingTips1', name: 'TheoryB1WritingTips1', component: TheoryB1WritingTips1, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
    { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
