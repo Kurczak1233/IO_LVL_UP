@@ -146,6 +146,11 @@ export default {
         this.writing = doc.data().writing;
         this.listening = doc.data().listening;
         this.level = doc.data().level;
+        this.FCEpassed = doc.data().FCEPassed
+        this.passedGrammar = doc.data().FCEGrammarPassed
+        this.passedReading = doc.data().FCEReadingPassed
+        this.passedWriting = doc.data().FCEWritingPassed
+        this.passedListening = doc.data().FCEListeningPassed
         });
     });
     },
@@ -160,6 +165,11 @@ export default {
         this.writing = doc.data().writing;
         this.listening = doc.data().listening;
         this.level = doc.data().level;
+        this.FCEpassed = doc.data().FCEPassed
+        this.passedGrammar = doc.data().FCEGrammarPassed
+        this.passedReading = doc.data().FCEReadingPassed
+        this.passedWriting = doc.data().FCEWritingPassed
+        this.passedListening = doc.data().FCEListeningPassed
         });
     });
     },

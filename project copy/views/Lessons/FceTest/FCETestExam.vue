@@ -468,6 +468,8 @@ export default {
                 if(this.pointsReading >= 4)
                 {
                     this.PassedReading = true;
+                    var db = firebase.firestore();
+                    db.collection(this.email).doc(this.email).set({FCEReadingPassed: this.PassedReading} ,{merge:true})
                 }
         },
          checkFormGrammar: function() {
@@ -484,6 +486,8 @@ export default {
                 if(this.pointsGrammar >= 4)
                 {
                     this.PassedGrammar = true;
+                    var db = firebase.firestore();
+                    db.collection(this.email).doc(this.email).set({FCEGrammarPassed: this.PassedGrammar} ,{merge:true})
                 }
         },
         checkFormWriting: function() {
@@ -501,6 +505,8 @@ export default {
                 if(this.pointsWriting >= 5)
                 {
                     this.PassedWriting = true;
+                    var db = firebase.firestore();
+                    db.collection(this.email).doc(this.email).set({FCEWritingPassed: this.PassedWriting} ,{merge:true})
                 } 
         },
         checkFormListening: function() {
@@ -518,6 +524,9 @@ export default {
                 if(this.pointsListening >= 5)
                 {
                     this.PassedListening = true;
+                    var db = firebase.firestore();
+                    db.collection(this.email).doc(this.email).set({FCEListeningPassed: this.PassedListening} ,{merge:true});
+                    db.collection(this.email).doc(this.email).set({FCEPassed: this.FCCCompleted} ,{merge:true})
                 } 
         },
         GiveConsent: function()
