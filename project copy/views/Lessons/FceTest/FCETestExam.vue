@@ -108,37 +108,82 @@
     </b-container>
 
 <!--Grammar-->
-    <b-container v-if="questionNumber<MaxQuestionsCount-1 && GiveConsent === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
-        <b-row>
-            <b-col class="text-center text-info pt-2 text-size-big">
-                Question {{id}}
-            </b-col>    
-        </b-row>
-        <b-row>
-          <b-col class="col-10 offset-1 pt-3 text-center font-bigger">{{description}}</b-col>
-            <b-col class="d-flex align-items-center mt-3" >
-                <b-form-radio-group v-model="selected" :options="options" class="text-center font-medium col-12" value-field="item" text-field="name"></b-form-radio-group>
+    <b-container v-if="formalConsent === true && CheckedGrammar === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
+     <b-container>
+         <b-col class="text-center mb-5"><h2><b>GRAMMAR</b></h2></b-col>
+         <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>1. ________, he didn't do as well as expected in the exam. The teachers wondered why.</b></b-col>
+                    <b-form-radio v-model="GrammarAnswear1" name="GrammarAnswear1" value="A">Definitely</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear1" name="GrammarAnswear1" value="B">Interestingly.</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear1" name="GrammarAnswear1" value="C">Surprisingly.</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear1" name="GrammarAnswear1" value="D">Absolutely.</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>2. I'm looking forward to my holiday! I _____ to spend the whole week on a boat!</b></b-col>
+                    <b-form-radio v-model="GrammarAnswear2" name="GrammarAnswear2" value="A">will</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear2" name="GrammarAnswear2" value="B">'m going</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear2" name="GrammarAnswear2" value="C">'ll go</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear2" name="GrammarAnswear2" value="D">would</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>3. She ________ me Steve had lost his job.</b></b-col>
+                    <b-form-radio v-model="GrammarAnswear3" name="GrammarAnswear3" value="A">said</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear3" name="GrammarAnswear3" value="B">say to</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear3" name="GrammarAnswear3" value="C">tell me</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear3" name="GrammarAnswear3" value="D">told</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>4. You don't have to apply for a student visa _____ you're from outside the EU.</b></b-col>
+                    <b-form-radio v-model="GrammarAnswear4" name="GrammarAnswear4" value="A">if</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear4" name="GrammarAnswear4" value="B">unless</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear4" name="GrammarAnswear4" value="C">if not</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear4" name="GrammarAnswear4" value="D">or else</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>5. You have taken the rubbish out, _______ you?</b></b-col>
+                    <b-form-radio v-model="GrammarAnswear5" name="GrammarAnswear5" value="A">haven't</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear5" name="GrammarAnswear5" value="B">have</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear5" name="GrammarAnswear5" value="C">didn't</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear5" name="GrammarAnswear5" value="D">do</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>6. I had a friend at college who was very gifted with languages. She ________ speak four or five!</b></b-col>
+                    <b-form-radio v-model="GrammarAnswear6" name="GrammarAnswear6" value="A">was able to</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear6" name="GrammarAnswear6" value="B">was too able</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear6" name="GrammarAnswear6" value="C">was able</b-form-radio>
+                    <b-form-radio v-model="GrammarAnswear6" name="GrammarAnswear6" value="D">was been able to</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-col class="text-center col-12">
+                <button type="button" v-on:click.once="checkFormGrammar" aria-describedby="Check answears button" class="btn btn-warning my-1">End test!</button>
             </b-col>
-        </b-row>
-        <b-row>
-            <b-col class="text-center mb-3 mt-3" >
-                <b-form>
-                    <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-if="selected === null && questionNumber!==(MaxQuestionsCount-2)" disabled type="button">Next question</button>
-                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else-if="questionNumber===(MaxQuestionsCount-2) && selected===null" disabled type="button">End test</button>
-                    <button class="btn btn-warning" v-on:click.once="SetUsersLevel" v-else-if="questionNumber===(MaxQuestionsCount-2) && selected!==null" type="button">End test</button>
-                    <button class="btn btn-warning" v-on:click="CheckAndNextQuestion" v-else type="button">Next question</button>
-                </b-form>
-            </b-col>
-            
-        </b-row>
+     </b-container>
     </b-container>
 
-
-    <b-container v-if="CheckedReading === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
+    <b-container v-if="FCCCompleted === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-black pt-2 text-size-big">
                 <p v-if="pointsReading < 4" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> reading! Learn some more and try this part again</p> 
                 <p v-else-if="pointsReading >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> reading!</p> 
+                <p v-if="pointsGrammar < 4" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> grammar! Learn some more and try this part again</p> 
+                <p v-else-if="pointsGrammar >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> grammar!</p> 
                 <b-col class="text-center mb-3" >
                     <router-link :to="{name: 'read', params: {ExamB1FCEPassed: this.ExamB1FCEPassed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
@@ -149,75 +194,6 @@
 </template>
 
 <script>
-function Task(id, pkt, description, answear1, answear2, answear3, answear4, correctAnswear, questionNumber){
-    this.id = id;
-    this.pkt = pkt;
-    this.description = description;
-    this.answear1 = answear1
-    this.answear2 = answear2
-    this.answear3 = answear3
-    this.answear4 = answear4
-    this.correctAnswear = correctAnswear
-    this.questionNumber = questionNumber
-}
-
-function TaskBuilder() {
-
-    return {
-        setId: function(id) {
-            this.id = id;
-            return this;
-        },
-        setPkt: function(pkt) {
-            this.pkt = pkt;
-            return this;
-        },
-        setDescription: function(description) {
-            this.description = description;
-            return this;
-        },
-        setAnswear1: function(answear1) {
-            this.answear1 = answear1;
-            return this;
-        },
-        setAnswear2: function(answear2) {
-            this.answear2 = answear2;
-            return this;
-        },
-        setAnswear3: function(answear3) {
-            this.answear3 = answear3;
-            return this;
-        },
-        setAnswear4: function(answear4) {
-            this.answear4 = answear4;
-            return this;
-        },
-        correctAnswear: function(correctAnswear) {
-            this.correctAnswear = correctAnswear;
-            return this;
-        },
-        setQuestionNumber: function(questionNumber) {
-            this.questionNumber = questionNumber;
-            return this;
-        },
-        build: function () {
-            return new Task(this.id, this.pkt, this.description, this.answear1, this.answear2,this.answear3,this.answear4, this.correctAnswear, this.questionNumber);
-        }
-    }
-}
-let task = (new TaskBuilder()).setId("1").setPkt("0").setQuestionNumber("0")
-        .setDescription("She ________ French words for hours, but she still doesn't remember all of them. (learn)").setAnswear1("have been learning").setAnswear2("has been learning").setAnswear3("has been learned").setAnswear4("have been learned").correctAnswear("has been learning").build();
-let task2 = (new TaskBuilder()).setId("2")
-       .setDescription("My father _______  for 15 minutes. (smoke)").setAnswear1("has been smoking").setAnswear2("have been smoking").setAnswear3("have smoked").setAnswear4("has smoked").correctAnswear("has been smoking").build();
-let task3 = (new TaskBuilder()).setId("3")
-      .setDescription("Sorry, I'm late,  ________ for long? (you wait)").setAnswear1("has you have wait").setAnswear2("have wait").setAnswear3("have you been waiting").setAnswear4("has been waiting").correctAnswear("have you been waiting").build();
-let task4 = (new TaskBuilder()).setId("4")
-      .setDescription("We ________ Lisa recently. (not see)").setAnswear1("have see").setAnswear2("have not been seeing").setAnswear3("have not seen").setAnswear4("has been seeing").correctAnswear("have not seen").build();
-let task5 = (new TaskBuilder()).setId("5")
-      .setDescription(" ________ hard today? (he study)").setAnswear1("Have he been studying").setAnswear2("Has he been studying").setAnswear3("Did he studied").setAnswear4("Have he studied").correctAnswear("Has he been studying").build();
-let taskList = [task, task2, task3, task4, task5];
-let points = 0;
-let i = 0;
 import { firebase } from '@firebase/app'
 import '@firebase/auth'
 export default {
@@ -234,13 +210,21 @@ export default {
           answear4: '',
           answear5: '',
           answear6: '',
+          GrammarAnswear1: '',
+          GrammarAnswear2: '',
+          GrammarAnswear3: '',
+          GrammarAnswear4: '',
+          GrammarAnswear5: '',
+          GrammarAnswear6: '',
+          pointsGrammar: 0,
           pointsReading: 0,
           QuizesCount: 2,
           reading: 0,
           CheckedReading: false,
           CheckedWriting: false,
           CheckedGrammar: false,
-          CheckedListeing: false
+          CheckedListeing: false,
+          FCCCompleted: false
       }
     },
     mounted: function()
@@ -264,6 +248,19 @@ export default {
                 let answears = [this.answear1,this.answear2,this.answear3,this.answear4,this.answear5,this.answear6];
                 this.CheckedReading = true;
                 this.CheckedGrammar = true;
+                for(let i = 0; i<correctAnswears.length;i++)
+                {
+                    if(correctAnswears[i] === answears[i])
+                    {
+                        this.pointsReading++;
+                    }
+                }
+                console.log(this.pointsReading);
+        },
+         checkFormGrammar: function() {
+                let correctAnswears = ["C", "B", "D", "B", "A", "A"];
+                let answears = [this.GrammarAnswear1,this.GrammarAnswear2,this.GrammarAnswear3,this.GrammarAnswear4,this.GrammarAnswear5,this.GrammarAnswear6];
+                this.CheckedWriting = true;
                 for(let i = 0; i<correctAnswears.length;i++)
                 {
                     if(correctAnswears[i] === answears[i])
