@@ -55,7 +55,10 @@
                     </b-col>
                     </b-row>
                     <b-row class="mt-5">
-                      <b-col class="text center text-danger font-small">
+                      <b-col v-if="listening>99 && writing>99 && speaking>99 && grammar>99 && reading>99" class="text-center">
+                          <b-button class="btn btn-warning btn-lg" type="button" name="test-button" aria-describedby="Fce attempt button" to="FCETestExam">Test your skills: FCE</b-button>
+                      </b-col>
+                       <b-col v-else class="text center text-danger font-small">
                         You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
                       </b-col>
                     </b-row>
@@ -110,7 +113,6 @@ export default {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      console.log(doc.data().speaking);
         this.grammar = doc.data().grammar;
         this.reading = doc.data().reading;
         this.speaking = doc.data().speaking;
@@ -125,7 +127,6 @@ export default {
        var db = firebase.firestore();
       db.collection(this.email).get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      console.log(doc.data().speaking);
         this.grammar = doc.data().grammar;
         this.reading = doc.data().reading;
         this.speaking = doc.data().speaking;
