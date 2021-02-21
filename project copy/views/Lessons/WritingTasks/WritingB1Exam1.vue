@@ -24,7 +24,6 @@
 <b-row>
   
   <form class="form-inline" autocomplete="off">
-    
     <b-col class="col-12 mb-2">
       <b-button-toolbar>
       <label class="my-1 mr-2 d-inline" for="answear1">1) Adjective; something is that when it is might be helpful (Wskazane)</label>

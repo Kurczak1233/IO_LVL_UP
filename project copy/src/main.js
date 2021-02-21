@@ -65,6 +65,8 @@ import TheoryB1WritingTips1 from '../views/Lessons/WritingTheory/TheoryB1Writing
 import SpeakingB1Task1 from '../views/Lessons/SpeakingTasks/TaskB1Speaking1.vue'
 import SpeakingB1Task2 from '../views/Lessons/SpeakingTasks/TaskB1Speaking2.vue'
 import SpeakingB1Task3 from '../views/Lessons/SpeakingTasks/TaskB1Speaking3.vue'
+//FCE//
+import FCETestExam from '../views/Lessons/FceTest/FCETestExam.vue'
 
 //Footer 1
 import TermsOFUse from '../views/TermsOFUse.vue'
@@ -155,6 +157,7 @@ const routes = [
    { path: '/SpeakingB1Task1', name: 'SpeakingB1Task1', component: SpeakingB1Task1, meta: {requiresAuth: true}},
    { path: '/SpeakingB1Task2', name: 'SpeakingB1Task2', component: SpeakingB1Task2, meta: {requiresAuth: true}},
    { path: '/SpeakingB1Task3', name: 'SpeakingB1Task3', component: SpeakingB1Task3, meta: {requiresAuth: true}},
+   { path: '/FCETestExam', name: 'FCETestExam', component: FCETestExam, meta: {requiresAuth: true}},
    { path: '/AboutUs', name: 'aboutus', component: AboutUs},
    { path: '/TermsOFUse', name: 'termsofuse', component: TermsOFUse},
    { path: '/PrivacyPolicy', name: 'pp', component: PrivacyPolicy},
