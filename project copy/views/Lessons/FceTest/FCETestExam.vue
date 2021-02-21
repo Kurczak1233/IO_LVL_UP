@@ -265,91 +265,97 @@
 
 
 <!--Listening-->
- <b-container v-if="formalConsent === true && CheckedGrammar === true && CheckedListeing === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
+ <b-container v-if="formalConsent === true && CheckedGrammar === true && CheckedListeing === true && FCCCompleted === false" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
      <b-container>
          <b-col class="text-center mb-5"><h2><b>LISTENING</b></h2></b-col>
          <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>1. ________, he didn't do as well as expected in the exam. The teachers wondered why.</b></b-col>
-                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="A">Definitely</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="B">Interestingly.</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="C">Surprisingly.</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="D">Absolutely.</b-form-radio>
+                 <b-col><b>1. You hear a customer talking to a shop assistant about a coat she bought. What does she want?</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="A">a different kind of item</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="B">the same item but in a different size.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="C">her money back.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="D">to ask about something.</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
             <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>2. I'm looking forward to my holiday! I _____ to spend the whole week on a boat!</b></b-col>
-                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="A">will</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="B">'m going</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="C">'ll go</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="D">would</b-form-radio>
+                 <b-col><b>2. You hear a weather forecast on the radio. Tomorrow, the weather in the east of the country will be</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="A">stormy in the morning.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="B">sunny in the afternoon.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="C">foggy in the evening.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="D">raining at night</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
             <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>3. She ________ me Steve had lost his job.</b></b-col>
-                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="A">said</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="B">say to</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="C">tell me</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="D">told</b-form-radio>
+                 <b-col><b>3. You hear an office worker talking about cycling to work. What does she enjoy most about it?</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="A">getting some exercise each morning</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="B">avoiding the traffic into town</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="C">thinking about the day ahead</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="D">riding her bike</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
             <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>4. You don't have to apply for a student visa _____ you're from outside the EU.</b></b-col>
-                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="A">if</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="B">unless</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="C">if not</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="D">or else</b-form-radio>
+                 <b-col><b>4. You hear a radio announcer talking about a competition for writers of short stories. The man says that one of the rules is that</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="A">you have to be over sixteen to enter.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="B">you can submit more than one entry.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="C">your entry must be emailed.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="D">your entry must be delivered before friday</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
             <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>5. You have taken the rubbish out, _______ you?</b></b-col>
-                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="A">haven't</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="B">have</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="C">didn't</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="D">do</b-form-radio>
+                 <b-col><b>5. You hear a conversation about reading. The man enjoys reading books which</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="A">have characters that remind him of people he knows.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="B">describe situations that he finds highly amusing.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="C">are set in places that he is unlikely ever to visit.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="D">are highly realistic</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
             <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>6. I had a friend at college who was very gifted with languages. She ________ speak four or five!</b></b-col>
-                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="A">was able to</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="B">was too able</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="C">was able</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="D">was been able to</b-form-radio>
+                 <b-col><b>6. You hear two people talking about watching films on the Internet. What do they agree about?</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="A">the advantages of buying films online</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="B">the usefulness of reading film reviews</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="C">the pleasure of watching films at home</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="D">the willingness of doing things togeather</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
                      <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>6. I had a friend at college who was very gifted with languages. She ________ speak four or five!</b></b-col>
-                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="A">was able to</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="B">was too able</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="C">was able</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="D">was been able to</b-form-radio>
+                 <b-col><b>7. You hear a woman at an airport talking on the phone. Why did she miss her flight?</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="A">She was held up by traffic.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="B">There was a long queue at check-in.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="C">She went to the wrong terminal.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="D">She was not late</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
                      <b-row class="mt-3 mb-3">
              <b-col class="col-12 mr-auto ml-auto mb-2 ">
-                 <b-col><b>6. I had a friend at college who was very gifted with languages. She ________ speak four or five!</b></b-col>
-                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="A">was able to</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="B">was too able</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="C">was able</b-form-radio>
-                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="D">was been able to</b-form-radio>
+                 <b-col><b>8. You hear a man talking about his new job. What attracted him to this job?</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="A">the type of work</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="B">the opportunities for promotion</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="C">the salary offered</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="D">the management</b-form-radio>
                 </b-col>
             </b-row>
          <hr>
+            <b-row class="mt-4 mb-3">
+               <b-col class="text-center">
+                   <audio src="https://github.com/Kurczak1233/IO_LVL_UP/blob/main/project%20copy/src/assets/FCE%20Listening%20Practice%20Test%201,%20Part%201.mp3?raw=true" controls ></audio>
+                </b-col>
+            </b-row>
+        <hr>
             <b-col class="text-center col-12">
-                <button type="button" v-on:click.once="checkFormGrammar" aria-describedby="Check answears button" class="btn btn-warning my-1">End test!</button>
+                <button type="button" v-on:click.once="checkFormListening" aria-describedby="Check answears button" class="btn btn-warning my-1">End test!</button>
             </b-col>
      </b-container>
     </b-container>
@@ -362,10 +368,12 @@
                 <p v-else-if="pointsReading >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> reading!</p> 
                 <p v-if="pointsGrammar < 4" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> grammar! Learn some more and try this part again</p> 
                 <p v-else-if="pointsGrammar >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> grammar!</p>
-                <p v-if="pointsGrammar < 5" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> writing! Learn some more and try this part again</p> 
-                <p v-else-if="pointsGrammar >= 5" class="text-size-big text-center">You <span class="text-success">PASSED</span> writing!</p>  
+                <p v-if="pointsWriting < 5" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> writing! Learn some more and try this part again</p> 
+                <p v-else-if="pointsWriting >= 5" class="text-size-big text-center">You <span class="text-success">PASSED</span> writing!</p>
+                <p v-if="pointsListening < 5" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> listening! Learn some more and try this part again</p> 
+                <p v-else-if="pointsListening >= 5" class="text-size-big text-center">You <span class="text-success">PASSED</span> listening!</p>    
                 <b-col class="text-center mb-3" >
-                    <router-link :to="{name: 'read', params: {ExamB1FCEPassed: this.ExamB1FCEPassed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
+                    <router-link :to="{name: 'userpage', params: {ExamB1FCEPassed: this.ExamB1FCEPassed, PassedReading: this.PassedReading, PassedGrammar: this.PassedGrammar, PassedWriting: this.PassedWriting, PassedListening: this.PassedListening }}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>
@@ -415,6 +423,11 @@ export default {
           pointsGrammar: 0,
           pointsReading: 0,
           pointsWriting: 0,
+          pointsListening: 0,
+          PassedGrammar: false,
+          PassedReading: false,
+          PassedWriting: false,
+          PassedListening: false,
           QuizesCount: 2,
           reading: 0,
           CheckedReading: false,
@@ -452,7 +465,10 @@ export default {
                         this.pointsReading++;
                     }
                 }
-                console.log(this.pointsReading);
+                if(this.pointsReading >= 4)
+                {
+                    this.PassedReading = true;
+                }
         },
          checkFormGrammar: function() {
                 let correctAnswears = ["C", "B", "D", "B", "A", "A"];
@@ -465,7 +481,10 @@ export default {
                         this.pointsGrammar++;
                     }
                 }
-                console.log(this.pointsGrammar);
+                if(this.pointsGrammar >= 4)
+                {
+                    this.PassedGrammar = true;
+                }
         },
         checkFormWriting: function() {
                 this.CheckedListeing = true;
@@ -478,8 +497,28 @@ export default {
                     {
                         this.pointsWriting++;
                     }
+                }
+                if(this.pointsWriting >= 5)
+                {
+                    this.PassedWriting = true;
                 } 
-                console.log(this.pointsWriting);
+        },
+        checkFormListening: function() {
+                this.FCCCompleted = true;
+                let correctAnswears = ["B", "B", "A", "B", "C", "A", "B", "A"];
+                let answears = [this.ListeningAnswear1,this.ListeningAnswear2,this.ListeningAnswear3,this.ListeningAnswear4,this.ListeningAnswear5,this.ListeningAnswear6,this.ListeningAnswear7,this.ListeningAnswear8];
+                this.CheckedListening = true;
+                for(let i = 0; i<correctAnswears.length;i++)
+                {
+                    if(correctAnswears[i] === answears[i])
+                    {
+                        this.pointsListening++;
+                    }
+                } 
+                if(this.pointsListening >= 5)
+                {
+                    this.PassedListening = true;
+                } 
         },
         GiveConsent: function()
         {
