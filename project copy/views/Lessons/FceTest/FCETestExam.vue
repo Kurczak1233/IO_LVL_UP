@@ -108,7 +108,7 @@
     </b-container>
 
 <!--Grammar-->
-    <b-container v-if="formalConsent === true && CheckedGrammar === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
+    <b-container v-if="formalConsent === true && CheckedGrammar === true && CheckedWriting === false" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
      <b-container>
          <b-col class="text-center mb-5"><h2><b>GRAMMAR</b></h2></b-col>
          <b-row class="mt-3 mb-3">
@@ -177,13 +177,102 @@
      </b-container>
     </b-container>
 
+<!--Writing-->
+    <b-container v-if="formalConsent === true && CheckedWriting === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-10 mr-auto ml-auto background-bluish p-5" fluid>
+        <b><h3><i>Tricky words section</i></h3></b>
+<b-row>
+  
+  <form class="form-inline" autocomplete="off">
+    <b-col class="col-12 mb-2">
+      <b-button-toolbar>
+      <label class="my-1 mr-2 d-inline" for="answear1">1) Adjective; When something is good enough to work with (Akceptowalne)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="WritingAnswear1" id="answear1"></b-form-input>
+        </b-input-group>
+
+      </b-button-toolbar>
+    </b-col>
+    <b-col class="col-12 mb-2">
+        <b-button-toolbar>
+          <label class="my-1 mr-2 d-inline" for="answear2">2) Noun: You use it when you want to send a package. (Adres)</label>
+          <b-input-group  size="sm" class="mr-1">
+          <b-form-input type="text" v-model="WritingAnswear2"  id="answear2"></b-form-input>
+          </b-input-group>
+
+      </b-button-toolbar>
+    </b-col>
+    <b-col class="col-12 mb-2">
+      <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear3">3) Adjective: Is is a synonym of prettiness. (Piękny/a)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="WritingAnswear3"  id="answear3"></b-form-input>
+        </b-input-group>
+
+      </b-button-toolbar>
+      </b-col>
+    <b-col class="col-12 mb-2">  
+        <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear4">4) Adverb: Able to transform (Zdolny do zmian)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="WritingAnswear4"  id="answear4"></b-form-input>
+        </b-input-group>
+
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear5">5) Noun: When you make a mistake in a word (Błędna pisownia)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="WritingAnswear5"  id="answear5"></b-form-input>
+        </b-input-group>
+
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">6) Noun: Crew of a restaurant (Personel)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="WritingAnswear6"  id="answear6"></b-form-input>
+        </b-input-group>
+
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">7) Noun: A declaration (Obietnica)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="WritingAnswear7"  id="answear7"></b-form-input>
+        </b-input-group>
+
+      </b-button-toolbar>
+        </b-col>
+        <b-col class="col-12 mb-2">
+          <b-button-toolbar>
+        <label class="my-1 mr-2 d-inline" for="answear1">8) Verb: To appear (Pojawić się)</label>
+      <b-input-group  size="sm" class="mr-1">
+        <b-form-input type="text" v-model="WritingAnswear8"  id="answear8"></b-form-input>
+        </b-input-group>
+
+      </b-button-toolbar>
+     </b-col>
+     </form>
+    <b-col class="text-center col-12 mb-2">
+        <button type="button" v-on:click="checkFormWriting" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
+    </b-col>
+  </b-row>  
+     </b-container>
+
+
+
     <b-container v-if="FCCCompleted === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
             <b-col class="text-center text-black pt-2 text-size-big">
                 <p v-if="pointsReading < 4" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> reading! Learn some more and try this part again</p> 
                 <p v-else-if="pointsReading >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> reading!</p> 
                 <p v-if="pointsGrammar < 4" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> grammar! Learn some more and try this part again</p> 
-                <p v-else-if="pointsGrammar >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> grammar!</p> 
+                <p v-else-if="pointsGrammar >= 4" class="text-size-big text-center">You <span class="text-success">PASSED</span> grammar!</p>
+                <p v-if="pointsGrammar < 5" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> writing! Learn some more and try this part again</p> 
+                <p v-else-if="pointsGrammar >= 5" class="text-size-big text-center">You <span class="text-success">PASSED</span> writing!</p>  
                 <b-col class="text-center mb-3" >
                     <router-link :to="{name: 'read', params: {ExamB1FCEPassed: this.ExamB1FCEPassed}}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
@@ -216,8 +305,17 @@ export default {
           GrammarAnswear4: '',
           GrammarAnswear5: '',
           GrammarAnswear6: '',
+          WritingAnswear1: '',
+          WritingAnswear2: '',
+          WritingAnswear3: '',
+          WritingAnswear4: '',
+          WritingAnswear5: '',
+          WritingAnswear6: '',
+          WritingAnswear7: '',
+          WritingAnswear8: '',
           pointsGrammar: 0,
           pointsReading: 0,
+          pointsWriting: 0,
           QuizesCount: 2,
           reading: 0,
           CheckedReading: false,
@@ -265,10 +363,23 @@ export default {
                 {
                     if(correctAnswears[i] === answears[i])
                     {
-                        this.pointsReading++;
+                        this.pointsGrammar++;
                     }
                 }
-                console.log(this.pointsReading);
+                console.log(this.pointsGrammar);
+        },
+        checkFormWriting: function() {
+                this.CheckedListeing = true;
+                let correctAnswears = ['acceptable', "address", "beautiful", "changeable", "misspell", "personnel","promise","occurred"];
+                let answears = [document.getElementById("answear1").value,document.getElementById("answear2").value,document.getElementById("answear3").value,document.getElementById("answear4").value,document.getElementById("answear5").value,document.getElementById("answear6").value, document.getElementById("answear7").value, document.getElementById("answear8").value];
+                for(let i = 0; i<correctAnswears.length;i++)
+                {
+                    if(correctAnswears[i] === answears[i])
+                    {
+                        this.pointsWriting++;
+                    }
+                } 
+                console.log(this.pointsWriting);
         },
         GiveConsent: function()
         {
