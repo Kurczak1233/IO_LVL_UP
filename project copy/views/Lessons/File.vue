@@ -42,7 +42,7 @@
 </table>
     <b-row>
   <b-col class="text-center mt-3">
-      <p class="text-size-big"><router-link to="/Grammar" class="text-primary">Return to grammar</router-link></p>
+      <p class="text-size-big"><router-link to="/UserPage" class="text-primary">Return to user platform</router-link></p>
   </b-col>
 </b-row>
     </b-container>  
