@@ -2,6 +2,8 @@
 
 Alpha 1.0
 
+There is B1 implemented. To get there you have to answear 2/3 answears at placement test. (Correct: C, A, A). So you have to deliberaltely pick one wrong.
+
 At that version my work on the project is done. I am fully aware that there is a lot of things to improve. Especially safety, javascript, design patterns and so on. The reasons why I have finished the project so quickly are;
 
 complete lack of free time;
