@@ -62,6 +62,18 @@
                         You are not allowed to attempt an FCE/CAE exam yet! Finish your lessons first!
                       </b-col>
                     </b-row>
+                    <b-row>
+                      <b-col v-if="FCEpassed === true" class="text-center mt-3">
+                        <p v-if="passedGrammar === false" class="mb-0 text-center">Grammar:<span class="text-danger">FAILED</span></p> 
+                        <p v-else-if="passedGrammar === true" class="mb-0 text-center">Grammar:<span class="text-success">PASSED</span></p> 
+                        <p v-if="passedReading === false" class="mb-0 text-center">Reading:<span class="text-danger">FAILED</span></p> 
+                        <p v-else-if="passedReading === true" class="mb-0 text-center">Reading:<span class="text-success">PASSED</span></p>
+                        <p v-if="passedWriting === false" class="mb-0 text-center">Writing:<span class="text-danger">FAILED</span></p> 
+                        <p v-else-if="passedWriting === true" class="mb-0 text-center">Writing:<span class="text-success">PASSED</span></p>
+                        <p v-if="passedListening === false" class="mb-0 text-center">Listening:<span class="text-danger">FAILED</span></p> 
+                        <p v-else-if="passedListening === true" class="mb-0 text-center">Listening:<span class="text-success">PASSED</span></p>    
+                      </b-col>
+                    </b-row>
                   </b-col>
                 </b-row>
                 </b-col>
@@ -106,7 +118,22 @@ export default {
             reading: 0,
             listening: 0,
             level: '',
+            passedGrammar: false,
+            passedReading: false,
+            passedListening: false,
+            passedWriting: false,
+            FCEpassed: false,
+            
         }
+    },
+            created: function()
+    {
+      this.passedGrammar = this.$route.params.PassedGrammar;
+      this.passedReading = this.$route.params.PassedReading;
+      this.passedListening = this.$route.params.PassedListening;
+      this.passedWriting = this.$route.params.PassedWriting;
+      this.FCEpassed = this.$route.params.FCCCompleted;
+      console.log(this.FCEpassed)
     },
     beforeUpdate: function() //Przed załadowaniem strony załaduj dane.
     {

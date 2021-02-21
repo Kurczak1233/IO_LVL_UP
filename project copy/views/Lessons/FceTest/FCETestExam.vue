@@ -373,7 +373,7 @@
                 <p v-if="pointsListening < 5" class="text-size-big text-center p-3">You <span class="text-danger">FAILED</span> listening! Learn some more and try this part again</p> 
                 <p v-else-if="pointsListening >= 5" class="text-size-big text-center">You <span class="text-success">PASSED</span> listening!</p>    
                 <b-col class="text-center mb-3" >
-                    <router-link :to="{name: 'userpage', params: {ExamB1FCEPassed: this.ExamB1FCEPassed, PassedReading: this.PassedReading, PassedGrammar: this.PassedGrammar, PassedWriting: this.PassedWriting, PassedListening: this.PassedListening }}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
+                    <router-link :to="{name: 'userpage', params: {FCCCompleted: this.FCCCompleted, PassedReading: this.PassedReading, PassedGrammar: this.PassedGrammar, PassedWriting: this.PassedWriting, PassedListening: this.PassedListening }}"><button class="btn btn-warning" type="button">Confirm</button></router-link>
                 </b-col>
             </b-col>    
         </b-row>
