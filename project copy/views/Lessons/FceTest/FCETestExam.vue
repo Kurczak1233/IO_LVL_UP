@@ -172,13 +172,13 @@
             </b-row>
          <hr>
             <b-col class="text-center col-12">
-                <button type="button" v-on:click.once="checkFormGrammar" aria-describedby="Check answears button" class="btn btn-warning my-1">End test!</button>
+                <button type="button" v-on:click.once="checkFormGrammar" aria-describedby="Check answears button" class="btn btn-warning my-1">Next part!</button>
             </b-col>
      </b-container>
     </b-container>
 
 <!--Writing-->
-    <b-container v-if="formalConsent === true && CheckedWriting === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-10 mr-auto ml-auto background-bluish p-5" fluid>
+    <b-container v-if="formalConsent === true && CheckedWriting === true && CheckedListeing === false" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-10 mr-auto ml-auto background-bluish p-5" fluid>
         <b><h3><i>Tricky words section</i></h3></b>
 <b-row>
   
@@ -257,12 +257,103 @@
      </b-col>
      </form>
     <b-col class="text-center col-12 mb-2">
-        <button type="button" v-on:click="checkFormWriting" aria-describedby="Check answears button" class="btn btn-primary my-1">Check answears</button>
+        <button type="button" v-on:click="checkFormWriting" aria-describedby="Check answears button" class="btn btn-warning my-1">Next part!</button>
     </b-col>
   </b-row>  
      </b-container>
 
 
+
+<!--Listening-->
+ <b-container v-if="formalConsent === true && CheckedGrammar === true && CheckedListeing === true" class="col-12 col-sm-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish p-5" fluid>
+     <b-container>
+         <b-col class="text-center mb-5"><h2><b>LISTENING</b></h2></b-col>
+         <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>1. ________, he didn't do as well as expected in the exam. The teachers wondered why.</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="A">Definitely</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="B">Interestingly.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="C">Surprisingly.</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear1" name="ListeningAnswear1" value="D">Absolutely.</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>2. I'm looking forward to my holiday! I _____ to spend the whole week on a boat!</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="A">will</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="B">'m going</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="C">'ll go</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear2" name="ListeningAnswear2" value="D">would</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>3. She ________ me Steve had lost his job.</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="A">said</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="B">say to</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="C">tell me</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear3" name="ListeningAnswear3" value="D">told</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>4. You don't have to apply for a student visa _____ you're from outside the EU.</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="A">if</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="B">unless</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="C">if not</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear4" name="ListeningAnswear4" value="D">or else</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>5. You have taken the rubbish out, _______ you?</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="A">haven't</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="B">have</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="C">didn't</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear5" name="ListeningAnswear5" value="D">do</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>6. I had a friend at college who was very gifted with languages. She ________ speak four or five!</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="A">was able to</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="B">was too able</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="C">was able</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear6" name="ListeningAnswear6" value="D">was been able to</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+                     <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>6. I had a friend at college who was very gifted with languages. She ________ speak four or five!</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="A">was able to</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="B">was too able</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="C">was able</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear7" name="ListeningAnswear7" value="D">was been able to</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+                     <b-row class="mt-3 mb-3">
+             <b-col class="col-12 mr-auto ml-auto mb-2 ">
+                 <b-col><b>6. I had a friend at college who was very gifted with languages. She ________ speak four or five!</b></b-col>
+                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="A">was able to</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="B">was too able</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="C">was able</b-form-radio>
+                    <b-form-radio v-model="ListeningAnswear8" name="ListeningAnswear8" value="D">was been able to</b-form-radio>
+                </b-col>
+            </b-row>
+         <hr>
+            <b-col class="text-center col-12">
+                <button type="button" v-on:click.once="checkFormGrammar" aria-describedby="Check answears button" class="btn btn-warning my-1">End test!</button>
+            </b-col>
+     </b-container>
+    </b-container>
+ 
 
     <b-container v-if="FCCCompleted === true" class="col-10 mt-5 col-md-8 col-xl-8 mr-auto ml-auto background-bluish" fluid>
         <b-row>
@@ -313,6 +404,14 @@ export default {
           WritingAnswear6: '',
           WritingAnswear7: '',
           WritingAnswear8: '',
+          ListeningAnswear1: '',
+          ListeningAnswear2: '',
+          ListeningAnswear3: '',
+          ListeningAnswear4: '',
+          ListeningAnswear5: '',
+          ListeningAnswear6: '',
+          ListeningAnswear7: '',
+          ListeningAnswear8: '',
           pointsGrammar: 0,
           pointsReading: 0,
           pointsWriting: 0,
@@ -372,6 +471,7 @@ export default {
                 this.CheckedListeing = true;
                 let correctAnswears = ['acceptable', "address", "beautiful", "changeable", "misspell", "personnel","promise","occurred"];
                 let answears = [document.getElementById("answear1").value,document.getElementById("answear2").value,document.getElementById("answear3").value,document.getElementById("answear4").value,document.getElementById("answear5").value,document.getElementById("answear6").value, document.getElementById("answear7").value, document.getElementById("answear8").value];
+                this.CheckedListening = true;
                 for(let i = 0; i<correctAnswears.length;i++)
                 {
                     if(correctAnswears[i] === answears[i])
