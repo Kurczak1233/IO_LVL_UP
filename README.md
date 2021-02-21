@@ -2,13 +2,14 @@
 
 Alpha 1.0
 
-At that version my work on the project is done. I am fully aware that there is a lot of things to improve. Especially safety, javascript, design patterns and so on. The reasons why I have finished the project so quickly are:
+At that version my work on the project is done. I am fully aware that there is a lot of things to improve. Especially safety, javascript, design patterns and so on. The reasons why I have finished the project so quickly are;
 
-Complete lack of free time.
-New semester of IT is beggining.
-The amount of fixes, code-refactorings and general rebuilding of this app is clearly overwhealming.
+complete lack of free time;
+new semester of IT is beggining;
+the amount of fixes, code-refactorings and general rebuilding of this app is clearly overwhealming;
 I want to develop myself more in .NET field of study.
-From my perspective this project has given me the awareness of multiple web development attributes like:
+
+<p>From my perspective this project has given me the awareness of multiple web development attributes like:</p>
 
 <p>How the DOM api works.</p>
 <p>What are js frameworks, and what is Vue.js.</p>
