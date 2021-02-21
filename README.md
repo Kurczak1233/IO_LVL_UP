@@ -19,6 +19,7 @@ How tiring leading a team might be.
 Why we should use basic design patterns in our project
 How to use Firestore+Firebase.
 What are unit tests. (very basically)
+
 As I have mentioned before, the project could be easily conitnued by refactoring the whole page by learning how to properly use Vue, and of course adding more design patterns and javascript code. The site is mainly static which can be clearly concluded from the code proportions (js less than 5%!) This is not satisfying at all. Hence there is a great way to refactor the whole static quizes into dynamic ones which would make the site highly more effective. Furthermore, there is a lot of fascinating v-for loops which I haven't used at all (which could easily improve code cleanliness). There is not enough support for screen readers in the project (aria). I think that usage of forms and lack of appropriate security is also something what can be easily developed. I also think that If my subject teacher saw this project, he would definitely add some more points to this list of bugs and problems. In conclusion: there is a lot to improve.
 
 To sum up, this release is not something I can be proud of. However at the beggining of this project I had completly no clue how to work in js frameworks, and I had no knowledge in js at all. What I am satisfied with is the amount of work I have spent on this project and the mindful approach to my future projects.
