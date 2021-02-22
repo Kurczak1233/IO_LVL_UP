@@ -30,14 +30,3 @@ As I have mentioned before, the project could be easily conitnued by refactoring
 To sum up, this release is not something I can be proud of. However at the beggining of this project I had completly no clue how to work in js frameworks, and I had no knowledge in js at all. What I am satisfied with is the amount of work I have spent on this project and the mindful approach to my future projects.
 
 <img src=https://i.redd.it/rskneik2r4h41.jpg></img>
-
-
-/// *** /// 
-
-Alpha 0.5
-My school project where I had to lead the team and create simple website.
-Despite the fact, that the application is not finished, I am glad that, I have spent so much time on learning how Vue works (and I have still a lot to do in this field). Alpha 0.5.0.1 in my opinion is a half-product. I would like to end this prototype by constantly improving the page, and of course learning how Vue.js works.
-
-This is my absolutely first contact with this kind of javascript frameworks.
-
-In about 3 weeks I have learng something about javascript / vue.js / firebase and firestore. I have trained my skill in html/css/bootstrap. It wasn't an easy task do accomplish that. Nonetheless, I am still halfway throught this jorney.
